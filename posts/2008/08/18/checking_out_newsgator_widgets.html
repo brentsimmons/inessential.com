@@ -1,0 +1,51 @@
+@dbid 3524
+@title Checking out NewsGator Widgets
+@pubDate Mon Aug 18 11:40:11 -0700 2008
+@modDate Mon Aug 18 11:40:11 -0700 2008
+<p>
+<a href="http://newsgatorwidgets.com/">NewsGator&#8217;s widgets business</a> hasn&#8217;t overlapped with NetNewsWire, but I felt like learning more about it. (I take it as self-evident that it’s good to be curious about your own company’s products.)</p>
+<p>Some other parts of NewsGator&#8217;s business, especially <a href="http://www.newsgator.com/business/EnterpriseServer/Default.aspx">NewsGator Enterprise Server</a> (NGES), <i>have</i> overlapped with NetNewsWire. NetNewsWire and the other client apps work with NGES as well as with the online syncing system. (NGES is like the online system, but with a whole bunch of special features that businesses need.)</p>
+<p>But I didn&#8217;t know that much about widgets, and I got curious. I got curious more about widgets-as-software than widgets-as-business, but I&#8217;ll talk about the business part first.</p>
+<h4>The Scoop on Widgets</h4>
+<p>They&#8217;re web-page widgets, not Dashboard widgets or whatever they&#8217;re called in Windows. They embed in a page via JavaScript includes. Though widgets could be anything, NewsGator&#8217;s tend to display RSS feeds.</p>
+<p>They&#8217;re also what the business hepcats like to call &#8220;viral&#8221; &#8212; they can <i>spread</i>. If you see a widget you like, you can add it to your own weblog, social networking thing, whatever.</p>
+<p>Why would anyone make a widget? I can guess at some business uses:</p>
+<ol>
+<li><p>Get the word out about your site.</p></li>
+<li><p>Get more people to visit your site.</p></li>
+<li><p>Make money from advertising. You could include an ad in a widget.</p></li>
+</ol>
+<p>The more a widget spreads, the better you do with the above. Since anybody can spread a widget, I will guess that an important goal of a widget-maker is to make widgets that people want to spread.</p>
+<p>Here&#8217;s where it got more interesting for me &#8212; I wondered what it was like to build a widget. I&#8217;m a developer, after all: <i>I like making things</i>.</p>
+<h4>Editor&#8217;s Desk</h4>
+<p>Business hipsters call this the &#8220;self-serve&#8221; model &#8212; NewsGator doesn&#8217;t have to make every widget by hand: we provide the tools to make widgets and the system to run them. (We <i>do</i> make some widgets, but other people can make widgets too.)</p>
+<p>We have a web app called Editor&#8217;s Desk where you can build a widget. You can add content from one or more feeds, and there are templates that let you pick the look and feel. Advanced users can edit the HTML, CSS, and JavaScript.</p>
+<p>I decided right away that I was one of those advanced-user-snobs. (Chianti-drinking, Plato-quoting, CSS-editing&#8230;)</p>
+<p>So I started futzing around to see what I could make, and at the same time I tried to figure out the basic principles of widget design. (Which is what most geeks would do, since it&#8217;s never enough to just learn how to make a thing: we have to get under the hood.)</p>
+<h4>My first widget</h4>
+<p>I wondered if the widget design tools were flexible enough for me to create a widget that looked like my weblog. Answer: yes.</p>
+<p>Here&#8217;s a screenshot, since the actual widget might not make it through your RSS reader.</p>
+<p><img src="http://inessential.com/images/inessential_widget2.png" height="379" width="375" alt="Screenshot of inessential.com widget" /></p>
+<p>(You can view the <a href="http://inessential.com/newsgatorWidgets.html">live, running widget</a>.)</p>
+<h4>My second widget</h4>
+<p>Then I did a widget that people might actually want to spread: it displays the NetNewsWire news feed. Here&#8217;s a screenshot:</p>
+<p><img src="http://inessential.com/images/netnewswire_widget.png" height="407" width="356" alt="Screenshot of NetNewsWire news widget" /></p>
+<p>(Again, the live version is on <a href="http://inessential.com/newsgatorWidgets.html">my widgets page</a>.)</p>
+<p>By this time I&#8217;d figured out a few things about widget design.</p>
+<h4>1. Widgets should be in a bordered box of some kind.</h4>
+<p>Seems obvious, but worth noting. Rounded corners are nearly a must.</p>
+<h4>2. Widgets are guests on a page. And no part of the widget starts drawing until after the JavaScript include returns.</h4>
+<p>This said to me that keeping resources low is a good idea. My widgets all use just one graphic. They don&#8217;t even use graphics for the rounded corners &#8212; they use the support built into Firefox and Safari for rounded corners. (You get square corners on IE, but I was willing to make the trade-off.)</p>
+<h4>3. The small canvas means <i>keep things simple</i>.</h4>
+<p>For each widget I used a limited color palette. News items are separated by space rather than with bullets or lines. The one graphic I use adds visual interest plus a clue to what the widget is about. (Business daddy-Os would call the graphic a &#8220;branding&#8221; thing.)</p>
+<p>I could have also added a mini-toolbar for each item, with an email-this link and a place to rate the article. But I didn&#8217;t quite buy the workflow, that you&#8217;d open a page, read it, and then come back, find the link on the widget, then email or it or rate it. I think you&#8217;re going to email a page when you&#8217;re actually on the page, either via a link on that page or your browser&#8217;s email command. And I didn&#8217;t think you&#8217;d remember that you want to come back and rate the page. Not including the mini-toolbar meant I had room to display more news items, and the overall look was more clear.</p>
+<h4>4. There&#8217;s a natural layout: title, feed or feeds, and Get This Widget link.</h4>
+<p>It&#8217;s like so many other things &#8212; desktop apps, web pages &#8212; with a header, main content area, and footer.</p>
+<p>To keep things simple (and, I hope, more striking, better able to compete with other things on the page), my headers and footers are always the same background color, and they&#8217;re darker than the news items list (the lighter news items list helps with readability).</p>
+<p>I’m sure there are <i>more</i> things to know about widget design, but I&#039;ve only made a few so far, and I haven’t seen them running on other sites yet, so I’m just a newbie.</p>
+<h4>My third widget</h4>
+<p>Now I was on a roll &#8212; making widgets is fun, it turns out &#8212; so I made a multi-feed widget: Seattle Mac &amp; iPhone Developers. Here&#8217;s a screenshot:</p>
+<p><img src="http://inessential.com/images/seattle_widget.png" height="741" width="349" alt="Screenshot of Seattle Mac and iPhone developers widget" /></p>
+<p>And I made one last widget with news from the weblogs of some of my co-workers. (I know about the weblogs of J. B. Holston, Greg Reinacker, Jeff Nolan, Karyn German, Walker Fenton, Dan Larson, Nick Harris, and Nick Bradbury. Apologies to anybody whose weblog I don&#8217;t know about. ;)</p>
+<p>(I&#8217;ve already posted enough screenshots &#8212; BRENTSCOWRKRSBLOGSOMG appears on <a href="http://inessential.com/newsgatorWidgets.html">my widgets page</a>.)
+</p>

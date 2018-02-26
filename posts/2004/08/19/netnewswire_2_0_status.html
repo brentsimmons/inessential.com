@@ -1,0 +1,57 @@
+@dbid 2899
+@title NetNewsWire 2.0 Status
+@pubDate Thu Aug 19 21:24:18 -0700 2004
+@modDate Thu Aug 19 21:40:18 -0700 2004
+So—where’s NetNewsWire 2.0?</p>
+
+<p>Well, we’re working quite hard on it—which is why I haven’t been doing much posting, and why if you’ve sent me email I may not have replied.</p>
+
+<p>It’s not ready for a public beta yet. The main new features are all in place. What remains is fixing bugs, adding a couple small features, updating the Help, adding polish, basically just taking care of all the many little details.</p>
+
+<p>In other words, we’re in the final sprint. The to-do list is down to 95 items.</p>
+
+<p>(If you’d like to help test, and you have a NetNewsWire license, just send me email. Bravery is required, though, because it does still have bugs. Most of the 95 items on the to-do list are bugs to fix.)</p><h4>What remains to do</h4><p>
+Only a few of the remaining items are big things like updating the Help book. Most are small, it’s just that there are many of them. To give you a flavor...</p>
+
+<p>- A smart list will cause a crash if you unsubscribe from a feed and the smart list includes headlines from that feed.</p>
+
+<p>- The Atom feed parser doesn’t support base64 encoding.</p>
+
+<p>- The order of columns in the headlines table is not remembered between runs.</p>
+
+<p>- The 32K limit to the HTML differences feature should be removed.</p>
+
+<p>- Etc.</p>
+
+<p>Each of the above—and most of the rest of the list—are small, easy-to-fix items.</p>
+
+<p>This, luckily for me, is my favorite part of software development. I enjoy fixing bugs much more than I enjoy adding big new features, probably because I can fix a bunch of bugs in a few hours. It’s like eating chocolates throughout the day instead of eating one big steak once a week.</p>
+
+<p>That’s not to say that there aren’t lots of big new features in 2.0. There are. What we’re doing right now is making sure that it’s not just ambitious but <i>good</i>.</p>
+
+<p>(A reminder, in case you missed it: NetNewsWire 2.0 will be a free upgrade for everyone who has bought or will buy NetNewsWire 1.x.)</p><h4>Random discussion of one small part of one feature</h4><p>
+Here’s what tabs ended up looking like.</p>
+
+<p><img src="http://ranchero.com/images/tabsnnw2.png" width="321" height="31" alt="tabs screen shot" /></p>
+
+<p>How many different ways can tabs be done? You’d be surprised. We tried just about every configuration.</p>
+
+<p>I really wanted the favicons because they perform a usability function: the icons make it easier to find the tab you’re looking for. It’s not just for looks. (We’re <i>Mac</i> users, right? We like icons.)</p>
+
+<p>But the close button needs to be on the left since that’s where it is in Safari, and since close buttons appear in the upper left of Aqua windows. (When we tried putting them on the right, testers could just not get the hang of it.)</p>
+
+<p>We could have put them together—close button, favicon, then title—but that looked very jumbled.</p>
+
+<p>Another option, which had its supporters, was to combine them. The favicons would become close buttons on mouseover. Slick, yes, but at the cost of explicitness. If you didn’t mouseover, you didn’t know there were close buttons.</p>
+
+<p>Another option was to do it like Firefox. In Firefox, tabs have favicons on the left, and there’s just one close button to the right of all the tabs. (But when we tried it, the feedback was almost completely negative, even though many NetNewsWire testers use Firefox. I personally liked this approach, but that’s just me.)</p>
+
+<p>It’s funny, though, because the Firefox style had a unique selling point: it meant you could close an “overflow” tab by clicking a close button. Try it in Safari—open a bunch of tabs so that you get the little tabs menu widget on the right. Select one of the tabs from that menu. Is there something you can click to close that tab? No, you have to use the Close Tab command. With Firefox you can still click the close button.</p>
+
+<p>In the end we went with the configuration pictured above, and we decided to make it possible to turn off the favicons, since it became one of those 50-50 things: some people really wanted them, but other people really preferred a cleaner look.</p>
+
+<p>All of the above is just to say that software development is about trade-offs, and this is a textbook case because the trade-offs are obvious and there is no one best way to do it.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>By the way, I’ll be doing a session called “Using WebKit: User Interface Challenges” at O’Reilly’s <a href="http://conferences.oreillynet.com/macosx2004/">Mac OS X Conference</a> this October. I probably won’t talk about the specifics of tabs design—it will be at a higher, more conceptual level.

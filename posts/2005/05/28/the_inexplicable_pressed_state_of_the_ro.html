@@ -1,0 +1,48 @@
+@dbid 3102
+@title The inexplicable pressed state of the round textured button
+@pubDate Sat May 28 19:02:40 -0700 2005
+@modDate Sat May 28 20:26:00 -0700 2005
+Everyone’s familiar with Safari’s cool buttons, right?</p>
+
+<p>Here, for example is the home button—first in normal and then in pressed state. Note how it highlights in blue. (Why it doesn’t highlight in graphite if you’re using graphite I won’t try to explain, because I can’t.)</p>
+
+<p><img src="http://inessential.com/images/safariHomeNormal.png" alt="Safari home button" height="25" width="28" />&nbsp;<img src="http://inessential.com/images/safariHomePressed.png" alt="Safari home button pressed" height="25" width="28" /></p>
+
+<p>If you look at Tiger, you can see this same button style used in lots of different places: System Preferences, Dictionary, Finder, Help Viewer, Address Book, Font Book, and so on.</p>
+
+<p>So I was checking out Interface Builder in Tiger, and I see that Apple has now provided this as a standard button type—which is very cool. Here’s a screen shot from Interface Builder:</p>
+
+<p><img src="http://inessential.com/images/rtButtonNormal.png" alt="Round textured button" height="31" width="69" /></p>
+
+<p>This is how things should work, I think: some folks on an app team come up with a new button, it stands the test of time (people like it and it’s usable), other apps adopt it, and it becomes a standard button type available to any developer. I’m all set to applaud, in other words.
+</p><h4>First, an explanation</h4><p>
+It’s not necessary for Apple to make a certain button type available before developers can create buttons that look and feel exactly the same way.</p>
+
+<p>There was never anything stopping anybody from making buttons that look and feel the same as these Safari-type buttons.</p>
+
+<p>Making custom buttons isn’t hard: you just need to create images for the buttons. (Sometimes you have multiple images, of course: normal, pressed, disabled, sometimes mouse-over, and sometimes graphite variants of the above.) You may need to write just a little code that says how the button should behave (does it toggle between two states like a checkbox, or is it like an OK button, that kind of thing).</p>
+
+<p>But when a button type becomes a standard, then it’s slightly easier for a developer to use, because you just need to create the icon that goes inside the button, and you don’t have to deal with the extra stuff.</p>
+
+<p>More importantly, it means that this button is now considered part of the OS X user interface, and you can use the button with confidence that you’re being consistent. (Presumably there is also some documentation that says when and how the button is best used.)
+</p><h4>Blue, we must have blue</h4><p>
+So after dragging the button to a window in Interface Builder, I “ran” the window to see the button in action. I clicked on it. It looked like this when pressed:</p>
+
+<p><img src="http://inessential.com/images/rtButtonPressed.png" alt="Round textured button pressed" height="36" width="71" /></p>
+
+<p>Looks good, right? A nice “pressed” look.</p>
+
+<p>But see the problem? <i>It’s not blue.</i></p><h4>It’s not blue, so you can’t use it</h4><p>
+Here’s what would happen were you to release an app that uses this button. Users would report it as a bug that the button doesn’t turn blue. They’d point to some of the many different apps that use this same button, and say, “See? The standard on OS X for these buttons is that they’re <i>blue</i> when pressed!” The users would be absolutely right.</p>
+
+<p>So then you have to go back to the custom method of making images for each of the states and perhaps writing a little code to get the behavior right. Not hard, but you’ll have to do it.</p>
+
+<p>But now you’ll wonder why you have to do it, when this button exists as a standard button type in Interface Builder.
+</p><h4>How did this happen?</h4><p>
+I don’t know.</p>
+
+<p>The worst-case scenario is that the policy is to give developers some cool widgets, but don’t make them the same as what Apple uses—make it so developers have to jump through some extra hoops.</p>
+
+<p>I don’t believe that scenario—it’s rather paranoid. I mention it because I’ve heard it from other developers.</p>
+
+<p>My guess is that, simply, it’s an oversight, just a mistake.

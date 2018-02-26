@@ -1,0 +1,25 @@
+@dbid 2609
+@title New NetNewsWire feature: Keyboard Shortcuts page
+@pubDate Fri Aug 22 17:49:31 -0700 2003
+@modDate Fri Aug 22 17:49:31 -0700 2003
+One of the new features in NetNewsWire seems like a little thing, but I&#8217;m rather proud of it. Here&#8217;s the story...</p>
+
+<p>NetNewsWire is by design a very keyboard-friendly app. There are lots of keyboard shortcuts that aren&#8217;t reflected in the menus because they&#8217;re not command-key shortcuts. They&#8217;re things like using the space bar to go to the next unread message and typing + to expand an item in the Combined View.</p>
+
+<p>The question I had was, how can I make it easier for people to find out about these shortcuts?</p>
+
+<p>I looked around at some other apps and noticed that it was pretty common to have a Keyboard Shortcuts item in the Help menu. So I decided to do that.</p>
+
+<p>But then the question was, how should the keyboard shortcuts be displayed in the window?</p>
+
+<p>I liked OmniOutliner&#8217;s approach&#8212;it opens an outline. Makes sense, right? The app is an outliner, so it uses an outline to display the list of shortcuts.</p>
+
+<p>An outline wouldn&#8217;t be right for NetNewsWire, though. I could do an outline (using the Notepad code), but it didn&#8217;t feel right for this. Other options (plain text, a table view, etc.) sounded boring.</p>
+
+<p>Then I thought of Web Kit, and I had an a-ha moment: I could use a very basic window that just displays an HTML page. All it took then was to create the window and write the HTML page itself. Piece of cake.</p>
+
+<p>Here&#8217;s a <a href="http://inessential.com/images/keyboardshortcuts.jpg">screen shot</a>.</p>
+
+<p>This was an unexpected benefit of using Web Kit. I expect there will be plenty more (and some of them will be quite a bit more interesting).</p>
+
+<p>If you&#8217;re a Mac app developer, and you have something like a page of keyboard shortcuts you want to display, I encourage you to use this approach. It&#8217;s easy and the end result is I think pretty nice.

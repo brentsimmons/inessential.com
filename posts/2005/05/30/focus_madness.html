@@ -1,0 +1,84 @@
+@dbid 3106
+@title Focus madness
+@pubDate Mon May 30 15:09:24 -0700 2005
+@modDate Mon May 30 15:13:21 -0700 2005
+Apple Mail.</p>
+
+<p>I’m a little obsessed with it. I don’t even use it. But it’s the Apple app that’s most like our software, so Mail’s design informs our design.</p>
+
+<p>I got a feature request that asked for NetNewsWire to adopt the following from Mail:</p>
+
+<p><i>When the list of messages has focus, page-up and page-down should scroll the message view.</i></p>
+
+<p>When I heard about this, I couldn’t believe it, so I checked it out, and it’s true. I can see how it’s a useful feature—but it’s also weird, isn’t it? If a scrolling view has focus, shouldn’t page-up and page-down work on the view with focus? Shouldn’t it work on the message list view?</p>
+
+<p>Well, yes.</p>
+
+<p>Nevertheless, having a keyboard method of scrolling the message view when the list view has focus is useful. (Space works, but it also goes to the next message when it reaches the bottom, so a scroll-only command would still be useful.)
+</p><h4>Don’t try this</h4><p>
+So then I wondered about the list of mailboxes. One of the things I didn’t like about earlier versions of Mail was that you couldn’t use the keyboard with the mailbox list.</p>
+
+<p>Do <i>not</i> try the following:</p>
+
+<p>1. Select a message in the message list view.</p>
+
+<p>2. Click on a mailbox in the mailbox list.</p>
+
+<p>3. Hit the Delete key.</p>
+
+<p>What happens is that the currently selected message in the message list view gets sent to the Trash. This happens because the mailbox list does not get focus when you click on it. (You don’t necessarily realize that, though, since there aren’t any focus rings. Focus rings are pass&eacute; these days.)</p>
+
+<p><i>However</i>... if you hit the Tab key (once or a few times) focus <i>will</i> move to the mailbox list. The selection color changes to blue when the mailbox list has focus.</p>
+
+<p>Once the mailbox list has focus, you can navigate using arrow keys. Cool. And now if you hit Delete, nothing happens, which is probably best.
+</p><h4>Focus gravity</h4><p>
+You can probably figure out why it works this way—Mail has a sort-of “focus gravity” for the message list.</p>
+
+<p>When you’re not writing an email, the message list has focus most of the time, unless you go out of your way to change the focus. (Even clicking in the mailbox list won’t change the focus.)</p>
+
+<p>I understand it, it makes sense—because most of the time you want the message list to have focus. If you don’t have to check to see if it has focus, that’s cool.</p>
+
+<p>But here’s the problem:</p>
+
+<p>1. The message list doesn’t <i>always</i> have focus, it just <i>usually</i> has focus. So you do still need to click on it or hit Tab or whatever sometimes.</p>
+
+<p>2. There is at least one situation where you can trash email without necessarily realizing it. (Described above.)</p>
+
+<p>3. The concept of focus is a fundamental user interface concept. (Most users probably use the word “active” instead, as in, “The mailbox list does not become active when you click on it.”) But Mail does odd things, sometimes paying attention to focus, sometimes not, and not always doing what you’d expect.</p>
+
+<p>Note that you can (obviously) learn Mail and all its exceptions, and even like them. However, I suspect a normal treatment of focus would be more usable.
+</p><h4>A note about focus rings</h4><p>Focus rings are those blue outlines you see sometimes. For instance, the below is from Safari’s bookmarks editor. The Collections and Bookmark lists get a focus ring when they have focus.</p>
+
+<p><img src="http://inessential.com/images/safariFocusRing.png" alt="Safari focus ring" height="79" width="68" /></p>
+
+<p>Mail doesn’t use focus rings around the mailbox, message list, or message views. If it did, it would be more obvious that a click on the mailbox list doesn’t move focus—you’d still see the focus ring around the message list.</p>
+
+<p>Without the focus ring your main clue is the selection highlight color.</p>
+
+<p>Here’s why I think we don’t see focus rings very often these days:</p>
+
+<p>1. If you have a focus ring, you need a margin so that the focus ring has somewhere to draw. (Again, note Safari’s bookmarks editor, which has a margin.) Margins on non-metal apps are old-school: the modern look is no margins, which means no focus rings.</p>
+
+<p>2. The blue outline itself looks rather old-school: it’s not sleek enough, just kind of thick and fuzzy. Seems busy.</p>
+
+<p>Of course, focus rings are used, even in Mail, at least a little bit—search fields tend to get a focus ring.</p>
+
+<p><img src="http://inessential.com/images/searchFocusRing.png" alt="Search focus ring" height="34" width="199" /></p>
+
+<p>(Editing the name of a mailbox also gives you a focus ring. There are probably other cases too.)</p>
+
+<p>The thing about focus rings, though, is that they serve a great function—they make it really super-easy to know where the focus is. A replacement for focus rings—either a new look or something different but just as effective—would be a good idea. It would have made the accidentally-trashing-email scenario much less likely.</p>
+
+<p>(Of course, I also think that clicking in the mailbox list in Mail ought give focus to the mailbox list. If it’s good enough for iTunes, why not Mail? If you can Tab there, why not click there?)</p>
+
+<p>There are super-smart user interface people at Apple. The folks who came up with Expos&eacute;, for instance, thought out-of-the-box and came up with an innovative solution. But OS X has been a step backwards for focus indication, which makes using your computer just a little bit harder than it should be. I’d love it if some of those super-smart UI folks took a look at the problem of focus indication. It feels like there’s a great solution begging to be invented—I just don’t know what it is.
+</p><h4>P.S. A note about why I don’t use Mail</h4><p>
+I mentioned at the top that I don’t use Mail. It’s <i>not</i> because of the user interface; it’s not because of the toolbar buttons or the focus issues or anything like that.</p>
+
+<p>It’s the text editor. For the amount of writing I have to do, I need a great text editor—so I use Mailsmith.</p>
+
+<p>The glossary feature alone is worth it for me. I also very much appreciate that it uses > characters instead of that quote bar thing that can be so hard to manipulate. Etc. I’m not trying to sell it to you—just saying that doing email without a strong text editor is out of the question for me personally.</p>
+
+<p>(I also have used and quite like the combinations of mutt+vim and mutt+BBEdit.)</p>
+
+<p>Mailsmith’s UI is not flashy at all (it even has margins and focus rings!)—and I often think about how I’d like to give it a make-over. But then again I think that about most apps, and it doesn’t stop me from using the apps that make me the most productive.

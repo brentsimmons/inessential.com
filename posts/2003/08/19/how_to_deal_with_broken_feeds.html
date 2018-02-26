@@ -1,0 +1,27 @@
+@dbid 2603
+@title How to deal with broken feeds
+@pubDate Tue Aug 19 21:05:26 -0700 2003
+@modDate Tue Aug 19 21:05:26 -0700 2003
+Tim Bray writes about <a href="http://www.tbray.org/ongoing/When/200x/2003/08/19/Draconianism">how to deal with broken PEAW feeds</a>: &#8220;I would absolutely require basic XML well-formedness.&#8221;</p>
+
+<p>Me, I would absolutely love it if I, as an aggregator developer, could require well-formedness.</p>
+
+<p>In other words, if a feed isn&#8217;t well-formed, then NetNewsWire would not parse it and display it.</p>
+
+<p>The thing is, that doesn&#8217;t work now for RSS&#8212;but not because of anything special to RSS, it&#8217;s because feed generators don&#8217;t always produce well-formed XML. There&#8217;s no reason to expect PEAW feed generators would be any different. (Both RSS and PEAW require well-formedness. No difference there.)</p>
+
+<p>The single most common cause of non-well-formedness that I see is unencoded ampersands. They appear in a feed as &amp; rather than as &amp;amp;. This is most often in &lt;title>s.</p>
+
+<p>In my experience this most often afflicts larger publications, not weblogs using Movable Type or Radio or whatever. My guess is it&#8217;s because these larger publications have their own in-house systems. Those systems don&#8217;t get tested the way weblog systems get tested. A weblog system will have many thousands of users, but an in-house system has just one user (the publication). (I mean user in the sense of publisher.)</p>
+
+<p>Another thing about these larger publications is that their feeds are often very popular. So when one is non-well-formed, I get a ton of bug reports about it until they fix it.</p>
+
+<p>Actually, that used to happen, but NetNewsWire has gotten progressively better about dealing with the ampersand problem, so I don&#8217;t get so many bug reports.</p>
+
+<p>According to Tim aggregators should consider it a fatal error and not process these feeds. If I agreed, NetNewsWire users would pay the price.</p>
+
+<p>Tim writes: &#8220;Granted that the RSS legacy necessarily required the use of liberal parsers, but hey, that was then, we have better tools now.&#8221;</p>
+
+<p>Setting aside the note about &#8220;the RSS legacy,&#8221; which isn&#8217;t relevant to the issue of well-formedness, I want to note that though we indeed &#8220;have better tools now&#8221; they aren&#8217;t evenly distributed.</p>
+
+<p>And, ironically and interestingly, John Q. NewToBlogging has better feed-generating tools than many of the large publications.

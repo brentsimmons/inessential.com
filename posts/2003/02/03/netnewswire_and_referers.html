@@ -1,0 +1,11 @@
+@dbid 2357
+@title NetNewsWire and referers
+@pubDate Mon Feb 03 11:22:27 -0800 2003
+@modDate Mon Feb 03 11:22:27 -0800 2003
+There has been some notice&#8212;at <a href="http://writetheweb.com/Members/edd/Articles/2003-02-rss">WriteTheWeb</a>, <a href="http://www.kottke.org/03/01/030130rss_readers_.html">Jason Kottke&#8217;s weblog</a>, <a href="http://www.jayallen.org/journey/2003/01/using_and_abusing_the_referrer_field">Jay Allen&#8217;s weblog</a>, and probably other places&#8212;that RSS newsreaders are often guilty of sending a referer when no referer should be sent.</p>
+
+<p>What I propose to do&#8212;and what I doubt anyone will disagree with&#8212;is to make it so that NetNewsWire does <em>not</em> send a referer when reading an RSS feed.</p>
+
+<p>The User-Agent string will be revised to include the URL of the home page of the software, which is what some spiders do.</p>
+
+<p>Unless someone talks me out of it (which I doubt will happen), these changes will appear in the next releases of both the lite and pro versions.

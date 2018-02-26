@@ -1,0 +1,32 @@
+@dbid 1027
+@title 10/31/00
+@pubDate Thu Nov 02 11:17:39 -0800 2000
+@modDate Thu Nov 02 18:28:32 -0800 2000
+<p><a href="http://www.cwi.nl/~jack/macpython.html">MacPython 2.0</a> has been released. Also, here&#039;s <a href="http://tony.lownds.com/macosx/">Python for OS X</a>.</p>
+
+<p>The <a href="http://www.darwinfo.org/faq.shtml">Unofficial Darwin FAQ</a>. If you want to lift the hood on OS X, this is a good starting place.</p>
+
+<p><a href="http://www.classicmenu.com/">Classic Menu</a> -- Apple menu and processes menu for OS X. I&#039;m considering it.</p>
+
+<p><a href="http://www.three-2-one.com/ID3X/">ID3X</a> 1.0b1 is a freeware ID3 info editor for Macs.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>Carbon porting tip: if your app is already using Appearance Manager calls that came in with OS 8, then porting to Carbon is easier. Case in point: there was a bug with scrollbars. We were deactivating them using System 7 routines. Which is fine, nothing wrong with that -- except it didn&#039;t work right on OS X. (What happened was that they disappeared entirely, never to return.) So substitute <a href="http://developer.apple.com/techpubs/carbon/HumanInterfaceToolbox/ControlManager/Control_Manager/Functions/DeactivateControl.html">DeactivateControl</a>, which came in with Appearance Manager 1.0, and we&#039;re in business.</p>
+
+<p>So the lesson is: if some control is being weird, remember the Appearance Manager. A bonus: you can often do in one call what used to take several calls.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>There are some books on my shelves I haven&#039;t read yet. Last night I started reading <a href="http://shop.barnesandnoble.com/booksearch/isbnInquiry.asp?isbn=0679725229">Ada</a> by Nabokov. It&#039;s one of the fattest books you could ever hope to read -- 626 pages in a hardback edition.</p>
+
+<p>I paid $1.49 for it.</p>
+
+<p>How did I get it so cheap? See, I used to work for Goodwill as a book pricer. My job was sorting through all the books that came in, throwing out the ones in bad shape (most of them), and pricing the remainder. $1.49 was a high price; most books were priced at less than a dollar. So it was me, I set the price at $1.49. It still has the little green Goodwill price sticker inside the front cover that I placed there.</p>
+
+<p>I couldn&#039;t just keep books that I wanted; I&#039;d make a mental note of it, then after work go to the books section in the store and try to find it. It usually took a few days between me pricing a book and its appearance on the shelves. But given that there was very little organization in the books section, I&#039;d have to browse the whole thing every day until I found the book I was looking for.</p>
+
+<p>You&#039;d think -- well, how many people shopping at Goodwill are Nabokov fans? What happens is that book collectors and used-book stores send people to Goodwill every day, looking for bargains. (I&#039;m sure they find lots of bargains.) So the book section got regular comb-overs by people other than me. I was lucky to snag Ada; there were plenty of other books I struck out on.</p>
+
+<p>Only now, years later, am I actually getting around to reading it. But I&#039;m glad I have it. So far I like it.
+</p>

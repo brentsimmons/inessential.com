@@ -1,0 +1,29 @@
+@dbid 2628
+@title RSS and links and permalinks
+@pubDate Thu Sep 11 18:01:15 -0700 2003
+@modDate Thu Sep 11 18:01:15 -0700 2003
+With RSS feeds and links, there are two schools of thought:</p>
+
+<p>1. The link should be an external link—it should point to whatever the item is linking to. For instance, if an item links to an article on Example.Com News, then the link should point to that article.</p>
+
+<p>2. The link should be an internal link—it should be the permalink for the item. In other words, it should link to the page on the site that is the permanent home for the weblog entry that links to the article on Example.Com News.</p>
+
+<p>I myself do it two ways: inessential.com links are internal permalinks; ranchero.com links are external. The reason for that is the two weblogs are different in character. On inessential.com I’m usually talking about something. On ranchero.com I’m pretty much just linking to something. (Or Sheila is linking to something—she edits ranchero.com too.)</p>
+
+<p>But people tend to think that one way is right and the other way is wrong.</p><h4>Newsreaders have a choice</h4><p>So here’s where it gets interesting—feeds often contain both links. The external link is either in the link item or can be gathered from the description. The permalink is either the guid or the rdf:about link. (And sometimes the link item is a permalink.)</p>
+
+<p>So, then, you have a situation where newsreaders can decide which link to prefer. NetNewsWire has always preferred the external link over the permalink, based on my thinking (a year-and-a-half ago) that this is more intuitive, it’s what people expect.</p>
+
+<p>Why did I think that? Say you’re reading a weblog entry about some other cool page somewhere. You want to check out that cool page, so you do an open-in-browser in NetNewsWire.</p>
+
+<p>If, instead of opening that cool page, your browser opens the web version of the post you were just reading, then it seems like an extra step. Why would you want to read it a second time? And then have to find the link to the cool page? It takes up time and bandwidth.</p>
+
+<p>However, there are situations where the permalink is absolutely the right thing to want. If a feed provides just summaries, you want the permalink to take you to the full version, so you can read the whole thing. Or if you want to point to that person’s weblog entry on your own weblog, you want the permalink, not the external link.</p>
+
+<p>I’m neutral on these two schools of thought: I just want to do what’s best for NetNewsWire users.</p><h4>Should NetNewsWire prefer permalinks?</h4><p>So the question is: should NetNewsWire change to prefer permalinks?</p>
+
+<p>I’d really <em>hate</em> to do a new pref. (I’d rather get rid of prefs than add new ones.) Better to make the right choice and stick to it.</p>
+
+<p>Before writing all this, I tried it here in the lab. And I didn’t like it for some feeds (ranchero.com especially), but for others I liked it better than how it works now.</p>
+
+<p>What do you think?

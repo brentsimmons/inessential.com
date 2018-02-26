@@ -1,0 +1,127 @@
+@dbid 3291
+@title How to manipulate me (or, Tuesday Whipper-Snapping)
+@pubDate Sat Apr 15 16:44:21 -0700 2006
+@modDate Sat Apr 15 16:44:21 -0700 2006
+If you read my weblog, there’s a good chance you use my software—and there’s a good chance you’d like me to do something. Something specific—fix a particular bug, add a particular feature.</p>
+
+<p>How do you make it more likely that I’ll do that thing you want me to do? Here’s how to manipulate me....
+</p>
+<h4>Mental preparation</h4>
+<p>
+You can’t just go into it blind. Getting someone to do something first requires being able to see things from their side.</p>
+
+<p>Imagine you’re in my shoes: you’re me, for a minute. Think about feature requests, for example—you have a list several hundred items long of really, really good ideas. You’ve heard pretty much everything multiple times, though now and again you do hear new ideas. Which just makes the list longer!</p>
+
+<p>Then of course there are bugs to fix, schedules to meet, tests to run, docs to update, user interfaces to design, lots and lots of things. Most of your time is spent just sitting in a chair, coding, because that’s the only way things get done.  (Oh, and then there’s email. And writing blog posts. And so on.)</p>
+
+<p>Okay, to put it in a nutshell—the input is like a firehose, and there’s a ton of work to do, and both things are <i>always</i> true.
+</p>
+<h4>Back to you being you</h4>
+<p>
+Enough of you being in my shoes... here are a few things that don’t work (at least, not anymore ;).</p>
+
+<p><b>The “just one thing” maneuver</b></p>
+
+<p>This is the one where if I did “just one thing” then you’d _____ (insert something good). This doesn’t work because, well, I know you really want more than one thing—or you will, anyway. And of course there are lots of people who want just one thing—but it’s a different “just one thing” for each person.</p>
+
+<p><b>The “I consider the lack of feature x a bug” ploy</b></p>
+
+<p>When you’d like to see a feature, you can’t make it happen faster by telling me you consider the lack of a feature a bug. It’s clever, yes, but not the nth time. I really do classify stuff by bugs and features, and a feature really is a feature. (Yes, some features are obvious to-dos, but they’re still features.)</p>
+
+<p><b>The “surely it must be easy for a developer like you” scheme</b></p>
+
+<p>This one almost works, but I’ve grown immune. (Slowly, over many years.) Very few things are easy. Quite often the <i>coding</i> is easy—the actual coding is one of the easier parts of the job. It’s the user interface design and software architecture that’s harder. Many of the “easy” requests aren’t easy at all. (Some of them require advanced artificial intelligence—and raw computing horsepower—not seen outside the wreckage of the Roswell craft. “Easy” often means “easy to a human”—and, much as I love my Mac, no amount of ardor will give it human intuition.)</p>
+
+<p><b>The “maybe you should put it to a vote” finagle</b></p>
+
+<p>I’ve learned not to take that as an insult. It’s not meant that way. I used to think the person was besmirching my ability to determine what’s best for the product based on what I think and the feedback I get. I’ve learned that lots of software developers do in fact take votes from users, and that’s cool—it’s just that I get so much feedback already that setting up voting means more work with not much added benefit. I already know what people are asking for the most.</p>
+
+<p><b>Being mean</b></p>
+
+<p>Okay, this one is hugely rare—Mac users being the way they are. (Super-nice folks!) But now and again someone does come across as less than polite. It doesn’t work. I take the bug or request seriously, but I’m not going to give something a higher priority just because the person was rude. (Better to butter me up. Don’t worry about going too far—you <i>can’t</i>. ;)
+</p>
+<h4>The secret formula</h4>
+<p>
+Now I’ll tell you straight up how to manipulate me: save me time.</p>
+
+<p>Time is so precious, it’s everything.
+</p>
+<h4>Saving time with bug reports</h4>
+<p>
+Consider bug reports. What’s the hardest thing about a bug report? Almost never is it actually fixing the bug that’s hard. (Sometimes, but not usually.) The hard part is <i>reproducing</i> the bug—that is, understanding what’s going on and being able to make it happen at will.</p>
+
+<p>Once I understand a bug and can make it happen, I can fix it.</p>
+
+<p>Good bug reports contain as much detail as possible and are specific. <i>Generalizing</i> and leaping to conclusions in a bug report is not helpful and is usually incorrect.</p>
+
+<p>For instance, I’ve had bug reports like this: “NetNewsWire doesn’t support UTF-8.”</p>
+
+<p>Well, of course it does. I have no idea what the person is seeing and why he reports this bug. I end up having to play 20 questions, which is a waste of my time and his.</p>
+
+<p>In the end we get it narrowed down to the actual bug—which (for instance) is that the descriptions for a specific feed show as garbage characters rather than the expected characters. Imagine how it would have helped to know the URL of the feed and the specific problem in the first place! (This particular class of bugs, by the way, is usually bugs in the feeds rather than NetNewsWire—but I still check out each report.)</p>
+
+<p>The best bug reports follow this form:</p>
+
+<p>1. What I did. (With as much specific detail as possible. Including URLs of feeds or URLs of weblogs when appropriate!)</p>
+
+<p>2. What I expected to have happen. (Again, with detail.)</p>
+
+<p>3. What actually happened. (With detail.)</p>
+
+<p>Things like screen shots can really help, too—as long as you also use text to explain what’s wrong.</p>
+
+<p>(Why is step #2 important? Because some bugs are <i>expectation</i> bugs. That is, it’s working fine, but you expected something else to happen. Expectation bugs sometimes point to a user interface design or documentation bug. But not always.)</p>
+
+<p>There are two other things that can be super helpful.</p>
+
+<p>1. Send crash logs if the software crashes.</p>
+
+<p>When you send a crash log to Apple, it doesn’t get to me. Until NetNewsWire and MarsEdit have a send-crash-log feature (one of those hundreds of good ideas), you can find the crash logs on disk at <code>[your home folder]/Library/Logs/CrashReporter/[AppName].crash.log</code>.</p>
+
+<p>2. Run sample reports.</p>
+
+<p>If it seems like the software is using the CPU when you don’t expect it to, you can run a sample report and send me the report.</p>
+
+<p>Launch Activity Monitor (<code>/Applications/Utilities/Activity Monitor.app</code>), select the app in the main window, then choose <span class="menuPath">View > Sample Process</span>, then email the report to support at newsgator. (Also include any details you can think of, such as: this happens every time I do _____.)</p>
+
+<p>(Then, if you’re talking about NetNewsWire, disable plugins and JavaScript for news items and web pages, because that’s probably what’s causing the CPU usage. Seriously.)</p>
+
+<p>Sample reports are great because they let me know what the software was actually doing. No guesswork—facts, which saves me tons of time.
+</p>
+<h4>Saving time with feature requests</h4>
+<p>
+Most people think they’re like most other people most of the time.</p>
+
+<p>And they’re right—except when it comes to software.</p>
+
+<p>The first thing to know when writing feature requests is that, despite what your intuition tells you, despite your experiences in the rest of your life, <i>you are not the representative user</i>. You are specifically you, an individual, with your own ideas and needs and wants. (It’s a Good Thing! Don’t be scared! I’m a doctor, and I’m here to help!)</p>
+
+<p>So... let’s imagine a feature: Tuesday Whipper-Snapping.</p>
+
+<p>It may seem obvious that Tuesday Whipper-Snapping is a slam-dunk. Surely it’s easy to do, surely every user wants Tuesday Whipper-Snapping, surely that would take the software to the next level—surely it’s a <i>bug</i>, really, that Tuesday Whipper-Snapping isn’t <i>already in there</i>.</p>
+
+<p>Say I agree that Tuesday Whipper-Snapping is a good idea. I add it to the list: it’s now the 347th good idea.</p>
+
+<p>The trick, though, is getting me to think it’s a <i>super</i> good idea.</p>
+
+<p>The trick is <i>not</i>, as you might expect, to convince me that it’s something lots of people would want. The trick is to tell me how <i>you</i> would use it, how it would benefit <i>you</i>, how it solves a problem that <i>you</i> have.</p>
+
+<p>Forget about other people—let me do any extrapolating. (It’s my job.) Instead, just tell me a great story about how this feature would be cool for <i>you</i>. (It goes without saying, by the way, that it’s the “just one thing” you have to have. ;)</p>
+
+<p>Also remember that, lots of times, software developers pay more attention to the problem being solved than to the exact feature being requested.</p>
+
+<p>Think of Expos&eacute;—I doubt the folks at Apple had feature requests that read like this, “Please make it so that I hit a hot key and all my windows fly around and make it so I can mouse-over them and pick the one I want.” Instead, they probably had feature requests like this: “Please add a global window menu to the Dock so I can more easily pick a window from any app.”</p>
+
+<p>But they listened to the problem and came up with another solution, one that probably nobody had requested specifically, but that is really cool.</p>
+
+<p>Sometimes that happens, sometimes not: I’m just saying that telling a good story is important, because my goal is really to solve problem, not just implement specific requests.</p>
+
+<p>If you tell me good, specific stories about <i>you</i> and the software and the problem you want to solve, then I’ll know <i>why</i> the feature is important, and that makes it more likely I’ll get to it sooner.
+</p>
+<h4>That’s it</h4>
+<p>Have fun with your new Mac Developer Real Life Action Figure! Just remember to treat him right and don’t leave him out in the rain.</p>
+
+<p>(Or, you know, <a href="http://www.crazyapplerumors.com/?p=580">just boot into Windows</a>. ;)
+</p>
+<h4>PS 18 days</h4>
+<p>If I’m so busy coding, how do I have time to write such a huge post as this? It took me 18 days, a little at a time. (And maybe it reads that way, but I don’t have time for editing...)

@@ -1,0 +1,57 @@
+@dbid 3271
+@title NetNewsWire 2.1: Performance
+@pubDate Sat Mar 18 16:27:17 -0800 2006
+@modDate Sat Mar 18 16:27:17 -0800 2006
+When I started work on NetNewsWire 2.1, I had two main things in mind: NewsGator syncing and performance. I’ve talked a bit about <a href="http://inessential.com/?comments=1&amp;postid=3267">syncing</a>, so now I’ll talk about performance.
+</p>
+<h4>No silver bullet</h4>
+<p>
+Except in the simplest or most specialized applications, there is no “silver bullet,” one place to optimize your code that makes everything faster.</p>
+
+<p>Imagine, for instance, a web browser with super-fast network but super-slow page layout.</p>
+
+<p>Or imagine an email app with a super-fast database—but the text editor can’t keep up with your typing.</p>
+
+<p>Fact is, performance issues are <i>specific</i>—usually even more specific than the above. For instance, the hypothetical text editor is slow only with HTML editing but not when editing plain text. And then, it’s slow only if you’re using multiple font sizes and have an embedded graphic.</p>
+
+<p>So: there aren’t any silver bullets. Performance is a matter of reproducing the exact performance issues people run into, then making those specific things fast.
+</p>
+<h4>Sometimes there might be a silver bullet, sort of</h4>
+<p>
+Okay, there was one silver bullet, sort of, here: just producing a Universal binary made it faster on Intel Macs. But that’s it.
+</p>
+<h4>Shark!</h4>
+<p>
+So what I did was identify a few places where people were reporting performance bugs the most.</p>
+
+<p>Then I used this super-cool tool from Apple called <a href="http://developer.apple.com/tools/shark_optimize.html">Shark</a>.</p>
+
+<p>Want to know what the heck is happening? Run Shark while it’s happening. (I find “Tree (Top-Down)” view most useful most of the time.)</p>
+
+<p>Shark is utterly and totally my good friend.
+</p>
+<h4>Made some stuff faster</h4>
+<p>
+One thing I ended up having to do was rewrite almost completely the browser tabs manager. In 2.0 and 2.0.1, if you had a large list of browser tabs (in the hundreds), startup could take <i>minutes</i>, which is crazy.</p>
+
+<p>In 2.1, a large list of browser tabs doesn’t affect startup time. (Oh, maybe a fraction of a second.) This was my top priority, and I was glad to nail it so completely.</p>
+
+<p>(I go into more details about performance fixes in the <a href="http://ranchero.com/netnewswire/changenotes/netnewswire2.1b16.php#performance">change notes for 2.1b16</a>.)
+</p>
+<h4>Made other stuff seem faster</h4>
+<p>
+There’s an art to performance fixes. Some stuff you make faster, other stuff you make <i>seem</i> faster.</p>
+
+<p>Performance when marking all as read was one of those things. I was able to optimize it a little—but mainly it was bound by code that isn’t mine (SQLite code), so I couldn’t optimize it past a certain point.</p>
+
+<p>How do you make it <i>seem</i> faster? The answer in this case was to use another thread, so that it doesn’t block the user interface. (When the user interface is blocked, that’s when you get the spinning beach ball.)</p>
+
+<p>Problem solved. Now it seems instant.
+</p>
+<h4>My favorite couple posts</h4>
+<p>
+Avi Drissman wrote about NetNewsWire performance issues on <a href="http://www.drissman.com/blog/archives/2006/02/24/netnewswire_hangs.html">his weblog</a> a few weeks ago. I invited him to join the private beta, which he did.</p>
+
+<p>And <a href="http://www.drissman.com/blog/archives/2006/03/17/netnewswire_beta.html">now he writes</a> about how it’s “amazingly fast” and doesn’t lock up.</p>
+
+<p>I love posts like that. You have no idea. That’s where my motivation comes from—making things people like. (Thanks, Avi!)

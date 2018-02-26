@@ -1,0 +1,27 @@
+@dbid 2163
+@title Decentralization
+@pubDate Wed Sep 25 11:00:44 -0700 2002
+@modDate Wed Sep 25 11:00:44 -0700 2002
+A suggestion I’ve heard several times is that NetNewsWire should get the sites for the Sites Drawer from a file stored on my server. (Currently it gets it from a file, SourceList.plist, stored in the application bundle.)</p>
+
+<p>Then, when NetNewsWire starts up, it would download the file and populate the Sites Drawer.</p>
+
+<p>It’s a good suggestion, and two years ago I probably would have done it this way.</p>
+
+<p>But here’s why I won’t do it now.</p>
+
+<p>1. I’m ruthless about minimizing potential sources of failure. If the download fails for some reason—such as that my server is down—then one has no sites in the Sites Drawer, and that’s unacceptable.</p>
+
+<p>My server should be able to go down without affecting NetNewsWire’s functionality. The worse that should happen is that you can’t get news from my sites.</p>
+
+<p>2. It’s a bandwidth and time issue. The file size is up to 136K, and it will keep growing. Downloading that file means more bandwidth is used by me and, more importantly, by NetNewsWire users. I want to minimize the amount of bandwidth used, not maximize it.</p>
+
+<p>3. Some users are paranoid about contacting the vendor’s server. I wouldn’t use the connection in some nefarious way—but still, if there’s no connection at all, that’s one less thing to be paranoid about. You can watch your traffic and see that NetNewsWire contacts my server to read RSS feeds only (that is, if you’re subscribed to any of my feeds).</p>
+
+<p>However...</p>
+
+<p><a href="http://simone.blogs.it/">Simone Bettini</a> emailed me an excellent idea. The idea is that other people could maintain smaller lists of feeds on specific subjects, and that there would be a way for a NetNewsWire user to download and incorporate any of these lists in their Sites Drawer.</p>
+
+<p>For instance, one might have a list of Italian news sources, or baseball news sources, etc.</p>
+
+<p>Of course, the challenge is the user interface. Actually implementing something like this is a piece of cake. UI suggestions are of course welcome.

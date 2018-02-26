@@ -1,0 +1,75 @@
+@dbid 3463
+@title NetNewsWire and other desktop apps: your RSS router
+@pubDate Tue Jan 22 21:20:04 -0800 2008
+@modDate Tue Jan 22 21:34:50 -0800 2008
+One of my favorite features of NetNewsWire is how it works with a bunch of other desktop apps.</p>
+
+<p>The idea is this: news comes in to NetNewsWire, and then you route stuff to wherever it should go.
+</p>
+<h4>Twitterrific: Breaking news network</h4>
+<p>
+One day it became obvious that Twitter was how people got breaking news—it appeared in <a href="http://iconfactory.com/software/twitterrific">Twitterrific</a> first.</p>
+
+<p>How could NetNewsWire compete with that? Add some kind of super-fast-breaking news channel thingy? Weeeeeellllll no. I mean, you’ve already got Twitterrific, so why.</p>
+
+<p>Instead I made it a cool combo—you’re reading something (a news item or web page) in NetNewsWire, type ctrl-T, and then the URL appears in Twitterrific, all ready for the tweeting.</p>
+
+<p><img src="http://inessential.com/images/sendToTwitterrific.png" alt="Twitterrific screenshot" height="61" width="319" /></p>
+
+<p>The baseball fan in me thinks of it as a double-play combination—NetNewsWire to Twitterrific to Twitter. Inning over.</p>
+
+<p>(Note: the News > Send to Twitterrific command appears only if you have Twitterrific and it’s 2.1 or greater.)
+</p>
+<h4>MarsEdit and ecto</h4>
+<p>
+I’m writing this post in <a href="http://www.red-sweater.com/marsedit/">MarsEdit</a>, which I adore. Lots of folks adore <a href="http://infinite-sushi.com/software/ecto/">ecto</a>.</p>
+
+<p>I don’t have to tell you the advantages of using a desktop weblog editor—local storage, scriptability, offline drafts, performance, one interface for all your weblogs, etc.—you know this stuff. (And if you don’t know, you should find out.)</p>
+
+<p>The News > Post to Weblog command is how you get news items and web pages from NetNewsWire to your weblog. This way NetNewsWire doesn’t have to have a built-in weblog editor: you can mix and match, choose the weblog editor you prefer.</p>
+
+<p>(Note to anyone who’s new to NetNewsWire: the original version of NetNewsWire had a built-in weblog editor, which later was broken out and mostly rewritten and hugely expanded and turned into MarsEdit, which was later sold to Red Sweater Software. Before MarsEdit 1.0 shipped I made sure NetNewsWire would work with any weblog editor that supports a <a href="http://ranchero.com/netnewswire/developers/externalinterface.php">simple Apple event interface</a>.)
+</p>
+<h4>VoodooPad</h4>
+<p>
+Got <a href="http://www.flyingmeat.com/voodoopad/">VoodooPad</a>? It’s a desktop wiki—you write stuff in it, save stuff in it.</p>
+
+<p>If you have VoodooPad, then a Send to VoodooPad command appears in the News menu.
+</p>
+<h4>del.icio.us choices</h4>
+<p>
+For posting to del.icio.us you choose from an external browser, NetNewsWire’s browser, <a href="http://www.scifihifi.com/cocoalicious/">Cocoalicious</a>, <a href="http://www.fromconcentratesoftware.com/Postr/">Postr</a>, <a href="http://codesorcery.net/pukka/">Pukka</a>, and <a href="http://www.happyapps.com/webnotehappy/">WebnoteHappy</a>.</p>
+
+<p>In fact, the command is somewhat mis-named, because some of these apps do things other than posting to del.icio.us.</p>
+
+<p><img src="http://inessential.com/images/deliciousPopup.png" alt="del.icio.us app popup menu screenshot" height="287" width="557" />
+</p>
+<h4>iCal and Address Book</h4>
+<p>
+When you come to a web page or news item that includes calendar or contact <a href="http://microformats.org/">microformats</a> (such as at <a href="http://upcoming.yahoo.com/">upcoming</a>), NetNewsWire presents popup menus at the bottom of the window: you can add an event to iCal (as in the screen shot below) or add contact information to Address Book.</p>
+
+<p><img src="http://inessential.com/images/microformats_ical.png" alt="microformats screenshot" height="101" width="276" /></p>
+
+<p>Also, if a feed includes an email address for the author, you can add the author’s email address to Address Book (via News > Add Author to Address Book).
+</p>
+<h4>Mail</h4>
+<p>There are two ways to send news items and web pages via email. You can send just the URL, which works with any email client (Mail, Mailsmith, Entourage, and so on).</p>
+
+<p>Or you can send the page as HTML mail, which works with Mail.</p>
+
+<p><strike>These commands, like the others, are in the News menu.</strike> These commands appear in the File menu rather than in the News menu, for the simple reason that that’s where the commands appear in Safari.</p>
+
+<p><img src="http://inessential.com/images/sendContentsViaMail.png" alt="Mail screenshot" height="517" width="363" />
+</p>
+<h4>iPhoto</h4>
+<p>
+When an image appears in a news item or web page, you can ctrl-click (or right-click) on the image and choose Add Image to iPhoto Library. Easy.
+</p>
+<h4>Scripting</h4>
+<p>Last thing—but the most powerful thing. NetNewsWire is scriptable via AppleScript, which means you can use or write scripts for things like <a href="http://snippets.dzone.com/posts/show/5001">sending items to Yojimbo</a>, <a href="http://merecat.org/comp/mac/dev/applescript/netnewswire-blogroll-with-applescript.html">building a blogroll</a>, and plenty more.</p>
+
+<p>There’s no way we can figure out, in advance, everything that everybody might want to do—so we make NetNewsWire scriptable, so people can add the features they want. (And we pay attention to the kinds of scripts people write, since actually writing a script is a pretty strong feature request.)</p>
+
+<p>NetNewsWire even has the concept of scripted feeds—it can run AppleScript or shell (Python, Ruby, etc.) scripts that generate RSS. Anything that happens on your machine, you can probably create a feed for it.</p>
+
+<p>See the <a href="http://ranchero.com/netnewswire/resources/scripts.php">NetNewsWire Scripts</a> page for more scripts written by NetNewsWire users.

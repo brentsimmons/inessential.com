@@ -1,0 +1,16 @@
+@dbid 2913
+@title NetNewsWire Save Bookmark In Omniweb AppleScript
+@link http://toxicsoftware.com/blog/index.php/weblog/netnewswire_save_bookmark_in_omniweb_applescript/
+@pubDate Sat Sep 25 14:14:28 -0700 2004
+@modDate Sat Sep 25 14:14:28 -0700 2004
+Jonathan Wight posted a script that saves the current browser page in NetNewsWire as a <a href="http://toxicsoftware.com/blog/index.php/weblog/netnewswire_save_bookmark_in_omniweb_applescript/">bookmark in OmniWeb</a>.</p>
+
+<p>I love scripting. The latest beta of NetNewsWire is more scriptable than 1.x—and it’s a safe bet that it will get more and more scriptable in later versions.</p>
+
+<p>One of the common scripting feature requests we got was a way to export subscriptions as OPML, so we added an export subscriptions command. You can choose whether or not it should be flat or with groups. This way you could automate a blogroll, for instance, or export your OPML file to share it with another aggregator.</p>
+
+<p>We added a bunch of other things too—including the ability to script the browser, as Jonathan found.</p>
+
+<p>One script I’d love to see someone write is an Email-this-Story script. It should pay attention to whether you’re looking at a news item or a web page. This is a common feature request, and it’s the kind of thing that a script can do quite well: there’s no need to wait for us to add the feature.</p>
+
+<p>Another feature some people have asked for is a way to launch their weblog editor—MarsEdit, ecto, etc.—from within NetNewsWire but <i>without</i> creating a new post. That’s pretty easy to do: write a one-line script that reads <code>tell application "MarsEdit" to activate</code>. Save it and put it in NetNewsWire’s Scripts folder. (If you use another weblog editor, replace the name MarsEdit with your weblog editor’s name in the script.)

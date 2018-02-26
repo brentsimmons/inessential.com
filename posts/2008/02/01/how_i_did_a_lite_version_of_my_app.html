@@ -1,0 +1,43 @@
+@dbid 3476
+@title How I did a Lite version of my app
+@pubDate Fri Feb 01 17:06:47 -0800 2008
+@modDate Fri Feb 01 17:13:35 -0800 2008
+I figured it would be worth noting how I managed full and Lite versions of the same app, for the benefit of any Cocoa programmers considering the same thing.</p>
+
+<p>It’s pretty simple, actually.</p>
+
+<p>1. I had a separate target (named NetNewsWire Lite) inside the same project. (The easiest way to get started is probably to duplicate your existing target.)</p>
+
+<p>2. In the Xcode toolbar I made sure the Active Target popup was visible. (So I could switch between targets easily.)</p>
+
+<p>3. In the Groups & Files list, I enabled the Target Membership column, so I could set which files were included in which targets. (Ctrl-click, or right-click, on the Groups & Files header.)</p>
+
+<p>4. Each target had a separate Prefix Header setting. (proprefix.h and liteprefix.h)</p>
+
+<p>5. Instead of just defining #LITE in the prefix header, I did separate #defines per feature. (Not for every feature, but for features that may not appear in the Lite version.)</p>
+
+<p>For instance, proprefix.h has lines like this:</p>
+
+<p><code>#define FIND 1<br />
+#define COLUMN_DATE 1<br />
+#define COLUMN_SUBJECT 1</code><br />
+<em>etc.</em></p>
+
+<p>While liteprefix.h has lines like this:</p>
+
+<p><code>#define FIND 0<br />
+#define COLUMN_DATE 1<br />
+#define COLUMN_SUBJECT 0</code><br />
+<em>etc.</em></p>
+
+<p>Then, in the right places in the code, I used those.</p>
+
+<p><pre>#if FIND
+    [do findy things here]
+#endif</pre></p>
+
+<p>The reason to do this on a per-feature basis is because it makes it easy to change your mind. For instance, one day I decided that the Lite version should get a date column, and I just edited liteprefix.h and rebuilt.</p>
+
+<p>Easy? Yep.</p>
+
+<p><em>Update:</em> I bet I got the per-feature-#defines from working on <a href="http://frontierkernel.org/">Frontier</a>.

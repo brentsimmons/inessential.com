@@ -1,0 +1,43 @@
+@dbid 2445
+@title Short-term NetNewsWire road map
+@pubDate Thu Mar 13 12:13:59 -0800 2003
+@modDate Thu Mar 13 12:16:09 -0800 2003
+Here&#8217;s the short-term road map for NetNewsWire...</p>
+
+<p>NetNewsWire 1.0.1 will probably be released Friday. This release is mainly about fixing crashing bugs&#8212;but it also fixes some weblog editor bugs and makes some other improvements here and there.</p>
+
+<p>The big change in 1.0.1 is under-the-hood&#8212;it&#8217;s the brand-new XML-RPC client code that&#8217;s used by the weblog editor. It replaces the system&#8217;s built-in code that was a source of crashes in the weblog editor. (It&#8217;s <a href="http://ranchero.com/cocoa/xmlrpc/">available</a> under the open source BSD license, so other Cocoa developers can use it too&#8212;and help improve it if they want to.)</p>
+
+<p>Another change&#8212;less major in terms of code, but still nice&#8212;is that the RSS parser is more forgiving of unencoded ampersands, which is the most common cause of feed-reading failures.</p>
+
+<p>(I&#8217;ll do a what&#8217;s-new-in-1.0.1 page that explains more of this in friendlier terms.)</p>
+
+<p>So&#8212;what&#8217;s next? What&#8217;s coming in 1.0.2?</p>
+
+<p>1.0.2 will have more under-the-hood changes: I plan to make frameworks out of some of the underlying code that doesn&#8217;t change much. For instance, the XML-RPC code will be in a framework, the RSS parser will be in a framework, the OPML parser will be in a framework, and so on.</p>
+
+<p>For non-developers... frameworks are like separate modules. They&#8217;re hidden from view unless you do a Show Package Contents on the app. As a user you wouldn&#8217;t notice the difference if code is in a framework or not. But it means two good things:</p>
+
+<p>1. It&#8217;s easier to maintain and test code that&#8217;s in frameworks. I can write test apps that are specific to a framework, and I can work on a framework separately from working on NetNewsWire, and only incorporate the updated framework when it&#8217;s ready.</p>
+
+<p>2. Some of these frameworks will be released as open source (BSD license) so that other developers can use them. Frameworks are easier to use and integrate than just raw source files.</p>
+
+<p>Okay, that&#8217;s pretty boring to most of you... So what else is coming in 1.0.2?</p>
+
+<p>More bug fixes. More small enhancements. And, finally, some new features.</p>
+
+<p>I haven&#8217;t decided yet which features yet are going into 1.0.2, but they&#8217;ll most likely be weblog editor features, such as:</p>
+
+<p>1. Allowing Radio users to specify that a post should <em>not</em> go on the home page.</p>
+
+<p>2. Supporting more Movable Type options.</p>
+
+<p>3. At least some minimal AppleScript support for the weblog editor&#8212;the ability to get and set the contents of the Title, URL, and Body fields. Lots of people want this so they can write scripts that initiate a new post in NetNewsWire.</p>
+
+<p>4. Support for uploading media objects (pictures, movies, etc.) to sites that support it. (I think Radio and Movable Type support this.)</p>
+
+<p>5. Some kind of <a href="http://www.feedster.com/">Feedster</a> integration. I don&#8217;t know what, yet, just that I like the idea. (Okay, this isn&#8217;t a weblog editor thing.)</p>
+
+<p><strong>Note:</strong> The above list is just my preliminary thoughts: the list of new features in 1.0.2 may change.</p>
+
+<p>Also&#8212;a question&#8212;what new features would you most like to see? If you had to pick just one, what would it be?

@@ -1,0 +1,67 @@
+@dbid 3406
+@title The end of “desktop vs. web apps”
+@pubDate Thu Apr 26 11:23:16 -0700 2007
+@modDate Thu Apr 26 11:35:50 -0700 2007
+Hybrid apps are no longer the future—they’re <i>now</i>.</p>
+
+<p>In my career I’ve heard lots of predictions—Apple will go out of business; soon there will be only six or seven websites; the browser is dead; we’ll all be running “thin clients”; Java will replace C/C++ everywhere—that I haven’t believed.</p>
+
+<p>The most recent is the prediction that desktop apps are dead, that soon <i>everything</i> will be a web app.</p>
+
+<p>I actually believe that’s correct, in a way—you’re going to see fewer and fewer desktop apps that know nothing about the internet.</p>
+
+<p>But the thing about software industry predictions is that they’re usually somewhere between dead wrong and partly right in a way. This particular prediction is partly right, in a way—but it misses out totally on all the <i>fun</i>.
+</p>
+<h4>A tour</h4>
+<p>
+What’s a web app, what’s a desktop app?</p>
+
+<p>Where does the code run? What kind of code is allowed to run? What kind of resources can the code access?</p>
+
+<p>In the case of web apps, some code runs on the server—and a bunch runs on the client, too. A browser—a desktop app—is implied. And that browser renders HTML, runs JavaScript, makes network requests, plays audio and video and Flash, stores some data locally, knows how to launch other apps, etc. Web apps run a bunch of code on your desktop: in fact, they don’t exist without a desktop app.</p>
+
+<p>And then, of course, you can trick out your browser (depending on which one you use) by installing some cool extensions—which then run on your desktop too, even though they’re all about the web.</p>
+
+<p>Well, then I think about Dashboard widgets, which are, essentially, little bits of browser chipped off and running in a special layer. They’re HTML plus JavaScript, just like web apps, but they’re like mini-web-apps stored locally.</p>
+
+<p>However, widgets can also contain Cocoa code and can access local resources. They can also have nothing at all to do with the web, even though they’re made of web dust.</p>
+
+<p>Then there are feed readers. They’re specialized browsers that access a certain type of structured data and display it in a structured way. (A feed is a mini-web-app with just one command: GET.) Like widgets and browsers, feed readers do their display with HTML and can run JavaScript and audio and video, whether or not the feed reader is a “desktop” or “web” app.</p>
+
+<p>iPhoto is perhaps a desktop app—except that I’ve installed <a href="http://connectedflow.com/flickrexport/">FlickrExport</a>, and iPhoto itself reads and writes RSS feeds. Similarly, iCal subscribes to calendars published via Google. My Address Book syncs over the web.</p>
+
+<p>Text editors know about FTP and can usually display HTML. <a href="http://www.codingmonkeys.de/subethaedit/">SubEthaEdit</a> even does collaboration over the network. <a href="http://flyingmeat.com/voodoopad/">VoodooPad</a> is a wiki—a web thing, clearly—that can generate websites, yet is a Cocoa app. <a href="http://plasq.com/skitch">Skitch</a> makes it super-easy to share locally-created images over the web.</p>
+
+<p><a href="http://www.red-sweater.com/marsedit/">MarsEdit</a> gives me one interface for a bunch of different weblog systems. <a href="http://www.adiumx.com/">Adium</a> does the same thing for chat, and uses HTML for display, even though it’s not a browser.</p>
+
+<p><a href="http://www.delicious-monster.com/">Delicious Library</a> talks to Amazon. <a href="http://www.panic.com/coda/">Coda</a> is clearly a web app, in the sense that it’s entirely about the web and does HTML, networking, and so on. <a href="http://desktop.google.com/mac">Google Desktop</a> lets you search your Gmail messages on your desktop. <a href="http://michael-mccracken.net/wp/?p=44">Webmail</a> is a special browser just for GMail. <a href="http://quicksilver.blacktree.com/">QuickSilver</a> is web-savvy, and it’s also pretty savvy about the files and apps on my hard drive.</p>
+
+<p>And then there’s iTunes. I can’t imagine wanting to store my songs anywhere but on my desktop, especially when I sync my iPod. But I also like the integration of the music store—which may not be HTML (I don’t know what it is), but it’s something conceptually similar. And of course the music store exists somewhere in the internet, even though the code to display and interact with it lives in iTunes. iTunes is a specialized web app container.
+</p>
+<h4>Look, it works the other direction too</h4>
+<p>
+If you haven’t checked out <a href="http://labs.adobe.com/technologies/apollo/">Apollo</a>, <a href="http://www.microsoft.com/silverlight/asp/default.aspx">Silverlight</a>, <a href="http://joyeur.com/2007/03/22/joyent-slingshot">Slingshot</a>, <a href="http://jerakeen.org/blog/2007/03/djangokit/">DjangoKit</a>, and <a href="https://addons.mozilla.org/en-US/firefox/addon/3002">POW</a>, you ought to.</p>
+
+<p>The idea behind these is to write web apps that run on your desktop.</p>
+
+<p>Here’s what the Joyent site says about Slingshot: “Joyent Slingshot enables Rails to break free of the browser. It breaks down the wall between a Web application and a desktop application without losing what makes a Web application great...”</p>
+
+<p>Well, that sounds pretty cool. I haven’t tried any of these yet, but it’s an exciting direction. (Aside: we did similar work at UserLand years ago. But that was then, and the world is slow to catch up.)
+</p>
+<h4>Last thing: Twitterrific</h4>
+<p>
+I’ve said before that I wouldn’t use Twitter were it not for <a href="http://iconfactory.com/software/twitterrific">Twitterrific</a>. None of my browsers can provide the user interface that Twitterrific provides: floating window, not in widget space, <i>doesn’t crash when my browser crashes</i>.</p>
+
+<p>The Twitter folks were smart to provide an easy-to-use <a href="http://groups.google.com/group/twitter-development-talk/web/api-documentation">API</a> that makes apps like Twitterrific possible. And Twitter works with IM and phones, and you can put a widget on your weblog, and who knows what all else.</p>
+
+<p>It’s smart because we live in a multiple-platform world—and in a world where different people have different tastes. There’s not one soda everybody drinks: there’s diet, and vanilla and cherry, and diet-vanilla-cherry, and caffeine-free. Plus root beer.
+</p>
+<h4>It’s a hybrid world</h4>
+<p>
+Rather than make a prediction—like “Look out! Hybrid apps are coming!”—I’m just recognizing what is true right now: hybrid apps are <i>here</i>.</p>
+
+<p>Anyone who wants to do everything in just one desktop app, the browser, can—provided they don’t mind giving up protected memory and all that modern goodness.</p>
+
+<p>But most folks are going to make app-by-app decisions, and developers are going to try a whole bunch of different approaches.</p>
+
+<p>If it looks like an exciting age of experimentation, that’s because it is.

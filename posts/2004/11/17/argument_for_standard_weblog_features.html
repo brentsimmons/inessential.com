@@ -1,0 +1,79 @@
+@dbid 2984
+@title Argument for standard weblog features
+@pubDate Wed Nov 17 17:32:37 -0800 2004
+@modDate Wed Nov 17 17:39:43 -0800 2004
+Ask any weblog editor author—<a href="http://blog.kung-foo.tv/">Adriaan</a> or <a href="http://fraserspeirs.livejournal.com/">Fraser</a>, for instance—and I bet they’ll tell you that weblog editing is surprisingly complex.</p>
+
+<p>Certainly I think it is, and I think we can and should do something about it.
+</p><h4>Why weblog editing is complex</h4><p>
+If you look at it from far away, it seems like writing a weblog entry and writing an email are about the same thing. You write some text—a few sentences, a few paragraphs, occasionally something longer—and send it somewhere, to another person or to a weblog.</p>
+
+<p>But if you look closer you notice that there’s a major difference in the attributes you can set in email versus a weblog entry.</p>
+
+<p>Email:</p>
+
+<p>From (usually implicit)<br />
+Subject<br />
+To<br />
+CC<br />
+BCC</p>
+
+<p>These are all text attributes which can be set in a text field. And all these attributes are supported everywhere: email apps don’t have to show and hide different attributes depending on what kind of SMTP server you use.</p>
+
+<p>On the other hand, take weblog entries:</p>
+
+<p>Title<br />
+URL<br />
+Weblog<br />
+Main category<br />
+Additional categories<br />
+Post to home page<br />
+Allow comments<br />
+Allow trackbacks<br />
+Trackbacks to send<br />
+Text formatting<br />
+Excerpt<br />
+Extended<br />
+Keywords<br /></p>
+
+<p>Here’s where complexity comes in—we’re a long way from typing some text, choosing a place to send it, and clicking a send button.</p>
+
+<p>There are not only more attributes, but they’re of different types. Some are simple yes/no fields (allow trackbacks), some allow one of multiple choices (text formatting), some allow multiple of multiple choices (categories), and some are whole new text views (extended entry).</p>
+
+<p>Not only are there more attributes, but <i>different weblog systems support different attributes</i>. And I think that’s a barrier to the growth of the weblog infrastructure.
+</p><h4>Converge, please!</h4><p>
+Wouldn’t it be cool if weblog systems supported a standard set of attributes? Forget the API for a moment (though that’s important too)—I’m talking about the <i>features</i> different systems support.</p>
+
+<p>The problem with that idea is that systems compete (in part) based on those features. Does system x support trackbacks? Does system y support keywords?</p>
+
+<p>Nevertheless, I believe the following points are true:</p>
+
+<p>1. We know what the superset of attributes is, and it’s been fairly stable for a while.</p>
+
+<p>2. A standard set of attributes is a standard that could evolve. Think of any other standard that has succeeding versions.</p>
+
+<p>3. Standards are a key to building infrastructure. Imagine if email had the same mess of competing attributes as weblogs. It wouldn’t be good.</p>
+
+<p>4. Weblog systems could still compete based on price, performance, license, extendability, support, hosting, extras (like photo galleries), support, usability of their browser-based UI, coolness of their templates, and so on.
+</p><h4>Some good news</h4><p>
+Some informal convergence appears to be happening around Movable Type. Recent versions of WordPress and Drupal, for instance, are working toward Movable-Type-compatibility, where they support the same attributes. (They’re not quite there yet, but they’re getting there.)</p>
+
+<p>However, lots of systems aren’t heading in that direction. Radio UserLand, for instance, has multiple categories like Movable Type but doesn’t have the concept of a primary category. (At least, this was true last time I looked.) And it has a post-to-home-page attribute that is, as far as I know, unique among systems.</p>
+
+<p>(Nothing against Radio, it’s just a convenient counter-example.)</p>
+
+<p>(And hey, my own home-grown system doesn’t even have categories at all.)
+</p><h4>Well, so...</h4><p>
+For real convergence to happen, something more than just an informal move on the part of some systems toward one implementation needs to happen.</p>
+
+<p>(To repeat: this isn’t about the various XML-RPC APIs versus the Atom editing API—this is about what you’re editing when you use those APIs.)</p>
+
+<p>I think it’s self-evident that infrastructure growth depends on standards. I think the next step in the maturity of weblog systems is to develop a standard set of attributes, so that writing software that works with weblog systems isn’t purely the province of crazy people who are willing to put up with this. (Why are there so few “universal” weblog editors and none that are truly universal?)</p>
+
+<p>We’ve seen the success of syndication. Just about every weblog system creates RSS and/or Atom files which are readable in every aggregator. (Imagine if aggregators only worked with certain publishing systems!)</p>
+
+<p>Doing the same thing for <i>writing</i> requires more than just agreeing on an API, it also means agreeing on the standard features of weblog systems <i>and implementing them</i>.</p>
+
+<p>It boils down to the difficulty of user interface: it’s more difficult than the plumbing. Having to generate different interfaces for different systems should not be a permanent situation.</p>
+
+<p>User interfaces cost money, in other words. And the more expensive it is to create the software infrastructure, the less of it there is.

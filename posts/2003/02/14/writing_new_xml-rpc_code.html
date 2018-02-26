@@ -1,0 +1,25 @@
+@dbid 2396
+@title Writing new XML-RPC code
+@pubDate Fri Feb 14 11:47:34 -0800 2003
+@modDate Fri Feb 14 12:05:36 -0800 2003
+Last night I started work on new XML-RPC code for NetNewsWire, to replace the system-supplied code it&#8217;s currently using. This will fix a bunch of weblog editor bugs.</p>
+
+<p>As I started work on this I was instantly reminded of why I love XML-RPC: it&#8217;s so simple and geometric and clean. My code reflects this. It practically writes itself.</p>
+
+<p>In comparison, parsing RSS is like walking across a field of broken glass.</p>
+
+<p>(And the glass has been heated to just below its melting point. And your hair is on fire.)</p>
+
+<p>I have a couple things going for me:</p>
+
+<p>1. I&#8217;ve been on good-friend terms with XML-RPC since even before its spec went public. As a former UserLand employee, XML-RPC is as familiar to me as my own socks.</p>
+
+<p>2. I have a bunch of experience already parsing XML using the CoreFoundation routines. I can re-use the knowledge gained by doing RSS and OPML parsers. (And even re-use some of the code.)</p>
+
+<p>A reasonable person might ask: Why not use Eric Kidd&#8217;s code or use the Python bridge? It seems like a good idea to use existing code rather than do it from scratch.</p>
+
+<p>There are a couple reasons:</p>
+
+<p>1. I&#8217;d write just as much code to integrate existing code as I would in writing a parser from scratch. There&#8217;s no savings in code written&#8212;and it would mean an extra unneeded layer, which means there&#8217;s more that could go wrong.</p>
+
+<p>2. Since I&#8217;ve already done a great deal of XML parsing already (RSS and OPML for instance) I already have a bunch of knowledge and code. Writing this code presents no challenges.

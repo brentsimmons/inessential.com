@@ -1,0 +1,15 @@
+@dbid 2164
+@title Control over browsers
+@pubDate Wed Sep 25 11:34:35 -0700 2002
+@modDate Wed Sep 25 11:34:35 -0700 2002
+Another very common NetNewsWire feature request is better control over what the browser does when it’s asked to open a URL.</p>
+
+<p>People want to specify that the browser should stay in the background, for instance. Or open every URL in a new window. Or never open new windows.</p>
+
+<p>The problem is that Cocoa gives us just one dinky little call to open a URL. No control over the browser.</p>
+
+<p>But I’m continuing to investigate, and it looks like LSOpenFromURLSpec, from the LaunchServices framework, may provide the control people are asking for.</p>
+
+<p>I’ll give it a shot and see what happens. I can’t promise it will work, but I’ve got my fingers crossed.</p>
+
+<p>One of the big drags with something like this is all the testing. Lots of browsers to test.

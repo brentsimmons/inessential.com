@@ -1,0 +1,60 @@
+@dbid 3251
+@title Flash Crash? WebKit Crash? Both?
+@pubDate Tue Jan 31 15:33:47 -0800 2006
+@modDate Tue Jan 31 15:33:47 -0800 2006
+At last!</p>
+
+<p>We’ve been getting crash logs lately that point to a bug in WebKit or Flash Player 8.0.22 (or both). I couldn’t reproduce the crashes until a helpful person sent me his prefs—and now I can make it crash at will.</p>
+
+<p>Safari crashes too—not just NetNewsWire.</p>
+
+<p>Here are the steps to reproduce. Bug id 4428609. I do not recommend doing this:</p>
+
+<p>1. Install <a href="http://macromedia.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&amp;promoid=BIOW">Flash Player 8.0.22</a>. (Don’t do this!)</p>
+
+<p>2. In Safari&#039;s preferences, enable plugins, but disable JavaScript and Java. (Don’t do this either!)</p>
+
+<p>3. Open the following page in Safari: <a href="http://www.informationweek.com/blog/main/archives/2006/01/is_unix_dead_i.html">http://www.informationweek.com/blog/main/archives/2006/01/is_unix_dead_i.html</a> (Definitely don’t do this!)</p>
+
+<p>4. Crash! (I told you not to do it!)</p>
+
+<p>I have not seen this crash with Flash Player 7.0.24, which comes with OS X. So it’s either a Flash Player bug or WebKit bug, Flash Player triggering a WebKit bug, or...</p>
+
+<p>I reported it to Apple, so hopefully it will get fixed or worked around, even if it’s a Flash Player bug, since it does actually crash Safari. (I can even make Interface Builder crash with a simple WebKit view that opens that URL—just disable JavaScript, enable plugins, then open the URL.)</p>
+
+<p>Satisfaction! You have no idea how much I love being able to reproduce crashes. Love it.</p>
+
+<p>Now, of course, I want it to get actually fixed. If I had to guess, based on the crash log, I think the problem is that the plugin is trying to run some JavaScript but JavaScript is disabled, and something is not expecting that to happen.</p>
+
+<p>The crash looks like this:</p>
+
+<p><pre>
+Exception:  EXC_BAD_ACCESS (0x0001)
+Codes:      KERN_PROTECTION_FAILURE (0x0002) at 0x00000000</p>
+
+<p>Thread 0 Crashed:
+0   com.apple.JavaScriptCore       	0x9579ec74 _NPN_Invoke + 204
+1   ...romedia.Flash Player.plugin 	0x06b074ec unuse_netscape_plugin_Plugin + 1320
+2   ...romedia.Flash Player.plugin 	0x06b14140 Flash_EnforceLocalSecurity + 47880
+3   ...romedia.Flash Player.plugin 	0x06bebaa8 Flash_EnforceLocalSecurity + 930928
+4   ...romedia.Flash Player.plugin 	0x06bdc3b0 Flash_EnforceLocalSecurity + 867704
+5   ...romedia.Flash Player.plugin 	0x06bdcea0 Flash_EnforceLocalSecurity + 870504
+6   ...romedia.Flash Player.plugin 	0x06bdd988 Flash_EnforceLocalSecurity + 873296
+7   ...romedia.Flash Player.plugin 	0x06b129e0 Flash_EnforceLocalSecurity + 41896
+8   ...romedia.Flash Player.plugin 	0x06b0a3c0 Flash_EnforceLocalSecurity + 7560
+9   com.apple.WebKit               	0x956865dc -[WebBaseNetscapePluginView sendEvent:] + 280
+10  com.apple.WebKit               	0x956883ac -[WebBaseNetscapePluginView sendNullEvent] + 144
+11  com.apple.Foundation           	0x928e949c __NSFireTimer + 116
+12  com.apple.CoreFoundation       	0x90770aec __CFRunLoopDoTimer + 184
+13  com.apple.CoreFoundation       	0x9075d464 __CFRunLoopRun + 1680
+14  com.apple.CoreFoundation       	0x9075ca18 CFRunLoopRunSpecific + 268
+15  com.apple.HIToolbox            	0x9318e1e0 RunCurrentEventLoopInMode + 264
+16  com.apple.HIToolbox            	0x9318d874 ReceiveNextEventCommon + 380
+17  com.apple.HIToolbox            	0x9318d6e0 BlockUntilNextEventMatchingListInMode + 96
+18  com.apple.AppKit               	0x9368c104 _DPSNextEvent + 384
+19  com.apple.AppKit               	0x9368bdc8 -[NSApplication nextEventMatchingMask:untilDate:inMode:dequeue:] + 116
+20  com.apple.AppKit               	0x9368830c -[NSApplication run] + 472
+21  com.apple.InterfaceBuilder     	0x00002d04 0x1000 + 7428
+22  com.apple.InterfaceBuilder     	0x00069b14 0x1000 + 428820
+23  com.apple.InterfaceBuilder     	0x000699bc 0x1000 + 428476
+</pre>

@@ -1,0 +1,23 @@
+@dbid 2513
+@title More Smash View Progress
+@pubDate Tue May 20 19:06:47 -0700 2003
+@modDate Tue May 20 19:07:44 -0700 2003
+I had to rip up and start over with NetNewsWire&#8217;s &#8220;smash view&#8221; feature. It&#8217;s coming along&#8212;here&#8217;s a <a href="http://ranchero.com/images/smashviewprogress2.jpg">screen shot</a>.</p>
+
+<p>The original implementation just used a <a href="http://www.eng.uwaterloo.ca/~ejones/software/osx-tableview.html">subclass of NSTableView</a> that allows for variable heights. But that didn&#8217;t work for the smash view because there was a major user interface problem. (A problem in this context: not a problem with that subclass in general.)</p>
+
+<p>The problem was that two concepts were fighting.</p>
+
+<p>One concept is that this is, at least conceptually, still a table view listing headlines in a subscription. When a headline is selected, it&#8217;s marked as read.</p>
+
+<p>The second concept is that it&#8217;s kind of a like a web page&#8212;you should be able to click on links and select text in the descriptions.</p>
+
+<p>So the solution, which came from NetNewsWire beta tester <a href="http://www.megacity.org/blog/">Derek J. Balling</a>, was to alternate headlines and description views. When you navigate normally (via the arrow keys or whatever), you select headlines. (The blue-shaded lines in the screen shot.) But then you can click with your mouse in the descriptions that appear between the headlines.</p>
+
+<p>This way the smash view works the way the other view works. You navigate the same way, everything&#8217;s the same.</p>
+
+<p>Except that you have a description underneath each headline, and you can click in the descriptions and select text.</p>
+
+<p>For comparison, here&#8217;s Jason Kottke&#8217;s original <a href="http://www.kottke.org/plus/misc/images/netnewswire.gif">mock-up</a> of this feature. The mock-up is cool, but it doesn&#8217;t take HTML descriptions into account: it shows just plain-text descriptions. Which would have worked, except that descriptions so often contain HTML.</p>
+
+<p>Anyway: there are a bunch of details still to do. It&#8217;s not ready for beta testing yet. Some time next week, probably.

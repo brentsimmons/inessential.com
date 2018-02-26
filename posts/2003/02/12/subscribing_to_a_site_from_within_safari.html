@@ -1,0 +1,22 @@
+@dbid 2391
+@title Subscribing to a site from within Safari
+@pubDate Wed Feb 12 23:58:04 -0800 2003
+@modDate Wed Feb 12 23:58:04 -0800 2003
+One of my favorite features of NetNewsWire is that it&#8217;s scriptable. There&#8217;s even a Scripts menu, so you can add your own commands as scripts.</p>
+
+<p>Here&#8217;s a little two-line script that lets you subscribe in NetNewsWire to the frontmost window in Safari.</p>
+
+<p><pre>tell application "Safari" to set s to URL of document 1
+tell application "NetNewsWire" to subscribe to s</pre></p>
+
+<p>It gets the URL of the front window in Safari, then it tells NetNewsWire to subscribe to that URL.</p>
+
+<p>When NetNewsWire gets a subscribe command it automatically does RSS auto-discovery.</p>
+
+<p>In other words, you could just be on the home page of a weblog in Safari, run this script, then NetNewsWire will (most often) find the RSS feed for that weblog. (If it exists, of course.)</p>
+
+<p>You could put this script in NetNewsWire&#8217;s Scripts menu, or maybe put it in the global <a href="http://www.apple.com/applescript/script_menu/">Script Menu</a>, or even put it in the Dock.</p>
+
+<p>And then there you have it, an easy way to subscribe to a site in NetNewsWire while you&#8217;re in Safari.</p>
+
+<p>(By the way, you could probably modify the first line of this script to work with other browsers. It may not even need modification except for the name of the application.)

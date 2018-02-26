@@ -1,0 +1,17 @@
+@dbid 2606
+@title Gzip compression and RSS
+@pubDate Thu Aug 21 21:55:00 -0700 2003
+@modDate Thu Aug 21 21:55:45 -0700 2003
+The new version of NetNewsWire supports gzip compression&#8212;which sounds like a really boring thing.</p>
+
+<p>And it is. Unless you&#8217;re looking for ways to save bandwidth.</p>
+
+<p>It works like this: when downloading a feed, NetNewsWire tells the server that it supports compression. If the server also supports compression, it returns a compressed version of the feed. This means less actual bytes are transferred, which saves bandwidth.</p>
+
+<p>This is such a good idea that Ted Leung has been <a href="http://www.sauria.com/blog/articles/aggregator-gzip.html">keeping track</a> of which aggregators support compression. (I&#8217;ll have to email him about NetNewsWire.)</p>
+
+<p>But here&#8217;s the thing&#8212;it looks like hardly any servers support compression. Here&#8217;s a <a href="http://ranchero.com/images/bandwidthstatsgzips.jpg">screen shot</a> of my bandwidth stats window. Note the new gzips column, and note how there are only four (out of 99) feeds that have returned compressed data. (Even my own feeds don&#8217;t support compression yet.)</p>
+
+<p>So&#8212;I wish I had a cool pitch of some kind, something to say besides, &#8220;Hey, server admin, please support compression.&#8221;</p>
+
+<p>But I don&#8217;t, so I just say hey, server admin, please support compression.

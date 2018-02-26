@@ -1,0 +1,27 @@
+@dbid 2563
+@title Radio/Frontier tips
+@pubDate Tue Jul 01 15:37:02 -0700 2003
+@modDate Tue Jul 01 15:37:02 -0700 2003
+Now and again I&#8217;m reminded of things that not all Radio/Frontier scripters know that they should know:</p>
+
+<p>Here are two that just came up:</p>
+
+<p>1. You can get the text from a wp-text very easily.</p>
+
+<p>People often write something like this:</p>
+
+<p><code>edit (@some.text.object)<br />
+local (s = wp.getText ())<br />
+close (@some.text.object)</code></p>
+
+<p>Here&#8217;s the better way:</p>
+
+<p><code>local (s = string (some.text.object))</code></p>
+
+<p>Yes, you can coerce directly to a string. Very clean.</p>
+
+<p>2. You can open sub-tables in their own windows.</p>
+
+<p>Just double-click in the Value column for a table, and that table will open in a new window. Or type cmd-enter (on Macs; I forget what it is on Windows).</p>
+
+<p>Anyway, this has been a public service announcement. Now back to your regularly scheduled programming.

@@ -1,0 +1,31 @@
+@dbid 2757
+@title CSS in RSS (yet again)
+@pubDate Fri Jan 02 16:18:16 -0800 2004
+@modDate Fri Jan 02 16:19:01 -0800 2004
+I’ve been getting email asking what I think about CSS in RSS, in light of <a href="http://www.crystalflame.net/2003/12/rss_with_css.html">Richard Soderberg’s how-to</a>, <a href="http://joi.ito.com/archives/2003/12/30/css_in_rss_feed.html">Joi Ito’s use</a>, and <a href="http://www.intertwingly.net/blog/1679.html">Sam Ruby’s guidance</a>.</p>
+
+<p>I have a few thoughts:</p>
+
+<p>1. Some people think it’s an abomination. Other people like it. But, no matter what, it can’t be stopped. Some feeds will include CSS.</p>
+
+<p>2. The people who think it’s an abomination are correct. Part of the idea behind syndication is that the reader has control over the display, not the creator.</p>
+
+<p>3. The people who like it are also correct. CSS formatting allows for a little more personality.</p>
+
+<p>4. The best thing would be to allow each newsreader user to choose whether to use CSS or ignore it.</p>
+
+<p>5. Making it a choice is difficult if the CSS is linked-to from within the description (or equivalent) of each item in a feed.</p>
+
+<p>Sam Ruby wrote: “Overall my recommendation is to not to try to tunnel this information inside the content, but to place it outside the content (either at the item or the feed level).&#160; This would make it easier for aggregators to identify that a stylesheet is desired and to take the appropriate action.”</p>
+
+<p>I agree completely.</p>
+
+<p>Unfortunately, there is at present no accepted method for doing this in RSS. There is for Atom, however, and I’d like to see something similar for RSS.</p>
+
+<p>Now... before I hear from people who say CSS in RSS is an abomination, and therefore there should be no recommendation for how to include CSS in RSS, let me re-iterate two things:</p>
+
+<p>1. People are already including CSS in RSS, and there’s no stopping that. What they’re doing is legal RSS.</p>
+
+<p>2. If Sam’s recommendation of moving it into a separate element were followed, then newsreaders would be able to give people a choice of using or ignoring CSS. (When the CSS link is in the description, a newsreader would have to parse the description and find the link and nuke it. That’s ugly stuff. You <em>do not</em> want your newsreader to have to do things like that.)</p>
+
+<p>And, finally, there’s another thing to consider: some newsreaders present items all on one browser page. When CSS is included in an item’s description, that CSS applies to the entire page, not just to that one item. The word for that situation is havoc.

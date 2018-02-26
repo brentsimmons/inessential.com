@@ -1,0 +1,115 @@
+@dbid 3307
+@title How NetNewsWire 2.1 Reads Feeds
+@pubDate Tue May 16 21:00:48 -0700 2006
+@modDate Tue May 16 21:00:48 -0700 2006
+People have been asking me how NetNewsWire 2.1 reads feeds. Does it read feeds from NewsGator or from the sites themselves?</p>
+
+<p>I’ll explain how it works, and also explain why it works the way it does.
+</p>
+<h3>How it works</h3>
+<p>
+If you have NewsGator syncing turned on, then NetNewsWire reads feeds from NewsGator Online.</p>
+
+<p>If you do not have NewsGator syncing turned on, then NetNewsWire reads feeds from the original sources, just like it always has.</p>
+
+<p>In other words, you can choose. It’s up to you.</p>
+
+<p>(Also: if you have NewsGator syncing turned on, and there’s an outage or network error connecting to NewsGator Online, NetNewsWire will temporarily read feeds from the original sources. This way you still get your news.)</p>
+
+<p>I’ll get to why it works this way—but, first, let’s start at the top.
+</p>
+<h3>The Big Picture</h3>
+<p>
+Server-based systems (like NewsGator Online, Bloglines, FeedLounge, and so on) have advantages—but desktop readers like NetNewsWire have advantages too.</p>
+
+<p>The big advantage of server-based readers is that if you can get to a browser you can read your feeds. You don’t have to be in front of your normal computer.</p>
+
+<p>I was determined not to let NetNewsWire users miss out on this just because they chose to use a desktop reader.</p>
+
+<p>But I wanted to go even farther, to make it so you could sync not just multiple copies of NetNewsWire and an online reader but also be able to sync with other aggregators running on other platforms.</p>
+
+<p>It’s important, in this increasingly cross-platform and multiple-gadget world, to be able to get your feeds anywhere, anytime.</p>
+
+<p>As I’ve written before, it’s not just about syncing, it’s about <i>ubiquity</i>, having your feeds and read/unread status available wherever you are.</p>
+
+<p>I’m aware that not everybody needs this yet. But tons of people already do, and more and more people will. (I think, ultimately, that pretty much everybody will. The number of people who will use just one aggregator on just one machine will be small.)
+</p>
+<h3>Server-based readers</h3>
+<p>
+Let’s set desktop apps aside for the moment and look at server-based readers.</p>
+
+<p>Server-based readers each have a big list of feeds that their users subscribe to. When a system reads a given feed, it reads that feed one time on behalf of 10 or 100 or 100,000 subscribers.</p>
+
+<p>Makes sense, right? If a feed has 100 subscribers, the system wouldn’t read it 100 times an hour, it would read it once an hour. Same if it has 1 subscriber or 100,000 subscribers—it gets read once an hour. (Or whatever the update period is.)
+</p>
+<h4>Server-based readers and subscriber counts</h4>
+<p>
+If you’re a feed publisher, you’re probably thinking that this sounds pretty good. It can save you a ton in bandwidth costs—you’re not penalized for popularity.</p>
+
+<p>But you might also be wondering, “Well, how can I know how many subscribers I have?”</p>
+
+<p>The answer is simple: NewsGator and many other systems report the number of subscribers in the user-agent. The answer is in your logs. You’ll see things like this:</p>
+
+<p><code>NewsGatorOnline/2.0 (http://www.newsgator.com; 4796 subscribers)</code></p>
+
+<p>It just comes right out and tells you how many subscribers there are—no need to count unique IP addresses (which wouldn’t give an accurate count anyway).
+</p>
+<h3>Syncing</h3>
+<p>
+Now imagine that you want different RSS clients—that run on various operating systems and even on phones and PDAs and various gadgets—to <i>sync</i>.</p>
+
+<p>Your first thought might be to do something like IMAP. Well, it turns out that email and RSS are quite different, no matter how much they appear similar on the surface. But still, the basic idea of IMAP syncing—the idea of having a smart server that different clients talk to—is sound.</p>
+
+<p>You could use the under-the-hood part of a server-based system as a sync server, as kind of like IMAP for RSS. (It’s not that much like IMAP, as I said, but it’s a convenient way to think about it.)</p>
+
+<p>Using a server solves some tough problems and provides some nice efficiencies.
+</p>
+<h4>The big tough problem: the lack of unique IDs</h4>
+<p>
+For any two different aggregators to sync, they need a way to refer to news items in a feed. Many feeds have unique IDs—but, importantly, many feeds do <i>not</i> have unique IDs.</p>
+
+<p>(Think of a unique ID as like a social security number. There may be 100 brown-haired, green-eyed guys named John Smith who live in Kentucky—but they each have a different social security number, a different unique ID.)</p>
+
+<p>So what NewsGator’s system does is assign unique IDs to each news item. This way all the different clients have an agreed-on way to refer to news items, <i>which makes syncing possible</i>. These assigned unique IDs appear in the feeds coming from NewsGator, which NetNewsWire and other clients read.</p>
+
+<p>These unique IDs <i>have to appear inside the feeds</i>, inside the news items they refer to—or else you’d have the problem of not knowing what ID applies to what item.</p>
+
+<p>(What if all feeds everywhere contained unique IDs? They don’t. I can only dream about a parallel universe.)
+</p>
+<h4>Other info in the feed</h4>
+<p>
+The feeds also contain other information—such as whether or not the item is read. Since we already put a unique ID in the feed, it makes sense to also put the status in the feed, so a separate call to get the status is not always necessary.</p>
+
+<p>Here, for example, is a snippet from a feed:</p>
+
+<p><code>&lt;ng:postId xmlns:ng="http://newsgator.com/schema/extensions">883945119&lt;/ng:postId><br />
+&lt;ng:read xmlns:ng="http://newsgator.com/schema/extensions">True&lt;/ng:read>
+&lt;ng:avgRating xmlns:ng="http://newsgator.com/schema/extensions">5.000000&lt;/ng:avgRating></code></p>
+
+<p>The ng:postId is the unique ID and ng:read is the read/unread status. (Also notice ng:avgRating. NetNewsWire doesn’t use that yet, but it’s there. You could imagine that we might put even more info in the feeds later.)
+</p>
+<h4>Efficient updates</h4>
+<p>
+A big efficiency gain is how updates happen: NetNewsWire asks NewsGator which feeds have changes, and then reads just those feeds. To be clear, this is possible because NewsGator has downloaded the feeds and knows what’s in them.</p>
+
+<p>As an engineer, I love this kind of thing—the old-fashioned system where every client polls every feed all the time is kind of wasteful: there’s way more traffic than is necessary.
+</p>
+<h3>Summing Up</h3>
+<p>
+The way this works, there is no difference between syncing and downloading feeds. It’s more efficient (in terms of bandwidth and CPU usage)—and it solves the big problem of unique IDs.</p>
+
+<p>It’s a good thing for feed publishers, too: publishers get an easier, more accurate way to count subscribers and they get lower bandwidth costs.</p>
+
+<p>But, finally, there’s choice—if you don’t care about syncing, you don’t have to use it, and NetNewsWire will download feeds from the original sources just like it always has.
+</p>
+<h4>P.S. There’s an API</h4>
+<p>
+If you want to know more about how all this works, the <a href="http://www.newsgator.com/ngs/api/default.aspx">SOAP and REST APIs</a> are documented.
+</p>
+<h4>P.P.S. No, you can’t rely on links or titles or anything else</h4>
+<p>
+Whenever the issue of unique IDs come up, people say, “Well, why not just use the links as unique IDs? Or the titles?”</p>
+
+<p>The answer is because they’re not unique. I’ve seen feeds where every single item has the same title and the same link to the home page. And remember, too, that news items are frequently edited—and the title, link, or both may be edited.</p>
+
+<p>Unique IDs are needed, and if they don’t reliably come from the original feeds, they have to come from somewhere.

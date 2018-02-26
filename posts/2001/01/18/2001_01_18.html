@@ -1,0 +1,50 @@
+@dbid 1193
+@title 2001/01/18
+@pubDate Thu Jan 18 11:00:45 -0800 2001
+@modDate Thu Feb 01 14:24:44 -0800 2001
+<p><strong>Radio&#039;s Web server</strong></p>
+
+<p>One of the things we&#039;ve been working on is figuring out what do with the dual nature of Radio&#039;s Web server.</p>
+
+<p>It does two main things:</p>
+
+<p>1. File serving. Any files you put in the www folder are available to the rest of the world.</p>
+
+<p>2. Desktop websites. These are applications like My UserLand on the Desktop. In this case you can read and route news, maintain a weblog, and so on. It&#039;s a website where you go to work.</p>
+
+<p>In the first case, files are simply served from disk. In the second case, a database contains scripts, templates, and data that implement an application.</p>
+
+<p>So, the question is, what&#039;s the top level? What do you get when you request http://127.0.0.1/? Do you get the top level of the www folder, or do you get a desktop website?</p>
+
+<p>Answer: the top level is the top level of your www folder. If you go to http://127.0.0.1/, you get the index.html file stored in your www folder.</p>
+
+<p>To get to your desktop website, you&#039;d go to http://127.0.0.1/userland/.</p>
+
+<p>The counter-argument to that went like this: if Radio is a desktop website server, then shouldn&#039;t the top level be the desktop website? What if I&#039;m at an Internet café, and I want to access my desktop website remotely -- should I have to remember the longer URL?</p>
+
+<p>The solution came to us when we thought about other developers doing desktop websites. What if the folks at Pyra wanted to do a Blogger on the Desktop? What would the URL of that website be?</p>
+
+<p>It would be http://127.0.0.1/blogger/.</p>
+
+<p>This puts our desktop website on an equal footing with other desktop websites. Imagine a future where there are lots of desktop websites in Radio. UserLand&#039;s is just one of many. Were I a desktop website developer, I would like that.</p>
+
+<p>Other things I&#039;d like as a developer: this environment has what I&#039;d need -- XML, XML-RPC, SOAP, RSS, HTTP client and server, templates, macros, an outliner, an object database, and so on. Perhaps best of all is that there&#039;s no need to run and maintain a server -- it&#039;s Radio that is the server. The action is on your users&#039; workstations. The data is on the workstation. What happens to your scaling issues when you the developer don&#039;t have to run a central server? Good things.</p>
+
+<p>And as a user, I&#039;d want the choice. Maybe I don&#039;t really like UserLand&#039;s or Pyra&#039;s desktop website -- but perhaps John VanDyk has developed a website that&#039;s the bee&#039;s knees. I&#039;d have the choice.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p><strong>More Frontier and Radio Tips for Developers</strong></p>
+
+<p>I got good feedback on the previous tips, so I&#039;ll continue. (Plus, it&#039;s fun for me.)</p>
+
+<p>Here&#039;s a tip: <em>don&#039;t over-abstract</em>.</p>
+
+<p>{includeMessage (1219, flDgLink:false)}</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>Another tip: <em>beware the with statement</em>.</p>
+
+<p>{includeMessage (1218, flDgLink:false)}
+</p>

@@ -1,0 +1,34 @@
+@dbid 3470
+@title The awesome self-repairing crashing bug
+@pubDate Sat Jan 26 17:22:58 -0800 2008
+@modDate Sat Jan 26 17:22:58 -0800 2008
+Back during the 3.1 beta period, just after the launch of Leopard, I created a self-referential (sort-of), self-repairing crashing bug.</p>
+
+<p>Here’s the scoop:</p>
+
+<p>I needed to revise the crash log reporter for Leopard, since crashes are now stored one per file, rather than one file per app.</p>
+
+<p>So I did, and tested it (I already had a crash log on disk), and it worked great. Cool. Release beta.</p>
+
+<p>But...</p>
+
+<p>The crash-log-finder code <i>crashed</i> when there were <i>no</i> NetNewsWire crash logs on disk. Since Leopard was new, the odds of there being no crash logs yet was pretty good.</p>
+
+<p>So it crashed for a bunch of people. (Yes, a crashing bug about reporting crashes.)</p>
+
+<p>However—and I bet you’ve figured this out already—it was self-repairing because, once it crashed, then next time you launch NetNewsWire, it would find the newly-created crash log just fine. And all was well from that point.</p>
+
+<p>(Of course I fixed it asap anyway.)</p>
+
+<p>In the end it was a stupid bug, an uninitialized variable. Something like this:</p>
+
+<p>Where f is the path the crash log...</p>
+
+<p><pre>NSString *f;
+[find the crash log...]
+if (f)
+    [do something with the crash log...]</pre></p>
+
+<p>Obviously, <code>NSString *f = nil;</code> was the answer.</p>
+
+<p>(Good thing I’m secure in my coding skills or I’d never admit to such a stupid mistake. Normally I’m a compulsive variable initializer. Feh.)

@@ -1,0 +1,42 @@
+@dbid 3491
+@title SliverlightPlugin trying to catch up to Flash in crashiness?
+@pubDate Sat Apr 19 17:30:44 -0700 2008
+@modDate Sat Apr 19 17:30:44 -0700 2008
+NetNewsWire has a feature where it sends me crash logs (if the user clicks the send button) — so I see a fair amount of Flash crashes.</p>
+
+<p>Stuff like this is not at all uncommon:</p>
+
+<p><pre>Thread 9 Crashed:
+0   ???                           	0000000000 0 + 0
+1   ...romedia.Flash Player.plugin	0x183c0795 Flash_EnforceLocalSecurity + 98669
+2   ...romedia.Flash Player.plugin	0x180dc962 0x18000000 + 903522
+3   ...romedia.Flash Player.plugin	0x180dd081 0x18000000 + 905345
+4   ...romedia.Flash Player.plugin	0x180dd7b1 0x18000000 + 907185
+5   ...romedia.Flash Player.plugin	0x1838f81c 0x18000000 + 3733532
+6   libSystem.B.dylib             	0x9061dc55 _pthread_start + 321
+7   libSystem.B.dylib             	0x9061db12 thread_start + 34</pre></p>
+
+<p>But lately I’m starting to see Silverlight crashes now too.</p>
+
+<p><pre>Thread 8 Crashed:
+0   ...microsoft.SilverlightPlugin	0x172e2b3b CMediaElement::Buffering(float) + 303
+1   ...microsoft.SilverlightPlugin	0x17625249 0x1729f000 + 3695177
+2   ...microsoft.SilverlightPlugin	0x172ecf25 CMFByteStreamOnStream::BeginRead(unsigned char*, unsigned long, IMFAsyncCallback*, IUnknown*) + 493
+3   ...microsoft.SilverlightPlugin	0x174264c8 CByteStreamCacheReader2::_BeginCacheItemRead(unsigned long long, int) + 286
+4   ...microsoft.SilverlightPlugin	0x174271b9 CByteStreamCacheReader2::BeginCacheRead(IMFAsyncCallback*, IUnknown*) + 297
+5   ...microsoft.SilverlightPlugin	0x173efdb8 CASFBytewiseMediaSource::AsyncReadData() + 216
+6   ...microsoft.SilverlightPlugin	0x173f02c8 CASFBytewiseMediaSource::DoReadPackets(CASFSourceOperation*) + 94
+7   ...microsoft.SilverlightPlugin	0x173f054b CASFBytewiseMediaSource::DispatchOperation(CBaseOperation*) + 83
+8   ...microsoft.SilverlightPlugin	0x1745b991 COpQueue::ProcessMarshalledOperations(IMFAsyncResult*) + 175
+9   ...microsoft.SilverlightPlugin	0x1765a62b COpQueue::ProcessMarshalledOperationsAsyncCallback::Invoke(IMFAsyncResult*) + 27
+10  ...microsoft.SilverlightPlugin	0x17477248 CCompletionPortNT::InvokeCallback(tagMFASYNCRESULT*) + 64
+11  ...microsoft.SilverlightPlugin	0x173dc238 CWorkQueue::CThread::ThreadMain() + 164
+12  ...ple.CoreServices.CarbonCore	0x94395beb PrivateMPEntryPoint + 56
+13  libSystem.B.dylib             	0x94f92c55 _pthread_start + 321
+14  libSystem.B.dylib             	0x94f92b12 thread_start + 34</pre></p>
+
+<p>Etc. (There are a few others.)</p>
+
+<p>I’ve said it before —&#160;one of my favorite things about the iPhone is <em>no Flash</em>. I will now add <em>and no SilverlightPlugin</em>.</p>
+
+<p>(I hate when plugins crash my app. The user doesn’t know that it’s something other than my code that’s causing the crash, and it’s cold comfort anyway.)

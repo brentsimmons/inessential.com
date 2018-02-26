@@ -1,0 +1,31 @@
+@dbid 1964
+@title RFC: Cocoa RSS API
+@pubDate Wed Apr 17 10:19:58 -0700 2002
+@modDate Wed Apr 17 10:19:58 -0700 2002
+I’m working on a Cocoa class for reading RSS feeds. My intent is to make it open source (BSD license) so it’s available to other Cocoa developers. I chose the BSD license so people doing commercial apps can use it too.</p>
+
+<p>Here’s what the API looks like. I’m seeking comments on its 1) Cocoa-ness and 2) usefulness.</p>
+
+<p><code class="cocoa">initWithData (NSData)</code> takes data and returns an RSS object.</p>
+
+<p><code class="cocoa">initWithUrl (NSURL)</code> takes a URL, gets it from the Web, then returns an RSS object. (It calls initWithData.)
+
+<p><code class="cocoa">lastReadDate</code> returns an NSDate specifying when the RSS object was created (presumably when the data was last read).</p>
+
+<p><code class="cocoa">version</code> returns an NSString specifying the RSS version.</p>
+
+<p>Here are the two interesting ones—the above are fairly non-controversial, I think.</p>
+
+<p><code class="cocoa">headerItems</code> returns an NSDictionary of all the stuff in the header: the title of the channel, webMaster, and so on.</p>
+
+<p><code class="cocoa">itemsArray</code> returns an NSArray of all the news items. Each item in the array is an NSDictionary containing the elements of the item: link, description, title, and so on.</p>
+
+<p>I thought about normalizing headerItems and the items in itemsArray. What I mean is I thought about always having a ‘webMaster’ key in the headerItems dictionary even when that item didn’t appear in the RSS feed. (For instance.)</p>
+
+<p>But I decided not to do any normalizing for these reasons:</p>
+
+<p>1. Which spec would I normalize to? All of them? What about optional items? What about new specs that appear later on? In this case, normalization is what we doctors call a quagmire.</p>
+
+<p>2. Normalization would remove potentially important information. You wouldn’t be able to tell the difference between an empty element and an element that wasn’t specified.</p>
+
+<p>The downside is that anyone using an RSS object will have to check for existence. For instance, if you want to get the ‘link’ element of a news item, you can’t assume that the element exists. If it didn’t exist in the RSS feed, it won’t exist in the dictionary for that news item. But I think that’s okay. 

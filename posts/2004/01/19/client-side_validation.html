@@ -1,0 +1,15 @@
+@dbid 2791
+@title Client-side validation
+@pubDate Mon Jan 19 23:55:13 -0800 2004
+@modDate Mon Jan 19 23:55:13 -0800 2004
+Mark Pilgrim, in <a href="http://diveintomark.org/archives/2004/01/19/validator-services">If people won’t go to the validator</a>, suggests running the validator on the client rather than on the web.</p>
+
+<p>Last week I got a surprising amount of requests from NetNewsWire users who’d like to have a validator built in to NetNewsWire. (Many of these people are people who test and monitor their own feeds with NetNewsWire.)</p>
+
+<p>What I could do—what I’d like to do—is include Mark’s and Sam Ruby’s validator in NetNewsWire. The validator would stay out of the way by default, but it would be there for people who want it.</p>
+
+<p>There’s an issue, though: the validator is open source, licensed via the Python license, and I don’t know if I can include it with NetNewsWire. (License gurus please clarify.)</p>
+
+<p>But more importantly, licensing issues aside, I wouldn’t do it without Mark’s and Sam’s agreement.</p>
+
+<p>(In case you’re wondering about the technical details: the validator would be included unmodified, as a set of files on disk, but inside the app package, in Contents/Resources/).

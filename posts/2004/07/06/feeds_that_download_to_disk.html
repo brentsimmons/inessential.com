@@ -1,0 +1,27 @@
+@dbid 2885
+@title Feeds that download to disk
+@pubDate Tue Jul 06 22:30:50 -0700 2004
+@modDate Tue Jul 06 23:41:30 -0700 2004
+<p>I’m not sure what to do about this. It’s a little thing that bugs me.</p>
+
+<p>Say you’re reading a weblog in your browser, and you want to subscribe to its feed. So you click on the XML button, or the Syndicate this Site link, or whatever it is.</p>
+
+<p>You’re expecting the standard page of gibberish, so you can get the URL of the feed and subscribe to it.</p>
+
+<p>But no! The feed downloads to disk instead, and the URL in the browser’s address bar remains the URL of the page you’re reading.</p>
+
+<p>So how do you subscribe? You don’t have the URL. Well, depending on the feedreader you’re using, you may be able to drag-and-drop, but that’s probably a pain since your browser is actually in front.</p>
+
+<p>Depending on your feedreader, you might be able to rely on auto-discovery and subscribe using the URL of the page you’re reading. But that may or may not work.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>What’s happening is that the server is doing the right thing: it’s telling your browser that the MIME type of the file is that of a syndication file. (<code>application/rdf+xml</code>, for instance.) Your browser doesn’t know how to display it, so it downloads it to disk.</p>
+
+<p>You could, in theory, tell your feedreader to handle that particular MIME type—but that won’t solve the problem, because the feedreader would get a file, but what it wants is the URL of the feed, not the contents of the feed. (You subscribe to a URL, not to the one-time contents of a feed.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>All I’m saying is that I don’t know what would be best here. It’s broken in so many ways. (Expecting a page of gibberish is itself a totally broken idea, but it does allow me to get the URL of the feed.)</p>
+
+<p>One possibility—on Macs only—is that Safari’s incorporation of RSS features will make this work. You’d click on the feed, and it would appear either in Safari or in another feedreader, depending on how you have things configured. That outcome would be totally cool with me, except that it doesn’t solve the problem for users of other browsers and other operating systems.</p>

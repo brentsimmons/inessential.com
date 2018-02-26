@@ -1,0 +1,13 @@
+@dbid 2637
+@title RSS and style sheets
+@pubDate Wed Sep 17 15:20:09 -0700 2003
+@modDate Wed Sep 17 15:20:09 -0700 2003
+<a href="http://stevenf.com/mt/archives/000433.php">Steven Frank’s post</a> about how RSS readers cause “all blogs start to muddy together” because they don’t use style sheets from the weblogs is something I’ve thought about often. (In fact, it’s on the <a href="http://ranchero.com/netnewswire/featureIdeas.php#perfeedRenderingStyles">feature ideas</a> page.)</p>
+
+<p>And other people have thought about it, too. I’ve gotten several emails that say something to this effect: “Hey Brent—now that Web Kit is available, NetNewsWire could apply style sheets to the content it displays. An RSS-specific style sheet could be linked to from an RSS feed, and that way authors would have more control over how their content is displayed in a newsreader.”</p>
+
+<p>I’m strongly considering this for NetNewsWire 1.1. A few things are required: one is a convention for how a post is laid out (divs and class ids and so on); the other is a spec that defines a module that links to a style sheet to use when rendering in an RSS reader. (This module would ideally work in RSS 1.0 and in RSS 2.0.)</p>
+
+<p>I haven’t done a bunch of research on this, and I wouldn’t be surprised if something like this module already exists. So step one is to find out if there’s something already out there.</p>
+
+<p>Doing this wouldn’t mean that you’d get the full effect of someone’s weblog design in NetNewsWire, but you’d get kind of a concentrated echo of it. Designing for just one post is different than designing an entire page, but you can still do cool things with colors and fonts and placement and so on.

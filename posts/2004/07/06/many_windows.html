@@ -1,0 +1,51 @@
+@dbid 2883
+@title Many windows
+@pubDate Tue Jul 06 18:07:01 -0700 2004
+@modDate Tue Jul 06 18:07:43 -0700 2004
+<p>If you’re a long-time Mac user, you remember when Mac apps tended to use multiple windows rather than multiple panes in a single window.</p>
+
+<p>Think of Eudora: years ago there was no preview-in-window for messages. Each mailbox was a separate window, and each message opened in a separate window.</p>
+
+<p>NewsWatcher is another example. The subscriptions were in one window, the full group list was another window, and each post appeared in its own window.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>So today I got, for the first time (I think), a feature request to make it so you can optionally split NetNewsWire’s main window into separate windows, as in the good old days. I was instantly nostalgic, and I thought: yes, totally, I have to do this.</p>
+
+<p>But then a second later I changed my mind. My personal nostalgia plus one feature request obviously doesn’t warrant the effort.</p>
+
+<p>It got me thinking, though—why is the current approach better than the old approach?</p>
+
+<p>Answer: I don’t know that the current single-window approach is better, but it’s better for 2004, and that’s what makes the difference.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>The main issue is that people’s user interface expectations are radically different than they were ten years ago <i>because of the web</i>. People have been tuned by years of website UI to expect the following:</p>
+
+<p>1. There will be just one main window. Other windows are popups that do one small thing and then, usually, disappear.</p>
+
+<p>2. All their choices will be visible in the main window.</p>
+
+<p>3. The UI gestures available are limited to those that can be coded in web pages.</p>
+
+<p>These expectations have some consequences for application UI design:</p>
+
+<p>1. You need a main window with multiple panes instead of multiple windows. (Obviously this has to be modified for document-based applications.)</p>
+
+<p>2. Toolbars should exist inside the window, at the top, rather than outside the window.</p>
+
+<p>3. People don’t look at the main menu anymore, since they’re used to the menu belonging to the browser rather than the web-based application they’re using. So you need enough toolbars and widgets in the main window to make your app usable. When working on your design, you need at some point to pretend your application has no menus at all.</p>
+
+<p>4. Few people will think to use drag-and-drop, since it’s so rarely supported in web pages. It’s important to support other ways of moving objects. (Within limits. OS X users are used to drag-and-drop within standard table and outline views, since they’ve used iTunes and similar apps.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>Cocoa very much encourages this sort of user interface. For instance, toolbars appear at the top of windows; you can’t have them appear elsewhere without going to some trouble. Creating split views for multiple panes is so easy it’s almost silly. And so on.</p>
+
+<p>(It may be that Carbon encourages the same kind of design. If so, I wouldn’t be surprised, it’s just that I’m not so up-to-date with Carbon these days so I don’t know.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>Anyway... my point is that the web has had a major impact on the design of desktop applications. And it appears that the designers of application frameworks took this into account, to the benefit of developers and users.</p>
+
+<p>(Hat tip: <a href="http://www.alexking.org/blog/">Alex King</a> was the first person to explain this to me succinctly. I understood the new UI conventions without having thought about why they came to be.)</p>

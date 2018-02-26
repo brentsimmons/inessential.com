@@ -1,0 +1,15 @@
+@dbid 2476
+@title NetNewsWire and Update Checking
+@pubDate Wed Apr 30 21:34:00 -0700 2003
+@modDate Wed Apr 30 21:34:00 -0700 2003
+James Duncan Davidson&#8212;who I recently had the pleasure of meeting&#8212;posted today about <a href="http://x180.net/Blog/Blogging/NetNewsWire/UpdatedChecking.html">NetNewsWire and update checking</a>.</p>
+
+<p>He hits the nail on the head: a headline has three, not two, states: unread, read, and updated.</p>
+
+<p>NetNewsWire isn&#8217;t that smart about this. When comparing an incoming headline to an existing headline, if they&#8217;re the same but for a word here or there, NetNewsWire will mark it as a new headline. Which is annoying.</p>
+
+<p>Luckily, there&#8217;s at least a partial solution. Later versions of RSS include a guid element which identifies a headline. This way you can tell that an incoming headline is the same as a previously-read headline, even if they&#8217;re different, because the guid is the same.</p>
+
+<p>NetNewsWire already reads and stores guids, but it doesn&#8217;t do anything with them yet. In an upcoming release it will look at guids in deciding if an item is new or just updated.</p>
+
+<p>Unfortunately, not all RSS feeds contain guids. My hope is that more and more they will since they&#8217;re so useful, since they make reading news so much better.

@@ -1,0 +1,43 @@
+@dbid 3035
+@title But I can tell that it’s about the same thing
+@pubDate Mon Mar 07 21:26:46 -0800 2005
+@modDate Mon Mar 07 21:27:14 -0800 2005
+One of the common feature requests we get for NetNewsWire is to handle this situation:</p>
+
+<p>Say you’re subscribed to several Mac news feeds. Then one day Microsoft updates Office for Macintosh, and each feed includes a news item about it, so you have several news items about it.</p>
+
+<p>You only need to read that particular piece of news once. So why not make it so NetNewsWire detects that these are all about the same thing, and mark them as read automatically once you read the first one?</p>
+
+<p>Here’s why:</p>
+
+<p>Consider these two news items, ripped from today’s headlines...</p>
+
+<p><i>MacMinute</i></p>
+
+<p><b>Title:</b> Microsoft Office 2004 update released<br /><b>Description:</b> Microsoft&#039;s Macintosh Business Unit (Mac BU) has posted Office 2004 for Mac Update 11.1.1, which includes improvements to Excel add-in calculation, increased PowerPoint and Word 2004 stability, additional support for device drivers and enhanced appearance of imported graphics...<br /><b>Link:</b> http://www.macminute.com/2005/03/07/office-2004/</p>
+
+<p><i>MacCentral</i></p>
+
+<p><b>Title:</b> Microsoft Office 2004 for Mac updated to 11.1.1<br /><b>Description:</b> Microsoft Corp.&#039;s Mac Business Unit (Mac BU) on Monday announced the release of Microsoft Office 2004 for Mac Update 11.1.1. The update includes improvements to Excel add-in calculation, improves stability for PowerPoint and Word, adds support for new device drivers and improves the appearance of imported graphics.<br /><b>Link:</b> http://www.macworld.com/news/2005/03/07/office/index.php?lsrc=mcrss-0305
+</p><h4>They’re about the same thing</h4><p>
+Both items are obviously about the same thing. You can tell by looking, instantly, no thought required.</p>
+
+<p>But computers aren’t that smart. How does a piece of <i>software</i> know that these two are about the same thing?</p>
+
+<p>The titles, descriptions, and links are different.</p>
+
+<p>There are many of the same words—but you <i>really</i> don’t want your aggregator to start making guesses here. Imagine two completely different stories, but each one has “Apple iTunes” in the title. “Songs on Apple iTunes Music Store now free” and “Apple iTunes sold to SixApart” are <i>not</i> the same piece of news.
+</p><h4>What’s the solution?</h4><p>
+Artificial intelligence would be helpful here. But we don’t have that.</p>
+
+<p>One possibility would be a new kind of link element—an external link element that is meant to identify the <i>source</i> of the story. For instance, if you go to the full version of the above example news items, both of the stories include a link to the same page on the Microsoft site, a page about this update to Office.</p>
+
+<p>Were that link to be included in the feed, with that item, as a special link-to-the-source link, then an aggregator could know that the news items were really about the same thing.</p>
+
+<p>One nice thing about this is that it’s likely that the folks at MacMinute and MacCentral would pick the same link. They wouldn’t have to coordinate, it would just work. (At least in this example. It wouldn’t always be so clear-cut.)</p>
+
+<p>The bad thing about this idea is the potential for abuse—or just plain laziness. What if people make the link-to-the-source link just a link to http://apple.com/ for any story about Apple—you’d end up with stories that are <i>not</i> about the same thing being marked as read. Nuts.</p>
+
+<p>Another problem is that you still might miss something interesting. Say MacX posted a basic news report, but MacY posted a lengthy piece with interviews and and all kinds of goodies. You wouldn’t want to miss MacY’s report—but you would, since it was marked as read when you read MacX’s news item.</p>
+
+<p>In other words, I don’t know what the solution is, but it’s worth thinking about.

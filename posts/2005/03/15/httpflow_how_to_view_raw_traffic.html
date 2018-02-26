@@ -1,0 +1,13 @@
+@dbid 3043
+@title httpflow: how to view raw traffic
+@pubDate Tue Mar 15 12:02:14 -0800 2005
+@modDate Tue Mar 15 12:02:14 -0800 2005
+Since both MarsEdit and NetNewsWire make HTTP requests, I often have a need to see what the raw HTTP traffic looks like.</p>
+
+<p>There are different ways to do this, but what I do is type <code>httpflow</code> on the command line, then type my password, and then watch the traffic.</p>
+
+<p><code>httpflow</code> on my machine is an alias—a command-line command alias, not a traditional Mac OS file alias—for the following command: <code>sudo /usr/local/bin/tcpflow -c port 80</code></p>
+
+<p>You’ll need tcpflow to make it work. Tcpflow isn’t a standard part of OS X—but you can get a copy from <a href="http://www.entropy.ch/software/macosx/welcome.html">Marc Liyanage</a>. (That’s the version I myself use.)</p>
+
+<p>Sometimes I only need just a quick peek at the headers (for a feed, usually) to see if it’s redirecting or returning a 404-not-found or something. In that case I don’t need tcpflow—<code>curl</code> does the job. I type something like <code>curl -I &#039;http://maccentral.macworld.com/mnn.cgi&#039;</code> to see what I get. (Curl comes with OS X, I believe.)

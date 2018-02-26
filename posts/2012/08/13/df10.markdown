@@ -1,0 +1,4 @@
+@title DF10
+@pubDate Mon Aug 13 11:22:44 -0700 2012
+@modDate Mon Aug 13 12:06:33 -0700 2012
+Distant Shape <a href="http://distantshape.com/df10/">visualizes 10 years of Daring Fireball</a>. (The longest article is an interview with me from 2003. Sometimes I’m long-winded.)

@@ -1,0 +1,33 @@
+@dbid 3432
+@title Speculation as to why iPhone doesn’t include Flash
+@pubDate Fri Jul 06 15:25:06 -0700 2007
+@modDate Fri Jul 06 15:25:06 -0700 2007
+We all know that the iPhone doesn’t include Flash. Various theories have been aired.</p>
+
+<p>I have a theory that I haven’t heard yet: Flash wasn’t included <em>because it crashes so much</em>.</p>
+
+<p>I have some evidence for this. My app—which uses WebKit and, thus, supports Flash—includes a crash reporter: when it crashes, you can send the crash log to me just by clicking a button. People do so, so I see the crashes.</p>
+
+<p>And you know what I see a lot of? Stuff like this:</p>
+
+<p><code>Thread 0 Crashed:<br />
+0   ...romedia.Flash Player.plugin 	0x094e8ddc native_ShockwaveFlash_TCallFrame + 344728</code></p>
+
+<p><code>Thread 0 Crashed:<br />
+0   ...romedia.Flash Player.plugin 	0x19367572 MMgc::GCAlloc::ClearMarks() + 370</code></p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>Since Apple collects crash logs too, they know how often Flash crashes.</p>
+
+<p>Given that the first impression of the iPhone is so important, I can easily imagine a conversation like this:</p>
+
+<p>A: “We have to include Flash so it’s not the watered-down web.”</p>
+
+<p>B: “We can’t, since Flash crashes all the time, and people will think the iPhone is crashy.”</p>
+
+<p>A: “But can we get away with not including Flash?”</p>
+
+<p>B: “If we do a special YouTube app that uses QuickTime instead.”</p>
+
+<p>A: “That’s officer thinking, lieutenant. Let’s call Google.”

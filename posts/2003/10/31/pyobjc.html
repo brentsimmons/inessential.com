@@ -1,0 +1,17 @@
+@dbid 2684
+@title PyObjc
+@pubDate Fri Oct 31 13:59:05 -0800 2003
+@modDate Fri Oct 31 13:59:05 -0800 2003
+I caught Bill Bumgarner’s <a href="http://www.pycs.net/bbum/2003/10/30.html#a524">presentation on PyObjc</a> at the OS X conference. I was surprised by how complete PyObjc is: according to Bill, it pretty much just works.</p>
+
+<p>You can of course send messages back and forth across the PyObjc bridge: you can call Objective-C from Python and vice versa. You can even subclass Objective-C classes in Python. Things like Web Kit and the new NSController layer work with Python. And with Python you don’t have to deal with memory issues (retain/release/autorelease).</p>
+
+<p>So, while all that’s very cool, I’m not about to switch away from Objective-C. But I can imagine using Python for a few things:</p>
+
+<p>1. XML-RPC and other web services. Python is utterly remarkable as a web services language. I’ve used no other language as nice as Python for this stuff.</p>
+
+<p>2. As a user scripting language. NetNewsWire for instance has a Scripts menu to which you can add AppleScript scripts. It would be cool if you could also put Python scripts in there that have at least the same level of access to NetNewsWire as the AppleScript scripts have. (Actually, it would be easy to give an even bigger level of access.)</p>
+
+<p>3. Writing unit tests. Writing tests should be as frictionless as possible; Python would be a big help here.</p>
+
+<p>I should point out that NetNewsWire already does use Python for one feature, though it’s not using PyObjc: the HTML differences code is a Python script by <a href="http://www.aaronsw.com/">Aaron Swartz</a>. (NetNewsWire just calls the script on disk via NSTask.)

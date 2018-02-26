@@ -1,0 +1,37 @@
+@dbid 3172
+@title #4251116: Crash with Shift_JIS-encoded XML data
+@pubDate Fri Sep 09 14:13:36 -0700 2005
+@modDate Fri Sep 09 14:15:50 -0700 2005
+<img src="http://inessential.com/images/shiftjiscrashapp.png" alt="Screen shot of ShiftJISCrash.app" width="515" height="328" /></p>
+
+<p>My Apple bug of the week is #<a href="rdar://4251116">4251116</a>, a crash in the CoreFoundation XML parser that often happens with Shift_JIS-encoded feeds.</p>
+
+<p>I even created a small project to demonstrate it: download <a href="http://inessential.com/downloads/ShiftJISCrash.zip">ShiftJISCrash.zip</a>.</p>
+
+<p>To reproduce the crash, launch the application (at ShiftJISCrash/build/Release/ShiftJISCrash.app), then click the “Parse Shift_JIS File” button.</p>
+
+<p>Inside the app’s bundle is a Shift_JIS-encoded feed that crashes whenever CFXMLTreeCreateFromData is called. (The feed is ShiftJISCrash.xml, at the top level of the project folder.)</p>
+
+<p>(Remember the <a href="http://www.drunkenblog.com/drunkenblog-archives/000635.html">Safari Image of Doom</a>? You could call this the CoreFoundation XML File of Doom.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>The thing about crashing bugs like this is that any developer worth anything takes great pride in writing stable applications. It’s the first principle of craftsmanship: don’t build things that fall down.</p>
+
+<p>When your app crashes due to a bug in the system, your users think it’s your bug. How would they know differently? <i>Your</i> app crashed, therefore it’s a bug in <i>your</i> app, right?</p>
+
+<p>Except when it’s not, except when it’s a bug in the system. But how would the average user be able to tell the difference? (It’s important because your reputation is at stake.)</p>
+
+<p>There is no real answer to that question. So the best thing is to get the crashing bugs out of the system.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>More about bugs and crashes...</p>
+
+<p>drunkenbatman: <a href="http://www.drunkenblog.com/drunkenblog-archives/000655.html">Spotlight on Spotlight, Part 01 of &#8734;</a> and <a href="http://www.drunkenblog.com/drunkenblog-archives/000654.html">Of Smart Crash Reports</a>. (I’ll definitely be looking at the new crash-report helper from Unsanity.)</p>
+
+<p><a href="http://www.gigliwood.com/weblog/MacOSX/iTunes_5_is_Butt-Ug.html">Dan Wood filed 4247645</a> about the new iTunes UI and <a href="http://www.gigliwood.com/weblog/MacOSX/BugReportFriday__Ol.html">reviews some previous reports</a>.</p>
+
+<p>Sven-S. Porst filed a bug about <a href="http://earthlingsoft.net/ssp/blog/2005/09/bug_report_friday_nicknames">nicknames in Mail</a>.</p>
+
+<p>For more, see the <a href="http://del.icio.us/tag/applebugfriday">applebugfriday</a> page on del.icio.us.

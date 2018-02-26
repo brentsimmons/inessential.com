@@ -1,0 +1,11 @@
+@dbid 2548
+@title NetNewsWire and Panther crash
+@pubDate Wed Jun 25 13:03:46 -0700 2003
+@modDate Wed Jun 25 15:04:40 -0700 2003
+I haven&#8217;t had the chance to try out Panther yet&#8212;but I got an email from an Apple engineer telling me NetNewsWire will crash on the Panther seed. (Due to a bug in CFNetwork.)</p>
+
+<p>The same engineer told me it will probably be fixed for the next Panther seed. I may be able to do something in NetNewsWire about this before the next seed, but then again I may not bother, since it&#8217;s not necessarily a good use of my time to work around someone else&#8217;s bug that will get fixed anyway.</p>
+
+<p>I&#8217;d rather spend my time fixing other bugs and upgrading to WebKit.</p>
+
+<p>Update 12:02 PM: More details... the Panther system networking crash occurs when there are more than n simultaneous DNS lookups, where n is something like 15. (I&#8217;m not sure if that number is exact.) Depending on various things, you may not encounter the crash in NetNewsWire. It may work fine. But then again it may crash.

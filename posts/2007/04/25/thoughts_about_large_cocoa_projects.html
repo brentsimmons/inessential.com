@@ -1,0 +1,107 @@
+@dbid 3405
+@title Thoughts about large Cocoa projects
+@pubDate Wed Apr 25 16:14:12 -0700 2007
+@modDate Wed Apr 25 16:14:12 -0700 2007
+My app isn’t huge compared to Photoshop or Word—it’s teeny in comparison—but it’s large compared to some Cocoa apps. (It has 345 .m files and an executable size of 3.2MB when stripped.)</p>
+
+<p>It’s big enough that, were you to ask me how _____ works, I’d have to go look. There’s no way I can remember, with any level of detail, how every part of it works.</p>
+
+<p>I call it the Research Barrier, when an app is big enough that the developer sometimes has to do research to figure things out. (“Research” just means reading the code and following some paths of execution, sometimes running in the debugger.)</p>
+
+<p>It’s no surprise, then, that I have a few thoughts on managing Cocoa projects of this size. The below is my thinking right now—it could all change in six months. Or later today. And I could be wrong on every single point. ;)</p>
+
+<p>Most of this is about making research easier—making it so that when you go back to _____ six months from now, you can quickly figure out what’s going on.
+</p>
+<h4>Notifications can make code hard to follow</h4>
+<p>When I first started writing Cocoa apps, I used notifications (NSNotificationCenter) all the time. They’re great for encapsulation: object x doesn’t need to tell object y that something happened: object x sends a notification, and any object that cares about it can listen for it.</p>
+
+<p>But I found that notifications sometimes made code difficult to follow.</p>
+
+<p>It’s difficult, when doing research, to know what’s going to happen when I encounter a notification-send. If I see something like this...</p>
+
+<p><code>[&#91;NSNotificationCenter defaultCenter] postNotificationName:SomeNotificationName object:self]</code></p>
+
+<p>...how do I know what’s going to happen next? What code will run, and what other notifications will be triggered?</p>
+
+<p>What I often found was that a given notification was listened for in only one place. If object x and object y truly have a relationship, why not make it easier to discern?</p>
+
+<p>I still use notifications—but I often use delegates now instead, since it’s a little easier to figure out what’s going on, and since the delegate pattern shows that the two objects are related. (Which they are.)</p>
+
+<p>Another thing I do—which may sound like heresy—is just to admit that class x and y know about each other. If they’re not truly re-usable in other projects, and if they really do work together, then why not take all the guesswork out and just have object x call object y directly. It makes research easier, the code is more straightforward, and the relationship between the classes is obvious. You can hide the fact that they work together with a level of indirection—but that makes things more complex, not less.</p>
+
+<p>(It’s always a judgment call, of course.)</p>
+
+<p>So, if I see something like this...</p>
+
+<p><code>[&#91;SomeClass sharedController] updateStuff]</code></p>
+
+<p>...then I know what’s going to happen next: or, at least, I can easily jump there and find out what happens next. And it’s more honest—I know that the classes work together.
+</p>
+<h4>Key-Value Observing: for prefs only</h4>
+<p>
+Key-Value Observing (KVO) makes code paths even harder to follow than notifications. With notifications, at least there’s a line of code saying that a notification is being posted. With KVO you have no idea if changing a value will trigger a bunch of other code.</p>
+
+<p>KVO is wonderful technology, but its over-use can also lead to twisty code paths.</p>
+
+<p>There is one major exception: prefs. I use KVO exclusively to watch for changed prefs. This is the thing that makes KVO <i>rock</i>.</p>
+
+<p>But still, I try not to litter the field of code with a bunch of observers: there are just a few objects that are allowed to watch for changed prefs. Not having a tangle of observers means it’s easier to know what happens when a given pref changes.</p>
+
+<p>(However, I should point out that I take care to make sure my code is key-value-compliant.)
+</p>
+<h4>Bindings are for basic stuff</h4>
+<p>Every time I wire up a checkbox or menu item with bindings, I sing a little song of joy in my head. The song is all about how wonderful the Apple engineers are for bringing us bindings.</p>
+
+<p>But the few times I’ve used bindings with a table view, I’ve not sung that song. By the time I’ve done an NSArrayController subclass to get the behavior I need, and written some value formatters to get the display I need, I find I&#039;ve created a little squirrel’s nest of code.</p>
+
+<p>Instead, I prefer the more traditional route of creating a table datasource/delegate: one object which does all these things without tangles.</p>
+
+<p>That doesn’t mean bindings aren’t useful—they are highly useful, and I use them all the time, with great glee—but that for tables and outlines I end up with something less straightforward than I would like. When it comes to research time, it’s easier to get lost (in these cases) when using bindings.
+</p>
+<h4>High-level Interface</h4>
+<p>
+There are a few things in my app that lots of different objects need: current feed, current news item, a flat array of feeds, whether or not there’s a download session in progress, and so on.</p>
+
+<p>I’ve created a high-level interface: a set of methods that any object can call to get these things. I even make these C function calls, though class methods would work as well. (I use C because it helps differentiate the high-level interface from other stuff: it’s easy to see at a glance.)</p>
+
+<p>For example, to get the current news item, an object just calls <code>NNWCurrentDataItem()</code>. These functions usually take no parameters and return some high-level state information. (If they take a parameter, it’s usually a boolean.)</p>
+
+<p>This retains explicitness, while also having a small barrier between classes. It also helps with my goal: I want my code to read as much like scripting as possible, whenever possible. (Tip of the hat to <a href="http://scripting.com/">Dave Winer</a>, who suggested this to me as a goal for app writers. Much of the Frontier kernel reads like scripting.) 
+</p>
+<h4>Use #pragma mark, use the function popup</h4>
+<p>
+My single favorite Xcode feature is the function popup menu. It has a few cool features:</p>
+
+<p>1. You can pop it up with a keystroke. Ctrl-2 on my machines. (Remember, every time you touch the mouse, God kills a kitten. Use the keyboard if you have a heart.)</p>
+
+<p>2. It puts all #pragma mark Section headers in bold, so you can easily see the structure of the current file.</p>
+
+<p>3. The menu responds to type-ahead, arrow keys, home/end, page-up/page-down, making it easy to go where you want to go, all via keyboard.</p>
+
+<p>It’s the fastest way I’ve found to get a quick look at what’s in a file. The function popup is my good friend.
+</p>
+<h4>Opening Files</h4>
+<p>
+Once your project is beyond a certain size, it can be a major pain to find files in the hierarchy. So I don’t: I use the Open Quickly... command. (Shift-cmd-D on my machine.) Pretty much always.</p>
+
+<p>Once you’ve opened a file, if you want to see where it is in the hierarchy, there’s the Reveal in Group Tree command (option-cmd-T on my machine). I use it whenever I want to see a file’s neighbors.
+</p>
+<h4>Managing Files: flat folder on disk</h4>
+<p>
+Years ago I used to always keep the on-disk hierarchy in sync with the hierarchy in Xcode. Total waste of time.</p>
+
+<p>Instead I put a Source directory inside my project directory. Inside Source is all the .h and .m files. Flat. No sub-folders.</p>
+
+<p>Then I have a hierarchy in Xcode, though I try not to let it get more than two folders deep, because deep hierarchies are just a way of losing things and wasting time.</p>
+
+<p>This setup is kind of like how some apps have a library which just contains everything as a flat list—but then has separate playlists or folders for organization. The Source folder on disk is the equivalent of the flat library.</p>
+
+<p>Life’s way too short to be dealing with sub-folders for my source in addition to a hierarchy in Xcode.
+</p>
+<h4>Summary</h4>
+<p>
+The main thing for me is <i>explicitness</i>.</p>
+
+<p>I want it to be as easy as possible to know what code is doing, because that saves me time, and it makes it more likely I’ll do a good job maintaining that code.</p>
+
+<p>The bigger the project, the tougher this gets. But it’s manageable.

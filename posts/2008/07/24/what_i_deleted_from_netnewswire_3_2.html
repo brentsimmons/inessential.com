@@ -1,0 +1,55 @@
+@dbid 3514
+@title What I deleted from NetNewsWire 3.2
+@pubDate Thu Jul 24 11:04:43 -0700 2008
+@modDate Thu Jul 24 11:04:43 -0700 2008
+<p>
+Here’s the list of what I deleted from NetNewsWire 3.2:
+</p>
+<p>
+- Microformats
+</p>
+<p>
+- Sites Drawer
+</p>
+<p>
+- Add Author to Address Book
+</p>
+<p>
+- Command to turn on/off icons and favicons in subs list
+</p>
+<p>
+- Command to turn on/off sort animating in subs list
+</p>
+<p>
+- Command to show/hide styles menu
+</p>
+<p>
+- Combined View&#039;s "Collapse read items at startup" pref
+</p>
+<p>
+<img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" />
+</p>
+<p>
+Not everything on the <a href="http://inessential.com/?comments=1&postid=3511">initial list</a> was deleted, which is normal. (It was a list of things to consider deleting, after all, not a set-in-stone list.) All the feedback I got was very helpful — thanks to everyone who took the time to write to me.
+</p>
+<p>
+<img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" />
+</p>
+<p>
+Important note about the last four items: the features still exist, but now as “hidden” prefs that you can set in the Terminal. These aren’t the first hidden prefs, nor will they be the last, I’m sure.
+</p>
+<p>
+<img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" />
+</p>
+<p>
+In the end, NetNewsWire was slimmed down by almost a megabyte (mostly resources, but some code too), and the menus and preferences are a little smaller.
+</p>
+<p>
+My favorite thing was deleting the microformats parsing code. Any CFXML-based code should be nuked. (I have no inside knowledge about CFXML being deprecated or anything — but it <em>should</em> be.)
+</p>
+<p>
+It also means a slight performance boost when opening news items and web pages, as NetNewsWire now doesn’t look for embedded microformats. (It still looks for feeds in web pages, though, of course.)
+</p>
+<p>
+I also really liked deleting the Add Author to Address Book command. As <a href="http://www.atomicwang.org/motherfucker/Index/57801B38-03B2-4202-A3FE-45FA1078A538.html">Mike Lee said</a>, “In terms of interface unity, ABMultiValue might just be the worst class in Cocoa. Why should querying the Address Book yield a collection seen nowhere else in the entire API?” Oh yes, it was nice to delete this code.
+</p>

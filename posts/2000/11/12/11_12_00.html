@@ -1,0 +1,26 @@
+@dbid 1052
+@title 11/12/00
+@pubDate Sun Nov 12 12:51:37 -0800 2000
+@modDate Sun Nov 12 20:32:11 -0800 2000
+<p>Question for people running Mac OS X:</p>
+
+<p>I need a file-sharing connection from a Cube running OS X to a Linux machine. It seems like I have several options, but I don&#039;t know which is most reliable. (Ease-of-setup is a bonus, but reliability is most important.)</p>
+
+<p>So: what do you recommend? I can install additional software on both the Mac Cube and the Linux machine, if needed.</p>
+
+<p><em>Update:</em> At the moment I&#039;m trying NFS. So far no good, but docs are scant on getting this working in OS X, so it&#039;s probably my configuration. Wesley Felter wrote me suggesting Appletalk. (His advice was to install netatalk on the Linux box.) He also suggests scp, but scp won&#039;t work for my purposes.</p>
+
+<p><em>Second update</em>: I can&#039;t get NFS working. It should be very simple. However, on the Mac OS X machine I get the error "mount_nfs: /some/path: Protocol not supported." If I do a showmount -e linuxmachine on the Mac OS X machine I do get a list of my one exported share.</p>
+
+<p>So now I&#039;m thinking about another option: using <em>two</em> IP addresses on my Mac OS X box. One IP address for Frontier, the other for Apache. That would eliminate the need for a file-sharing connection: one box could host Manila and static files at the same time.</p>
+
+<p>Does anyone know how to use multiple IP addresses on a Mac OS X box?</p>
+
+<p><em>Third update</em>: Apple has a page on using <a href="http://til.info.apple.com/techinfo.nsf/artnum/n60301">multiple IP addresses</a> with Mac OS X. It works. Now to see if I can have Frontier listen on one address and Apache listen on the other. If so -- then hey, this is pretty damn cool, an excellent reason to make OS X your choice of servers for Manila. But first, dinner-time, TV-time, some relaxation. If you&#039;re following this drama as it unfolds, you&#039;ll have to stay up late.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>Bob. <a href="http://www.biermania.com/2000/11/11">40</a>. Hill. Over the.</p>
+
+<p>Happy Birthday!
+</p>

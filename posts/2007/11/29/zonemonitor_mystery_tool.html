@@ -1,0 +1,7 @@
+@dbid 3457
+@title ZoneMonitor, Mystery Tool
+@pubDate Thu Nov 29 09:57:52 -0800 2007
+@modDate Thu Nov 29 09:58:37 -0800 2007
+If you look at /Developer/Applications/Utilities/ZoneMonitor.app, you’ll find a garbage collection debugging tool. Apple’s <a href="http://developer.apple.com/documentation/MacOSX/Conceptual/OSX_Technology_Overview/Tools/chapter_952_section_2.html">documentation</a> refers to it as an “application for analyzing memory usage” but doesn’t say any more.</p>
+
+<p>I had to launch it twice—the first time it crashed. I don’t know if that was a fluke or not (could have been). On second launch I pointed it at a little demo garbage-collected app, and it launched collected and non-collected versions and compared them. I double-clicked on auto_zone, and got a new window with tabs for Heap and Roots. Etc. It’s explorable—I don’t know what it all means yet, but it’s intriguing.

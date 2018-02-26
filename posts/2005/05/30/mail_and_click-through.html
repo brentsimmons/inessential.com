@@ -1,0 +1,23 @@
+@dbid 3107
+@title Mail and click-through
+@pubDate Mon May 30 16:33:21 -0700 2005
+@modDate Mon May 30 16:33:21 -0700 2005
+Apple Mail. There’s more.</p>
+
+<p>The new toolbar does the icons-inside-buttons thing, which makes sense, and may be a usability gain.</p>
+
+<p>However, here’s a weird thing I noticed:</p>
+
+<p>When Mail is not the frontmost app, the buttons change their look: they look dimmed, disabled.</p>
+
+<p><img src="http://inessential.com/images/mailNewInBackground.png" alt="Mail New button in background" height="91" width="97" /></p>
+
+<p>However, if you click, it’s actually <i>enabled</i>, it supports click-through. (This is true for non-destructive buttons, not all of the buttons.) Right before you click you see the mouse-over highlighting.</p>
+
+<p><img src="http://inessential.com/images/mailNewMouseover.png" alt="Mail New button in background" height="90" width="107" /></p>
+
+<p>It turns out that the icon <i>inside</i> the button is used to indicate whether it’s enabled or not. Standard toolbars dim and un-dim the icon too—it’s just that they don’t also have a button being used to indicate status (sorta).</p>
+
+<p>So the dimmed button look means “I’m in the background” rather than “I’m disabled.”</p>
+
+<p>Safari’s icons are similar in that the icon rather than the button indicates status—but they don’t have a special dimmed in-the-background look, which I think confuses things in Mail.

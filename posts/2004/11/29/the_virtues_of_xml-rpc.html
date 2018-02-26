@@ -1,0 +1,99 @@
+@dbid 2991
+@title The virtues of XML-RPC
+@pubDate Mon Nov 29 21:05:09 -0800 2004
+@modDate Mon Nov 29 21:08:11 -0800 2004
+It’s way too late to convince the folks working on the Atom weblog editing API that XML-RPC is good. (I argued in favor of XML-RPC—months ago? A year ago? And lost.)</p>
+
+<p>But now and again I feel the need to explain why XML-RPC is good, since the issue will come up in other contexts. Even if we use other things, it’s worth remembering the virtues of XML-RPC, since nothing else comes close yet in terms of both ease-of-use and generality.</p>
+
+<p>So my point here isn’t to convince anyone to use XML-RPC but to talk about why it’s good. It’s worth knowing.
+</p><h4>Procedures</h4><p>
+When you write software, you write lots of code that looks like this: <code>someProcedure (thing, otherThing, somethingElse)</code>.</p>
+
+<p>In other words, you call a procedure (or method or function) with some parameters.</p>
+
+<p>The procedure does something. Maybe it stores things, maybe it converts them to something else, maybe it sends them somewhere else, maybe it adds them together. Something happens.</p>
+
+<p>There’s often a return value that lets you know the result. (Maybe it’s the sum of the things, or true or false, or an error code, and so on.)</p>
+
+<p>Programmers do this all day long. It’s at the very core of programming.</p>
+
+<p>Normally, of course, they write code that calls a procedure that they wrote—it’s part of the same program. Or they call procedures in a library (in my case, I use Cocoa, so there are lots of Cocoa-supplied methods my code calls). The caller and the procedure are on the same machine.</p>
+
+<p>But wouldn’t it be cool if the procedures didn’t have to be on the same machine? Wouldn’t it be cool if they worked across the internet?</p>
+
+<p>That would open up a whole new world of programming. You could do things like call a procedure on your weblog server that posts a new entry to your weblog. (Which is exactly what ecto and MarsEdit do.)
+</p><h4>XML-RPC is programmer-friendly</h4><p>
+Here’s why:</p>
+
+<p>1. You make procedure calls.</p>
+
+<p>Even though your code may or may not look like the example <code>someProcedure (thing, otherThing, somethingElse)</code>, you’re still thinking in terms of procedure calls, which is very natural for programmers.</p>
+
+<p>2. It’s language-neutral.</p>
+
+<p>It turns out—no surprise—that languages have common types of data: integers, strings, arrays, dictionaries, and so on. Sometimes they go by different names—XML-RPC uses the word “struct” instead of “dictionary”—but they’re the same types.</p>
+
+<p>What XML-RPC does is give you an easy way to call procedures and translate your data to a format that other languages can use. In other words, my code might send a Cocoa string and the server gets a Python string.</p>
+
+<p>So programmers continue to think not only in terms of procedures but in terms of the data types they already know.</p>
+
+<p>(OS X programmers: think of property lists. Though XML-RPC’s format isn’t the same, it’s the same in spirit. It’s an XML formatting of various data types.)</p>
+
+<p>3. Learning and using a new API is easy.</p>
+
+<p>When you learn a new API for in-computer procedure calls, you just learn the different names of the procedures and what parameters they take.</p>
+
+<p>It’s similar for XML-RPC. You don’t have to write a new parser for each new API. You just learn what the procedures are, what parameters to send, and what they return.</p>
+
+<p>This makes getting up-to-speed on a new type of web service—as long as it’s XML-RPC—incredibly, ridiculously easy.</p>
+
+<p>I can’t stress this enough, how easy it is. It’s <i>crazy</i> how easy it is. And I suspect it’s so easy that people assume there’s something wrong with it.
+</p><h4>The knocks against XML-RPC</h4><p>
+Some people will never like XML-RPC because, frankly, the <a href="http://www.xmlrpc.com/spec">spec</a> is on a UserLand server, and some people don’t want to use a spec that Dave Winer had anything to do with.</p>
+
+<p>To those people, there’s nothing anyone can say, since it’s not about considering XML-RPC on its merits.</p>
+
+<p>But there are other people who don’t like XML-RPC because of a real or perceived drawback or a misunderstanding of how it works. So I’ll cover some of these.
+</p><h4>Knock #1: XML-RPC mandates ASCII, and thus isn’t internationalization-friendly</h4><p>
+Actually, as the spec says, the “body of the request is in XML.” For instance, my software uses UTF-8 as a matter of course. It does the standard XML things for specifying the encoding.</p>
+
+<p>(An earlier version of the spec did say ASCII. The spec was updated.)
+</p><h4>Knock #2: XML-RPC mandates using one endpoint, which can be a problem for server implementors</h4><p>
+(By endpoint I mean the URL of the script on the server.)</p>
+
+<p>The spec doesn’t mandate using one endpoint, but one endpoint is quite common. I argue that one endpoint is easier, because you don’t have to have scripts in a bunch of locations (or do mod_rewrite stuff). It’s more secure because you have just one endpoint to lock down in whatever way. It’s easier for clients because you only need to discover (or figure out) one endpoint, not separate endpoints for each thing you want to do.</p>
+
+<p>In other words, <i>one</i> is simpler than <i>many</i>.</p>
+
+<p>But the spec doesn’t mandate a single endpoint, anyway. So if you prefer multiple endpoints, you can use them.
+</p><h4>Knock #3: XML-RPC doesn’t understand namespaces</h4><p>
+Quite right—it doesn’t. But that’s totally beside the point. It doesn’t matter.</p>
+
+<p>The point of XML-RPC is <i>not</i> to send around XML documents. The point is to send around data. That it uses XML to serialize the data is an under-the-hood thing. The data can be any combinations of strings, arrays, dictionaries, and so on—the standard building blocks of data.</p>
+
+<p>It’s all about making a procedure call with standard data types. It’s not about document-literal XML.
+</p><h4>Knock #4: XML-RPC isn’t a document-literal system</h4><p>
+Some people prefer a document-literal approach. I don’t, because it means that for each different service I have to write code that translates my data to and from that document format. XML-RPC makes it super-easy: there’s just one way to translate data into XML. Once you have an XML-RPC library, you don’t ever have to deal with this again.</p>
+
+<p>I’ve had the argument many times with people that document-literal does things that XML-RPC can’t do. But I’ve never been convinced. Is there anything you can’t do by calling a procedure with some data?
+</p><h4>Some possible reasons not to use XML-RPC</h4><p>
+The spec doesn’t say anything about security, which means people do different things.</p>
+
+<p>The spec doesn’t say specifically that https is okay to use (though many people just assume it is and use it all the time).</p>
+
+<p>The spec doesn’t say anything about compression. (I assume, since the spec does say that it’s http, that compression is okay to use. It would be nice if the spec said something about this, though, since XML is by nature somewhat verbose compared to binary formats.)</p>
+
+<p>The spec doesn’t talk about discovering methods on a server.
+</p><h4>XML-RPC and its replacements</h4><p>
+I’ll grant that it’s possible that the missing pieces in XML-RPC may be enough to say that, for many cases, something else should be used.</p>
+
+<p>But what we don’t have—what we’re not even close to having—is something as general and as easy-to-use as XML-RPC.</p>
+
+<p>Again, what could be easier for programmers than procedure calls with parameters and return values? What is more general?</p>
+
+<p>While SOAP has its many good points, no one would argue that it’s easy to use.</p>
+
+<p>And while REST satisfies my aesthetic sense as being wonderfully elegant, it doesn’t give you a single serialization format you can use. You have to do more work, you have to turn data into XML and back again. (And you have to turn everything into an http verb. What if you have a procedure that, given a graphic as a parameter, returns a black-and-white version? Is that <i>really</i> a GET request, or are we overloading http a bit here?)</p>
+
+<p>XML-RPC represents a high-water mark in ease-of-use and flexibility. If we’re moving on to something else—and, at least in the Atom weblog editing world, we are—it would be nice if that something else recognized and built on the virtues of XML-RPC.

@@ -1,0 +1,19 @@
+@dbid 2447
+@title XML-RPC and OS X 10.2.5
+@pubDate Mon Mar 17 10:07:07 -0800 2003
+@modDate Mon Mar 17 10:27:24 -0800 2003
+I&#8217;ve received email from people this morning telling me that OS X 10.2.5 will contain fixes to Apple&#8217;s XML-RPC code. Which I think is great. I had no doubt they would fix the bugs.</p>
+
+<p>Now, I don&#8217;t get pre-release copies of the system, so I can&#8217;t confirm this. But, assuming it&#8217;s true, the obvious question for me is: why not switch back to the system-supplied XML-RPC code?</p>
+
+<p>Here&#8217;s why I do not plan to switch back:</p>
+
+<p>1. My philosophy is to always use system-supplied code whenever possible. My time can be much better spent in ways other than re-inventing the wheel. However, I already <em>have</em> re-invented the wheel in this case. There&#8217;s a value to being in control of the source code. If I want to or need to add features, I can.</p>
+
+<p>2. My XML-RPC code runs on systems previous to 10.2.5. I don&#8217;t want to require that NetNewsWire users run 10.2.5.</p>
+
+<p>3. The code is designed to be forgiving of things like unencoded ampersands and characters outside of the XML-RPC spec. It has to be forgiving, because not all of the various weblog publishing systems return perfectly valid responses all of the time. (That&#8217;s just a fact of life. It&#8217;s not my job to be an XML cop. I&#8217;d rather just have things work.)</p>
+
+<p>4. My code is in the form of a set of Cocoa classes. Apple&#8217;s code is procedural. I prefer using Cocoa, since NetNewsWire is a Cocoa app. It fits better.</p>
+
+<p>5. My code uses <a href="http://curlhandle.sourceforge.net/">CURLHandle</a>, which is what NetNewsWire uses to read feeds and so on. There&#8217;s a value to using the same HTTP client software throughout the app. For instance, once I fix the bug with authenticating proxies in the news reader, I can fix it in the XML-RPC code at the same time, since the fix will be the same.

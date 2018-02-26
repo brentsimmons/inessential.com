@@ -1,0 +1,35 @@
+@dbid 3486
+@title When do we stop making ’em fat?
+@pubDate Sat Mar 22 18:28:08 -0700 2008
+@modDate Sat Mar 22 18:28:08 -0700 2008
+I’ve had this conversation once before — back when I was at UserLand, around 2000 or so, we made the call to stop building Frontier as a <a href="http://en.wikipedia.org/wiki/Fat_binary">fat binary</a>. There weren’t many folks running 68k machines anymore, so we could build for PowerPC only.</p>
+
+<p>You might wonder: why do that? If you’re already building for 68k and PowerPC, why not just continue?</p>
+
+<p>Well, it meant we wouldn’t have to <em>test</em> on 68k machines anymore, for one thing. It’s hard for a small development team hard to support a CPU type they don’t use normally.</p>
+
+<p>It also meant that full-build times would be faster — and, of course, the size of the app and the download would be smaller. (Not cut in half, because resources take up a certain amount of space, but smaller nonetheless.)</p>
+
+<p>But the testing was the big thing. Even though, in the ideal case, another architecture is just a checkbox, you still have to test. And it’s time-consuming — it takes time that could be used to fix more bugs.
+</p>
+<h4>Today: PowerPC and Intel</h4>
+<p>
+I was looking at the <a href="http://update.omnigroup.com/">Omni Software Update stats</a>, and they’re showing Intel at 83.6% and PowerPC at 16.4%. (Choose Hardware from the popup menu on the left, then click CPU Type.)</p>
+
+<p>Those numbers may not represent the Mac market as a whole — but I bet they’re reasonably representative of people who buy Mac software, which is the group Mac developers care about.</p>
+
+<p>What this says is that it’s too soon to stop building fat binaries. We have to keep supporting PowerPC for now. But it also says that the time is approaching when we won’t have to anymore. (Could it be as soon as later this year?)
+</p>
+<h4>Possible special case: YourApp 1.0</h4>
+<p>
+The numbers also suggest to me another thing: if you’re building a new app, and that app is targeted to developers and power users — the kind of people who have newer systems — then you might not do PowerPC at all.</p>
+
+<p>YourApp 1.0 would be an Intel-only release.</p>
+
+<p>Of the power user and developer set, the percentage of PowerPC users is likely quite a bit smaller than the 16.4% reported in the Omni stats.</p>
+
+<p>Consider also that you can avoid the time (which is coming) when suddenly you stop supporting PowerPC. If you start off Intel-only, you won’t have left any PowerPC customers in the cold. (Since you won’t have any PowerPC customers.)</p>
+
+<p>I’m not telling you to do this. But if it were me working on a brand-new app, I’d think about it. (I’d also go Leopard-only, for sure.)</p>
+
+<p>(Note to NetNewsWire users: don’t worry, I don’t have plans to take away PowerPC support. Eventually it will have to happen, but not soon.)

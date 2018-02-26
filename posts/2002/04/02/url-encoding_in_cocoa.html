@@ -1,0 +1,9 @@
+@dbid 1935
+@title URL-encoding in Cocoa
+@link http://developer.apple.com/techpubs/macosx/CoreFoundation/URLServices/URL_Services/Functions/Miscellaneou39456789101112.html#//apple_ref/C/func/CFURLCreateStringByAddingPercentEscapes
+@pubDate Tue Apr 02 18:31:48 -0800 2002
+@modDate Tue Apr 02 18:32:32 -0800 2002
+I was going ape looking for a URL-encoding method in Cocoa. To my surprise it appears to lack one.</p>
+
+<p>So this post is here for the search engines. Cocoa developers: you can call <a href="http://developer.apple.com/techpubs/macosx/CoreFoundation/URLServices/URL_Services/Functions/Miscellaneou39456789101112.html#//apple_ref/C/func/CFURLCreateStringByAddingPercentEscapes">CFURLCreateStringByAddingPercentEscapes</a> in the CoreFoundation framework to URL-encode a string. It takes (and returns) 
+CFStringRefs, which are apparently interchangeable with NSStrings.

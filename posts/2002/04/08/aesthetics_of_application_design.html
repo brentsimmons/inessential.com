@@ -1,0 +1,69 @@
+@dbid 1945
+@title Aesthetics of Application Design
+@pubDate Mon Apr 08 13:21:08 -0700 2002
+@modDate Mon Apr 08 13:21:08 -0700 2002
+I’ve been working on an aesthetics of application design. I don’t claim that it’s complete or the only valid theory. Here are my thoughts in progress.</p>
+
+<h4>Abundance</h4>
+
+<p>This is an age of software abundance. Sure, there may be apps that don’t exist that you wish you had—but there are far more apps available today than ever before.</p>
+
+<p>This includes Web apps, a giant category which didn’t even exist a few years ago.</p>
+
+<h4>A few things follow from this observation:</h4>
+
+<p>1. People are asked to learn more user interfaces than ever before. Learning user interfaces is difficult and takes too much time.</p>
+
+<p>2. If you the software developer don’t do something, some other software developer will. And that’s okay: that’s a good thing. It means the richness of the computer world doesn’t rely all on you: we can’t help but collaborate.</p>
+
+<p>3. There is an abundance not just of software but of people using software, and each person has different needs, wants, and feature requests.</p>
+
+<h4>I conclude several things:</h4>
+
+<p>1. The simpler the user interface the better. A UI should be instantly learnable and usable, or as close to that as possible given the problem being solved.</p>
+
+<p>In other words, the more apps there are, the more aggressively one should simpify your UIs. Anything else is just not fair to the people who use them.</p>
+
+<p>2. Small apps that do one thing very well are better than monolithic apps that do lots of things unevenly.</p>
+
+<p>Here’s what I mean. Say you have ten features you could implement. You could make a giant app that has all of those features. But any one person will only use three of those features. The problem is, for each person it’s a different three.</p>
+
+<p>So an alternative approach is to do several smaller apps. Each one has a far simpler UI than the big app would have. Each one does one or a couple things very well.</p>
+
+<p>Then users can pick and choose. They’ll choose which apps they want to use based on which features they want or need.</p>
+
+<p>3. Apps should talk to each other.</p>
+
+<p>This means using common, standard data formats, supporting Web services, Apple events, COM, pipes, and so on. Not that every app should support all these things: they should support whatever makes sense for that app.</p>
+
+<p>It’s a key point, though. A computing universe of small apps would be just chaos and noise unless the apps can talk to each other and exchange data.</p>
+
+<p>4. Scripting is important.</p>
+
+<p>This goes to the above: a user should be able to do unexpected but important things with scripting. There’s a special place in the computing world for scripting systems: they’re the glue that ties everything together. Scripts are the energy that moves the bits.</p>
+
+<p>5. Core apps should be extendable via plugins.</p>
+
+<p>Apps such as <a href="http://www.barebones.com/">BBEdit</a>, <a href="http://www.adobe.com/">Photoshop</a>, <a href="http://www.apache.org/">Apache</a>, and <a href="http://radio.userland.com/">Radio UserLand</a>—apps that implement core services of some kind—should be open platforms. There are plenty of cases where, instead of implementing another app, what a developer really wants to do is integrate his or her app into one of these platforms. That’s completely appropriate.</p>
+
+<p>And note that BBEdit, Photoshop, Apache, and Radio all <em>do</em> have a plugin architecture, and this explains part of their popularity.</p>
+
+<h4>Two examples</h4>
+
+<p>I recently released two apps. One, <a href="http://ranchero.com/software/huevos/">Huevos</a>, is a small and simple desktop app for OS X. The other is a Web app, a <a href="http://ranchero.com/macnews/">Macintosh news aggregator</a>.</p>
+
+<p>In both cases the user interface is as simple as I could make it. Huevos has one main window: choose a search engine from a popup menu, type in your search terms, then click a button to run the search. It would be hard not to understand it right off the bat.</p>
+
+<p>I’ve had a number of people write me with feature requests, things I could add to Huevos. Several people have asked about adding a local find, something like a GUI wrapper for grep that would allow one to search your local hard drive.</p>
+
+<p>And I think that’s a great idea—but if I do it, it will be another app. It won’t be Huevos. Because as soon as I add that feature to Huevos its UI would no longer be simple and instantly graspable.</p>
+
+<p>My Macintosh news aggregator is also as simple as I could make it. I could have added a bunch of prefs so that members could customize their view by choosing how many items to display, what RSS feeds to show, and so on. I could have added a bunch of options to the search engine.</p>
+
+<p>But I chose not to. Why? Because I want you to feel like you understand it, understand the entire thing, right away.</p>
+
+<p>Because I respect you, I also want you to be able to decide right away if the app will meet your needs or not. If not, there are plenty of other aggregators, and probably one of those will work for you. I don’t want you to waste your time with a lengthy decision process regarding an app you understand only partly.</p>
+
+<h4>Anyway...</h4>
+
+<p>I’m still thinking about all this. Comments are, of course, welcome.

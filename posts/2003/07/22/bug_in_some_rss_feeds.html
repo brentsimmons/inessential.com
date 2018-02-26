@@ -1,0 +1,37 @@
+@dbid 2588
+@title Bug in some RSS feeds
+@pubDate Tue Jul 22 16:23:26 -0700 2003
+@modDate Tue Jul 22 18:32:13 -0700 2003
+I&#8217;m seeing a bug in some RSS feeds (both RSS 1.0 and RSS 2.0).</p>
+
+<p>The bug is using the same item_uri or guid in multiple items in a feed. (I&#8217;m not going to point to any examples, because I don&#8217;t want to embarass anybody.)</p>
+
+<p>In <a href="http://web.resource.org/rss/1.0/spec#s5.5">RSS 1.0</a>, unless I read the spec wrong, the {item_uri} in &lt;item rdf:about="{item_uri}"> should be unique for each item.</p>
+
+<p>And in <a href="http://blogs.law.harvard.edu/tech/rss#ltguidgtSubelementOfLtitemgt">RSS 2.0</a>, the guid should also be unique.</p>
+
+<p>Something like this would be incorrect:</p>
+
+<p><pre>&lt;item rdf:about="http://example.com/somePage.html">
+   ...title, link, description stuff...
+   &lt;/item>
+&lt;item rdf:about="http://example.com/somePage.html">
+   ...some other title, link, and description...
+   &lt;/item></pre></p>
+
+<p>Or, in RSS 2.0, this would be incorrect:</p>
+
+<p><pre>&lt;item>
+   ...title, link, description stuff...
+   &lt;guid>http://example.com/somePage.html&lt;/guid>
+   &lt;/item>
+&lt;item>
+   ...some other title, link, and description...
+   &lt;guid>http://example.com/somePage.html&lt;/guid>
+   &lt;/item></pre></p>
+
+<p>Using non-unique identifiers is worse than using none at all. The reason to have identifiers is so that newsreaders can identify an item. If two items have the same identifier, a newsreader may think it&#8217;s really the same item.</p>
+
+<p>It&#8217;s like in email: if you look at the headers you see a Message-Id which identifies each email. If it&#8217;s missing&#8212;or, worse, not unique&#8212;email apps could get confused. <em>Update 3:24 p.m.</em>: Message-Ids are not required, so a missing ID should not confuse an email app. Which is similar to RSS: identifiers are not required. It&#8217;s the case when they&#8217;re not unique that&#8217;s the problem.</p>
+
+<p>P.S. If I&#8217;m wrong in my understanding of the RSS 1.0 spec, please don&#8217;t hesitate to let me know.

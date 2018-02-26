@@ -1,0 +1,35 @@
+@dbid 2790
+@title XML detective work
+@pubDate Mon Jan 19 00:02:40 -0800 2004
+@modDate Mon Jan 19 00:16:27 -0800 2004
+One of the things about XML and web services is that debugging can be tricky. The whole idea is that different applications on different platforms can read and write files that each understands.</p>
+
+<p>The tricky part comes when something doesn’t work. Where’s the bug?</p><h4>Case study in detective work</h4><p>A NetNewsWire user reported a bug to me: he had uploaded his NetNewsWire-generated subscriptions OPML file to <a href="http://feeds.scripting.com/">feeds.scripting.com</a>, and feeds.scripting.com reported an XML parsing error.</p>
+
+<p>The obvious thing to think is that there’s a bug in NetNewsWire’s OPML generator. That was my hunch, so I asked for a copy of the file so I could figure out the bug and fix it.</p>
+
+<p>The second obvious guess is that there’s a bug in the XML parser used by feeds.scripting.com. However, in my experience it’s usually the newer code that has the bugs, and NetNewsWire is newer than UserLand’s XML parser.</p><h4>Debugging</h4><p>
+The first thing I did was test the OPML file with a number of different tools. First I used <a href="http://xmlsoft.org/xmllint.html">xmllint</a>. It didn’t report any errors. Then I tried opening it in various web browsers, since web browsers include XML parsers these days. The ones I tried (Safari, Firebird, and Internet Explorer) all reported no errors. It even opened fine in OmniOutliner.</p>
+
+<p>Hmmm.</p>
+
+<p>So finally I uploaded the file to feeds.scripting.com—and it worked! No XML error reported.</p>
+
+<p>Let’s get this straight: it looked like the bug <em>didn’t exist at all</em>. The file NetNewsWire generated was fine, and the XML parser at feeds.scripting.com read it fine.</p>
+
+<p>But I knew better than to stop there. Rule one of bug reports is that you don’t invalidate what the user says, just because you don’t see it yourself.</p>
+
+<p>Think. What could be the problem?</p><h4>The answer that satisfies</h4><p>I had uploaded the file with Safari. Could the user have used another browser?</p>
+
+<p>I tried uploading it with Firebird and it worked fine. Then I tried uploading it with Internet Explorer—and feeds.scripting.com reported an XML error.</p>
+
+<p>Yes! My money was on the problem being a bug in IE: it somehow mangled the file on uploading it. So I wrote back to the person who reported the bug and told them what I’d found.
+</p><h4>The mystery remains</h4><p>But it turns out that they’d used Safari too.</p>
+
+<p>And now, when they try it again, it works fine.</p>
+
+<p>So what’s the real answer? Why was there a bug? Why does it work now?</p>
+
+<p>I don’t know. But if everything is working, and no software is reporting any errors at all, then you have to let it go.</p>
+
+<p>Which is, I think, an unsatisfying ending to this, but it’s a common ending when debugging XML and web services.

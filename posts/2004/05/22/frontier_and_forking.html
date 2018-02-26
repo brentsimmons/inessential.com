@@ -1,0 +1,31 @@
+@dbid 2852
+@title Frontier and Forking
+@pubDate Sat May 22 15:40:45 -0700 2004
+@modDate Sat May 22 15:58:53 -0700 2004
+It’s become obvious to me (and, I think, to folks like <a href="http://jim.roepcke.com/2004/05/21#item6924">Jim Roepcke</a>) that Frontier has at least two main areas of interest, reflecting its dual heritage.</p>
+
+<p>On one hand, there are fogeys like me who would love a desktop scripting system that totally embraces OS X. We look back at Frontier of ten years ago and say, hey, we want <i>that</i>, only better and updated for 2004.</p>
+
+<p>On the other hand, there are folks using Radio UserLand and running Manila servers that would like improvements to the server and content management features.</p>
+
+<p>(There may be other areas of interest, but these are the ones I’ve identified so far.)</p>
+
+<p>The fogeys (generally speaking) care about an updated user interface, support for more languages, support for scripting more applications (system.verbs.apps.iTunes?), and so on. The idea is a desktop tool that makes it easier to get more work done.</p>
+
+<p>But folks using Radio and Manila care about scalability, running as a daemon, a Linux port, separating the UI from the server, and so on. Those are all valid and important issues.</p>
+
+<p>As a fogey, I don’t even care that it runs on Windows. But if you’re running a Manila server on Win2K, you very much care, quite rightly, that it runs on Windows. As a fogey, I care more about syntax coloring in the script editor than I care about extending the upper limit of database file size. But if you run a Manila server your priorities are the reverse.</p>
+
+<p>That’s just to say that this could potentially be a serious challenge to whoever manages the kernel. There could be pressure to fork it, more so than most other applications, because of the two strongly different directions it could go in.</p>
+
+<p>What approach might the maintainers take?</p>
+
+<p>One possibility is something like Mozilla-like. With Mozilla, there is a base on which different applications are created. Some of those applications (Firefox) are cross-platform, and others (Camino) are not.</p>
+
+<p>This makes sense to me, because it allows the deep under-the-hood parts (the script evaluator, the object database, etc.) to be shared between these hypothetical different versions of the app.</p>
+
+<p>What I would <i>not</i> like to see happen is a complete fork, where folks with different visions take it in different directions without coordination or sharing.</p>
+
+<p>There are so many things I don’t know. Will there be a community of people that want to work on the app? How many fogeys are there, really? (Maybe we’re grossly outnumbered.) What license will be used? Will there be any kind of formal or informal organization charged with maintaining the kernel? If so, what will be their priorities, and how open will they be to different visions?</p>
+
+<p>As I’ve repeated before, I don’t plan to work on the kernel, fun as it would be, since I’m so busy with my own software—but I like thinking and writing about this story, since it could be the birth of a really great open source project, and it has some interesting and unique dimensions. I’m fascinated by it.

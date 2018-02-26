@@ -1,0 +1,33 @@
+@dbid 2996
+@title Another Atom title question
+@pubDate Sat Dec 04 18:16:33 -0800 2004
+@modDate Sat Dec 04 18:16:33 -0800 2004
+Another Atom question... (Is there a mailing list or forum somewhere where I can ask questions instead?)</p>
+
+<p>How must a client display the following title?</p>
+
+<p><pre>&lt;title>&amp;#38;&lt;/title></pre></p>
+
+<p>When defaults are applied, this expands to:</p>
+
+<p><pre>&lt;title mode="xml" type="text/plain">&amp;#38;&lt;/title></pre></p>
+
+<p>The value is inline XML and it should be displayed as plain text.</p>
+
+<p>Were the type HTML, then clearly it should be displayed <code>&</code>. But, since it’s plain text, I believe it should be displayed as <code>&amp;#38;</code>.</p>
+
+<p>But — here’s where I’m tripped up — this case is part of a <a href="http://www.intertwingly.net/blog/2004/04/04/Simple-examples">set of examples</a> that imply that it should be displayed as <code>&</code> and <i>not</i> as <code>&amp;#38;</code>.</p>
+
+<p>This example has to be correct, and I have to be wrong, because the following would be flat-out illegal:</p>
+
+<p><pre>&lt;title>&amp;&lt;/title></pre></p>
+
+<p>Here’s what it comes down to — the Atom spec talks about escaped content, but doesn’t specify what that means, and it’s giving me some trouble.</p>
+
+<p>If mode=xml, which entities should be converted? Ampersands, yes. What about lt, gt, and apos?</p>
+
+<p>If I do convert lt, gt, and apos also (when mode=xml), then I don’t understand how the third example in the <a href="http://diveintomark.org/tests/client/escaping/blink.xml">History of &lt;blink&gt; tag</a> test work. It looks like this:</p>
+
+<p><code>&lt;title type="application/xhtml+xml" mode="xml">&lt;div xmlns="http://www.w3.org/1999/xhtml">History of the &amp;lt;blink&amp;gt; tag&lt;/div>&lt;/title></code></p>
+
+<p>If I do translate lt and gt (at parse time), then <code>&amp;lt;blink&amp;gt;</code> turns into <code>&lt;blink&gt;</code> — and, consequently, you don’t see it, because now it’s an HTML tag. The test clearly says it should be displayed as <code>&lt;blink&gt;</code>, which means that the string value has to be <code>&amp;lt;blink&amp;gt;</code>.

@@ -1,0 +1,15 @@
+@dbid 2856
+@title External Weblog Editor Interface
+@pubDate Tue May 25 13:13:01 -0700 2004
+@modDate Tue May 25 13:13:01 -0700 2004
+I put up a page documenting the <a href="http://ranchero.com/netnewswire/developers/externalinterface.php">external weblog editor interface</a> that NetNewsWire 2.0 will use to send posts to a weblog editor.</p>
+
+<p>One of the things you’ll note is that it’s an Apple events interface. The reason for using Apple events is that this gives us the widest possible base of implementations: Apple events support appears in Cocoa, Carbon, and a whole bunch of scripting languages. The intent is to be inclusive.</p>
+
+<p>Another thing you’ll note is that it should work with apps other than weblog editors—you might want to send news items to a database or outliner, for instance, and I hope developers of such apps will implement the interface.</p>
+
+<p>Email me with any questions.</p>
+
+<p>I put no clauses or conditions in the documentation. (You knew I wouldn’t, right?) Everybody is free to implement either or both sides of the interface. (A note of thanks wouldn’t hurt—I’m easy to please!)</p>
+
+<p>I’m aware that, if you’re writing an app that implements the receiving side, there’s no sending apps to test with yet. We’re working to remedy that situation. But if you’re writing a sending app, you can test it with the latest version of <a href="http://blog.kung-foo.tv/archives/000925.php">ecto</a>, which has already implemented the receiving side.

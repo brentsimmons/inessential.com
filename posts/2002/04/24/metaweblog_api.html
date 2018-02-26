@@ -1,0 +1,14 @@
+@dbid 1976
+@title MetaWeblog API
+@link http://www.xmlrpc.com/metaWeblogApi
+@pubDate Wed Apr 24 09:28:48 -0700 2002
+@modDate Wed Apr 24 09:28:48 -0700 2002
+I’ve been putting off doing an XML-RPC interface for my weblog software. The Blogger API wouldn’t work for me because each post has three elements: title, url, and text.</p>
+
+<p>For some reason I had it in my head that the <a href="http://www.xmlrpc.com/metaWeblogApi">MetaWeblog API</a> was designed to work with the Blogger API. I thought I’d have to support two APIs, and I wouldn’t be able to get, set, and edit posts with one call each.</p>
+
+<p>I’m so pleased to discover that I was wrong. The MetaWeblog API does exactly what I need (a bit more, actually, but not too much more). My thanks go to <a href="http://scripting.com/">Dave Winer</a> and UserLand for a nice spec.</p>
+
+<p>A Cocoa weblog editor should be a piece of cake. Most of the code would be just getting and setting Apple event parameters. (I’d use the Apple Event Manager to send the XML-RPC requests.) The rest is pretty much just layout, building a form in Interface Builder.</p>
+
+<p>I won’t get around to it today or tomorrow or the next day. Maybe someone else will beat me to it, which would be just fine by me.

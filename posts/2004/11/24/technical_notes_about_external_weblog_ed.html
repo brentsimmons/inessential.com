@@ -1,0 +1,109 @@
+@dbid 2988
+@title Technical notes about external weblog editors
+@pubDate Wed Nov 24 23:49:40 -0800 2004
+@modDate Wed Nov 24 23:54:24 -0800 2004
+The Atom folks are working on a weblog editing API. I plan to support it in MarsEdit, of course. (Assuming it’s do-able and it’s adopted by weblog systems—safe bets, but I have to say it anyway.)</p>
+
+<p>What follows is some notes—for the benefit of the Atom folks and anyone else—based on my experience writing external weblog editors.
+</p><h4>My background</h4><p>
+First, just to establish what my experience actually is...</p>
+
+<p>I’ve been writing external weblog editors since early 2000. The first one I worked on was UserLand Pike, which was an external editor for Manila sites. It used Manila’s XML-RPC interface. (This may have been the first external weblog editor, though I’m not positive of that.)</p>
+
+<p>I then continued to work on external editing at UserLand. Later on, at Ranchero Software, I wrote an external editor that was part of NetNewsWire 1.x. My most recent editor is MarsEdit, which works with a variety of systems (Movable-Type-compatible, MetaWeblog, Blogger API, and Blosxom systems).</p>
+
+<p>I’ve also worked on the server side, both at UserLand and later for my home-grown weblog system.</p>
+
+<p>What follows is some notes on things I’ve learned along the way, some things that make writing clients easier.
+</p><h4>Fewer calls are better: one call is best</h4><p>
+Say you want to get the ten most recent posts from a weblog. Ideally, you make a single call of some kind to the weblog server to get all the info you need about those posts.</p>
+
+<p>(I think this should be self-evident—but, in case it’s not, I’ll just mention that it’s much easier to deal with state, updating the UI, and error handling when you can make a single call.)</p>
+
+<p>This means that the data for each post should contain not just the various bits of text but information such as categories, what text filter is used, whether or not comments are enabled, what trackbacks have been sent, etc. All the various pieces of data that you might want to edit through the UI should be returned in this one call.</p>
+
+<p>There are some systems today that require 11 calls to get the ten most recent posts. First you make a call that returns most of the information about those posts—but then you have to make a call <i>for each post</i> to get the categories for each post. That’s one initial call plus ten more calls. That’s ten calls too many.</p>
+
+<p>Similarly, you’d like to be able send a new or edited post to the weblog with a single call. Again, there are some systems today that require multiple calls in order to send a new or edited post.</p>
+
+<p>Here’s how that sequence goes:</p>
+
+<p>1. Make a call to send the post to the server—but tell it not to publish.</p>
+
+<p>2. Make a second call to set the category.</p>
+
+<p>3. Make a third call to tell it to publish the post.</p>
+
+<p>Obviously one call would be better. (What if the network goes down in the middle of this sequence of calls? It’s not like transactions are supported here.)
+</p><h4>Clients need info from the server other than just posts</h4><p>
+Downloading posts from the server is, obviously, very important. But there’s some other information you need to be able to get:</p>
+
+<p>1. What are the names of the categories for this weblog?</p>
+
+<p>2. What text filters are available?</p>
+
+<p>3. What comments options are available?</p>
+
+<p>(And so on.)</p>
+
+<p>For instance, in order to present a list of categories in the UI, you need to know what they actually are. Same with text filters and everything else like that.</p>
+
+<p>It would also be nice to be able to get the <i>defaults</i> for those things. For instance, a system may allow you to set the default text filter as Markdown. You might be able to say that comments should default to on. It would be great if the external editor could know the user’s settings. (Right now, they don’t.)
+</p><h4>Drafts are a big deal</h4><p>
+People who write for weblogs love drafts, but the situation with editing drafts is very bad right now.</p>
+
+<p>For some systems, they just don’t tell external editors if a post is a draft or if it has been published. This is important! Not least because an external editor might end up publishing a draft that should have remained a draft.</p>
+
+<p>Another issue is that an editor doesn’t have a way to ask for the ten (or whatever) most recent drafts that are stored on the server. This is a feature request I get all the time—people want to see and edit their server-stored drafts—but, right now, no can do.</p>
+
+<p>(So I have local drafts instead, which is okay, but people would—quite rightly—like to be able create and edit server-stored drafts.)
+</p><h4>Image and file uploading needs work</h4><p>
+The MetaWeblog API has a great feature—you can upload images and files. The server returns the URL of the uploaded image, and the client software can then build an img tag and insert it into the body of the post.</p>
+
+<p>As cool as this is, it’s limited, and I get feature requests about this all the time.</p>
+
+<p>The current API allows uploading, but more things are needed:</p>
+
+<p>1. A way to find out what images and files are <i>already</i> stored on the server.</p>
+
+<p>2. A way to delete images and files. (Say you upload the wrong file by accident.)</p>
+
+<p>3. A way to rename images and files. (I’ve seen people upload the same image again just so the filename will be what they want it to be.)</p>
+
+<p>4. A way to replace images and files. (Yes, you could delete and upload, but one call is better.)</p>
+
+<p>Of course, info like MIME type and size are needed along with the URLs.
+</p><h4>Enclosures should be supported</h4><p>
+I’m not sure what the current thinking is with Atom and enclosures. You’ve noticed the enthusiasm around podcasting, I’m sure.</p>
+
+<p>This is related to image-and-file-uploading. A way to tell a server that a given file or image should be linked-to as the enclosure for an item is important.</p>
+
+<p>(Imagine the UI in the client. A user clicks an Attach Enclosure button, chooses a file, and the file is uploaded. When the feed is read by an aggregator, that uploaded file is listed as the enclosure for that post.)
+</p><h4>Multiple users should be supported</h4><p>
+Some weblogs have multiple users. Some of those even prevent one user from editing another user’s posts.</p>
+
+<p>But most systems don’t express that in their external editing interfaces. A client should be able to get the ten most recent posts <i>for a given user</i>.
+</p><h4>Errors should be standardized</h4><p>
+There are various types of errors a weblog system might report, but there’s no standardized way to report the errors. (I’m talking about the current APIs. This may or may not be true in the current Atom editing draft, I don’t know.)</p>
+
+<p>Example: say there’s an authentication error. My software has to actually look at the error string for keywords like “login” and “username” and “password” and make a <i>guess</i> that the error is an authentication error. That’s just plain <i>bad</i>.</p>
+
+<p>That’s the most common error, but other errors should be standardized too. Clients should not have to guess what an error means. Ideally error codes are used so that error messages can be localized.</p>
+
+<p>Maybe some of this is just standard HTTP: that’s cool. But I can imagine error conditions that aren’t part of the HTTP spec. (Or that are in the spec but are insufficiently specific for weblog editing.)
+</p><h4>Discovery is very important</h4><p>
+Imagine you’re trying to configure an external editor to work with your weblog. Your hope is that you can just tell the app the URL of the weblog, your username, and your password—and that’s it.</p>
+
+<p>Systems that support <a href="http://archipelago.phrasewise.com/rsd">RSD</a> make this possible right now.</p>
+
+<p>If RSD is not used, then something just as good should be used. Configuring a client is difficult without it.</p>
+
+<p>Discovery is something a client should do just once: it shouldn’t be constantly having to make calls to discover different URLs for different things. (The way RSD works is that you read the file once and you know everything you need to know.)
+</p><h4>Duplicate pings should be avoided</h4><p>
+Some servers send “pings”—update notices—to various sites when you publish a new or edited post. Many clients do the exact same thing.</p>
+
+<p>So clients should have a way of knowing what URLs the server is pinging, in order to avoid duplicate pings. While duplicate pings aren’t the worst thing in the world, it’s still a situation that should be fixed.
+</p><h4>Pie in the sky features can be ignored for now</h4><p>
+There are so many more features my users would love to have. Editing pages, for instance, not just weblog entries. Editing all the various templates and settings. Editing the list of categories.</p>
+
+<p>I’d still be happy even if all the pie-in-the-sky stuff is put on the back burner at first. The more important issues are things I’ve listed above.

@@ -1,0 +1,33 @@
+@dbid 3533
+@title Private properties and class extensions
+@pubDate Mon Sep 22 11:46:21 -0700 2008
+@modDate Mon Sep 22 11:46:21 -0700 2008
+<p>
+I saw an Objective-C question on Twitter the other day — I forget who asked it (sorry about that) — but I figured I’d post an answer anway.
+</p>
+<p>
+The question was something like this: “Do you use properties even for private instance variables?”
+</p>
+<p>
+Answer: yes.
+</p>
+<p>
+(I like properties. I like the way they simplify my code. I even like dot notation. If you don’t like properties, then ignore this.)
+</p>
+<p>
+Here’s the thing: you can create private properties — you don’t have to declare all of them in the .h file. You can use a <em>class extension</em> (kind of like a category, but un-named) to declare properties.
+</p>
+<p>
+It’s simple: in your .m file, add something like this:
+</p>
+<p>
+<code>@interface MyCoolObject ()</code><br />
+<code>@property (nonatomic, retain) NSDictionary *myPrivateDictionary;</code><br />
+<code>@end</code>
+</p>
+<p>
+Note the <code>MyCoolObject ()</code> part — unlike a category, there’s no name for the interface. It’s an <em>extension</em> rather than a category.
+</p>
+<p>
+(For more info, see the <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ObjectiveC/Articles/chapter_5_section_2.html#//apple_ref/doc/uid/TP30001163-CH17-SW13">Properties Overview</a> in The Objective-C 2.0 Programming Language.)
+</p>

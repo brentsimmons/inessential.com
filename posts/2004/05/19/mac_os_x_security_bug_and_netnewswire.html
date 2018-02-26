@@ -1,0 +1,18 @@
+@dbid 2843
+@title Mac OS X security bug and NetNewsWire
+@link http://ranchero.com/bugs/display.php?bugid=1477
+@pubDate Wed May 19 17:52:21 -0700 2004
+@modDate Wed May 19 17:52:21 -0700 2004
+Recently a security bug was reported in Safari. Clicking on certain URLs could cause a script to run on your machine.</p>
+
+<p><a href="http://ranchero.com/bugs/display.php?bugid=1477">Sylvain Carle</a> alerted us to the fact that this security bug is not really a Safari bug, it’s a bug in WebKit.</p>
+
+<p>WebKit is Safari’s rendering system, provided by Apple as part of OS X, which other applications use too—including NetNewsWire.</p>
+
+<p>NetNewsWire uses WebKit to display feed descriptions, so NetNewsWire (and other WebKit-using applications) may be vulnerable to this bug.</p>
+
+<p>We certainly expect that Apple will fix the bug with a security update, and that should solve the problem. In the meantime we’re looking at the possibility of fixing it just for NetNewsWire, in case Apple doesn’t come through with a fix.</p>
+
+<p>For reference: here’s the <a href="http://secunia.com/advisories/11622/">report</a> on the bug, and here’s a <a href="http://news.com.com/2100-7349_3-5215586.html">CNET article</a> about it, which states that Apple is aware of the issue.</p>
+
+<p>If you have any questions, please feel free to email me at brent@ranchero.com.

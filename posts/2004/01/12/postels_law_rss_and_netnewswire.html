@@ -1,0 +1,17 @@
+@dbid 2771
+@title Postel’s Law, RSS, and NetNewsWire
+@pubDate Mon Jan 12 14:01:36 -0800 2004
+@modDate Mon Jan 12 14:01:36 -0800 2004
+So, you might wonder, why is NetNewsWire’s RSS parser forgiving?</p>
+
+<p>When I started writing NetNewsWire, there were other aggregators already out there that were forgiving.</p>
+
+<p>For example, what happens when an RSS feed has an unencoded ampersand (and is thus not-well-formed XML)? Should NetNewsWire work around the error or not?</p>
+
+<p>(Unencoded ampersands are possibly the most common of errors in RSS feeds.)</p>
+
+<p>At the time I was writing the RSS parser, I believed it should try to work around the error, so it could read feeds that other aggregators could read.</p>
+
+<p>Was that the right or wrong choice? It’s debatable.</p>
+
+<p>But I do like that since Atom is a new format—and because NetNewsWire is already-established software—I have a chance to do it differently.

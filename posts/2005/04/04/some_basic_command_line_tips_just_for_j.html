@@ -1,0 +1,55 @@
+@dbid 3060
+@title Some basic command line tips, just for jazz
+@pubDate Mon Apr 04 19:04:31 -0700 2005
+@modDate Mon Apr 04 19:04:31 -0700 2005
+Here are a few command-line tips, some basic stuff that I use regularly but that novices may not have discovered yet:
+</p>
+<h4>open</h4>
+<p>
+The <code>open</code> command is cool because it bridges the Terminal and GUI worlds. From its man page: “The open command opens a file (or a directory or URL), just as if you had double-clicked the file’s icon.”</p>
+
+<p>Say you’re in your home folder in Terminal, and you decide you want to open the folder in the Finder. Type <code>open .</code> (and hit return). The Finder comes to front with the current folder open. (You can of course also specify a folder, as in <code>open /usr/share/calendar</code>)</p>
+
+<p>But open also opens other things. For instance, you could launch Chess like this:</p>
+
+<p><code>open /Applications/Chess.app</code></p>
+
+<p>Or launch a URL in your default browser:</p>
+
+<p><code>open &#039;http://example.org/&#039;</code></p>
+
+<p>Or open a file:</p>
+
+<p><code>open path/to/some/file</code>
+</p>
+<h4>Aside about tab completion</h4>
+<p>
+Typing the above command <code>open /Applications/Chess.app</code> doesn’t look easy, actually. But here’s what I type when I do it:</p>
+
+<p><code>op[tab] /A[tab]Ch[tab]</code></p>
+
+<p>Tab completion is your friend. Without it, using Terminal would be unbearable.
+</p>
+<h4>pushd/popd: snapback for directories</h4>
+<p>
+You know snapback, right, in Safari? How you can snap back to a previous page?</p>
+
+<p>You can do something similar with directories in Terminal. Say you’re some place odd, and you have have to go somewhere else, but then you want to come back easily.</p>
+
+<p>Instead of just doing a <code>cd</code> to someplace else, use <code>pushd</code>, as in <code>pushd /some/other/directory</code>. When you’re finished in some-other-directory—when you want to snap back to where you were—type <code>popd</code>.</p>
+
+<p>(It’s actually a stack, but I’m not going to explain that right now. Plus, most of the time I myself just use it as a quick snap-back feature rather than as a stack.)
+</p>
+<h4>What day of the week is the 23rd?</h4>
+<p>
+I myself don’t have iCal running all the time. And questions like this come up from time to time—what day of the week is the 23rd? What’s the date of the last Tuesday of this month?</p>
+
+<p>These questions can be easily answered with a quick look at a basic calendar for the current month. Type <code>cal</code> and hit return. Easy.
+</p>
+<h4>Quickly view a text file</h4>
+<p>
+Say there’s a text file and you just want to view it—you don’t need to edit it or anything.</p>
+
+<p>Type <code>less filename</code> (or <code>less /path/to/file</code>).</p>
+
+<p>Less is a fast and easy-to-use text file viewer. Hit the space bar to scroll down. Type b to scroll backwards. Type q to quit. Type h for help. Type /, followed by a search string and the return key, to search for something.

@@ -1,0 +1,55 @@
+@dbid 3507
+@title Change notes for NetNewsWire for iPhone 1.0.5
+@pubDate Wed Jul 16 12:18:24 -0700 2008
+@modDate Wed Jul 16 12:18:24 -0700 2008
+<p>
+Below are the change notes (edited for profanity and such) for NetNewsWire for iPhone 1.0.5. It’s not up on the store yet — 1.0.2 is still In Review. But, one of these days, you’ll get an update.
+</p>
+<p>
+(I feel very good about this build, especially regarding performance issues. It’s much better than 1.0.)
+</p>
+<p>
+I’m not totally sure why I’m posting these, other than that it keeps me from feeling like a black box where you can’t see in.
+</p>
+<p>
+Anyway...
+</p>
+<p>
+<b>Changes in 1.0.5 (since 1.0.4):</b>
+</p>
+<p>
+- Scrolling is faster in the Feeds list -- now re-using a table cell instead of creating a new one for each row. (Which I had been doing to work around a [REDACTED] in an earlier [REDACTED] of the iPhone [REDACTED]. Glad I don’t have to anymore.)
+</p>
+<p>
+- The + button is now an action-menu button -- because it will have more than just Add to Clippings in it. (Things like email-link, mark-unread, and send-to-Twitterrific will go in there.)
+</p>
+<p>
+- Email Link now appears in the action menu for news items and for web pages. Both create a new outgoing message in MobileMail with no recipient, but with subject and body filled in. (The link is the body.)
+</p>
+<p>
+- Fixed a bug where feeds with blank names could appear (because their titles haven’t been retrieved yet -- now we’re retrieving them first).
+</p>
+<p>
+- Fixed a bug where GetSubscriptionsList (a server call) would be called at times unnecessarily.
+</p>
+<p>
+- Fixed a bug where a refresh/sync session would happen twice sometimes, unnecessarily.
+</p>
+<p>
+- The application icon on the home screen now gets the unread count badge.
+</p>
+<p>
+- Total unread count appears at bottom-left of Feeds page (except during refresh/sync).
+</p>
+<p>
+- Reversed delete-older-than-two-weeks change from 1.0.4 -- because [REDACTED] [REDACTING] help me if unread counts don’t match with the iPhone and other readers. I’d be explaining it for the remainder of my natural-born existence.
+</p>
+<p>
+- It’s now faster to rebuild the Feeds list -- not rebuilding all unread counts every time it loads.
+</p>
+<p>
+- When downloading feeds, the status message says the name of the feed, so you can better tell what’s happening. (This change, plus putting the unread count at the bottom-left, also have the effect of making this <em>feel</em> like NetNewsWire.)
+</p>
+<p>
+- On the news items list view, the Mark All as Read button now does not appear if all items are read.
+</p>

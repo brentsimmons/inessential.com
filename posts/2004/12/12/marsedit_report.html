@@ -1,0 +1,130 @@
+@dbid 3004
+@title MarsEdit report
+@pubDate Sun Dec 12 01:37:53 -0800 2004
+@modDate Sun Dec 12 01:37:53 -0800 2004
+In the spirit of Gus Mueller’s after-development <a href="http://www.gusmueller.com/blog/archives/2004/12/9.html">report on VoodooPad 2.0</a>, here’s mine on MarsEdit 1.0...</p>
+
+<p>(Note: I may ramble a bit. And: this is mostly about programming.)
+</p><h3>Mitosis</h3><p>
+The genesis of MarsEdit was the idea of mitosis, that we could remove NetNewsWire’s weblog editor and create a new, separate weblog editor—and thereby create a better newsreader <i>and</i> a better weblog editor.</p>
+
+<p>We had long planned to support external weblog editors in NetNewsWire—but it wasn’t until autumn 2003 that we considered supporting <i>only</i> external weblog editors. That’s when we first sketched out MarsEdit’s user interface.</p>
+
+<p>To my delight, the final version of MarsEdit looks very, very much like our original vision, done originally as a non-functioning prototype in Interface Builder.</p>
+
+<p>Splitting up NetNewsWire like this was a big risk, though, and we didn’t know how it would be received. (It turned out that the feedback far surpassed our hopes.)</p>
+
+<p>We not only split up the product but created an <a href="http://ranchero.com/netnewswire/developers/externalinterface.php">open interface</a> so that various combinations of newsreader and weblog editor could work together. This is something we’re very proud of—even though it increased the risk.
+</p><h3>Programming stuff</h3><p>
+Early on, before testers even saw it, I had a few challenges...
+</p><h4>1. Morphing user interface</h4></p>
+
+<p>I had to develop an adaptable user interface that morphs based on the capabilities of different weblog systems—and not have the morphing be obnoxious.</p>
+
+<p>This was a response to one of the major problems with NetNewsWire’s weblog editor: fields that a given system couldn’t use were just disabled rather than disappeared. This led to lots of email and bug reports. Though I’m not generally a fan of UIs that morph, it had to be done here—and I was utterly pleased with the result.</p>
+
+<p>At first, actually, I was entranced—I used to just keep changing the weblog system to watch the animation of fields appearing and disappearing. But I got over it and went to work on the next thing.
+</p><h4>2. Asynchronous XML-RPC</h4><p>
+I had to do a better job dealing with asynchronous XML-RPC calls than I did in NetNewsWire.</p>
+
+<p>Here’s the deal—you click a button like Post or Refresh, it kicks off a call to the server to do something. MarsEdit waits for the response—but it can’t lock up while waiting, it has to be responsive to your commands, and it has to do things like run a progress indicator. And calls have to be chainable: make a second call after the first completes, but not before.</p>
+
+<p>Well, I had this working in NetNewsWire’s old weblog editor, but I was never pleased with it, and there were times when the UI would miss the response, and a progress indicator would run forever.</p>
+
+<p>This was just an architecture job. I ended up with a system both cleaner and better than what was in NetNewsWire. (The second time is usually better than the first, after all.)</p>
+
+<p>What I ended up with was solid plumbing. With leaky plumbing, you spend all your time patching it and not enough time working on the UI—and the UI is where you need to spend your time.</p>
+
+<p>I have barely touched this code (except to add a minor feature or two) since MarsEdit first went into private testing, which says alot for the code.</p>
+
+<p>From a high level, every net operation looks like an Objective-C method call that, instead of returning a value, returns immediately and calls back to a method when it’s done. Since the code is object-oriented, maintaining state is almost not even an issue. (Simple stuff, nothing revolutionary, just plain old-fashioned goodness.)
+</p><h4>3. Documents</h4><p>
+Cocoa has wonderful built-in support for document-based applications.</p>
+
+<p>The only trouble is, that support assumes that you’re saving documents to disk.</p>
+
+<p>The whole point of MarsEdit was to be document-centered, like email—but, also like email, you don’t save files to disk, you send your document to the internet somewhere.</p>
+
+<p>I had to learn about Cocoa’s document-based app features—and, at the same time, I had to learn how and where to over-ride it so that it didn’t think it was loading and saving disk-based documents. This turned out to be difficult—lots of trial-and-error. The docs don’t talk about this much.</p>
+
+<p>And the early, private testers would tell you that I didn’t have all the kinks worked out in the first versions they saw.
+</p><h3>Design philosophy: maximum elegance</h3><p>
+Throughout the process of working on MarsEdit, the phrase “maximum elegance” repeated in my head. The idea was to keep it as simple and focused as possible.</p>
+
+<p>As I’ve written before, weblog editing is far more complex than email: you have things like categories and text filters and trackbacks and all this stuff you don’t have with email.</p>
+
+<p>The phrase “maximum elegance” was just a personal reminder to myself to simplify as much as possible. With something as complicated as weblog editing, you have to be relentless about simplification, or it will get away from you.</p>
+
+<p>Note, for instance, how short and small MarsEdit’s menu is. How many other productivity apps do you use have such a small menu? Note how the design of document windows is influenced by Apple Mail rather than, say, Microsoft Word.</p>
+
+<p>The “lightness” of an application is a matter of feel rather than number of lines of code or number of resources. It’s a design issue. I wanted MarsEdit to feel <i>weightless</i> in order to balance the heavy complexity of weblog editing.</p>
+
+<p>Note to developers—regular folks, please skip this—there is, oddly, a danger to making an app feel light. People sometimes get the impression that it’s not light but <i>slight</i>—that it can’t possibly have very many features and couldn’t have taken much time to develop, so it can’t possibly be worth paying money for. That’s not true, of course. (It’s like that old line about not having enough time to write a short letter.) However, even though there’s this danger, it’s better to go for lightness, because the vast majority of Mac users appreciate quality.</p>
+
+<p>The early, private testers were a huge help with this. I simplified—but they simplified even more. There was lots of feedback about stuff that could be removed from these early versions, and I think I used all of it. (I’m a strong proponent of development-by-subtraction—after all, MarsEdit exists because we removed the weblog editor from NetNewsWire.)</p>
+
+<p>Of course, there’s no design nirvana. MarsEdit is very close to my original vision, and that’s wonderful—as long as the original vision is good. But is there room for improvement? Could the user interface be better still? Yes, of course. (And I already have plenty of ideas for how to make it better.)
+</p><h3>Last-minute features</h3><p>
+Once MarsEdit was in public beta, it was fairly close to what 1.0 would become, but of course there were bugs to fix.</p>
+
+<p>And it turned out that there were a couple features I was putting off until after 1.0 that really needed to be in 1.0:</p>
+
+<p>1. Preview with text filters—Markdown and similar.</p>
+
+<p>2. Customizable list of URLs to ping.</p>
+
+<p>That’s not to say there weren’t plenty of other feature requests, but so many people asked for these two that it became apparent that they had to be in 1.0. If I could have waited on these, I would have.</p>
+
+<p>Before deciding to implement them, I had to answer a few questions for each feature:</p>
+
+<p>1. How much time would it take to develop?</p>
+
+<p>2. How much time would it take to test?</p>
+
+<p>3. Is this feature a likely site of bugs, or will it be straightforward?</p>
+
+<p>4. Can it fit in the existing user interface without major disruption?</p>
+
+<p>For text-filter-preview and customizable pings list, I guessed (and all you can do is make an educated guess) that they would be quick to develop and test, that they’re straightforward, and that the user interface wouldn’t require many changes.</p>
+
+<p>Another popular feature request was supporting titles for Blogger. This we didn’t do in 1.0, because it would take too long to develop and test and it would be a likely site of bugs. It sounds crazy—we’re just talking about titles, no big thing, right?—but it required adopting the Atom editing API, which is a big job. (Now that 1.0 has shipped, this is MarsEdit’s top priority, by the way.)
+</p>
+<h3>Wrong turns</h3>
+<p>
+There weren’t many features pursued that I had to drop or change drastically. Just a few things:</p>
+
+<p>1. At one point during the private beta I wanted to add what I thought was a cool Rendezvous-based feature—but it didn’t interest the testers, and finally it didn’t interest me personally that much, and I dropped it before spending programming time on it.</p>
+
+<p>2. The first versions of MarsEdit did previews quite a bit differently: the preview appeared in a drawer attached to the document window. This was cool for one major reason: it tied the editing window and the preview together. In a way, this is much better than having a separate, single preview window. But it had a serious drawback: you couldn’t resize the preview independently of the size of the editing window.</p>
+
+<p>At one point I considered doing the preview as a splitview in the document window, which would have let you semi-independently resize it—but I ended up going for a separate preview window. (There were testers on all sides of this issue, by the way: there was no consensus. Sometimes a solution is obvious to everyone but the developer, but not this time.)</p>
+
+<p>3. For a long time during the beta process the app icon looked very much like the Firefox icon. (This was just coincidence—the MarsEdit icon was originally created before the Firefox icon was created. The final icon <a href="http://www.bryanbell.com/">Bryan Bell</a> created is fantastic. I love it.)
+</p>
+<h3>The real story behind the name MarsEdit</h3>
+<p>
+<a href="http://ranchero.com/marsedit/"><img src="http://ranchero.com/images/marsedit/marseditIconLarge.png" height="128" width="128" alt="MarsEdit 1.0 icon" align="right" hspace="5" /></a></p>
+
+<p>In an alternate universe, MarsEdit is an outliner instead of a weblog editor—and its name is MarsLiner. It has the exact same icon MarsEdit has.</p>
+
+<p>When I first asked Bryan to make a Mars-with-spaceship icon—way back in early 2003 (I think—could have been 2002) it was for an application named MarsLiner. The idea was to do an outliner that could fill in for <a href="http://outliners.scripting.com/more31.html">MORE.</a></p>
+
+<p>It’s been a sore spot in my computing life that no outliner for OS X feels as good to me as MORE did. This is purely subjective, of course—there are several really great outliners for OS X. But I want MORE, and I was willing to write it myself. (Just the outliner, that is—I didn’t care about the presentation stuff in MORE.)</p>
+
+<p>The idea was to have a text-oriented outliner—I didn’t care about embedding movies and sound clips and whatnot—that was designed for keyboard users, felt very light, and was super-fast.</p>
+
+<p>The rough draft of this idea was the Notepad in NetNewsWire 1.x. But MarsLiner was to be a huge improvement, it was supposed to be the outliner of my dreams.</p>
+
+<p>But then I discovered something important: most people don’t care about outliners. And the people who do care about outliners, many of them would want the embedded media features that I didn’t care about. So I realized that the market would be small, just a subset of the outliner market, which is small enough already—and there are already some great outliners already.</p>
+
+<p>When we decided to bag MarsLiner and do a separate weblog editor instead, I wanted to use the name “Mars” somehow and use Bryan’s cool icon. Hence the name MarsEdit. We rationalized the name by saying it represents editing at a distance, since you’re not editing local documents, you’re editing documents that live on the web somewhere.</p>
+
+<p>But really it was because I like Mars and spaceships and we already had a great Mars icon.</p>
+
+<p>How much programming time had I spent on MarsLiner? Very little, thankfully—I built NetNewsWire’s Notepad as a stand-alone app. I didn’t even get as far as supporting multiple documents or doing a save command.</p>
+
+<p>But still today I wish for the outliner of my dreams.</p>
+
+<p>From time to time I’m tempted to do it as a Terminal-based thing, all done with ncurses. This way it would have to be purely keyboard-based; it wouldn’t be able to display pictures or movies; it would be <i>fast</i>.</p>
+
+<p>Maybe <i>you</i> will do it. I can dream, right?

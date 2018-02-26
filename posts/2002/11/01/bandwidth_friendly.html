@@ -1,0 +1,15 @@
+@dbid 2247
+@title Bandwidth friendly
+@pubDate Fri Nov 01 10:53:39 -0800 2002
+@modDate Fri Nov 01 10:53:39 -0800 2002
+I’m working on a new beta for NetNewsWire that supports XML-level redirection (as specified <a href="http://radio.userland.com/howtoRedirectRss">here</a>).</p>
+
+<p>But, since I’m working on a new beta, and bandwidth is still an issue, I was thinking of adding another feature—a note on the Info window for a subscription that says whether or not the subscription is bandwidth-friendly.</p>
+
+<p>By “bandwidth-friendly” I mean the feed uses ETags or Last-modified headers to cut down on the amount of bandwidth used when reading the feed.</p>
+
+<p>This gives users an additional bit of data to use when deciding whether or not to keep a subscription, and it will help raise the general consciousness about bandwidth issues.</p>
+
+<p>In running my debug builds I’ve found that most of my subscriptions are in fact bandwidth-friendly—but still way too many feeds are not. In my opinion this is the single best way to reduce bandwidth consumption from the server side. (That’s not to say that other ideas aren’t helpful also.)</p>
+
+<p>What do you think? Make sense?

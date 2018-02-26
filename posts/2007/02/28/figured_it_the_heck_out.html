@@ -1,0 +1,35 @@
+@dbid 3389
+@title Figured it the heck out
+@pubDate Wed Feb 28 19:48:04 -0800 2007
+@modDate Wed Feb 28 19:52:46 -0800 2007
+There are sometimes these little problems that just stick, that just take a long time to figure out. Months go by. Years go by.</p>
+
+<p>Anyway, for a long time I’ve been bugged because I couldn’t figure out how to set an alternate location for the WebKit cache. (Really the URL-loading cache, but I call it the WebKit cache anyway.)</p>
+
+<p>The reason I wanted to do this was, well, because Apple recommends it somewhere (I forget where) if you have other stuff in your cache folder (as NetNewsWire does). Plus it just feels quite a bit cleaner.</p>
+
+<p>It seems like it should be easy: the <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSURLCache_Class/Reference/Reference.html">NSURLCache documentation</a> tells you to use <a href="http://developer.apple.com/documentation/Cocoa/Reference/Foundation/Classes/NSURLCache_Class/Reference/Reference.html#//apple_ref/occ/clm/NSURLCache/setSharedURLCache:">+[NSURLCache setSharedURLCache]</a>. Piece of cake, right?</p>
+
+<p>But when I did it, everything seemed to be fine, except that <i>nothing was ever written to disk</i>.</p>
+
+<p>My code, which ran very early at startup, looked something like this:</p>
+
+<p><code>NSURLCache *originalCache = [NSURLCache sharedURLCache];<br />
+NSURLCache *newCache = [&#91;NSURLCache alloc] initWithMemoryCapacity:[originalCache memoryCapacity] diskCapacity:[originalCache diskCapacity] diskPath:RSCacheFolderForAppSubFolder(APP_SUPPORT_FOLDER_NAME, @"WebKitCache", NO)];<br />
+[NSURLCache setSharedURLCache:newCache];</code></p>
+
+<p>Makes sense, right? In creating the new cache, I wanted to use the capacity settings from the original cache.</p>
+
+<p>So tonight I got it in my head to finally get to the bottom of this. I tried a bunch of things, including creating an NSURLCache subclass where all the methods called super, and watching the various methods actually get called in the debugger, so that I knew that my cache was getting sort-of used, even if nothing ever made it to disk.</p>
+
+<p>Finally, on a hunch—a hunch that I wish I’d had a year ago—I rewrote my code like this:</p>
+
+<p><code>NSURLCache *newCache = [&#91;NSURLCache alloc] initWithMemoryCapacity:1024 * 1024 diskCapacity:1024 * 1024 * 10 diskPath:RSCacheFolderForAppSubFolder(APP_SUPPORT_FOLDER_NAME, @"WebKitCache", NO)];<br />
+[NSURLCache setSharedURLCache:newCache];
+</code></p>
+
+<p>And now it works! Cache-y things actually written to disk. You have no idea how glad I am: this really <i>has</i> been bugging me for a long time.</p>
+
+<p>It turns out that referencing [NSURLCache sharedURLCache] before calling setSharedURLCache was the problem. So there’s the answer: don’t go like that.</p>
+
+<p>Anyway, if anyone else ever runs into this particular problem and looks on the web for help, this post is repetitive enough with terms like sharedURLCache that it will probably turn up in Google near the top. ;)

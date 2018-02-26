@@ -1,0 +1,37 @@
+@dbid 2937
+@title MarsEdit and WYSIWYG editing
+@pubDate Tue Oct 05 17:01:08 -0700 2004
+@modDate Tue Oct 05 23:24:06 -0700 2004
+An interesting question came up in the <a href="http://inessential.com/?comments=1&postid=2936">comments</a> for the previous post: why doesn’t MarsEdit do WYSIWYG editing?</p>
+
+<p>We plan to add WYSIWYG editing in the future, but it’s not there yet.</p>
+
+<p>I’m not sure what more I can say publicly about it, because this feature depends on another company making a WYSIWYG editor component available. It’s a component we’ll be able to use but that we didn’t write. (This isn’t hypothetical: it’s a real thing that’s in the works.)</p>
+
+<p>The good thing about this component is that its support for HTML and style sheets is fairly complete. It’s worth the wait—but it’s not worth holding up MarsEdit 1.0 just to wait for it.</p>
+
+<p>We could have done a limited WYSIWYG editor that supports the basics. But it’s not a good idea to spend time writing code that we’d just toss later.</p>
+
+<p>Another reason not to do a basic WYSIWYG editor is that it would be a black hole, sucking up all our time.</p>
+
+<p>Why would it be a black hole? Because everybody who uses it would need just one more feature than it has, and every “just one more feature” would be a different feature.</p>
+
+<p>Imagine if it supports the basics: bold, italics, links, and images. If it didn’t support right-aligned images, people would ask for it. Someone else would say that they need &lt;h(x)&gt; tags. Another person would say that it has to reflect the style sheet they use for their site. Another person would absolutely need &lt;pre&gt; tag support. And so on and so on.</p>
+
+<p><i>These would all be reasonable requests</i>. But there would be so many of them that I wouldn’t be able to stop until I had written a full HTML parser, renderer, and editor—which is a <i>huge</i> job.</p>
+
+<p>The good news is that some other folks are doing that, and I don’t have to! (That news is more than good, it’s <i>wonderful</i>.) But the downside is that we have to wait a little while before we can use it.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>Above I used the term “black hole” to describe a limited WYSIWYG editor. The issue of development black holes is something I’m very sensitive to, since I’ve been stuck in them before—though not for several years, thank goodness.</p>
+
+<p>One type of black hole is a feature that has no end and never pleases enough people to be worth it. If you keep putting resources into it, it gets more complete, but it never comes anywhere near the 80% mark you want to reach. You keep thinking that you’re getting close to it, but you’re not. You double your efforts, you work harder, you add features, it feels like progress, <i>but it isn’t</i>.</p>
+
+<p>Small, independent developers need to be especially careful to avoid black holes, since one black hole can take out your business.</p>
+
+<p>(Larger companies can handle a few black holes—but even then they eventually cancel them, if they’re smart. Larger companies and organizations also have the resources to tackle a feature that would be a black hole to a small company.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p><i>Update 8:20 PM Pacific:</i> I certainly don’t mean to imply that Adriaan or any other developer who has added WYSIWYG editing is wrong to do so before a full-featured WYSIWYG editing component is available. A black hole for one developer with one product is not necessarily a black hole for another. Not at all. (See the <a href="http://inessential.com/?comments=1&amp;postid=2937">comments</a> for more on this.)

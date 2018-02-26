@@ -1,0 +1,66 @@
+@dbid 889
+@title 09/23/2000
+@pubDate Sat Sep 23 13:16:11 -0700 2000
+@modDate Sun Sep 24 11:47:25 -0700 2000
+<p>Question for Windows developers:</p>
+
+<p>Radio UserLand has embedded the browser control. If we want the same Work Offline command that IE and Outlook Express have, how do we do it?</p>
+
+<p>What I can&#039;t figure out is how to get and set the global offline status. If someone has chosen Work Offline in IE, Radio UserLand should respect that flag. And vice versa -- you should be able to choose the Work Offline menu item in RU and have it respected in other apps.</p>
+
+<p>Things I&#039;ve tried: IWebBrowser2 methods for getting and setting offline status, InetIsOffline, InternetQueryOption, and InternetGetConnectedState. I get different behavior from each -- some return inconsistent results, others are consistent but have no basis in reality.</p>
+
+<p>I&#039;ve been RTFMing like mad.</p>
+
+<p>What would be extremely helpful is some sample code that showed how to get and set this flag. Or a simple explanation -- like "set the ___ key in the registry," for example.</p>
+
+<p>Can you help? If so -- thanks!</p>
+
+<p><em>Update:</em> <a href="http://isangelos.editthispage.com/">Matthew Barger</a> sent me email -- there&#039;s a GlobalUserOffline registry key at HKey_Current_User/Software/Microsoft/Windows/CurrentVersion/Internet Settings/. So: I&#039;ll see if that works as expected.</p>
+
+<p>
+<img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>This moody bastard installed Mac OS X last night. Here&#039;s my report.</p>
+
+<p><strong>Boring part</strong><br /><br />
+     The first step in installing a new OS is the boring part -- backing up the hard drive. Bleh. It serves a purpose, though -- not just in protecting your data but in instilling a sense of scientific detachment.<br /><br />
+     I&#039;m going to start with the bad news then move on to the good news.<br /><br />
+<strong>Aqua</strong><br /><br />
+     Before installing OS X, I thought that the people complaining about Aqua were just whining.<br /><br />
+     I was wrong. There&#039;s a lot to complain about.<br /><br />
+     My hope is that these and other issues are fixed before it ships. Most things I don&#039;t like could be fixed by giving me ways to turn them off or configure them.<br /><br />
+     Problems:<br /><br />
+     1. Window dragging and resizing is slow and jerky on my G4. Being able to turn off display of window contents while dragging would help tremendously. I&#039;ve got that feature turned off on my 500 Mhz Pentium III because this feature is too slow there too.<br /><br />
+     2. Anti-aliasing is not appropriate at the size of most text that&#039;s displayed. It makes text seem blurry; it hurts my eyes. OS 9 allows you specify a minimum font size for anti-aliasing -- I want the same thing here. This is serious -- I can&#039;t even browse the web for more than a couple minutes because of this.<br /><br />
+     3. Drop shadows -- the whole 3D effect is cluttery. It&#039;s like a bad website from 1997. Let me turn &#039;em off.<br /><br />
+     4. Translucent menus -- let me make them opaque. It&#039;s a readability issue.<br /><br />
+     5. The blue Mac at the top of the screen -- I&#039;ve said it before: it&#039;s the cyber equivalent of having a pimple on your nose, right between your eyes. It&#039;s the placement that stings -- please move it.<br /><br />
+     6. The dock -- where do I start? I want to move it. I want to make it vertical on the right side of the screen. I want to know why some apps that aren&#039;t currently running are in the doc. I want labels -- not on mouseover, but persistent labels. <em>I need text.</em> I want to turn off animations. (On Windows I get the choice -- and I use it.) I want to know why sometimes windows appear in the dock and sometimes don&#039;t. It&#039;s confusing. Major feature request: I want to click on an item in the dock and get a popup menu.<br /><br />
+     7. Resizing columns when in list view in the Finder is sloooow.<br /><br />
+     8. I couldn&#039;t figure out how to set the color of my desktop. I don&#039;t like the default picture that&#039;s there. I want a solid color.<br /><br />
+     9. Throbbing is another type of animation I want to turn off. Anything that catches my eye distracts me. It&#039;s like animated GIFs.<br /><br />
+     10. What happened to drag-and-drop text?<br /><br />
+     On the whole, it&#039;s better than Windows, but that&#039;s low praise coming from me. It&#039;s a long way from being as easy to use as Mac OS 9.<br /><br />
+<strong>Good things</strong><br /><br />
+     Apps crash but don&#039;t take down the system. At long last. This alone is worth the price of admission.<br /><br />
+     It really is UNIX(ish). I had to see this for myself. Here&#039;s what I found:<br /><br />
+     1. Terminal.app! My favorite app so far. It&#039;s the command line.<br /><br />
+     2. emacs, my preferred text editor, is here. The basics -- less, ping, df, telnet, etc. etc. -- seem to be here. (Python is missing, however. Sadly.)<br /><br />
+     3. Apache is installed. It&#039;s off by default.<br /><br />
+     In short, it has most of what I like about Linux. What it doesn&#039;t have -- Python, Samba, BIND, etc. -- I wouldn&#039;t be surprised if I could install before long.<br /><br />
+<strong>More good things -- developer tools</strong><br /><br />
+     I installed the Developer Tools CD, which I gather isn&#039;t included with every public beta, just with the Developer shipments.<br /><br />
+     Anyway, I did a quick run-through to see what&#039;s there, and missed most of it, I&#039;m sure.<br /><br />
+     The first thing I tried -- could I create a simple command-line Hello World app? You know, the classic printf ("Hello, World!
+");?<br /><br />
+     Yes, indeed, it worked.<br /><br />
+     Call me a geek, but at this point I&#039;m pinching myself -- I&#039;m doing this on a Macintosh OS. Not Linux.<br /><br />
+     Then I launched Project Builder and created a new project using their stationery. A Java app. (I don&#039;t ever want to learn Objective-C.)<br /><br />
+     Naturally, since I made no changes to the project, it built and ran the first time.<br /><br />
+     I launched Interface Builder and edited the menu for the project, then re-built it. It worked. Mind you, I&#039;ve looked at no documentation; I just remembered from other reports that Project Builder and Interface Builder are the NeXT-derived tools for building apps.<br /><br />
+     At first glance they seem easy to use. How much power and flexibility there is I don&#039;t know. If you&#039;re the kind of person who likes using object-oriented frameworks and visual editors and inspectors and all that -- go to town. It may be that this shit is the bomb. (Me, I prefer C and text files to all that, but that&#039;s just me. I could probably learn to like Project Builder and Interface Builder.)<br /><br />
+     What I&#039;m thinking is that Mac OS X is, if not a developer&#039;s dream, at least a hobbyist&#039;s dream. You&#039;ve got all that UNIX stuff -- gcc, Perl, etc. -- and whatever you don&#039;t have yet I bet you will have soon. Then you&#039;ve got the tools for building Cocoa apps, which seem like they give you lots of features for free, so you can get started pretty quickly.<br /><br />
+     And you&#039;ve got a platform that needs more software. There are tons of holes -- small, medium, and huge -- to fill.<br /><br />
+     I can&#039;t wait to get Radio UserLand and Frontier running here.<br /><br />
+</p>

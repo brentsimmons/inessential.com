@@ -1,0 +1,49 @@
+@dbid 2922
+@title Bloglines integration
+@pubDate Tue Sep 28 16:11:53 -0700 2004
+@modDate Tue Sep 28 16:15:40 -0700 2004
+Last night, Mark Fletcher of Bloglines <a href="http://www.wingedpig.com/archives/000178.html">posted</a> about the new Bloglines Web Services. The first desktop apps set to use them are <a href="http://www.feeddemon.com/">FeedDemon</a>, <a href="http://www.blogbot.com/">Blogbot</a>, and <a href="http://ranchero.com/netnewswire/">NetNewsWire</a>.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>In an <a href="http://rss.weblogsinc.com/entry/5225556132366423/">interview</a> last May I was asked if I planned to add a server-side component to NetNewsWire.</p>
+
+<p>The gist of my answer was that I’d love to work with an existing system rather than roll my own—this way we can concentrate on the desktop software and the server-side folks can concentrate on the server software.</p>
+
+<p>A little while after the interview, I emailed with Mark Fletcher a couple times, and the idea (at least on my end) sat for a while as I worked on other things, and then it came up again—and this time with <a href="http://nick.typepad.com/">Nick Bradbury</a> and <a href="http://www.xxeo.com/">Dru Nelson</a> too.</p>
+
+<p>Though I myself set it aside for a while, the Bloglines folks didn’t—they went to work on it. (And did a great job!)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>The <a href="http://www.bloglines.com/about/pr_09282004">press release</a> talks about syncing and eliminating the RSS bandwidth bottleneck. I’ll elaborate.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>About syncing...</p>
+
+<p>To many NetNewsWire users, being able to use Bloglines and NetNewsWire together will be pretty cool. You could even—for instance—use NetNewsWire at home, FeedDemon or Blogbot at work, and use Bloglines when you’re at your mom’s house.</p>
+
+<p>Importantly, other apps could use this too. The Bloglines Web Services API is not limited to the apps mentioned in the press release.</p>
+
+<p>The API is simple and easy-to-implement. On one hand this should promote wide adoption, but on the other hand it’s easy to criticize it for not doing x, y, and z. My own take is that it’s like all software: you start with something basic but workable, get a solid base, then improve it in increments.</p>
+
+<p>In other words, it doesn’t have to be perfect and comprehensive before real people can get real benefits. (This is a lesson we’ve learned over and over on the Web.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>About the RSS bandwidth bottleneck...</p>
+
+<p>The idea is this: instead of having NetNewsWire ask each site for its feed, NetNewsWire asks Bloglines.</p>
+
+<p>Say feed x has 100 subscribers, so feed x gets 100 requests an hour. But if the aggregators are going through Bloglines, then feed x gets just <i>one</i> request an hour—from Bloglines.</p>
+
+<p>(That’s a simplified view, but it gets across the idea.)</p>
+
+<p>It means that feed x gets far fewer hits, which is good for the folks who pay the bandwidth costs for feed x.</p>
+
+<p>Of course, if you take this to the extreme—that everyone in the world who uses RSS goes through Bloglines—this solution probably won’t scale. Which means it’s not the end-all solution to the problem of syndication and bandwidth.</p>
+
+<p>But, again, it’s a very good thing anyway—even if it’s not perfect and comprehensive, even if it’s not the final word on the topic—because it does mean that <i>less bandwidth is used</i>. (When it comes to real issues like bandwidth, we can’t let the perfect be the enemy of the good.)</p>
+
+<p>I suspect that the problem of bandwidth is going to have several solutions that, taken together, solve the problem. One part of the puzzle is the Bloglines approach, but there will be others too.

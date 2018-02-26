@@ -1,0 +1,63 @@
+@dbid 2946
+@title Rolling back workarounds
+@pubDate Sat Oct 16 21:40:02 -0700 2004
+@modDate Sat Oct 16 21:40:02 -0700 2004
+As the overall quality level of feeds improves, I’ve been considering removing some of the workarounds in NetNewsWire for messed-up feeds.</p>
+
+<p>Any workaround that either affects performance or has strange side effects is on the top of the to-remove list.</p>
+
+<p>It’s a tricky issue, because there are passionate feelings on both sides. I’m taking what I think is a reasonable path, considering each workaround on a case-by-case basis.</p>
+
+<p>Users expect things to just plain work. Quite rightly. It’s my responsibility to make things work. But, at the same time, there is more than one way to do that.</p>
+
+<p>One way is to write code to work around every possible feed bug, and keep adding to this code as new bugs are found.</p>
+
+<p>Another way is to allow NetNewsWire to fail to parse really bad feeds, and move in the direction of strictness. This doesn’t have the instant gratification of just parsing everything, but it does have some positive influence: it’s another way of getting things to just plain work, via the longer but <i>better</i> route of encouraging people to fix their feeds.</p>
+
+<p>(Before anyone thinks this is an RSS vs. Atom thing, it’s not. I’m talking about feeds in general.)
+</p>
+<h4>Specifics</h4>
+<p>
+Before you interpret this to mean that I’m making NetNewsWire 2.0 a strict parser, let me be clear: I’m not going anywhere near there. (I wish I could.)</p>
+
+<p>I have removed one workaround so far—it was a performance hit: for each news item, NetNewsWire 1.0.8 checked to see if its unique ID was truly unique. That check was removed in 2.0b3. This isn’t a bug that shows up often, so the performance hit totally wasn’t worth it.</p>
+
+<p>Note that Yahoo’s search feeds did have this bug—and the Yahoo folks, when they were alerted to the problem, <i>fixed it</i>. How did I get alerted to the problem? Because a 2.0b3 user noticed that their Yahoo feeds were messed up and they let me know.</p>
+
+<p>In other words, the process worked exactly as it should. NetNewsWire workaround removed, bug now visible, bug fixed by feed provider.</p>
+
+<p>Now Yahoo search feeds “just work”—to the benefit of NetNewsWire users and everybody else who uses those feeds with any software on any platform.</p>
+
+<p>My sense is that this means I’m doing the right thing for NetNewsWire users <i>and</i> I’m doing the right thing regarding my responsibility to other developers and users.
+</p>
+<h4>Considering removing another workaround</h4>
+<p>
+I’m thinking about removing one other workaround in 2.0: it’s a workaround that we employ when a feed isn’t well-formed XML.</p>
+
+<p>An occasional side effect of this workaround is that the HTML is <i>visible</i> in NetNewsWire. And then we get bug reports like “NetNewsWire doesn’t render HTML!” which of course isn’t true.</p>
+
+<p>Why did we even do this in the first place? This goes back to when NetNewsWire was very young. We tried to set our parsing bar at the same place other aggregators did. Radio UserLand handled feeds that were not well-formed XML due to containing unencoded ampersands. We tried to handle that case too, but I never put the time in to handle it as smoothly as Radio.</p>
+
+<p>(I discovered later that it was Radio’s XML parser that wasn’t strict about unencoded ampersands, so the fact that their aggregator handled this case smoothly was a side effect of their XML parser, not any decision on the part of the aggregator developers. But I didn’t realize that at the time—and anyway it wouldn’t have mattered.)</p>
+
+<p>I’m thinking of removing this workaround. NetNewsWire would require well-formed XML. There are people who would argue against this, but I think it’s a more-than-reasonable minimum level of expectation that an XML document would actually be well-formed XML.</p>
+
+<p>Frankly, we don’t see non-well-formed feeds that often anymore. A year ago we couldn’t have removed this workaround, but today I think we can. Here’s my rationale:</p>
+
+<p>1. The cure is worse than the disease. (Seeing the HTML markup isn’t very cool, and it just results in bug reports.) I could do a better cure, but that feels deeply wrong to me.</p>
+
+<p>2. It’s another opportunity to help encourage higher-quality feeds. This process is already happening, but it’s nonetheless true that we can help.
+</p>
+<h4>Postel’s Law</h4>
+<p>
+Much is made of Postel’s Law—that you should be strict in what you create and liberal in what you accept.</p>
+
+<p>The law is correct.</p>
+
+<p>But there always has to be limits in the implementation. If you’re expecting an XML document, you can’t handle a cow. And you can’t handle an MP3 file, either. You need something at least fairly close to an XML document.</p>
+
+<p>The question is: what lines do you draw? Of course you have to draw lines.</p>
+
+<p>Anyway... all this, and I still haven’t decided whether or not to remove this particular workaround. I’m just considering it.</p>
+
+<p>Frankly, it excites me that we may be at the point where we even could require that feeds be well-formed XML. That’s progress, an unalloyed Good Thing.

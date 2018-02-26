@@ -1,0 +1,21 @@
+@dbid 3020
+@title RSS 1.1
+@pubDate Tue Jan 18 15:02:02 -0800 2005
+@modDate Tue Jan 18 20:18:41 -0800 2005
+I had no idea that people were working on <a href="http://inamidst.com/rss1.1/">RSS 1.1</a>!</p>
+
+<p>A quick look suggests it’s a cleaned-up version of 1.0. The text of the draft says as much, “RSS 1.1 is hence to be considered a bugfix and streamline release of RSS 1.0 for users of RSS 1.0 who do not want to migrate to Atom.”</p>
+
+<p>It looks good. I like it. My favorite change is removing that items sequence thing that was in RSS 1.0.</p>
+
+<p>But there is a little bad news in here too, unfortunately. I’ll explain:</p>
+
+<p>In RSS 1.0, every &lt;item> had to have an rdf:about attribute that functioned as a unique identifier. NetNewsWire used this as the equivalent of an RSS guid or an Atom id.</p>
+
+<p>Unique identifiers are hugely important to aggregators. Huge. I can’t stress this often enough or strongly enough.</p>
+
+<p>In RSS 1.0 these unique identifiers were mandatory. In RSS 1.1, they are <i>not</i> mandatory. This is a step backwards.</p>
+
+<p>Is there any way that this could be changed?</p>
+
+<p><i>Update 5:00 p.m.:</i> I heard from Sean Palmer—and it’s not too late to change it. In the next draft of the RSS 1.1 specification the rdf:about attribute will be required. I’m quite pleased.

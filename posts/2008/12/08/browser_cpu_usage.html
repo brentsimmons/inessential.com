@@ -1,0 +1,31 @@
+@dbid 3570
+@title Browser CPU usage
+@pubDate Mon Dec 08 11:17:22 -0800 2008
+@modDate Mon Dec 08 11:20:06 -0800 2008
+<p>
+One thing that bugs me — some pages use an abnormal amount of the CPU even when they’re not apparently doing anything.
+</p>
+<p>
+For instance, open <a href="http://mashable.com/2008/12/07/googles-plan-for-world-domination/">this page on Mashable</a>. (Not to pick on them: I like Mashable a ton and subscribe to their feed.)
+</p>
+<p>
+Once the Flash thing has loaded, run top or Activity Monitor and watch Safari’s CPU usage. On my laptop, it goes up and down, but it’s around 13%. Even though nothing is going on.
+</p>
+<p>
+Then close the page — Safari’s CPU usage immediately backs down.
+</p>
+<p>
+It’s not just Flash causing the problem.
+</p>
+<p>
+- I disabled plug-ins and reloaded the page, and CPU usage was around 7% in this case.
+</p>
+<p>
+- Then I disabled JavaScript and reloaded the page. CPU usage went down to around 3%.
+</p>
+<p>
+- Then I turned off image display and reloaded the page. Ah, now we’re down to 0%.
+</p>
+<p>
+The thing is, web developers should test their pages for CPU usage the same as app developers do. And anytime a page is idle, CPU usage should be at 0%. Same as with any other app.
+</p>

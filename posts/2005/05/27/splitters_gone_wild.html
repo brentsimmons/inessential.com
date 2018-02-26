@@ -1,0 +1,65 @@
+@dbid 3100
+@title Splitters gone wild
+@pubDate Fri May 27 18:40:58 -0700 2005
+@modDate Fri May 27 18:42:42 -0700 2005
+More on trends in OS X user interface design...</p>
+
+<p>I don’t understand what’s happening to splitter bars. (The part where you grab and drag to resize a split view.)
+</p><h4>What the HIG says</h4><p>
+Here’s what the Human Interface Guidelines has to <a href="http://developer.apple.com/documentation/UserExperience/Conceptual/OSXHIGuidelines/XHIGControls/chapter_18_section_7.html#//apple_ref/doc/uid/20000957-TP30000359-CHDDBIJE">say on split views</a>.
+</p><blockquote>The splitter bar displays a circular dimple at its midpoint that indicates to the user that it is draggable...<br /><br />
+In a metal window, the width of a splitter bar is 7 pixels...<br /><br />
+In a standard Aqua window, the width of the splitter bar is 9 pixels...</blockquote><h4>No surprise</h4><p>
+You’ve probably already noticed that splitter bars come in different sizes. (Compare the iTunes splitter bar to the Finder’s, for instance.)</p>
+
+<p>You may not have noticed a couple other details that I just can’t explain:</p>
+
+<p>1. The dimple in the Finder looks different from the dimple used in iTunes. Here they are, magnified:</p>
+
+<p><img src="http://inessential.com/images/finderDimple.png" alt="Finder dimple" height="56" width="56" /></p>
+
+<p><img src="http://inessential.com/images/iAppDimple.png" alt="iApp dimple" height="56" width="68" /></p>
+
+<p>Subtle, but, you know, it’s <i>light-source</i> stuff, which Apple has historically mastered.</p>
+
+<p>2. In iTunes there is a light-colored border on either side of the splitter bar—but that’s not true in the Finder. (See second graphic above.)</p>
+
+<p>But those differences aren’t that big, really. At least the splitter is still recognizably a splitter.
+</p><h4>Where it gets crazy</h4><p>This goes back to the <a href="http://www.inessential.com/2005/05/26.php">goodbye-stripes thing</a>...</p>
+
+<p>You will not find in any of Apple’s apps outside of utilities (or Sherlock) a splitter bar that looks like a standard non-metal splitter bar. You won’t see this:</p>
+
+<p><img src="http://inessential.com/images/standardSplitterBar.png" height="23" width="24" alt="Standard splitter bar" /></p>
+
+<p>You would expect to see the above in Mail, because Mail is not metal.</p>
+
+<p>Mail’s horizontal splitter bar looks like this:</p>
+
+<p><img src="http://inessential.com/images/mailHorizontalSplitter.png" height="23" width="24" alt="Mail&#039;s horizontal splitter bar" /></p>
+
+<p>The drawing is custom, for Mail only as far as I can tell. (No stripes! Gradient! Cool custom dimple! I like it! No kidding—I really do like it.)</p>
+
+<p>But what is really odd to me is the vertical splitter bar, which looks like this:</p>
+
+<p><img src="http://inessential.com/images/mailVerticalSplitter.png" height="38" width="16" alt="Mail&#039;s vertical splitter bar" /></p>
+
+<p>It’s a one-pixel-wide line separating an area of blue from an area of white.</p>
+
+<p>I can easily explain this from a coolness factor—but I can’t explain it from a usability standpoint, because it’s very difficult to grab such a narrow target. (And it doesn’t resemble a splitter bar at all, so you don’t necessarily realize that you <i>can</i> grab it.) To make up for it, they’ve added a little grab thing at the bottom of the window which is easy to grab. (Which I also, no kidding, really like.)</p>
+
+<p><img src="http://inessential.com/images/mailGrabThing.png" height="41" width="65" alt="Mail&#039;s grabber" /></p>
+
+<p>Here’s the thing—this isn’t the only non-metal app to completely avoid standard splitter bars.</p>
+
+<p>Look at <a href="http://www.apple.com/iwork/keynote/">Keynote</a>, for instance. No splitter bar at all, just a grabber at the bottom. But, though similar, it’s different from Mail—in Keynote you can’t grab the splitter bar at all, you have to use the grabber at the bottom.</p>
+
+<p>And then there’s Xcode—also non-metal, and with yet another custom splitter bar.</p>
+
+<p><img src="http://inessential.com/images/xcodeSplitterBar.png" height="18" width="7" alt="Xcode splitter" /></p><h4>The trend</h4><p>
+The trend is clearly to avoid standard splitters in non-metal windows.</p>
+
+<p>I have no theory to explain it other than as a coolness thing—stripes are not cool, we must not have stripes.</p>
+
+<p>But even still I have trouble explaining Mail’s vertical splitter, which appears to me to be too much of a triumph of coolness over usability. You might like it—heck, I like it too, it’s <i>cool</i>—but is it too much of a usability hit? When is a cool idea not worth it?</p>
+
+<p>Here’s the thing to remember: developers look to Apple for guidance. If Apple’s UI decisions say that it’s okay to sacrifice usability for a distinctive look, then many developers will do that. It’s a long, long way away—but at the end of that particular road is Windows.

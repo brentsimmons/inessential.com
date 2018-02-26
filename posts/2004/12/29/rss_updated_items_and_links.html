@@ -1,0 +1,53 @@
+@dbid 3007
+@title RSS, updated items, and links
+@pubDate Wed Dec 29 18:28:58 -0800 2004
+@modDate Wed Dec 29 18:28:58 -0800 2004
+One of the big differences between RSS and email is that RSS items can <i>change</i>. </p>
+
+<p>So the question for any newsreader developer is this: what changes should trigger an item being marked as unread?</p>
+
+<p>Specifically, today I’m thinking about a subset of that question: changes to &lt;link&gt; elements.</p>
+
+<p>Take this hypothetical case:</p>
+
+<p>1. An item looks like this:</p>
+
+<p><pre>&lt;title>A title&lt;/title>
+&lt;description>A description&lt;/description>
+&lt;link>http://example.org/1&lt;/link>
+&lt;guid>123&lt;/guid>
+</pre></p>
+
+<p>2. Then the feed updates, and the &lt;link&gt; element changes:</p>
+
+<p><pre>&lt;title>A title&lt;/title>
+&lt;description>A description&lt;/description>
+&lt;link>http://example.org/2&lt;/link>
+&lt;guid>123&lt;/guid>
+</pre></p>
+
+<p>The question: should it be marked as unread or not?</p>
+
+<p>Right now, NetNewsWire marks it as unread. My policy has always been to err on the side of marking things unread—on the assumption that, otherwise, you might miss something important.</p>
+
+<p>(Actually, NetNewsWire marks it as updated, and you have a pref that says whether or not to mark updated items as unread. Which most people leave turned on.)</p>
+
+<p>The <a href="http://blogs.law.harvard.edu/tech/rss">RSS 2.0 spec</a> doesn’t address the issue of when to consider an item significantly changed—and I’m not sure the spec <i>should</i> say anything about that.</p>
+
+<p>Of course, I don’t want new prefs or special cases, I want the best policy.</p>
+
+<p>Perhaps changes to &lt;link&gt;s should <i>not</i> cause an item to be marked unread. What do you think?</p>
+
+<p><img src="http://ranchero.com/images/tinyshoe.gif" width="27" height="30" alt="" /></p>
+
+<p>On a related topic...</p>
+
+<p>People have often asked me why we can’t use the &lt;link&gt; element as a unique identifier and permalink for news items.</p>
+
+<p>It can’t be a unique identifier because it may change. The New York Times feeds, for instance, change their &lt;link&gt;s frequently: they include a query string that allows you to get past the registration system, and that query string changes. (It’s the New York Times feeds that prompted the discussion above about ignoring &lt;link&gt; changes.)</p>
+
+<p>&lt;link&gt;s can’t be permalinks because there is nothing that says that a &lt;link&gt; has to be a permalink—it could point to another site entirely.</p>
+
+<p>Which is why I always ask people to use &lt;guid&gt;s in their feeds, so we can identify items, so we can know when an item is an updated version of a previous item.</p>
+
+<p>(About Atom there is one thing I adore: that guids—called &lt;id&gt;s there—are <i>mandatory</i>. I wish they could be mandatory in RSS too.)

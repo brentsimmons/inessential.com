@@ -1,0 +1,25 @@
+@dbid 133
+@title 2/6/2000
+@pubDate Sun Feb 06 12:22:34 -0800 2000
+@modDate Sun Feb 06 20:52:20 -0800 2000
+<p>Eric Soroos suggests that <a href="http://inessential.com/discuss/msgReader$130">CERT is channelling Frank Zappa</a>.</p>
+
+<p>Scott Hanson, on getting Frontier running with WINE, says <a href="http://inessential.com/discuss/msgReader$132">It worked... better than you said it would</a>!</p>
+
+<p>QubeQuorner: <a href="http://weblogs.userland.com/qube/stories/storyReader$295">Week in Review</a>.</p>
+
+<p>***More about .asp pages and Linux</p>
+
+<p>Karl Martino <a href="http://inessential.com/discuss/msgReader$131">responds</a> to my comments <a href="http://inessential.com/2000/02/05">yesterday</a> about scripts embedded in HTML files stored on disk. "ASP, on it&#039;s own, is definitely not a content management system. But you can build one with it," wrote Karl.</p>
+
+<p>Jay R. Ashworth also <a href="http://greenspun.com/ct/baylink/FROM-
+
+BRENT?send_to=http://baylink.pitas.com/index.html#MANILA">responds</a>. (Scroll down to the Tradeoffs... headline). I think this may be a sort-of religious issue. My experience tells me that putting everything in a scriptable database -- text, templates, prefs -- is necessary for an excellent content management system that serves dynamic pages. Jay disagrees, prefers to store at least some content as files in a file system. There&#039;s alot of middle ground here, by the way: some of our Manila sites store their picture files on our Apache servers -- since Apache is super-good at serving static files. Another example: Scripting News is edited via Manila, but the home page is written to disk and served by Apache running on a Qube.</p>
+
+<p>When Jay talks about choosing the underlying platform, I&#039;m not sure if he&#039;s referring to the OS or the webserver, or both. If you follow this weblog, you know that we&#039;re working on a Linux version of Frontier. You probably also know that Frontier is itself a webserver -- but you may also know that it&#039;s capable of running behind other servers on Mac and Windows. Will it, like Zope, be capable of running behind Apache on Linux? We haven&#039;t investigated yet, but it&#039;s of course a possibility. So imagine a possible future: you&#039;re running Frontier on Linux behind Apache. By Jay&#039;s criteria, I think you&#039;ve got the right platform. However, you&#039;re still storing your pages in a database, not as files on disk -- and I think that&#039;s the crux of the issue, not UNIX vs. NT vs. Mac or Apache vs. everything else.</p>
+
+<p><em>Update 7:42 p.m.</em>: Jay Ashworth asked me a very good question via private email: with Frontier running on Linux, how do you use RCS for version control, tracking changes, etc.? (Or: how do you use any UNIX tool x that understands the file system but doesn&#039;t understand Frontier databases.) That&#039;s an excellent question. The short answer is, you don&#039;t, unless someone were to teach RCS how to read Frontier databases. But then there are lots of other tools that would need to be taught the same thing.</p>
+
+<p>But here&#039;s my counter-question: What if I&#039;m a Mac Frontier user, but the server&#039;s running Frontier on Linux? Yes, there are Mac clients for some things (maybe even CVS), and there&#039;s always telnet. But if I&#039;m using Frontier, it&#039;s as easy as putting my cursor on the object and selecting Check Out from the WebEdit menu. You don&#039;t even need to know what OS the server&#039;s running.</p>
+
+<p>So Jay&#039;s title "Tradeoffs..." makes sense to me now. There are trade-offs involved in running on Macs, Windows, and Linux machines.</p>

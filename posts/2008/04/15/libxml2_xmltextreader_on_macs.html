@@ -1,0 +1,29 @@
+@dbid 3489
+@title libxml2 + xmlTextReader on Macs
+@pubDate Tue Apr 15 22:52:47 -0700 2008
+@modDate Tue Apr 15 22:52:47 -0700 2008
+I’ve used a few different XML parsers on Mac OS X—including CoreFoundation’s XML parser and NSXMLDocument.</p>
+
+<p>But recently, for technical reasons, I couldn’t use any of the XML parsers I was already using. And, furthermore, I had reason to want to use a stream-based parser rather than a parser that builds a tree. (For better performance and lower memory use.)</p>
+
+<p>I figured that probably meant using a SAX-ish API. (SAX == <a href="http://en.wikipedia.org/wiki/Simple_API_for_XML">Simple API for XML</a>) But I’ve never wanted to deal with SAX because it meant writing a bunch of code to deal with state, and that’s just a pain. (Honestly. <a href="http://twitter.com/ccgus/statuses/789746739">No matter what Gus says</a>.)</p>
+
+<p>So I found my way to libxml2 and its <a href="http://xmlsoft.org/html/libxml-SAX2.html">SAX2 module</a>. Eh, okay, I’ll do this, I guess. Maybe it’ll even be fun! (Really thinking, <em>probably not fun</em>.)</p>
+
+<p>Then somehow I ran across the <a href="http://xmlsoft.org/html/libxml-xmlreader.html">xmlreader module</a>. It turns out to be exactly what I wanted—stream-based and fast—without being a big pain like SAX.</p>
+
+<p>(It’s a clone of the <a href="http://dotgnu.org/pnetlib-doc/System/Xml/XmlTextReader.html">xmlReader .NET interface</a>. It’s possible that it’s very commonly-used in the Windows world.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>xmlTextReader works like this:</p>
+
+<p><pre>loop until done
+	GetTheNextBitOfXML
+	DoSomethingWithItIfYouWant</pre></p>
+
+<p>Right. No callback functions (as in SAX). Just loop through the XML until you’re done.</p>
+
+<p>See the <a href="http://xmlsoft.org/xmlreader.html">Libxml2 XmlTextReader Interface Tutorial</a>.</p>
+
+<p>And here’s a demo project (<a href="http://inessential.com/downloads/BSTweetParser.zip">BSTweetParser</a>) that downloads the Twitter public timeline and parses it into Cocoa objects, an array of dictionaries. (Twitter stuff makes for great sample code.)

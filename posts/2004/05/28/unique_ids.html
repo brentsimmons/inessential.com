@@ -1,0 +1,26 @@
+@dbid 2862
+@title Unique IDs
+@pubDate Fri May 28 13:52:59 -0700 2004
+@modDate Fri May 28 13:52:59 -0700 2004
+As an aggregator developer, my main mission in life often seems to be to get people to use unique IDs in their feeds. RSS 1.0, RSS 2.0, and Atom all have the concept of unique IDs—it’s just that not everybody uses them.</p>
+
+<p>Unique IDs make life better for users. Here’s why:</p>
+
+<p>Consider what happens when your feedreader reads a feed. It has to compare the new version of the feed with what it has already read. It has to determine, for each item in the new version, if it’s new, old, or updated.</p>
+
+<p>If you have unique IDs, you can tell that an item is an updated version of a previous item. The title, description, link, permalink, and so on may all have changed—but you know it’s the same item, and you can do whatever you do with updated items.</p>
+
+<p>Otherwise the feedreader has to guess. I imagine every feedreader does it differently. As an example, a feedreader might say—well, the title is the same, the body is different, but the link is the same, so it’s probably an updated item. The thing is, that’s not necessarily true, it’s just a <i>guess</i>. Which means the feedreader might do the wrong thing with it. And when the feedreader does the wrong thing, users don’t get the functionality they’re expecting.</p>
+
+<p>If you have unique IDs, then the feedreader can be sure it’s doing the right thing, and everything works the way users expect.</p>
+
+<p>Dave Winer has often evangelized guids in RSS 2.0. And it pleases me that Mark Pilgrim wrote <a href="http://diveintomark.org/archives/2004/05/28/howto-atom-id">How to make a good ID in Atom</a>. (Unique IDs are mandatory in Atom. Good!)</p>
+<h4>Feedreader compatibility</h4>
+<p>
+Consider also the problem of exchanging data between feedreaders. Say you want to synch between your desktop reader and an on-line service, or between two desktop readers. How do they tell each other what items have been read?</p>
+
+<p>One way would be to include the entire contents of each read item, and say, “These have all been read.” But that could be a <i>ton</i> of data, and you still have the problem of guessing.</p>
+
+<p>It would be so much better to just pass a list of unique IDs of read items. Imagine the bandwidth savings. And feedreaders wouldn’t have to make guesses.</p>
+
+<p>So unique IDs aren’t just about detecting read vs. unread items, they’re also a key to compatibility among feedreaders, which benefits users.

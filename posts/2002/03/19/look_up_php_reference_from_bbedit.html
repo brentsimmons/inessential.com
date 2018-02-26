@@ -1,0 +1,31 @@
+@dbid 1909
+@title Look Up PHP Reference from BBEdit
+@pubDate Tue Mar 19 10:29:10 -0800 2002
+@modDate Tue Mar 19 10:50:09 -0800 2002
+Many years ago I was trying to learn AppleScript and just not getting it. Nothing against AppleScript—everybody’s brain is wired differently. For me, a language that seems like natural language but really isn’t was just confusing.</p>
+
+<p>But that’s just me. While struggling with AppleScript I discovered Frontier, and it immediately clicked for me.</p>
+
+<p>Since then I’ve learned lots of other languages, but AppleScript has always been the language that stumps me. Which is why I’m proud to have finally written a useful AppleScript script.</p>
+
+<p>The following is a script for BBEdit.  If you write PHP scripts in BBEdit it’s useful.</p>
+
+<p>This script allows you to select some text then search for it on the PHP site. Drop it in your Scripts folder as a compiled script. On my machine I called it Look Up PHP Function. Here’s the source:</p>
+
+<pre class="scriptcode">
+set s to ""
+set searchurl to "http://www.php.net/manual-lookup.php?pattern="
+
+tell application "BBEdit 6.5"
+   set s to selection of text window 1 as text
+end tell
+
+set searchurl to searchurl & s
+
+tell application "Internet Explorer"
+   Activate
+   OpenURL searchurl
+end tell
+</pre>
+
+<p>It’s pretty simple—it creates a URL by appending the selected text to a base URL. Then it tells Internet Explorer to open that URL. You could probably change the Web browser and it would still work.

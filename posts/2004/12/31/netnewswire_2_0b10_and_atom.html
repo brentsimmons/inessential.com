@@ -1,0 +1,19 @@
+@dbid 3009
+@title NetNewsWire 2.0b10 and Atom
+@pubDate Fri Dec 31 16:47:01 -0800 2004
+@modDate Fri Dec 31 16:47:01 -0800 2004
+The Atom parser in NetNewsWire 2.0b10 is a complete re-write. It’s much improved. (The <a href="http://ranchero.com/netnewswire/changenotes/netnewswire2.0b10.php#atom">change notes page</a> goes into detail, listing tests it passes and so on.)</p>
+
+<p>Aside from doing the things it’s supposed to do—decoding base64, handling namespaces, etc.—it adds a feature that I really like: it presents <i>alternate</i>, <i>via</i>, and <i>related</i> links.</p>
+
+<p>In case you don’t know what I’m talking about, I’ll explain...</p>
+
+<p>An Atom item may contain multiple links. In the past, NetNewsWire just ignored the extra links. Now it parses them and presents them below the description.</p>
+
+<p>For instance, <a href="http://annevankesteren.nl/feeds/href">Anne van Kesteren’s feed</a> often includes <i>related</i> links and sometimes includes <i>via</i> links. Those links are displayed immediately below the description, as in the below screen shot:</p>
+
+<p><img src="http://inessential.com/images/viaRelatedLinks.png" height="230" width="361" alt="Screen shot showing related and via links" /></p>
+
+<p>This is a pretty cool feature of Atom, that you have a specified way of adding these links.</p>
+
+<p>If you’re interested in more about this, check out Mark Pilgrim’s <a href="http://diveintomark.org/archives/2004/05/27/howto-atom-linkblog">How to make a linkblog in Atom</a>.

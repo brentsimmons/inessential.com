@@ -1,0 +1,51 @@
+@dbid 2614
+@title Custom style sheets
+@pubDate Sat Aug 23 18:51:19 -0700 2003
+@modDate Sat Aug 23 18:51:19 -0700 2003
+Another new feature in NetNewsWire is the ability to specify a custom style sheet to customize how HTML is displayed.</p>
+
+<p>This is a direct result of switching to use Web Kit for HTML display. (Have I said lately how much I love Web Kit? I do love it.)</p>
+
+<p>Here&#8217;s a <a href="http://ranchero.com/images/htmlprefs104.jpg">screen shot</a> of my HTML prefs panel: note that I&#8217;ve chosen to use a custom style sheet.</p>
+
+<p>Here&#8217;s my personal custom style sheet.</p>
+
+<p><pre>
+a {
+	text-decoration: none;
+	}
+a:hover {
+	color: red;
+	}
+body {
+	line-height: 17px;
+	}
+.newsItemTitle {
+	border-top-width: 0;
+	border-bottom-width: 1px;
+	border-right-width: 0;
+	border-left-width: 0;
+	border-style: dotted;
+	border-color: #9999CC;
+	}
+</pre></p>
+
+<p>Here&#8217;s a <a href="http://ranchero.com/images/customdescription.jpg">screen shot</a> of the result.</p>
+
+<p>What my style sheet does:</p>
+
+<p>1. It turns off link underlining.</p>
+
+<p>2. It makes it so links turn red when you mouse-over.</p>
+
+<p>3. It adds some space between lines of text.</p>
+
+<p>4. It puts a thin dotted border below the title.</p>
+
+<p>Note that .newsItemTitle is special to NetNewsWire&#8212;it&#8217;s a div that wraps the title. There&#8217;s also a .newsItemDescription for the main part of the description.</p>
+
+<p>(In Combined View, the title isn&#8217;t part of the HTML, so only .newsItemDescription is available there.)</p>
+
+<p>This is definitely a power-user feature: most people probably won&#8217;t do this. And that&#8217;s cool. But it&#8217;s one of my favorites, anyway.</p>
+
+<p>If you&#8217;re a NetNewsWire user, and you post your custom style sheet on the web, please send me the URL so I can link to it.

@@ -1,0 +1,25 @@
+@dbid 2934
+@title Non-unique unique IDs (which Joe?)
+@pubDate Mon Oct 04 16:23:12 -0700 2004
+@modDate Mon Oct 04 16:27:54 -0700 2004
+The biggest time-waster in writing aggregators is the issue of unique IDs.</p>
+
+<p>One thing that separates RSS and Atom from email is that items can <i>change</i>. So, when an item changes, how does your aggregator know it’s a change rather than a new item? It looks at the item’s unique ID.</p>
+
+<p>Unfortunately, not all feeds have unique IDs. Which is too bad. But what’s worse—what’s far worse, what makes me foam at the mouth and blow steam out my eyeballs—is when a feed has unique IDs that are <i>not actually unique</i>. That’s just perverse.</p>
+
+<p>I don’t want to pick on an individual or small company—so I’ll pick on Yahoo. <a href="http://search.news.yahoo.com/usns/ynsearch/categories/47/index.html?p=apple">Consider this feed</a> that does a news search on “apple.”</p>
+
+<p>If you look at the source, you’ll note that each news item begins with <code>&lt;item rdf:about="http://us.rd.yahoo.com/dailynews/rss/search/apple/*"&gt;</code>. The URL is supposed to be unique in the feed.</p>
+
+<p>From the <a href="http://web.resource.org/rss/1.0/spec#s5.5">RSS 1.0 spec</a>: “{item_uri} must be unique with respect to any other rdf:about attributes in the RSS document and is a URI which identifies the  item. {item_uri} should be identical to the value of the &lt;link&gt; sub-element of the &lt;item&gt; element, if possible.”</p>
+
+<p>I’ll say it again: the <i>URL must be unique</i>. If the URL isn’t unique, you get a situation like where you have ten guys named Joe in a room, and you say, “Hey, Joe!” and they all turn around to look at you.</p>
+
+<p>It would be better if they didn’t even have names, so you could say, “Hey, brown-haired guy with the wire-rim glasses wearing a polka-dot shirt!”</p>
+
+<p>Yahoo isn’t the only creator of feeds that makes this mistake. This isn’t a case where fixing Yahoo’s feed fixes the problem as a whole, because it occurs other places too. </p>
+
+<p>(But it would be nice if Yahoo fixed the bug, so I could include Yahoo as a search engine provider in NetNewsWire the way we include Blogdigger, Daypop, and Feedster. In Yahoo’s case, the easy thing for them to do is probably make the rdf:about URL match the link URL.)</p>
+
+<p>P.S. I’m calm again now. I just have to vent about this occasionally. Breathe in, breathe out...

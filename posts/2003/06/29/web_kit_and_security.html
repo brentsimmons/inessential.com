@@ -1,0 +1,25 @@
+@dbid 2555
+@title Web Kit and security
+@pubDate Sun Jun 29 21:20:31 -0700 2003
+@modDate Sun Jun 29 21:22:23 -0700 2003
+Yesterday I started working with Web Kit. It&#8217;s so easy to get started. What a treat!</p>
+
+<p>One thing I plan to do for NetNewsWire is to make sure JavaScript scripts and plugins and so on don&#8217;t run in NetNewsWire, at least by default.</p>
+
+<p>Luckily, there&#8217;s an API for this in Web Kit&#8212;check out WebPreferences.h. There are methods for enabling and disabling JavaScript, Java, plugins, and even animated images.</p>
+
+<p>Notice that you can have different sets of WebPreferences: you can set up preferences for just your application, so disabling JavaScript doesn&#8217;t disable it in Safari, for instance.<h4>Why?</h4><p>But why do all this? Why turn off JavaScript and Java and so on?</p>
+
+<p>We don&#8217;t have experience with Web Kit yet; we don&#8217;t know what the security implications are of allowing scripts and plug-ins and so on to run. We can theorize, we can make some pretty good guesses, but we don&#8217;t really know, yet.</p>
+
+<p>A least-dangerous example might be this: someone puts a JavaScript script in their RSS feed that causes new windows in NetNewsWire to open in a loop. This would be obnoxious, for sure, but it may not be damaging. Or it may, depending on how the app and the system deal with it. I don&#8217;t know.</p>
+
+<p>That&#8217;s merely obnoxious (probably)&#8212;but are actual security exploits possible? You have to assume the worst.</p>
+
+<p>I don&#8217;t want Mac OS X to become like Windows, where untrusted code seems to run all the time from all kinds of sources. (Windows has perhaps gotten better than its reputation; I don&#8217;t follow it that closely.)</p>
+
+<p>So, to Mac developers, I&#8217;m not saying don&#8217;t use Web Kit. Use it. It&#8217;s super cool. I&#8217;m going to use it.</p>
+
+<p>I&#8217;m just saying to pay attention to security, and turn off, at least by default, things like JavaScript.</p>
+
+<p>And be glad that Web Kit allows you to turn off this stuff. It&#8217;s a very good thing. Thanks go to the Web Kit team.

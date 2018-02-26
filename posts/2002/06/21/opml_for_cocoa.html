@@ -1,0 +1,11 @@
+@dbid 2029
+@title OPML for Cocoa
+@pubDate Fri Jun 21 13:42:13 -0700 2002
+@modDate Fri Jun 21 13:43:38 -0700 2002
+I wrote an <a href="http://www.opml.org/">OPML</a> parser for Cocoa today. (I’ll release it with a BSD license after it gets more burn-in.)</p>
+
+<p>This is the <em>second</em> time I’ve written an OPML parser: I did it in C for Frontier/Radio. That version was of course based on the original scripts (by <a href="http://scripting.com/">Dave Winer</a>, now home from the hospital, thank goodness).</p>
+
+<p>Writing this parser in Cocoa was a very different exercise than when I did it for the Frontier kernel. In Frontier the object was to convert OPML text to an outline object—which is a user-interface object—while with Cocoa I’m working with pure data, just converting the OPML text to an array of arrays (and using dictionaries for the attributes).</p>
+
+<p>Anyway, I’m reminded what a nice format OPML is. Easy for machines to parse, easy to implement.

@@ -1,0 +1,16 @@
+@dbid 2099
+@title RSS 0.94 notes
+@link http://backend.userland.com/rss
+@pubDate Mon Sep 02 09:37:49 -0700 2002
+@modDate Mon Sep 02 09:37:49 -0700 2002
+Some notes on the proposed <a href="http://backend.userland.com/rss">RSS 0.94</a> spec...</p>
+
+<p>Actually, what I have is feature requests, based on requests I’ve heard users of aggregators and news readers make:</p>
+
+<p>An optional item element that specifies the author of the given item. There are plenty of collaborative weblogs out there: knowing who posted the given item can be important.</p>
+
+<p>Another optional item element, related to pubDate, would specify the time an item was modified. Currently the burden is on the newsreader software to determine modification of an RSS item, and every app does it differently (I suspect). This seems like something the RSS generator—the website itself—should specify. For instance, the correction of a typo might not mark an item as modified, and a newsreader would then not re-display the item to the user. But a more substantial change would mark it as modified, changing the modification date.</p>
+
+<p>A formal way to specify the app or toolkit that generated the RSS would be useful. A &lt;generator&gt; tag (or similar), with a way to specify the app name, version, and its URL. (Note that in many current RSS feeds the generator is included as a comment.)</p>
+
+<p>A way to specify how to reach the author via chat: a way to specify the service and screen name. (The idea is for news readers and aggregators to be able to offer a Chat with Author command.)

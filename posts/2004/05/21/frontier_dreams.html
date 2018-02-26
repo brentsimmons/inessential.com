@@ -1,0 +1,63 @@
+@dbid 2851
+@title Frontier Dreams
+@pubDate Fri May 21 12:47:04 -0700 2004
+@modDate Fri May 21 12:50:33 -0700 2004
+In the back of my mind I’ve been thinking about the <a href="http://archive.scripting.com/2004/05/17#asGoodATimeAsAny">open-sourcing of the Frontier kernel</a>, and like <a href="http://jim.roepcke.com/2004/05/19">some other folks</a> it’s made me dream of software that’s close in spirit to the early versions of Frontier, before it became the basis for a content management system.</p>
+
+<p>For those who don’t know, Frontier began life as a scripting system for Macintosh. But not just another language—it included an object database and a relatively rich (for the time) library of verbs. You wrote code in an outliner, which I still think is a wonderful way to write code.</p>
+
+<p>You used it do many of the same things people use Perl and Python (and so on) for today, only it was on Macintosh System 7. Instead of using pipes and Unix-y things for inter-application communication, it used Apple events. (Like AppleScript.) It was very common to use Frontier to do tasks that required scripting one or more other applications.</p>
+
+<p>For instance, your script might grab data from a Filemaker database, format it as text in Frontier, then create a new email message in Eudora and send it. With Frontier’s scheduler, its cron-equivalent, you could make this happen once an hour or whatever. And you might archive the data in its object database and create weekly reports based on that data.</p>
+
+<p>That’s just a for-instance, of course. The gist of it was that it made it possible to do custom things that apps like Filemaker and Eudora would never (quite rightly) have supported on their own.</p>
+
+<p>Sounds like AppleScript, right? Well, yes. But Frontier brought some things that AppleScript doesn’t have. (The browse-able object database, the richer library of verbs, the code outliner, the scheduler, and so on. Frontier is an entire environment on its own, though an open one, aware of the rest of the system.)</p>
+
+<p><b>My dream app</b></p>
+
+<p>First thing—I don’t have plans to work on Frontier. I’d love to use the results of someone else’s work, though! As much fun as it would be for me to work on it (partly because the kernel is an old friend, but more so because I know a lot of Frontier users who are cool cats) it just isn’t on my path. However, I’d be happy to make sure my software works well with people who want to script it with Frontier.</p>
+
+<p>Anyway... my dream app goes back to that earlier vision of Frontier. To bring it up-to-date, there are a few things I’d love to see:</p>
+
+<p><b>Python</b></p>
+
+<p>Whitespace-aware Python just <i>begs</i> to be written in an outliner. The language is similar in style to UserTalk (Frontier’s scripting language), but, key fact, it’s <i>object-oriented</i>.</p>
+
+<p>The object-oriented thing is a big deal: I’ve gotten so I won’t even consider writing in a procedural language for anything but the smallest of tasks. I want objects.</p>
+
+<p>And Python is just plain cool.</p>
+
+<p>I wouldn’t advocate dropping UserTalk, I’d argue for making Python a first-class peer of UserTalk. There are some challenges to consider, though. Frontier internally is receptive to other languages. (Note that you can write scripts in any OSA language, including AppleScript). But you’d have to make it so Python could access the object database (to store and retrieve data and to call other scripts) and you’d want a way to freeze-dry Python objects in the database.</p>
+
+<p><b>Cocoa front-end</b></p>
+
+<p>Okay, obviously I don’t care about classic Mac OS or Windows. I care about OS X.</p>
+
+<p>When Frontier was written, there were no system-supplied user interface controls for tables, outlines, and toolbars. And all applications <i>polled</i> for events (via WaitNextEvent, if I remember correctly).</p>
+
+<p>The first obvious thing to do is replace a bunch of the user interface code with .nib files and standard Cocoa widgets. However, I think I’d retain the existing outliner for writing scripts. (Cocoa and Carbon can co-exist: it’s not a problem.) But all toolbars, the object-database browser, text-editing views, and so on would use Cocoa user interface.</p>
+
+<p>In theory, you’d end up with less code, better performance, and a modern OS X UI.</p>
+
+<p><b>Bonus points: custom windows</b></p>
+
+<p>Sometimes you want to create a mini-application, a custom dialog or window backed by a script. Frontier has a long history (at least on classic Mac OS) of supporting this: you could run dialogs from resources, you could run MacBird cards.</p>
+
+<p>In the year 2004, the thing to do would be to run dialogs and windows from .nib files. You’d lay out your user interface using Interface Builder, then run it in Frontier.</p>
+
+<p>How would you handle wiring up actions and outlets to scripts in Interface Builder? Glad you asked. You probably wouldn’t. One way to handle this is to give each item a unique tag in IB. Then your script might have a handler like <code>on itemDidSendAction (itemRef, actionRef)</code>. This would be called when a checkbox was clicked, a button pressed, whatever. Your script would, obviously, have to branch on which item sent the action and what the action was. Not quite as slick as wiring up actions, but it would work.</p>
+
+<p>The other side of the coin is outlets. That’s where tags come in. To get a reference to an item, you might write something like <code>itemRef = cocoaWindow.itemWithTag (tag, windowRef)</code>. Then you could do things like set the value of a text field like so: <code>cocoaWindow.setStringValueForItem (itemRef, someString)</code>.</p>
+
+<p><b>Double bonus points</b></p>
+
+<p>Get <a href="http://pyobjc.sourceforge.net/">PyObjC</a> in the mix of all this, and now you’re talking about something extraordinary.</p>
+
+<p><b>Anyway...</b></p>
+
+<p>It’s possible that there will be an exciting burst of creativity once the kernel is made open-source. I think that’s totally cool, it it comes to be. For my part, I’d be happy to answer any questions I can for people who work on the code, since I know a little about it.</p>
+
+<p>It’s entirely possible that the things I’d like to see are not the things most people would like to see, and that’s fine. (But I can dream, right?)</p>
+
+<p>P.S. A glimpse into the kernel: The first thing you’ll discover is that, before Frontier was Frontier, its name was Cancoon.

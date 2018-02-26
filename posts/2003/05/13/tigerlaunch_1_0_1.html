@@ -1,0 +1,11 @@
+@dbid 2501
+@title TigerLaunch 1.0.1
+@pubDate Tue May 13 17:15:39 -0700 2003
+@modDate Tue May 13 17:15:39 -0700 2003
+<a href="http://ranchero.com/tigerlaunch/"><img src="http://ranchero.com/images/tigerlaunchicon3.jpg" border="0" height="132" width="130" alt="" align="right" /></a><a href="http://ranchero.com/tigerlaunch/">TigerLaunch 1.0.1</a> fixes a bug where user-added folders wouldn&#8217;t always have their apps added to the Apps menu when TigerLaunch starts up.</p>
+
+<p>The app remains open source (BSD license); the source code is available from the TigerLaunch page.</p>
+
+<p>For the curious: the app was building the Apps menu during awakeFromNib, but that was the wrong time to do it, since it was relying on another class&#8217;s awakeFromNib having already been called, which wasn&#8217;t always the case.</p>
+
+<p>So I added an applicationDidFinishLaunching delegate method, and now the menus get built then. This fixed the bug.

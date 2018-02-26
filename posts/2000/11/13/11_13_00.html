@@ -1,0 +1,38 @@
+@dbid 1056
+@title 11/13/00
+@pubDate Mon Nov 13 02:35:33 -0800 2000
+@modDate Mon Nov 13 10:52:13 -0800 2000
+<p>Here&#039;s a point in favor of OS X as a Manila server: Apache.</p>
+
+<p>What?</p>
+
+<p>In setting up Frontier on our new Cube -- which runs OS X -- I needed to do something similar to what we do with our NT Frontier servers. Those machines save user-uploaded pictures and other static files to a Linux server running Apache, since Apache is so good at serving static files.</p>
+
+<p>The drawback to that arrangement is that there&#039;s another box, at least one Linux box, that&#039;s part of the mix. We have to set up file-sharing, Apache, virtual domains. Blah blah blah. It&#039;s not usually a pain, except, well, when it is a pain.</p>
+
+<p>The beauty of OS X is that Apache&#039;s already there. You can give your machine two IP addresses: Frontier listens on one; Apache listens on the other.</p>
+
+<p>That means: no file-sharing connection needed. No separate box for doing static serving. One machine does it all: dynamic Manila sites and static files.</p>
+
+<p>Now, of course you might say: hey Brent, hold up a sec, I can do that on NT Server or Mac OS 9.</p>
+
+<p>But -- I reply -- Apache on NT isn&#039;t that great, not compared to Apache on Unix. And if you use IIS instead, you&#039;re going to run into IIS&#039;s funkiness with locking files -- there will be times Frontier can&#039;t write a picture or other file to disk, because IIS won&#039;t let it replace an existing file. So this setup isn&#039;t so nice on Windows. (And plus, it&#039;s Windows, so you get no style points.)</p>
+
+<p>If you&#039;re using OS 9, WebSTAR or WebTEN with Frontier -- well, you&#039;re paying extra money. (On the other hand, WebSTAR and WebTEN have much to recommend them, and they&#039;re worth the money.) More importantly, you&#039;re not using a quote-unquote real operating system, for whatever that matters. (As someone who&#039;s been running Mac servers since 1995, and who still runs a couple servers running OS 8.x, I can say that it does matter sometimes. Much as I&#039;ve always hated to admit it.)</p>
+
+<p>Frontier. Apache. Two great tastes that taste great together -- <em>on the same damn box</em>, thank ye very much.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>Peter M. Jansson wrote to let me know that <a href="http://aolserver.com/">AOLServer</a> also runs on Mac OS X. I didn&#039;t know that, but hey, right on.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>I&#039;ll be more specific about why I think being able to run Apache and Frontier on the same box is cool. While some Frontier server managers have the mondo setup -- lots of servers, racks, UPSes, hot-swappable this and that, automated xyz management, industrial strength squirrel detection -- others don&#039;t. There are many who have just one machine sitting in a closet somewhere. For those people, a single, easy-to-use box that does both Manila and static serving is a total bonus.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>David Brown <a href="http://editorial.inessential.com/discuss/msgReader$1059?mode=day">suggests</a> it might be possible to have Frontier, Apache, and Zope all running on the same machine with just one IP address.</p>
+
+<p>Phil Suh has been running Apache on NT and <a href="http://editorial.inessential.com/discuss/msgReader$1058?mode=day">loving it</a>.
+</p>

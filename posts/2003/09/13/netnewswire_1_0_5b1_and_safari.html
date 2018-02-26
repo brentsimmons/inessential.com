@@ -1,0 +1,19 @@
+@dbid 2632
+@title NetNewsWire 1.0.5b1 and Safari
+@pubDate Sat Sep 13 18:51:10 -0700 2003
+@modDate Sat Sep 13 18:51:10 -0700 2003
+The biggest bug fix in <a href="http://ranchero.com/netnewswire/beta.php">NetNewsWire 1.0.5b1</a> should fix some crashes, hangs, and slowness in not just NetNewsWire but also in Safari.</p>
+
+<p>Here’s the deal: NetNewsWire 1.0.4 switched to using the new downloading code that came with Safari 1.0 and Web Kit.</p>
+
+<p>One of the things about this new downloading code is that it shares cookies between each app that uses it. Unfortunately, there’s a problem in there, somewhere.</p>
+
+<p>The symptoms were sometimes straightforward—a crash on startup in Web Kit’s cookie storage code. Sometimes it was just extreme slowness or hangs in NetNewsWire or Safari or both.</p>
+
+<p>So what I did was make it so that cookies are <em>not</em> shared between NetNewsWire and Safari anymore.</p>
+
+<p>However, there is a drawback: if you were using NetNewsWire to read an RSS file that requires a cookie—such as an Editor’s Only Manila site—it’s not going to work. (Standard HTTP authentication still works, though.)</p>
+
+<p>And yes, I will report the bug to Apple. (At least the crashes.)</p>
+
+<p>Finally—just because this bug is fixed doesn’t mean there aren’t other possible bugs that cause hangs or slowness or whatever. Of course there are. Bug reports and crash logs remain very appreciated.

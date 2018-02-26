@@ -1,0 +1,18 @@
+@dbid 2434
+@title Open Source XML-RPC for Cocoa
+@pubDate Fri Mar 07 11:51:52 -0800 2003
+@modDate Fri Mar 07 11:51:52 -0800 2003
+I posted a new open source <a href="http://ranchero.com/cocoa/xmlrpc/">XML-RPC implementation for Cocoa</a>. It’s BSD licensed, which means you can use it in commercial apps and apps that aren’t themselves open source.</p>
+
+<p>This code is, at this writing, just a little ahead of the code that’s in the current NetNewsWire beta. NetNewsWire&#8217;s weblog editor uses XML-RPC to communicate with Radio UserLand, Movable Type, Conversant, Blogger, and so on.</p>
+
+<p>The code is in beta: it needs more testing and more documentation.</p>
+
+<p>People will ask: why not use WebServicesCore? Here&#8217;s a quote from the Cocoa XML-RPC page:
+<blockquote>
+At this writing (7 March 2003) the implementation of XML-RPC in Apple&#8217;s WebServicesCore has a crashing bug. Whenever a method response contains an empty element, there&#8217;s a crash.</p>
+
+<p>We fully expect this (and other smaller bugs) to get fixed&#8212;but we couldn&#8217;t wait. (NetNewsWire&#8217;s weblog editor uses XML-RPC heavily; it&#8217;s how external editors work with weblogs.)</p>
+
+<p>Using this XML-RPC code has other benefits: it&#8217;s Open Source, so you can see the code. As a set of Cocoa classes it&#8217;s easier to use than a C API, and you can create sub-classes.
+</blockquote>

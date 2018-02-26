@@ -1,0 +1,20 @@
+@dbid 3358
+@title Launching an app synchronously
+@pubDate Tue Dec 19 21:52:11 -0800 2006
+@modDate Tue Dec 19 21:52:11 -0800 2006
+When NetNewsWire sends a news item to a weblog editor app, it sends an Apple event to that app. But first it needs to make sure the app is running, so that it can receive the Apple event.</p>
+
+<p>When I first added this feature, I had some weird thing where NetNewsWire launched the app then waited for a notification that the app had launched—and then it would send the Apple event. It took a surprising amount of code.</p>
+
+<p>I decided that it was okay to launch the weblog editor app synchronously. Since -[NSWorkspace launchApplication:] is async, I needed something else. Turns out it was totally easy. Given f as the path to the app:</p>
+
+<p><pre>
+LSLaunchURLSpec launchSpec;
+launchSpec.appURL = (CFURLRef)[NSURL fileURLWithPath:f];
+launchSpec.itemURLs = nil;
+launchSpec.passThruParams = nil;
+launchSpec.launchFlags = kLSLaunchAndDisplayErrors;
+launchSpec.asyncRefCon = nil;
+return LSOpenFromURLSpec(&launchSpec, nil);</pre></p>
+
+<p>Anyway—so if you’re writing a newsreader or browser and need to launch a weblog editor before sending it the <a href="http://ranchero.com/netnewswire/developers/externalinterface.php">post-to-weblog Apple event</a>, you can use the above code to launch the weblog editor. (Or use it for launching any app, of course.)

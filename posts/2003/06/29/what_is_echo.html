@@ -1,0 +1,48 @@
+@dbid 2557
+@title What is Echo?
+@pubDate Sun Jun 29 22:52:50 -0700 2003
+@modDate Sun Jun 29 22:52:50 -0700 2003
+A number of people have asked me for an explanation of what the <a href="http://www.intertwingly.net/wiki/pie/">Echo project</a> actually is.</p>
+
+<p>I&#8217;ve stated before that while I&#8217;m not thrilled about it, my software will support it as long as it&#8217;s technically supportable.</p>
+
+<p>That&#8217;s so you know where I stand. What follows is a stab at explaining it without advocacy either way and in terms that will be familiar to people who read this weblog.<h4>What is Echo?</h4>
+<p>The point of Echo is to create a new format for syndication. It would be like RSS but different.</p>
+
+<p>The second, related point is to create an API for editing weblogs. Two such APIs already exist, the Blogger and MetaWeblog APIs.<h4>Why do this?</h4>
+<p>There appear to be two main motivations:</p>
+
+<p>1. To improve on RSS and the current editing APIs, to do better. See for example Ben Trott on <a href="http://www.sixapart.com/log/2003/06/why_we_need_ech.shtml">why we need Echo</a>.</p>
+
+<p>2. To deal with the political and personality issues involved with RSS and the current editing APIs. See Tim Bray&#8217;s <a href="http://tbray.org/ongoing/When/200x/2003/06/19/RSS4All">conversation with Mr. Safe</a>. See also Jon Udell&#8217;s conversation with Mr. Safe, which <a href="http://weblog.infoworld.com/udell/2003/06/27.html">concludes somewhat differently</a>.</p>
+
+<p>Which is the bigger motivation? It&#8217;s hard to tell. I lean toward saying it&#8217;s the politics, but there appear to be a number of people interested primarily in the technical issues.</p>
+
+<p>For more about the why of Echo, see the page on <a href="http://www.intertwingly.net/wiki/pie/Motivation">Motivation</a> on the Echo wiki.
+<h4>What will it look like?</h4>
+<p>It&#8217;s a safe bet that Echo format feeds will be XML. But the details are still being worked out.</p>
+
+<p>If you&#8217;ve looked at an RSS feed, you&#8217;ve seen some stuff at the top about the feed (its title and description and so on) and then the rest of the feed is a number of news items. Echo will (most likely) look like this too.</p>
+
+<p>See the <a href="http://www.intertwingly.net/wiki/pie/EchoExample">EchoExample</a> page. Nothing is set in stone yet, I think, but it appears that instead of having a bunch of <em>item</em> tags, as in RSS, there are a bunch of <em>entry</em> tags.</p>
+
+<p>Were that the only difference from RSS, you&#8217;d have to say, &#8220;So what?&#8221; right now. I&#8217;ll note another difference, so you can get the flavor of the kind of ways Echo differs from RSS.</p>
+
+<p>Each entry can have multiple content items. The same entry on a weblog could have a plain text version, an XHTML version, and so on. You can specify the language of individual content items.</p>
+
+<p>Maybe that&#8217;s a big deal, and maybe not. (I&#8217;m not going to mention each way Echo differs from RSS.)</p>
+
+<p>It looks like there are a number of such small things that may add up to a more flexible and complete syndication format. Or, it may add up to a more complex and difficult-to-generate and difficult-to-parse format.<h4>Questioning Echo</h4>
+<p>One main criticism of Echo would be that it&#8217;s not really necessary: RSS and the current editing APIs get the job done. In fact, you could argue that they do the job fabulously well. Look how many weblog publishing systems there are; look how many sites support RSS; look how many newsreaders there are. If RSS was so broken, this wouldn&#8217;t be happening.</p>
+
+<p>And if there are problems with RSS, they could perhaps be fixed by working with RSS rather than starting something new.</p>
+
+<p>An Echo enthusiast would reply that RSS does indeed have some technical problems which can&#8217;t be fixed because RSS is a frozen spec and because politics gets in the way too much. An Echo enthusiast might also add that the politics of RSS is a barrier to wide adoption, so something that is completely vendor-neutral is needed. (Again, the two Mr. Safe conversations argue different sides of this.)</p>
+
+<p>You might then ask what vendor-neutral means when <a href="http://www.intertwingly.net/blog/">Sam Ruby</a>, who started the project, works for IBM and works on this with the blessing of IBM. You might also be getting into the realm of conspiracy theories and paranoia here.</p>
+
+<p>You might also question the process. Tim Bray writes about too much <a href="http://tbray.org/ongoing/When/200x/2003/06/27/NoInventions">creativity</a>: &#8220;I am worried that the next-gen syndication process rooted in Sam&#8217;s Wiki is in danger of going seriously off the rails, because some of the participants have got the idea that it&#8217;s about trying to invent new technology or improve RSS.&#8221;</p>
+
+<p>Design by come-one-come-all committee may make delivering a good spec nearly impossible, because so many people want to solve their favorite technical problem. Too many engineers may lead to an over-engineered format, which would subvert the goal of delivering a clear, well-specified, easy-to-use format.</p>
+
+<p>Or not. If you like sausage, don&#8217;t go to the sausage factory. Sometimes beautiful things come from unsightly processes. Sometimes.

@@ -1,0 +1,25 @@
+@dbid 2915
+@title Unsung new feature
+@pubDate Sun Sep 26 14:16:49 -0700 2004
+@modDate Sun Sep 26 14:16:49 -0700 2004
+One of my favorite new features in NetNewsWire didn’t get its own page or make it as a bullet point on the what’s new page.</p>
+
+<p>It used to be that if you have a group selected and it has unread items—but they’re all above where you are in the headlines table—then going to the next unread item would (annoyingly!) expand the group and take you to a feed inside the group.</p>
+
+<p>There was a logic to this, but it was totally annoying anyway. And it was reported often as a bug.</p>
+
+<p>In talking to NetNewsWire users and testers, we discovered that people really want three distinct behaviors for going to next/previous unread:</p>
+
+<p>1. Always respect the expansion state of the Subscriptions list.</p>
+
+<p>That is, if a group is expanded, it’s okay for next-unread to select a feed in that group. Otherwise it should move on to the next group.</p>
+
+<p>2. Stay at the top level of the Subscriptions list.</p>
+
+<p>That is, don’t ever automatically expand groups, and don’t select feeds if they’re inside a group.</p>
+
+<p>3. Always expand groups and skip to feeds.</p>
+
+<p>Some people like to group their feeds, but they prefer to have a feed (rather than a group) selected when they’re reading.</p>
+
+<p>So these options are available at the bottom of the General preferences pane.

@@ -1,0 +1,37 @@
+@dbid 3510
+@title NetNewsWire progress report: 1.0.7, now with feed removing
+@pubDate Fri Jul 18 23:10:29 -0700 2008
+@modDate Fri Jul 18 23:10:29 -0700 2008
+<p>
+I just built NetNewsWire 1.0.7. I have no idea when you’ll see it, when it’ll get into the App Store — I’m just keeping you up-to-date on progress.
+</p>
+<p>
+Change notes (since the last time I posted, which was for 1.0.5):
+</p>
+<p>
+<strong>1.0.7</strong>
+</p>
+<p>
+- You can unsubscribe from feeds or just remove them from the iPhone. (That is, you can remove them from the iPhone location. They&#039;ll continue to appear in other locations.) Click the Edit button to start. Click the circle button, then the Delete button. An action sheet will pop up asking you what you want to do. (Don&#039;t Show in iPhone or Unsubscribe Everywhere. Or Cancel.)
+</p>
+<p>
+- Fixed a crashing bug that could happen when going to the Next Unread item.
+</p>
+<p>
+- Fixed a cause of database-busy errors that could come up when saving a favicon.
+</p>
+<p>
+<strong>1.0.6</strong>
+</p>
+<p>
+- Does more when receiving a memory warning message -- it dumps cached feed and news item objects (except for the current sub).
+</p>
+<p>
+- Fixed a small, rare memory leak in the RSS parser. (Did a big leak hunt -- even used scan-build -- and this is all I could find.)
+</p>
+<p>
+- Fixed a bug introduced in 1.0.5 that could let unread counts get out of sync.
+</p>
+<p>
+
+</p>

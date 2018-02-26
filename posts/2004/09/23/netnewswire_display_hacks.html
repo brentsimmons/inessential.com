@@ -1,0 +1,22 @@
+@dbid 2907
+@title NetNewsWire Display Hacks
+@pubDate Thu Sep 23 19:32:37 -0700 2004
+@modDate Fri Sep 24 18:58:58 -0700 2004
+In the full version of NetNewsWire 2.0 are a couple display hacks. One is <a href="http://www.hicksdesign.co.uk/journal/579/netnewswire-2">documented</a> by Jon Hicks. Another is a hack to add indenting to the datelines and summaries display in the headlines table.</p>
+
+<p>We added the ability to show datelines in the headlines table mainly for the benefit of people using the widescreen layout. (Choose View > Layout > Show Datelines in Table.) This removes the columns and puts a dateline below each title. (Thanks go to <a href="http://alexking.org/">Alex King</a> for suggesting this feature.)</p>
+
+<p>There is no exposed preference for adding indenting to the datelines—but you can add it manually via the Terminal.</p>
+
+<p><a href="http://inessential.com/images/indentPixels.png"><img src="http://inessential.com/images/indentPixelsSmall.png" height="121" width="121" alt="Indent pixels hack" align="right" hspace="5" border="0" /></a></p>
+
+<p><ol><li>Quit NetNewsWire if it’s running.
+<li>Launch /Applications/Utilities/Terminal.
+<li>Type the below and hit return.<br /><code>defaults write com.ranchero.NetNewsWire summaryTableIndentPixels 15</code><br />
+(Make the number the number of pixels you want to indent.)</li><li>Launch NetNewsWire. (Be sure that showing datelines and/or summaries is turned on, or you won’t see any effect.)</li></ol></p>
+
+<p>You end up with something like in the screen shot above (click for a larger version).</p>
+
+<p>Another hack, similar to the above, allows you to set the number of summary lines when showing summaries is on. The key is <code>summaryLinesToInclude</code>.</p>
+
+<p>We call these hacks because you have to use the Terminal to change the settings and also because they’re unsupported. But I couldn’t resist telling you about them.

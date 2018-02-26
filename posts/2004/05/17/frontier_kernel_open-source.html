@@ -1,0 +1,13 @@
+@dbid 2842
+@title Frontier kernel open-source
+@pubDate Mon May 17 14:08:56 -0700 2004
+@modDate Mon May 17 15:11:05 -0700 2004
+Dave Winer announced that the Frontier kernel—the C code, the internals of the application—will be made <a href="http://archive.scripting.com/2004/05/17#asGoodATimeAsAny">open-source</a>. I’m glad: I think it’s a good thing for Frontier and Radio and their users.</p>
+
+<p>During the latter part of my stint at UserLand I worked on the Frontier kernel. A big part of my efforts were on Carbonizing it. <a href="http://www.bact.wisc.edu/microtextbook/">Timothy Paustian</a> started the job, and handled all the really crazy low-level stuff like threading, then I did user interface stuff and fixed bugs. In some cases I was able to adopt the Aqua appearance, but going all the way with that would probably have tripled the development time. At least.</p>
+
+<p>Anyway, what I love about the kernel is the way it is written in C but is nevertheless object-oriented. (Remember that it was started in the late ’80s, so C was the natural choice.)</p>
+
+<p>The way it’s done is via the use of structs instead of “real” objects. These structs contain function pointers, so one object can inherit from another and have not just different data but different methods.</p>
+
+<p>I found this to be surprisingly elegant, so much so that now, years later, I sometimes get the urge to write in C just so I can use this style of object-oriented programming. (But then the urge passes, and I stick to Objective-C.)

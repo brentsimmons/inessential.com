@@ -1,0 +1,22 @@
+@dbid 3576
+@title File creation date in Ruby on Macs
+@pubDate Thu Dec 18 11:30:13 -0800 2008
+@modDate Thu Dec 18 15:40:25 -0800 2008
+<p>
+I couldn’t find a way to get the creation date of a file, using Ruby on a Mac. For the benefit of anyone searching for this same thing, here’s the solution I’m using. (Seems to work so far.)
+</p>
+<p>
+Where <code>f</code> is the path to the file:
+</p>
+<p>
+<code>Time.parse(`mdls -name kMDItemContentCreationDate -raw #{f}`)</code>
+</p>
+<p>
+Uses the awesome <code>mdls</code>. (Do a <code>man mdls</code> in Terminal to learn more.)
+</p>
+<p>
+(Note: <code>File.atime</code>, <code>File.ctime</code>, and <code>File.mtime</code> return the last access, change, and modification dates, respectively — but there’s no <code>File</code> method for the creation date. Also note that there may be a better way to do this that I just don’t know about.)
+</p>
+<p>
+Update 3:39 p.m.: Ben Tucker <a href="http://stream.btucker.org/post/65635235/file-creation-date-in-ruby-on-macs">posted a better version</a> that’s not open to shell injection.
+</p>

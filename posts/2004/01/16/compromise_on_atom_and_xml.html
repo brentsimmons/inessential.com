@@ -1,0 +1,23 @@
+@dbid 2785
+@title Compromise on Atom and XML
+@pubDate Fri Jan 16 19:40:36 -0800 2004
+@modDate Fri Jan 16 19:40:36 -0800 2004
+Tim Bray suggested a setting for how strict a parser should be with a given feed. Eric Albert suggested a <a href="http://rescomp.stanford.edu/~ejalbert/archives/2004/01/12.html#001215">smiley face</a> (as in iCab) to distinguish well-formed from non-well-formed feeds.</p>
+
+<p>I’ve gotten lots of email on the topic of Atom and requiring well-formed XML. I’ve read about this topic pretty much everywhere it’s popped up. And I conclude, reluctantly, that a compromise is the best thing.</p>
+
+<p>I encourage <a href="http://nick.typepad.com/">Nick Bradbury</a>—and any other aggregator developer who was planning on requiring XML well-formed-ness for Atom feeds—to take a similar position. Nobody should take a bullet over this.</p>
+
+<p>What I plan to do in NetNewsWire is something like the following—though details may change, of course.</p>
+
+<p>1. Have global and per-feed settings for requiring well-formed XML. The default will be no, to not require it. My Atom and RSS parsers will both work around non-well-formed feeds in the same way. (They’ll most likely use the same code.)</p>
+
+<p>2. Have an optional indicator of some kind that displays when a feed isn’t well-formed XML. (Probably <em>not</em> a little frowny face, but who knows.) This feature will also be turned off by default.</p>
+
+<p>3. Make the Validate this Feed command more visible. Right now it’s available only through a contextual menu; it should be easier to find and use.</p>
+
+<p>If you’re a NetNewsWire user, and you don’t care about this issue, it will stay out of your way. You’ll notice an extra pref and a command in the menu bar, but NetNewsWire won’t be complaining about non-well-formed feeds all the time.</p>
+
+<p>You’re not expected to care about this issue, by the way—you want to read the news. That’s totally cool.</p>
+
+<p>And me, I just want to get back to work fixing bugs and adding new features.

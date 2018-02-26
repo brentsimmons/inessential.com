@@ -1,0 +1,18 @@
+@dbid 2081
+@title More on RSS discovery
+@link http://diveintomark.org/archives/2002/08/15.html#ultraliberal_rss_locator
+@pubDate Thu Aug 22 11:07:38 -0700 2002
+@modDate Thu Aug 22 12:33:53 -0700 2002
+Mark Pilgrim is <a href="http://diveintomark.org/archives/2002/08/15.html#ultraliberal_rss_locator">right on</a> when he writes that RSS discovery is a usability issue. A user should never have to find and copy the RSS URL for a site.</p>
+
+<p>NetNewsWire supports RSS discovery. (Like Mark’s Python RSS finder it checks for a <a href="http://diveintomark.org/archives/2002/06/02.html">&lt;link...&gt;</a> tag, though it differs on what it does next if it doesn’t find one.)</p>
+
+<p>I think every RSS reader will eventually support RSS discovery. The little XML buttons on people’s websites will eventually be obsolete as sites more and more include the necessary &lt;link...&gt; tag. However, those XML buttons are totally still needed: they’re an important step in RSS adoption.</p>
+
+<p>Here’s how things work for me now. When I’m at a site I want to subscribe to, I copy-and-paste its home page URL into NetNewsWire’s subscription dialog. The app then searches for the RSS feed for that site. If it finds it, great. If it doesn’t find it then I delete the failed subscription—<em>even if the site actually does have a hidden-away RSS feed somewhere.</em> I don’t go looking for it manually: it’s too much trouble. And thus I don’t read that site.</p>
+
+<p>But of course even the above scenario is too many steps: ideally, when I’m at a site I want to subscribe to, I should be able to choose a menu command to subscribe to that site. (Or maybe it’s a bookmarklet, or a contextual menu command—some Subscribe to Site command that’s always in the same easily-accessible place.)</p>
+
+<p><a href="http://radio.userland.com/">Radio UserLand</a> and <a href="http://www.disobey.com/amphetadesk/">AmphetaDesk</a> (and perhaps other RSS readers) have a great feature where you can click on an icon on a page that then subscribes you to that site. That’s a hundred times better than having to hunt for an RSS feed and then copying the URL into your reader app. But it’s still not quite the best scenario—after all, you still have to look for that icon, which may or may not be there. And you have to run an HTTP server on your desktop, which you may not want to do or may not be allowed to do.</p>
+
+<p>To re-iterate: no human should ever have to find an RSS feed. That’s the kind of thing computers are good at. No human should ever have to see an RSS feed except out of curiousity (or if they’re debugging their own software). RSS should be completely hidden.

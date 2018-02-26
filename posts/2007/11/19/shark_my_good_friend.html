@@ -1,0 +1,29 @@
+@dbid 3455
+@title Shark, my good friend
+@pubDate Mon Nov 19 18:30:33 -0800 2007
+@modDate Mon Nov 19 18:32:00 -0800 2007
+I’m sure I’ve said before how much I love <a href="http://developer.apple.com/tools/shark_optimize.html">Shark</a>. (Shark, for those who don’t know, is Apple’s awesome tool for figuring out performance problems.)</p>
+
+<p>Here’s the thing: it seemed like the Combined View in the latest NetNewsWire betas was faster on Tiger than on Leopard. I would have expected the other way around, of course, as Apple tends to make new operating systems feel like hardware upgrades.</p>
+
+<p>So I ran the app using Shark to see what the problem was.</p>
+
+<p>I found that 37.7% of the time in the main thread was spent in <code>-[WebView(WebPrivate) _preferencesChangedNotification:]</code>. That seemed really suspicious. (It totally didn’t match any of my theories—but the beauty of Shark is that it <em>tells</em> you where the slow-down is, no matter what your theories are.)</p>
+
+<p>Your first guess may be that it’s a WebKit bug, since it appears in WebKit code. But it’s not. <code>_preferencesChangedNotification</code> does a bunch of preferences look-ups—it uses NSUserDefaults to look up a bunch of values. The slow-down is looking up the values.</p>
+
+<p>To get a comparison, I did the same thing on a machine running Tiger—an older, slower machine, actually—and found that it spent just 15.6% of its time in <code>_preferencesChangedNotification</code>.</p>
+
+<p>Holy farts! Shark rules.</p>
+
+<p>Then I created a little command-line app that would tell me how long it takes to do a bunch of preferences look-ups. To get a fair comparison, I ran the app on a dual-boot machine.</p>
+
+<p>The code calls <code>CFPreferencesGetAppBooleanValue</code> 100,000 times to read a pref from Safari’s preferences.</p>
+
+<p>Results:</p>
+
+<p>Leopard (10.5.1): 2.10 seconds<br /></p>
+
+<p>Tiger (10.4.11): 0.06 seconds</p>
+
+<p>You can <a href="http://ranchero.com/downloads/TestUserDefaults.zip">download the project</a> if you want to. The bug has been filed with Apple as <a href="rdar://5608561">rdar://5608561</a>.

@@ -1,0 +1,22 @@
+@dbid 3568
+@title Tip: use Property List Editor to view data structures
+@pubDate Wed Dec 03 10:36:45 -0800 2008
+@modDate Wed Dec 03 10:38:25 -0800 2008
+<p>
+Sometimes when I’m working with nested arrays and dictionaries — as a result of parsing some XML, for instance — I don’t even try to keep a map of the structure in my head.
+</p>
+<p>
+Instead I write the dictionary or array out to a file...
+</p>
+<p>
+<code>[someObject writeToFile:@"/Users/brent/Desktop/foo.plist" atomically:YES];</code>
+</p>
+<p>
+...and open it with Property List Editor, so I can actually see the structure. (This also lets me know that the structure I created is the structure I intended.)
+</p>
+<p>
+<img src="http://inessential.com/images/plist_data_structures.png" alt="Property List Editor screenshot" width="577" height="363" />
+</p>
+<p>
+Bonus tip: <code>valueForKeyPath</code> can be super-handy for getting data out of nested structures.
+</p>

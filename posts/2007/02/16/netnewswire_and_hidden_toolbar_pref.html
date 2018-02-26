@@ -1,0 +1,23 @@
+@dbid 3381
+@title NetNewsWire and hidden toolbar pref
+@pubDate Fri Feb 16 14:50:10 -0800 2007
+@modDate Fri Feb 16 14:50:10 -0800 2007
+There’s a hidden pref for using black (dark gray, really) toolbar buttons instead of colors. I find that certain number of testers liked this look, and so I kept it and made it available. I’m not sure if I’ll make it a “real” pref or not (I don’t like to add prefs).</p>
+
+<p><img src="http://ranchero.com/images/nnw3/toolbarWithColors.png" height="95" width="744" alt="Toolbar with colors" /></p>
+
+<p><img src="http://ranchero.com/images/nnw3/toolbarGray.png" height="84" width="748" alt="Dark gray toolbar" /></p>
+
+<p>If you want to try the monochrome toolbar, here’s what to do:</p>
+
+<p>1. Quit NetNewsWire.</p>
+
+<p>2. In Terminal, copy-and-paste the following and hit return:</p>
+
+<p><code>defaults write com.ranchero.netnewswire blackToolbarButtons 1</code></p>
+
+<p>3. Launch NetNewsWire.</p>
+
+<p>To go back to colorful icons, do the same as above with 0 instead of 1.</p>
+
+<p>(Note: I know that the toolbar is the most obviously visible change. I’ll write more about it from an app design point of view today or on the weekend.)

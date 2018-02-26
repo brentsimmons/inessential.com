@@ -1,0 +1,12 @@
+@dbid 815
+@title 08/11/2000
+@pubDate Mon Aug 14 18:57:20 -0700 2000
+@modDate Mon Aug 14 19:03:05 -0700 2000
+<p>A few days ago we added QuickTime support to Radio UserLand. From that, a couple tips for anyone adding QuickTime support to an application. These were a couple of stumpers.</p>
+
+<p>1. The movie controller wouldn&#039;t show up. There was a blank white space where it was supposed to be. The fix: call MCIdle each pass through the event loop. Calling MoviesTask did not do the trick.</p>
+
+<p>2. You&#039;re going to crash when calling MCSetActionFilterWithRefCon. Unless you do it this way: </p>
+
+<p><code>MCSetActionFilterWithRefCon (myController, NewMCActionFilterWithRefConProc(myFilter), (long) myPlayerWindow);</code>
+</p>

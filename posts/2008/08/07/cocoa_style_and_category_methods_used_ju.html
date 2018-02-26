@@ -1,0 +1,37 @@
+@dbid 3518
+@title Cocoa style and category methods used just once
+@pubDate Thu Aug 07 10:43:36 -0700 2008
+@modDate Thu Aug 07 10:43:36 -0700 2008
+<p>
+I used to create categories too often, and I’ve cut way back.
+</p>
+<p>
+One of the rules I’ve given myself: if something is used just once, don’t make a category for it, just make it a static C function. Unless it’s big.
+</p>
+<p>
+<img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" />
+</p>
+<p>
+Here’s a case of big: I use base64 decoding in just one place, but I still have my base64 code in an NSData category. Just because it’s big, it’s not some small function.
+</p>
+<p>
+<img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" />
+</p>
+<p>
+Here’s a case of small: I had a category for NSAppleEventDescriptor with one method, to get a target descriptor for a running app, given the path to the app. This was used in exactly one place (where the send-to-weblog command is implemented).
+</p>
+<p>
+So what I did was turn that method into a static C function, and I put it in the same file where it’s used. (Which allowed me to get rid of my NSAppleEventDescriptor category file.)
+</p>
+<p>
+The benefits I get from that:
+</p>
+<p>
+1. Less code to maintain. (And, in this case, two fewer files: one deleted .h and one deleted .m.)
+</p>
+<p>
+2. The code appears where it’s used: no need to jump to it if I need to edit it.
+</p>
+<p>
+My instincts are always to lower the number of lines of code (and number of files) I have to maintain, so I consider this a good rule. But I wonder what other folks do in this case.
+</p>

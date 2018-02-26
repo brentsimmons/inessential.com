@@ -1,0 +1,63 @@
+@dbid 2760
+@title The challenges of synching
+@pubDate Sun Jan 04 19:26:24 -0800 2004
+@modDate Sun Jan 04 19:36:05 -0800 2004
+I <a href="http://inessential.com/?comments=1&postid=2753">predicted the other day</a> that synching would appear in lots of newsreaders in 2004. (Some have it already, yes, but they don’t have it as I’ve defined it below.)</p>
+
+<p>A good question would be: why isn’t synching already a feature of every newsreader already? It can’t be that hard, right—just read and write from a file somewhere that two copies of your newsreader can access.</p>
+
+<p>I mean, what’s the hold-up? You just need something like a .newsrc. No big deal, it’s an old problem that’s been solved many times before.</p>
+
+<p>Okay, so the rest of this post will be about the challenges in implementing synching.</p><h4>What is synching?</h4><p>
+First we need to define what synching is. It’s really a collection of features and requirements.</p>
+
+<p>1. It’s merging, not cloning, of subscription lists.</p>
+
+<p>2. It also synchs read/unread states of individual items.</p>
+
+<p>3. Your newsreader uploads and downloads your synch data so you don’t have to do it manually with a browser or FTP client or whatever.</p>
+
+<p>4. Your newsreader knows (or at least guesses) when it needs to download and upload synch data.</p>
+
+<p>5. It works between different newsreader software on different operating systems.</p>
+
+<p>I’ll take these one at a time.</p><h4>Merging</h4><p>
+Cloning is easy, merging is hard—but synching has to be merging.</p>
+
+<p>For instance, imagine you have a newsreader at home and one at work. You subscribe to the same feeds—except that at work you also subscribe to some at-work-only feeds that you can’t get at home.</p>
+
+<p>So when you get into work in the morning, you want to synch your data from last night at home. If it’s just cloning your subscription list, then the additional at-work-only feeds would get deleted, since you aren’t subscribed to them at home. Since we’re merging, not cloning, your at-work-only feeds do not get deleted.</p>
+
+<p>But this leads to an interesting problem: what happens if you unsubscribe from a feed at home? The synching mechanism won’t delete it from your work subscription list, because for all it knows that feed could be a work-only feed.</p>
+
+<p>And there’s another entire set of problems that come up because for most newsreaders the subscription list is an outline rather than a flat list. Merging hierarchies is far more difficult than merging flat lists.</p><h4>Synching read/unread states of news items</h4><p>This is possibly the toughest of the challenges.</p>
+
+<p>In an ideal world, you can identify every item in an RSS feed with a unique id of some sort. So the synch data would be able to pair a unique ID with its read/unread status.</p>
+
+<p>But not all versions of RSS have the concept of a unique ID. And, even in the versions that do have unique IDs, they’re not mandatory, and lots of feeds don’t use them. (And sometimes feeds have a terrible bug: they have unique IDs that aren’t actually unique.)</p>
+
+<p>So, in the absence of a unique ID, how do you identify an item in a way that will work every single time? Answer: you can’t. There is no solution that will work every single time. (And this is why sometimes you notice in your newsreader items that are unread that you know you’ve read. They’ve been edited.)</p>
+
+<p>Even if you include an entire item, all its text and links and various elements, it’s possible that the item was edited between leaving home and arriving at work.</p>
+
+<p>So instead the synching has to do the best it can. Any format will probably use links and titles and whatever else so newsreaders can do a best guess. (I suspect that most developers hate situations like this, by the way, and it may be the single biggest reason why synching isn’t yet universal among newsreaders.)
+</p><h4>Uploading and downloading</h4><p>
+You’ll want to tell your newsreader where to save your synch data so you can get it at home and at work.</p>
+
+<p>You might say, why not use .Mac? Because not everyone has an account. Because your newsreader at work might be on Windows. (And there are some other technical reasons which I’ll skip.)</p>
+
+<p>Why not use FTP? Or HTTP-upload? Or...?</p>
+
+<p>The answer is probably that a couple different methods may need to be made available. (FTP and HTTP-upload seem like obvious candidates, but I’m just guessing.)</p>
+
+<p>But here’s the deal: I doubt that every newsreader already includes code for uploading files by the various methods people will want to use. Sure, there are libraries available, but newsreader developers will still have to write code and do a bunch of testing. Even a seemingly small thing like this still takes time and effort.
+</p><h4>Knowing when to upload and download</h4><p>This may be the easiest part. </p>
+
+<p>When you launch your newsreader, it can ask if you want it to synch. It would then download your synch data from wherever and do the synch.</p>
+
+<p>Similarly, when you quit, it could ask if you want to upload your synch data.</p>
+
+<p>There may be more sophisticated algorithms that would make sense too, but the above is I think a good minimum.
+</p><h4>Different newsreaders, different operating systems</h4><p>This means getting a bunch of developers to agree on a format for synch data. That’s probably the easy part—the hard part will be testing to make sure X can synch with Y and Y can synch with Z and Z can synch with X.</p>
+
+<p>That, by the way, is where you come in.

@@ -1,0 +1,82 @@
+@dbid 2993
+@title Black Box Parsing
+@pubDate Wed Dec 01 20:23:20 -0800 2004
+@modDate Wed Dec 01 20:34:31 -0800 2004
+NetNewsWire doesn’t know anything about RSS or Atom. Heck, it doesn’t know XML from Shinola.</p>
+
+<p>Which is an absurd claim — it wouldn’t be much of an aggregator if it were true. But — here’s the deal — to me as the developer, it <i>is</i> true.</p>
+
+<p>I’ll explain...</p>
+
+<p>But first: the below is of interest mostly to beginning programmers and power users who are curious about how things work under the hood. It’s a post about architecture, about time-tested and mother-approved techniques. (Truly mother-approved. My mom is a code reuse expert.)
+</p><h4>Inside NetNewsWire</h4><p>
+The part you see of NetNewsWire is an application that knows how to display data in NetNewsWire’s internal data format. That format is a collection of custom objects that use strings and arrays and so on.</p>
+
+<p>For instance, an individual item in a feed is a data-item object, and that object contains attributes such as title, link, description, and so on. And a feed is a data-source object, and it has a set of attributes — including an array of data-item objects.</p>
+
+<p>These objects are the <i>same</i> for RSS and for Atom, even though the feed formats are different. Even if more feed formats come to be, I’ll keep using these same data-item and data-source objects. These objects don’t know thing one about RSS and Atom. They’re more abstract: they’re like the <i>ideal</i> of a feed and feed items.</p>
+
+<p>So... how do we turn raw Atom and RSS feeds into these objects? Part of the answer is to use a black box.
+</p><h4>The black box</h4><p><img src="http://inessential.com/images/nnwBlackBox.png" height="158" width="518" alt="NetNewsWire -> RancheroXML diagram" /></p>
+
+<p>In high-level terms, it works like this. NetNewsWire has the raw text of a feed. It doesn’t know anything about it — it doesn’t even know if it’s RSS or Atom or whatever. NetNewsWire’s goal is to turn that raw feed into its data-source and data-item objects.</p>
+
+<p>So it turns to the black box (RancheroXML) and says, “Yo, here’s the text of a feed, please do your magic and give me back some data I know how to use.”</p>
+
+<p>The box does its thing — we’ll get to that — and then returns a simple, agreed-upon intermediate data format (using standard Cocoa dictionaries, arrays, strings, and so on) that NetNewsWire can quickly and easily turn into its own data-source and data-item objects.</p>
+
+<p>Some things to note:</p>
+
+<p>1. NetNewsWire knows almost nothing about the box. It knows how to send it raw feed text, and it knows about the data format the black box returns. That’s all it knows.</p>
+
+<p>2. The black box knows zero about NetNewsWire. “NetNewsWire? Never heard of it.”It knows how to parse feeds, and it knows how to create an intermediate data format that NetNewsWire also knows about.</p>
+
+<p>I’ll explain why this is done this way, and then we’ll open the black box, and see that boxes can contain other boxes.</p>
+
+<p>(Quick question: Is this black box real or virtual? In the case of NetNewsWire, it’s real. Do a Show Package Contents then look at Contents/Frameworks/. But black boxes can be virtual.)
+</p><h4>Reasons for using a black box</h4><p>
+Maybe it seems like a lot of trouble to go to. But here are a few of the good reasons for using the black-box approach.</p>
+
+<p>1. I can use that same black box in other applications.</p>
+
+<p>MarsEdit uses this same black box, for example. The box knows as much about MarsEdit as it does about NetNewsWire — <i>nothing</i>, that is. Had I the time and interest, I could write five or ten or a hundred more apps that use this box.</p>
+
+<p>2. Concentration.</p>
+
+<p>When I’m working on the box, I can put blinders on — I don’t have to think about my applications, I can concentrate entirely on some smaller task inside the box.</p>
+
+<p>Every big programming task is really a collection of small tasks. Using boxes helps break tasks up into their smaller components.</p>
+
+<p>For instance, when I’m working on NetNewsWire’s HTML display, I’m not thinking about feed parsing, and I shouldn’t be. In fact, the RancheroXML project isn’t even usually open, since I rarely need to work on it. That’s a bunch of code put away neatly until I need to work on it.</p>
+
+<p>3. Freedom.</p>
+
+<p>A black box is like Las Vegas: what happens in the box stays in the box.</p>
+
+<p>As long as it does what it’s supposed to do — take raw feed text and return that data format — then anything at all could happen inside the RancheroXML box. (In fact, I just re-wrote my Atom parser, which lives in the box. NetNewsWire has no idea — and doesn’t care.)</p>
+
+<p>4. Multiple programmers.</p>
+
+<p>Imagine multiple programmers. If each person (or pair or group) had their own box to work on, that might work out rather well, no?
+</p><h4>Inside the black box</h4><p>
+What happens inside the black box could change. It wouldn’t matter to NetNewsWire — as long as the black box takes input and returns the right kind of output.</p>
+
+<p>The RancheroXML black box contains smaller, virtual black boxes. Here’s how it works:</p>
+
+<p>1. Raw feed text comes in to a parser-finder class. This class doesn’t know about Atom or RSS or XML — but it does have a list of parser classes that live in the box. (A parser class is a class that knows how to parse a specific feed format. RancheroXML has one for RSS and one for Atom.)</p>
+
+<p>2. For each parser class, the parser-finder asks, “Hey, do <i>you</i> want to parse this text?” And it lets it examine the text.</p>
+
+<p>3. If a parser class says yes, then it gets to do the parsing, then returns to the parser-finder that agreed-upon data format, which is then passed back out of the box to NetNewsWire.</p>
+
+<p>So the thing to know is that the parser-finder itself knows nothing about Atom or RSS. There could be more feed formats, and it would know nothing about those too. It treats the parser classes as a row of black boxes, all the same.</p>
+
+<p>But the parsers are <i>not</i> the same — except in that very small part the parser-finder sees. In fact, my RSS and Atom parsers are wildly different. (Mainly because every time I write one of these I learn how to do it better next time.)
+</p><h4>Final thoughts</h4><p>
+This whole thing is not new with me or unique to NetNewsWire or even particularly special — at all — it’s just how programming is done. It doesn’t get you out of having to deal with things like memory management and performance. Using black boxes doesn’t magically make software good.</p>
+
+<p>And then sometimes there are things that seem to violate the black box principle. For instance, NetNewsWire’s data-item class didn’t know about summaries, since summaries don’t exist in RSS. (The data-item classes were created with RSS in mind, because Atom didn’t exist when I created them.) While the addition of Atom as a new format is theoretically only a matter of concern for the RancheroXML box, it affected NetNewsWire too: it had to know that feed items could contain summaries.</p>
+
+<p>But that’s okay, because what really happened is that the superset of what a feed item may contain did change, so NetNewsWire’s data-item object had to change.</p>
+
+<p>NetNewsWire <i>still</i> doesn’t know Atom from oranges. Or RSS from bananas.

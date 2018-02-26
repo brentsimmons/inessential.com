@@ -1,0 +1,74 @@
+@dbid 3390
+@title Workaround for CIImage to NSImage memory issue
+@pubDate Wed Mar 07 20:50:58 -0800 2007
+@modDate Wed Mar 07 20:50:58 -0800 2007
+This is another of those things posted for the benefit of other Mac developers using Google to research a problem...</p>
+
+<p>NetNewsWire 3 uses <a href="http://developer.apple.com/documentation/GraphicsImaging/Conceptual/CoreImaging/index.html">Core Image</a> to do a few things, most noticeably to tint the feed and folder icons to match the subscriptions list background.</p>
+
+<p>Core Image, as I was pleased to discover, makes doing stuff like this really, really easy, and it’s fun to use. It takes just a few lines of code to run a filter on an image.</p>
+
+<p>Now, the only slightly tricky part is I’m working with <a href="http://developer.apple.com/documentation/Cocoa/Reference/ApplicationKit/Classes/NSImage_Class/Reference/Reference.html">NSImage</a> everywhere in NetNewsWire, but Core Image uses <a href="http://developer.apple.com/documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIImage_Class/Reference/Reference.html">CIImage</a>. So I have to take an NSImage, create a CIImage based on it, run a filter on the CIImage (the tinting or whatever)—and then create an NSImage from the altered CIImage. (The NSImage is what gets displayed.)</p>
+
+<p>Both <a href="http://gigliwood.com/weblog/Cocoa/Core_Image__Practic.html">Dan Wood</a> and <a href="http://theocacao.com/document.page/350">Scott Stevenson</a> have written about doing the conversions, so you can see that it’s not particularly hard.</p>
+
+<p>Anyway...</p>
+
+<p>I’ve been working on NetNewsWire’s memory use by using leaks, ObjectAlloc, and MallocDebug. And I saw that my CIImage to NSImage conversion was using a lot of memory. It wasn’t reported as a leak but as an allocation by MallocDebug—and I saw that memory use kept going up and up when I triggered it.</p>
+
+<p>I discovered that creating an NSImage from a CIImage—if the CIImage has had a filter run on it—can cause unnecessary memory use <i>on some systems</i>. On my development machine, for instance, but not on the PowerBook sitting next to me.</p>
+
+<p>So... after a couple days of doing a bunch of research, emailing with people, pulling hair, reporting a bug to Apple (<a href="rdar://5046037">rdar://5046037</a>), getting <i>help</i> reporting a bug to Apple, complaining on <a href="http://twitter.com/brentsimmons">Twitter</a>, complaining to the private testers, explaining the issue to my <a href="http://inessential.com/?comments=1&amp;postid=3121">cat</a>, I <i>finally</i> found a workaround.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>Here’s an app (with source) that shows the leak.</p>
+
+<p>What it does is create an NSImage from a CIImage over and over. You can watch the app’s memory use go up in top or Activity Monitor. (Unless it doesn’t, because it doesn’t leak on every system.)</p>
+
+<p><a href="http://inessential.com/downloads/CIImageLeakDemo2.zip">CIImageLeakDemo</a></p>
+
+<p>It also includes the workaround, which is, in a nutshell, to use the software renderer, rather than the GPU.</p>
+
+<p>For any case where performance is an issue, this workaround isn’t usable. But in my case it’s fine.</p>
+
+<p>The leaking code (re-formatted for the web) looks like this:</p>
+
+<p><pre>
+NSImage *image = [&#91;[NSImage alloc] initWithSize:
+	NSMakeSize([ciImage extent].size.width,
+	[ciImage extent].size.height)]
+	autorelease];
+[image lockFocus];
+[&#91;[NSGraphicsContext currentContext] CIContext]
+	drawImage:ciImage atPoint:CGPointMake(0, 0)
+	fromRect:[ciImage extent]];
+	/*This appears to be the line that leaks*/
+[image unlockFocus];
+</pre></p>
+
+<p>The non-leaking code looks like this:</p>
+
+<p><pre>
+NSImage *image = [&#91;[NSImage alloc] initWithSize:
+	NSMakeSize([ciImage extent].size.width,
+	[ciImage extent].size.height)]
+	autorelease];
+[image lockFocus];
+CGContextRef contextRef =
+	[&#91;NSGraphicsContext currentContext]
+	graphicsPort];
+CIContext *ciContext =
+	[CIContext contextWithCGContext:contextRef
+	options:[NSDictionary dictionaryWithObject:
+	[NSNumber numberWithBool:YES]
+	forKey:kCIContextUseSoftwareRenderer]];
+[ciContext drawImage:ciImage
+	atPoint:CGPointMake(0, 0) fromRect:[ciImage extent]];
+	/*Does not leak when using the software renderer!*/
+[image unlockFocus];
+</pre></p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>My hope, of course, is that this workaround is needed temporarily, that it will get fixed. Obviously, using the software renderer defeats much of what’s cool about Core Image. But, for now, hey, cool, no leak, at least.

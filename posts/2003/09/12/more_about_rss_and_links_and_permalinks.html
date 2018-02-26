@@ -1,0 +1,24 @@
+@dbid 2629
+@title More about RSS and links and permalinks
+@pubDate Fri Sep 12 17:49:28 -0700 2003
+@modDate Fri Sep 12 17:49:28 -0700 2003
+I have a few more notes about RSS and links and permalinks...</p>
+<h4>Guids may be permalinks</h4><p>Many people have the misconception that guid in RSS 2.0 is not a permalink. Actually, it may be a permalink, and by default it is a permalink. Here’s the <a href="http://blogs.law.harvard.edu/tech/rss#ltguidgtSubelementOfLtitemgt">guid section</a> of the spec.</p>
+
+<p>Getting the permalink from the guid is the right thing to do, unless the guid says that it’s not a permalink.</p>
+
+<p>For RSS 1.0 feeds I use the rdf:about attribute as the permalink (and as a unique identifier).</p><h4>Two ways of looking at posts</h4><p>There appear to be two ways of thinking about posts in an aggregator.</p>
+
+<p>One is that when you’re reading in an aggregator, you’re looking at the post itself.</p>
+
+<p>The other is that you’re looking at a kind of link to the post, but not the post itself.</p>
+
+<p>Both are valid. And you may tend toward one view or the other, but it can change depending on if a feed provides full posts or summaries.</p><h4>Choice is good</h4><p>Some people have remarked that the feed should specify whether or not to use permalinks or external links.</p>
+
+<p>But that’s the situation we have now, and people complain about it.</p>
+
+<p>The better situation is when feeds provide both permalinks and external links, and users of newsreaders can decide which to prefer.</p>
+
+<p>I’ve decided to make it a pref in NetNewsWire. Unfortunately, it really is a <em>preference</em>, in that it can’t guarantee to always use permalinks or always use external links. Some feeds have both, some don’t, and the software can’t always tell.</p><h4>Who doesn’t want more traffic?</h4><p>Keola Donaghy asked this question. Most people do want more traffic, I think, and preferring permalinks means more people would go to your site, and you’d get more traffic.</p>
+
+<p>However, not everybody wants more traffic. Many people have to pay for bandwidth.

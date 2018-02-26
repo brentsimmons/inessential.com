@@ -1,0 +1,21 @@
+@dbid 2770
+@title Postel’s Law, Atom, and NetNewsWire
+@pubDate Mon Jan 12 13:14:43 -0800 2004
+@modDate Mon Jan 12 13:14:43 -0800 2004
+So a big topic lately has been Atom and Postel’s Law. (Postel’s law is the principle that you should be conservative in what you create and liberal in what you accept.)</p>
+
+<p>Though I haven’t said it publicly before, my plan with Atom support in NetNewsWire is to make the parser stricter than NetNewsWire’s RSS parser.</p>
+
+<p>There are really two levels to this, and I’m talking about the first level.</p>
+
+<p>1. XML errors (unencoded ampersands, string encoding errors, well-formedness errors). If the XML parser NetNewsWire uses returns an error, then NetNewsWire will not try to work around it and parse it anyway.</p>
+
+<p>NetNewsWire’s RSS parser does try to work around some of these errors; the Atom parser will not.</p>
+
+<p>2. Spec errors. Let’s say that Atom 0.6 defines a new element named “foo,” but then NetNewsWire is parsing an Atom 0.5 feed and it contains the foo element. What should NetNewsWire do? Ignore it? Or use it? In this case NetNewsWire might use the element. (Assuming it’s well-formed XML, that is; assuming it passes through #1 above.)</p>
+
+<p><a href="http://www.tbray.org/ongoing/When/200x/2004/01/11/PostelPilgrim">Tim Bray wrote</a>:</p>
+
+<p><blockquote>An Atom feed is going to be defined as an XML document, which means that if it’s not well-formed then it’s not Atom. All it needs is for one (I repeat, one) popular newsreader with a large installed base to enforce this policy (stop parsing and display an error to the subscriber) to turn this from <em>de jure</em> to <em>de facto</em> reality. This works because <em>Atom doesn’t have an installed base</em>. Let’s name names; if any one of NetNewsWire or FeedDemon or Radio adopted this policy for Atom, it would be game over; people who’ve gotten used to these aggregators are not going to switch clients because some upstream feed producer is a bozo.</blockquote></p>
+
+<p>That will be NetNewsWire’s policy: if an Atom feed is not well-formed XML, it’s an error.

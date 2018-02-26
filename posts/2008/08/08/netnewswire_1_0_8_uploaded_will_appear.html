@@ -1,0 +1,31 @@
+@dbid 3521
+@title NetNewsWire 1.0.8 uploaded, will appear on App Store later
+@pubDate Fri Aug 08 19:48:07 -0700 2008
+@modDate Fri Aug 08 19:48:07 -0700 2008
+<p>
+I just uploaded NetNewsWire for iPhone 1.0.8 — I can’t say when it will appear on the App Store, of course, but it’s in the review process now.
+</p>
+<p>
+Changes in 1.0.8 (since 1.0.7):
+</p>
+<p>
+- Fixed a hang/crash at startup affecting some people.
+</p>
+<p>
+- Fixed a bug restoring a feed or post at startup -- it now makes sure the feed and post still exist in the database.
+</p>
+<p>
+- Removed the Feeds title and the horizontal stripes from the startup image, so it doesn&#039;t look like it&#039;s switching views at startup.
+</p>
+<p>
+- Removed some logging code for when a download fails -- it shouldn&#039;t have been left in there.
+</p>
+<p>
+- No longer showing title in navigation controller in news item detail view -- it was redundant, and it didn&#039;t hardly ever fit anyway.
+</p>
+<p>
+- You can turn off the unread badge count on the home screen via a pref in Settings. (Note: the change in pref doesn&#039;t take effect until you next launch NetNewsWire.)
+</p>
+<p>
+- Fixed a bug parsing dates in news items on systems with non-English date formatting. (It will fix dates for items in the future, but it can&#039;t fix existing wrong dates.)
+</p>

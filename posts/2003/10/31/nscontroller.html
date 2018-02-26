@@ -1,0 +1,26 @@
+@dbid 2685
+@title NSController
+@pubDate Fri Oct 31 17:41:54 -0800 2003
+@modDate Fri Oct 31 18:01:59 -0800 2003
+At the OS X conference Scott Anguish did a 90-minute presentation on the new <a href="http://developer.apple.com/documentation/Cocoa/Conceptual/ControllerLayer/">NSController</a> layer in Cocoa.</p>
+
+<p>Here’s a quick summary of what this is about:</p>
+
+<p>Many applications have three different areas of code. One handles the data—that’s called the Model layer. Another handles display—that’s the View layer. A third goes between the first two—the Controller layer.</p>
+
+<p>Cocoa gives you a ton of stuff that for the first two, the Model and View layers. The hard and often tedious part has traditionally between the Controller layer.</p><h4>A simple example</h4><p>Imagine a checkbox in a Preferences window. When you check it or un-check it, the preferences for your application updates.</p>
+
+<p>What happens is this: the user checks the box (View layer), then a message is sent to the Controller layer that a checkbox has been checked. The message tells what checkbox was checked and the method can find out whether it was turned on or off. Then that method tells the Model layer to update the on/off flag for a given preference, and it gets saved to disk in the prefs file for that app.</p>
+
+<p>In Cocoa, before NSController, you had to write that method I talked about above. It’s easy but tedious. And if you think about all the different user interface pieces of even a simple app, you see that there’s a bunch of this go-between code to write.</p>
+
+<p>So the idea of NSController is to do a bunch of it for you.</p>
+
+<p>In this simple example, what you do is say that the checkbox is bound to a given key in the prefs. When the checkbox is checked, the new NSController layer updates the prefs. In many cases no code at all is needed.</p><h4>Complex stuff is handled too</h4><p>
+Of course, there’s more to it than just that. NSController can do a ton more than just connecting checkboxes with your preferences and eliminating a little code. It can eliminate a <em>lot</em> of code and handle more complex things like table views and knowing when to enable and disable things and so on.</p><h4>Drawbacks</h4><p>
+For all that coolness, there are still drawbacks—for one thing it requires Panther. That’s not a criticism, because new features come with new operating systems: that’s just the way it goes.</p>
+
+<p>But if you need to support 10.2 (or earlier) in your app then you’ll have to do without NSController.</p>
+
+<p>There have been criticisms of NSController: most notably, Aaron Hillegass <a href="http://cocoa.mamasam.com/COCOADEV/2003/10/2/75193.php">criticized NSController</a> in an email to the Cocoa-Dev mailing list. I’m not going to summarize Aaron’s email; instead I’ll say that any developer should think about the points Aaron makes.</p><h4>Bonus tip</h4><p>
+The documentation that comes with the developer tools CD is not as up-to-date as what’s on Apple’s website. So use the on-line docs.

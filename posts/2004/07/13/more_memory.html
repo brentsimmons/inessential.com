@@ -1,0 +1,35 @@
+@dbid 2891
+@title More memory
+@pubDate Tue Jul 13 13:35:47 -0700 2004
+@modDate Tue Jul 13 13:37:19 -0700 2004
+<p>I feel like it’s Christmas. Today I’m expecting the FedEx guy to bring me 512MB RAM for my development machine.</p>
+
+<p>Here’s the sad tale...</p>
+
+<p>When Xcode was new, I gave it a bunch of slack because it was new. I figured that the performance problems would get fixed.</p>
+
+<p>But Xcode isn’t new anymore, and I’m still seeing performance problems. Just the other day it finally occurred to me that it’s time to figure out what’s going on. No more slack.</p>
+
+<p><img src="http://ranchero.com/images/radiation.gif" width="21" height="20" alt="" /></p>
+
+<p>The performance problems were pretty simple: over time, the UI would get more and more sluggish, to the point where things like closing a window might take ten seconds. Debugging was sometimes nearly impossible, as it would often time out before retrieving variable data, and each single-step might take 30 seconds. (I’m guessing on the times. It felt like 30 seconds, but it might have been less. Or more.)</p>
+
+<p>I ended up quitting and restarting Xcode several times a day, just to reverse the sluggishness.</p>
+
+<p>I found that this wasn’t true when I was working on a small project—it was perfectly snappy then—but NetNewsWire isn’t a small project.</p>
+
+<p>So—finally, <i>sheesh</i>—I ran top to see what was going on. It turned out that the sluggishness was a result of not having enough memory. Well, that’s easy to fix!</p>
+
+<p>My development machine already has 512MB, so this will double it. It’s a dual-processor 867Mhz G4. Not the speediest kid on the block, but plenty fast enough—as long as it’s not running out of memory.</p>
+
+<p><img src="http://ranchero.com/images/tinyshoe.gif" width="27" height="30" alt="" /></p>
+
+<p>A related subject is the subject of build times. I mentioned that NetNewsWire isn’t a small project, and it’s not, but NetNewsWire 2.0’s main project is smaller than that of NetNewsWire 1.0.8—even though we’ve been adding a bunch of features.</p>
+
+<p>One of the ways we achieved that was to move a bunch of things into separate, loadable bundles. As a small example, think of the Bandwidth Stats window. Its code is fairly stable, and it’s not something everybody uses every time they launch NetNewsWire, so we took it out of the main NetNewsWire project and created a separate project that builds a bundle—a kind of plugin—that NetNewsWire loads only when needed.</p>
+
+<p>If you do this enough, you can end up with a smaller project that’s faster to build—even if you’re also adding features at the same time.</p>
+
+<p>Users benefit too, because your app loads only what’s essential at startup, and loads less-used things only if and when needed.</p>
+
+<p>(A side effect of this is that some day, if there’s interest, we may formalize NetNewsWire’s internal plugin API and make it so other developers can write plugins that add windows to NetNewsWire.)</p>

@@ -1,0 +1,41 @@
+@dbid 2777
+@title More details about Postel’s Law, Atom, and NetNewsWire
+@pubDate Wed Jan 14 14:03:54 -0800 2004
+@modDate Wed Jan 14 14:45:09 -0800 2004
+Here’s something that happens all the time. An RSS feed has errors in it. It displays in NetNewsWire, but it displays incorrectly, with some weirdness. A NetNewsWire user validates the feed and sees that it has errors. Then the user emails me asking if I can fix the weirdness anyway so it would display perfectly.</p>
+
+<p>Here’s the thing: being forgiving doesn’t always work. You end up not showing exactly what was intended, and users notice it, and they want to see what was intended.</p>
+
+<p>It never ends, either. There’s always something new to work around. What happens is all the pressure to make things work comes down on the aggregators. </p>
+
+<p>Despite all that, I agree with Postel’s Law. Atom is not a special case.</p>
+
+<p>But with Postel’s Law you still have to make decisions. What’s the baseline? I’m saying that the baseline for Atom in NetNewsWire is XML well-formed-ness. NetNewsWire will probably end up liberal regarding other aspects of the spec. (I’m hoping there will be some guidelines regarding what to be liberal about and what to be strict about; but, if not, I’ll work it out anyway.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>What does this mean in practice? Some stats...</p>
+
+<p>So far I’ve subscribed to 34 Atom feeds to test with.</p>
+
+<p>I just tested each against the Feed Validator: 14 of these feeds are invalid according to the Feed Validator.</p>
+
+<p>NetNewsWire displays <em>all but two</em> of them. In both cases the error is an XML parsing error.</p>
+
+<p>So, obviously, there are degrees of strictness. NetNewsWire will not be as strict as the Feed Validator—not even close.</p>
+
+<p>Choosing XML well-formed-ness as a baseline is not some unrealistic dictate that will prevent Atom from being popular.</p>
+
+<p>I like Atom, by the way, and I’m applying this standard because I like Atom. I would be utterly pleased if in the future people would say things like “Well, you pretty much know it’s going to be well-formed XML, <em>because it’s an Atom feed</em>.” In other words, I’m doing what I can to make sure this future comes about, where people can do cool and creative things with Atom feeds and real XML parsers. I want Atom feeds to have the reputation of being high-quality.</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>You might wonder in what ways is NetNewsWire’s RSS parser forgiving of XML errors. It’s not as forgiving as you might think.</p>
+
+<p>First thing to know is that it uses an XML parser (Apple’s CoreFoundation XML parser). There’s no pseudo-parser here.</p>
+
+<p>It tries to be forgiving of string encoding errors with this algorithm: first it tries to parse the XML with the encoding specified in the feed (or UTF8 if not specified). If the parser won’t parse it, then it tries a few other encodings. Sometimes this gets the job done, though there may be some loss of fidelity.</p>
+
+<p>It also tries to be forgiving of unencoded ampersands—but it does so in an inelegant way, and what you end up with is a feed where all the HTML tags are visible in the descriptions.</p>
+
+<p>So those are also the two things NetNewsWire is not doing for Atom. In the case of the two feeds with errors, it’s possible that applying these work-arounds might have worked. But then the bugs in these feeds might never be found. (And it looks possible that in the case of one of them it’s a bug in the weblogging software that generated the feed. Everybody wants bugs like that to get fixed.)

@@ -1,0 +1,53 @@
+@dbid 1440
+@title 2001/07/06
+@pubDate Fri Jul 06 01:25:14 -0700 2001
+@modDate Fri Jul 06 15:25:30 -0700 2001
+<p>It was on my to-do list for many months -- revising the <a href="http://www.ranchero.com/">Ranchero Software</a> site so it no longer appears that there is such a thing as Ranchero Software.</p>
+
+<p>I kept the pages that were there, since there are some Frontier docs and other tidbits that shouldn&#039;t just disappear.</p>
+
+<p>And now it&#039;s done.</p>
+
+<p>It was surpisingly fun doing the work -- it&#039;s a Frontier-built site, just a very simple website framework site that renders to disk. It&#039;s rare that I get to build websites that way. I had forgotten how nice it is. I even wrote a new macro to generate the little breadcrumbs path at the top of most of the pages.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>The Ranchero site is on my oldest server, an old Mac running WebSTAR. I noticed the creation date of the folder that contains all the content on that server:</p>
+
+<p>Fri, Sep 8, 1995, 4:25 PM</p>
+
+<p>Wow. Almost six years of hosting sites, mine and other people&#039;s.</p>
+
+<p>Sure, some people have done it longer, but six years is a pretty long time in Web years.</p>
+
+<p>"tinyshoe.gif"</p>
+
+<p>Anyway, it feels good to say that the Ranchero site is <em>done</em>. I have no plans, and no need, to ever update those pages again. Sure, I&#039;ll keep the database around just in case, but I really don&#039;t expect to need it.</p>
+
+<p>I&#039;m so used to Web sites being perpetually "under construction" -- because that&#039;s the way they&#039;re supposed to be, they&#039;re supposed to be always changing and new. So it feels extra weird to have a finished site.</p>
+
+<p>But, you know, in this case, I like it.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>Ranchero Software was a raging success. Okay, not really, but sort of, if you look at it a certain way.</p>
+
+<p>It ended in the black.</p>
+
+<p>In other words, we did better than Jeff Bezos. We did better than lots of people -- you&#039;ve <a href="http://www.fuckedcompany.com/">heard all the stories</a>. Ranchero didn&#039;t hemorrhage millions of dollars. Everyone gets more money back than what they put in.</p>
+
+<p>Ranchero was run conservatively -- even in the crazy bubble days -- on sound business principles which I like to summarize as <em>make a profit</em>.</p>
+
+<p>"tinyshoe.gif"</p>
+
+<p><a href="http://www.lockergnome.com/manifesto.html">The Libera Manifesto</a>. (Via <a href="http://www.backupbrain.com/">Backup Brain</a>.)</p>
+
+<p>It&#039;s not just Get Info, it&#039;s <a href="http://www.barebones.com/products/supergetinfo.html"><em>Super</em> Get Info</a>. From Bare Bones Software.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>I&#039;m posting this minor tidbit in case anyone has the same problem as me and does a Google search.</p>
+
+<p>Running <a href="http://www.list.org">Mailman</a> and <a href="http://www.postfix.org">postfix</a>, Mailman couldn&#039;t send mail -- it got an "All recipients refused" message with an error code of 111. (As listed in Mailman&#039;s smtp log.)</p>
+
+<p>It turned out to be a problem in /etc/hosts -- localhost wasn&#039;t configured properly. So I added a line <code>127.0.0.1 localhost</code> and suddenly the floodgates opened.</p>

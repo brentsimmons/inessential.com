@@ -1,0 +1,35 @@
+@dbid 3268
+@title NetNewsWire 2.1: Post to del.icio.us command
+@pubDate Fri Mar 17 13:05:33 -0800 2006
+@modDate Fri Mar 17 13:05:33 -0800 2006
+One of the most popular types of AppleScript scripts people write for NetNewsWire is a post-to-del.icio.us command. It’s a natural fit, right? It makes total sense that, if you use del.icio.us, you’d want to be able to send stuff there from your aggregator.</p>
+
+<p>I love it that people could write those scripts—it’s one of the joys of being a developer, when you make it so your app is scriptable so that people can create their own custom workflows.</p>
+
+<p>But, at the same time, it became apparent that this had to become a built-in feature, just because so many people want to do it.</p>
+
+<p>We had some choices:</p>
+
+<p>1. Punt and look at it for a later release. (The scripts, after all, do in fact work!)</p>
+
+<p>2. Write a del.icio.us client and bake it into NetNewsWire.</p>
+
+<p>3. Make NetNewsWire work with <i>other</i> apps that post to del.icio.us.</p>
+
+<p>If you know me, you know we did #3. ;)</p>
+
+<p>(If you don’t know me—one of the things I’m most proud of doing is creating the <a href="http://ranchero.com/netnewswire/developers/externalinterface.php">external weblog editor interface</a> which allows different aggregators to connect to different weblog editors. I like working with other apps and other developers; I like connecting apps.)
+</p>
+<h4>Choose your del.icio.us app</h4>
+<p>
+What we did: we added a new command in the News menu: Post to del.icio.us. It works with any one of four apps: your default browser, NetNewsWire, Cocoalicious, and Pukka.</p>
+
+<p>The default choice is your default browser, since that’s what most people are probably using already. (If you choose NetNewsWire, it just pops up a window with a web page in it—it’s just the browser-based interface, not a new client.)</p>
+
+<p>The choices I think are very cool are <a href="http://www.scifihifi.com/cocoalicious/">Cocoalicious</a> and <a href="http://codesorcery.net/pukka">Pukka</a>. Both are desktop apps, both talk to del.icio.us, but they have different and interesting approaches. (I’m a big fan, by the way, of apps that run on your desktop but that are Web-centric. No surprise there!)</p>
+
+<p>You already could have chosen one of those apps as your weblog editor in NetNewsWire—but that means choosing between posting to a weblog or posting to del.icio.us, when lots of people do both.</p>
+
+<p>Anyway, if you haven’t checked ’em out, and you post to del.icio.us, you should. They’re cool apps, and Buzz and Justin are cool cats, and it pleases me to be able to connect my stuff to their stuff.</p>
+
+<p>P.S. I’d love to figure out how to make this work with <a href="http://protagonist.co.uk/dashLicious/">dashLicious</a> too, but I haven’t figured it out yet. It’s a Dashboard widget, which means the context is different than with desktop apps.

@@ -1,0 +1,85 @@
+@dbid 1474
+@title 2001/07/17
+@pubDate Tue Jul 17 10:19:10 -0700 2001
+@modDate Tue Jul 17 18:49:12 -0700 2001
+<p>Y&#039;all know that I love baseball, and so does <a href="http://sheila.inessential.com/">Sheila</a>. So I&#039;m one lucky guy.</p>
+
+<p>But -- as if the luck could get even better -- my sister, who also lives in Ballard, <a href="http://www.inessential.com/Melissa/2001/07/17">loves baseball</a> too.</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>I wrote my first shell script yesterday. Linux gurus will laugh -- but that&#039;s alright. Some people who read this site are OS X newbies, so I figured I&#039;d share this.</p>
+
+<p>I wanted a simple way to take notes. I always have an ssh window to my OS X machine open, no matter what machine I&#039;m on. So I want to store my notes on that machine.</p>
+
+<p>It should be easy to create and/or edit a note, and they should always be stored in a directory named Notes in my home directory.</p>
+
+<p>So I wrote a command that allows me to type <code>~/.note notename</code>, where notename is the name of a new or existing note.</p>
+
+<p>What the script does is open an existing note for editing, or create a new note with that name.</p>
+
+<p>It&#039;s very simple. Here&#039;s the code:</p>
+
+<p><pre>
+
+#!/bin/tcsh
+
+# Create a new note or edit an existing
+
+# note and save it in the ~/Notes directory.
+
+# Brent Simmons 07/16/01
+
+if ($# != 1) then
+
+    echo "Please supply a note name."
+
+    exit 1
+
+endif
+
+/usr/bin/emacs  "~/Notes/$argv"
+
+exit 0
+
+</pre></p>
+
+<p>It&#039;s a file in my home directory named <code>note</code>. I made it executable with this command: <code>chmod u+x ~/note</code>.</p>
+
+<p>Here&#039;s how the script works:</p>
+
+<p>The first line, <code>#!/bin/tcsh</code>, specifies the shell to execute the script. tcsh comes with OS X.</p>
+
+<p>The lines that begin with a # are comments.</p>
+
+<p>The if block checks that there is one and only one parameter. The variable $# is always the number of parameters. If there is less than one or more than one parameter, the script reminds me that I need to supply a note name. Then it exits with the status code 1 -- a non-zero status code means that something went wrong.</p>
+
+<p>If the script gets past that test, then it simply tells Emacs to open a file in the ~/Notes/ directory that has the name of the note. $argv is the parameter I typed on the command line.</p>
+
+<p>If the file already exists, then Emacs opens it. If it doesn&#039;t exist, Emacs creates a new file.</p>
+
+<p>Very simple.</p>
+
+<p>To see a list of all my notes, I simply type <code>ls ~/Notes</code>.</p>
+
+<p>"tinyshoe.gif"</p>
+
+<p>I&#039;m going to the ball game! It&#039;s an afternoon game vs. the Arizona Diamondbacks.</p>
+
+<p>Go Mariners!</p>
+
+<p><img src="/images/atom.gif" height="30" width="29" border="0" alt="" /></p>
+
+<p>I love it when Matt Neuburg <a href="http://lists.userland.com/pipermail/frontier-users/2001-July/000006.html">answers a question</a> with "You&#039;re working way too hard. :-)"</p>
+
+<p>I&#039;ve said it before, and it bears repeating -- if something in Frontier seems really insanely difficult, it&#039;s probably because you&#039;re not doing it the easy way.</p>
+
+<p>Now, that&#039;s not always true, but it&#039;s true pretty often, enough to make this a useful rule of thumb.</p>
+
+<p>"bluebox.gif"</p>
+
+<p>I&#039;ll (try to) listen to tomorrow&#039;s <a href="http://www.apple.com/quicktime/qtv/mwny01/">MacWorld keynote</a> by Steve Jobs live.</p>
+
+<p>I really really really want to hear about OS X performance. I don&#039;t care about new flat-screen iMacs, hand-helds, new G4 enclosures, CD burning, all that stuff. Nope, totally don&#039;t care.</p>
+
+<p>I just want OS X to get <em>faster</em>. (Why? Because I dig it.)</p>

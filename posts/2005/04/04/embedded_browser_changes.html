@@ -1,0 +1,27 @@
+@dbid 3056
+@title Embedded browser changes
+@pubDate Mon Apr 04 12:00:54 -0700 2005
+@modDate Mon Apr 04 12:00:54 -0700 2005
+<a href="http://ranchero.com/images/nnw/browserTabsAndFeedButton.png"><img src="http://ranchero.com/images/nnw/browserTabsAndFeedButtonThumb.png" height="87" width="120" alt="NetNewsWire 2.0 browser tabs screenshot" align="right" hspace="5" border="0"/></a></p>
+
+<p>The browser in the latest beta of NetNewsWire 2.0 has a few changes. One is an updated look for the browser tabs. (Click the thumbnail to see a screen shot.)</p>
+
+<p>Also there is now a Feed button in the lower-right corner that appears when a page you’re viewing has a feed. NetNewsWire looks for the proper link tag in the source of the page, as described <a href="http://diveintomark.org/archives/2002/06/02/important_change_to_the_link_tag">here</a>.</p>
+
+<p>Click the button to subscribe to the feed. (The subscribe sheet appears with the URL filled in.)</p>
+
+<p>When we first added this feature, I found it oddly addicting—I just surfed around looking to see which sites would make the Feed button appear. What I found was that <i>lots</i> of sites make the Feed button appear: I was happily surprised.</p>
+
+<p>(Note: the Feed button doesn’t appear for a site that you’ve already subscribed to. So if it doesn’t appear for your weblog, it’s probably because you’ve subscribed to your weblog.)</p>
+
+<p><img src="http://inessential.com/images/atom.gif" width="29" height="30" alt="" /></p>
+
+<p>More about the look of the tabs...</p>
+
+<p>The look of the tabs is tricky because there is no standard tab widget that works for browser tabs. Yes, there is a standard Cocoa tab widget, but it’s not good for browser tabs. (Note how Safari, Firefox, etc. use custom tab widgets.)</p>
+
+<p>We ended up making them rectangles instead of rounded, since in this context it looks sharper. And, instead of a single gradient, it’s a two-tone, two-gradient look, kind of a “glass” look, that you see in other parts of the OS X user interface.</p>
+
+<p>With the standard tab widget, the selected tab is blue-ish (or graphite-ish)—but with browser tabs this is highly distracting. Since we couldn’t use color, it was quite a challenge to get enough contrast between active and inactive and highlighted tabs. We iterated over it a bit, and ended up quite happy with the results.</p>
+
+<p>I suspect that one of these days there will have to be a variant of the standard Cocoa NSTabView that works for tabbed browsers (and similar). More and more apps are using the idea (not just browsers)—eventually a consistent look will be a good idea. But, for now, people are experimenting, trying different things, which is cool.

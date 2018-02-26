@@ -1,0 +1,17 @@
+@dbid 3407
+@title Source to BSTwitterApp
+@pubDate Fri Apr 27 11:49:33 -0700 2007
+@modDate Fri Apr 27 11:49:33 -0700 2007
+It doesn&#039;t post! It doesn&#039;t store your password in the keychain! It doesn&#039;t automatically refresh! It&#039;s useless! Just a demo! Don&#039;t worry, Craig! ;)</p>
+
+<p>Download <a href="http://inessential.com/downloads/BSTwitterApp.zip">BSTwitterApp.zip</a>.</p>
+
+<p>(BS... my initials come in handy sometimes. ;)</p>
+
+<p>The idea behind this app is to show some basic use of the technologies that folks writing hybrid apps in Cocoa use. It uses NSXMLDocument and XPath to parse the friends tweets, WebKit to display the tweets, and NSURLConnection to download the tweets.</p>
+
+<p>It also demonstrates that just doing the plumbing—downloading and parsing—is only the barest beginning. For Mac apps, the magic is in the user interface. This doesn’t have any of that magic.</p>
+
+<p>(Folks who aren’t developers sometimes think that apps like Twitterrific are 90% under-the-hood plumbing and a 10% sprinkling of user interface. The truth is more likely the opposite: 10% plumbing, 90% user interface.)</p>
+
+<p>The coolest part of this is the code that parses the Twitter friends timeline. The parser is really very small. (And I’ve heard that there are ways to do it in even less code.) The central part of the parser is +[BSTwitterParser _parsedObjectWithNode:], which shows some very basic use of XPath to get data from an NSXMLNode.

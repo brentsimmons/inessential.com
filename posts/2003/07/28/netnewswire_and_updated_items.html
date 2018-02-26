@@ -1,0 +1,18 @@
+@dbid 2591
+@title NetNewsWire and Updated Items
+@pubDate Mon Jul 28 13:50:59 -0700 2003
+@modDate Mon Jul 28 13:50:59 -0700 2003
+In NetNewsWire 1.0.3, we added an updated items feature. The idea is that NetNewsWire can often tell if an item is updated (edited) rather than new.</p>
+
+<p>Updated items do <em>not</em> get marked as unread. There&#8217;s a reason for this: the majority of updates are inconsequential and you don&#8217;t want to be annoyed by them. They&#8217;re typo fixes, slight re-wordings, that kind of thing.</p>
+
+<p>But sometimes an update is significant, and you don&#8217;t want to miss it. There&#8217;s no bullet-proof way for NetNewsWire to tell the difference.</p>
+
+<p>I have a few ideas, one or more of which might be good, and I wonder what you think.</p><h4>Some ideas</h4>
+<p>1. Try to detect significant updates. There&#8217;s no way this could be perfect, but it could be pretty good&#8212;NetNewsWire could compare the length of the old description versus the new description. If it differs by n characters (where n is something like 50, or is configurable), then it&#8217;s a significant update, and therefore the item is marked as unread.</p>
+
+<p>2. Have a global pref: a &#8220;Mark updated items as unread&#8221; pref, so people could say they never want to miss any updated item. Also perhaps make it so that this pref can be over-ridden for individual subscriptions.</p>
+
+<p>3. Add a bunch more UI for unread items. For instance, unread counts that now appear as one number would appear as two: the unread count and the updated items count. (As in 22, 7). Add commands for going to the next and previous updated items. Add a new pseudo-feed for just updated items. Etc.</p>
+
+<p>(This option is horrible, because it means an entire parallel to all the unread items UI, but I mention it for completeness, and because I might be wrong about its horribleness.)
