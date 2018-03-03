@@ -2,22 +2,22 @@
 @title Atom constructs are cool
 @pubDate Tue Nov 30 17:47:19 -0800 2004
 @modDate Tue Nov 30 17:47:19 -0800 2004
-This screen shot illustrates something very cool about the <a href="http://www.atomenabled.org/developers/syndication/atom-format-spec.php">Atom feed format</a>. (If youâ€™ve written an RSS parser but havenâ€™t done Atom yet, you might find this interesting.)</p>
+This screen shot illustrates something very cool about the <a href="http://www.atomenabled.org/developers/syndication/atom-format-spec.php">Atom feed format</a>. (If you’ve written an RSS parser but haven’t done Atom yet, you might find this interesting.)</p>
 
 <p><img src="http://inessential.com/images/atomPersonConstruct.png" height="305" width="614" alt="Atom project screen shot" /></p>
 
-<p>What youâ€™re looking at is part of the Atom spec (leftmost), then part of the list of files of my XML-related classes, then the interface for a class named RSAtomPerson.</p>
+<p>What you’re looking at is part of the Atom spec (leftmost), then part of the list of files of my XML-related classes, then the interface for a class named RSAtomPerson.</p>
 
-<p>(Note to people who donâ€™t program in Cocoa: the â€œRSâ€ prefix is there because, in Cocoa, you typically prefix your class names with some initialsâ€”your own, your companyâ€™s, or the name of the project.)
+<p>(Note to people who don’t program in Cocoa: the â€œRSâ€ prefix is there because, in Cocoa, you typically prefix your class names with some initialsâ€”your own, your company’s, or the name of the project.)
 </p>
 <h4>Object-oriented thinking</h4>
 <p>
-Atom is more complex than RSS, yesâ€”but, at the same time, the Atom folks did a cool thing that mitigates this complexity: they defined certain â€œconstructsâ€ that are re-used in different places. If youâ€™re using an object-oriented language (such as Objective-C, Python, and C++) you can map these constructs to classes.</p>
+Atom is more complex than RSS, yesâ€”but, at the same time, the Atom folks did a cool thing that mitigates this complexity: they defined certain â€œconstructsâ€ that are re-used in different places. If you’re using an object-oriented language (such as Objective-C, Python, and C++) you can map these constructs to classes.</p>
 
-<p>For example, a Person construct has three pieces of information: name, URL, and email address. Wherever a person is identified in an Atom feed, it uses a Person construct. You might have a whole bunch of Person constructs in a single feedâ€”but, each time a person is identified, itâ€™s done the same way.</p>
+<p>For example, a Person construct has three pieces of information: name, URL, and email address. Wherever a person is identified in an Atom feed, it uses a Person construct. You might have a whole bunch of Person constructs in a single feedâ€”but, each time a person is identified, it’s done the same way.</p>
 
 <p>There are other constructs too, for content, dates, and links. (The Content construct is probably the most complex, but you only need to do it once, and then you can handle titles, summaries, and content elements.)</p>
 
-<p>What I like about this is that it practically tells you how to write an Atom feed parser: it suggests breaking up your code into a collection of small classes for each of the different constructs. Though an object-oriented language isnâ€™t required to parse Atom feeds, the Atom spec is a case of <i>object-oriented thinking applied to feed formats</i>, which is cool.</p>
+<p>What I like about this is that it practically tells you how to write an Atom feed parser: it suggests breaking up your code into a collection of small classes for each of the different constructs. Though an object-oriented language isn’t required to parse Atom feeds, the Atom spec is a case of <i>object-oriented thinking applied to feed formats</i>, which is cool.</p>
 
 <p>Going back to the screen shotâ€”you can see it, a direct line between the spec and its expression in object-oriented code. Nice.
