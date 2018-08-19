@@ -3,11 +3,11 @@
 My wife Sheila and I are <a href="http://ranchero.com/">Ranchero Software</a>, where we’re working on two new open source projects — Mac apps — that aren’t shipping yet:
 
 - **[Evergreen](https://github.com/brentsimmons/Evergreen)**
-- **[Frontier](https://github.com/brentsimmons/Frontier)**
+- **[Rainier](https://github.com/brentsimmons/Rainier)**
 
-Evergreen, a feed reader, is closer to shipping than Frontier. It has a Twitter account: [@evergreen_mac](https://twitter.com/evergreen_mac).
+Evergreen, a feed reader, is closer to shipping than Rainier.
 
-By day I work at <a href="https://www.omnigroup.com/">The Omni Group</a> on the Mac version of **<a href="https://www.omnigroup.com/omnifocus/">OmniFocus</a>**. (Where I also do a podcast: [The Omni Show](https://theomnishow.omnigroup.com/).)
+By day I work at <a href="https://www.omnigroup.com/">The Omni Group</a> where I do a podcast called [The Omni Show](https://theomnishow.omnigroup.com/) and write for [The Omni Blog](https://omnigroup.com/blog/) (among other things).
 
 #### The Past
 

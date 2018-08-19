@@ -9,35 +9,39 @@ body {
 	color: #333;
 	background-color: white;
 }
+
 a {
 	text-decoration: none;
 }
-#banner {
+a:link {
+	color: rgba(70, 140, 220, 1.0);
+}
+a:visited {
+	color: rgba(110, 153, 139, 1.0);
+}
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+}
+h3 {
+	font-size: 28px;
+}
+h3 a:link, h3 a:visited {
+	color: #333;
+}
+h3 a:hover {
+	color: rgba(70, 140, 220, 1.0);
+}
+h4 {
+	margin-bottom: 1em;
+	color: #444;
+}
+
+header {
 	line-height: 2em;
 	padding-top: 64px;
 	padding-bottom: 16px;
 	text-align: center;
 	}
-#content {
-	padding-top: 40px;
-	padding-bottom: 2em;
-	max-width: 650px;
-	margin-left: auto;
-	margin-right: auto;
-}
-#sidebar {
-	padding-top: 0;
-  color: #999;
-  text-align: center;
-  padding-top: 52px;
-  border-top: 1px solid #ddd;
-}
-.sidebarTitle {
-  margin-bottom: 0em;
-}
-.sidebarText {
-  margin-top: 0em;
-}
 #biglink {
 	font-size: 48px;
 	display: block;
@@ -54,61 +58,57 @@ a {
 	position: relative;
 	top: -10px;
 }
-h1, h2, h3, h4, h5, h6 {
-	color: black;
+
+main {
+	padding-top: 40px;
+	padding-bottom: 2em;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
 }
-h3 {
-	font-size: 28px;
+
+nav {
+	padding-top: 0;
+  color: #999;
+  text-align: center;
+  padding-top: 52px;
+  border-top: 1px solid #ddd;
 }
-h4 {
-	margin-bottom: 1em;
-	color: #444;
-}
-.weblogPost {
+
+.post {
 	margin-bottom: 75px;
 }
-.weblogPostBody {
-	margin-bottom: -18px;
-	padding-bottom: 0;
-}
-.weblogPostDateline {
-	margin-top: 1.5em;
-}
-.weblogPostDateline, .weblogPostDisplayDate a:link, .weblogPostDisplayDate a:visited {
-	color: #999;
-	font-weight: medium;
-}
-.weblogPostDateline a:hover {
-	color: rgba(70, 140, 220, 1.0);
-}
-a:link {
-	color: rgba(70, 140, 220, 1.0);
-}
-a:visited {
-	color: rgba(110, 153, 139, 1.0);
-}
-h3 a:link, h3 a:visited {
-	color: #333;
-}
-h3 a:hover {
-	color: rgba(70, 140, 220, 1.0);
-}
-.weblogPost h3 {
+.post h3 {
 	font-weight: normal;
 	line-height: 1.3em;
 	margin-bottom: -10px;
 }
-#footer {
+.postBody {
+	margin-bottom: -18px;
+	padding-bottom: 0;
+}
+.postDateline {
+	margin-top: 1.5em;
+}
+.postDateline, .postDateline a:link, .postDateline a:visited {
+	color: #999;
+	font-weight: medium;
+}
+.postDateline a:hover {
+	color: rgba(70, 140, 220, 1.0);
+}
+
+footer {
 	margin-bottom: 0;
 	padding-top: 14px;
 	padding-bottom: 32px;
 	color: #999;
 	text-align: center;
 	}
-#footer p {
+footer p {
 	margin-bottom: 18px;
 }
-#footer a:link, #footer a:visited {
+footer a:link, #footer a:visited {
 	color: rgba(70, 140, 220, 0.75);	
 }
 code, pre {
@@ -119,21 +119,21 @@ code, pre {
 }
 
 @media (max-width: 760px) {
-	#content {
+	main {
 		width: 500px;
 		max-width: 500px;
 		min-width: 500px;
 		}
 }
 @media (max-width: 600px) {
-	#content {
+	main {
 		width: 450px;
 		max-width: 450px;
 		min-width: 450px;
 		}
 }
 @media (max-width: 480px) {
-	#content {
+	main {
 		width: 300px;
 		max-width: 300px;
 		min-width: 300px;

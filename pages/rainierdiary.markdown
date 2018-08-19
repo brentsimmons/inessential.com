@@ -1,6 +1,8 @@
-@title Frontier Diary
+@title Rainier Diary
 
-I’m chronicling the job of porting Frontier from lightly-Carbonized Mac app to 64-bit Cocoa app written (mostly) in Swift.
+I’m chronicling the process of writing Rainier, a Mac app inspired by UserLand Frontier. It’s an integrated scripting system and database.
+
+(Note that originally I was calling this new app Frontier, but changed the name to Rainier in August 2018. The name change is more honest about what the app actually is: it’s not actually compatible with Frontier.)
 
 In chronological order:
 
