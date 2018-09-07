@@ -21,3 +21,5 @@ In chronological order:
 <a href="http://inessential.com/2017/04/27/frontier_diary_7_pretty_much_everythin">Frontier Diary #7: Pretty Much Everything Throws</a>
 
 <a href="http://inessential.com/2017/05/01/frontier_diary_8_when_worlds_collide">Frontier Diary #8: When Worlds Collide</a>
+
+<a href="http://inessential.com/2018/08/20/rainier_diary_9_the_renaming">Rainier Diary #9: The Renaming</a>
