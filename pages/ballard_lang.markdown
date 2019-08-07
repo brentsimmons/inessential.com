@@ -1,6 +1,6 @@
 @title Introduction to Ballard
 
-(Note: this document is from an alternate universe where, instead of [porting Frontier](http://inessential.com/frontierdiary), I started from scratch on a new app inspired by Frontier.)
+(Note: this document is from an alternate universe where, instead of [porting Frontier](https://inessential.com/frontierdiary), I started from scratch on a new app inspired by Frontier.)
 
 This article is for programmers who want to know how Ballard, the scripting language for $APPNAME, is like other languages and how it’s different. See the website for tutorial articles for people new to programming.
 
@@ -256,7 +256,7 @@ When scripting with Ballard, using descriptive names for variables is encouraged
 For instance, you might call the download verb like this:
 
 <pre>let requestHeaders = ('User-Agent': 'My Cool App 1.0')
-let result = download&#8203;(url:'http://inessential.com/&#8203;xml/rss.xml', headers:requestHeaders)</pre>
+let result = download&#8203;(url:'https://inessential.com/&#8203;xml/rss.xml', headers:requestHeaders)</pre>
 
 ### Closures
 
@@ -847,7 +847,7 @@ This is a scratchpad where I’m working out stuff. It may end up as bonus mater
 		let httpResult = download(url)
 		return rss.parse(httpResult.body)
 	
-<pre>let feedTable = downloadAndParseFeed&#8203;('http://inessential.com/&#8203;xml/rss.xml')
+<pre>let feedTable = downloadAndParseFeed&#8203;('https://inessential.com/&#8203;xml/rss.xml')
 msg(feedTable.title)
 array.visit(feedTable.items, def (oneItem))
 msg(oneItem.description)</pre>

@@ -1,7 +1,7 @@
 @title Why Care About 30,000 Notes?
 @pubDate Sat Oct 05 20:54:53 -0700 2013
 @modDate Sat Oct 05 21:13:51 -0700 2013
-On Twitter, <a href="https://twitter.com/zvisus/status/386647656040108032">Zvi Zemel asks</a>, regarding my <a href="http://inessential.com/2013/10/05/vesper_sync_diary_2_core_data">previous post</a>:
+On Twitter, <a href="https://twitter.com/zvisus/status/386647656040108032">Zvi Zemel asks</a>, regarding my <a href="/2013/10/05/vesper_sync_diary_2_core_data">previous post</a>:
 
 >@brentsimmons honest question: why are you worrying about performance with 30,000 notes in Vesper? Will anyone encounter that scenario?
 

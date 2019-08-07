@@ -17,7 +17,7 @@ The part you see of NetNewsWire is an application that knows how to display data
 <p>These objects are the <i>same</i> for RSS and for Atom, even though the feed formats are different. Even if more feed formats come to be, I’ll keep using these same data-item and data-source objects. These objects don’t know thing one about RSS and Atom. They’re more abstract: they’re like the <i>ideal</i> of a feed and feed items.</p>
 
 <p>So... how do we turn raw Atom and RSS feeds into these objects? Part of the answer is to use a black box.
-</p><h4>The black box</h4><p><img src="http://inessential.com/images/nnwBlackBox.png" height="158" width="518" alt="NetNewsWire -> RancheroXML diagram" /></p>
+</p><h4>The black box</h4><p><img src="/images/nnwBlackBox.png" height="158" width="518" alt="NetNewsWire -> RancheroXML diagram" /></p>
 
 <p>In high-level terms, it works like this. NetNewsWire has the raw text of a feed. It doesn’t know anything about it — it doesn’t even know if it’s RSS or Atom or whatever. NetNewsWire’s goal is to turn that raw feed into its data-source and data-item objects.</p>
 

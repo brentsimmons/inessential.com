@@ -1,7 +1,7 @@
 @title How I Work with Other People These Days
 @pubDate Tue Feb 05 11:59:39 -0800 2013
 @modDate Tue Feb 05 12:00:55 -0800 2013
-I <a href="http://inessential.com/2013/02/01/gone_indie">no longer work on Glassboard</a>, and don’t get any benefit at all if you use it.
+I <a href="/2013/02/01/gone_indie">no longer work on Glassboard</a>, and don’t get any benefit at all if you use it.
 
 So I feel totally comfortable telling you that I use it all the time. I do.
 

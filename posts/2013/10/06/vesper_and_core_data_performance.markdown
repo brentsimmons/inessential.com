@@ -1,7 +1,7 @@
 @title Vesper and Core Data Performance
 @pubDate Sun Oct 06 21:42:53 -0700 2013
 @modDate Sun Oct 06 21:53:43 -0700 2013
-I mentioned in a <a href="http://inessential.com/2013/10/05/vesper_sync_diary_2_core_data">previous post</a> that I was probably going to switch Vesper to Core Data, but that I needed to test with a large number of notes first to make sure it still performed well.
+I mentioned in a <a href="/2013/10/05/vesper_sync_diary_2_core_data">previous post</a> that I was probably going to switch Vesper to Core Data, but that I needed to test with a large number of notes first to make sure it still performed well.
 
 Here’s the test: how long does it take for the All Notes view — the default view, what you see on launch — to show notes?
 

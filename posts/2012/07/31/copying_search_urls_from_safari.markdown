@@ -9,7 +9,7 @@ But — at least so far — I’ve been happy with the new address/search bar. I
 
 I did find an unexpected problem, though: I wanted to give somebody else the URL of a Google search I just did. And I couldn’t.
 
-<img src="http://inessential.com/images/safari_search_copy_link.png" alt="Screenshot showing Safari’s search/address bar" width="299" height="35" />
+<img src="/images/safari_search_copy_link.png" alt="Screenshot showing Safari’s search/address bar" width="299" height="35" />
 
 I asked on Twitter. One way is to drag the magnifying glass into whatever text I’m editing. Another way would be a <a href="https://twitter.com/pwc/status/230514299104280576">bookmarklet</a> that gets the current page location. A third way would be an <a href="https://twitter.com/cocoadog/status/230520088430784513">AppleScript script</a>.
 

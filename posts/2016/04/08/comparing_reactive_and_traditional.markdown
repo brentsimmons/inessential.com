@@ -36,7 +36,7 @@ It’s not all bad, though. It sticks close to the frameworks and the language, 
 
 #### New Coolness
 
-The <a href="https://gist.github.com/cliss/51cb740b14f3cd56ba1d11f2a9a6ba02"">reactive version</a> has the advantages that the traditional version lacks:
+The <a href="https://gist.github.com/cliss/51cb740b14f3cd56ba1d11f2a9a6ba02">reactive version</a> has the advantages that the traditional version lacks:
 
 1. There is far less state to manage directly.
 

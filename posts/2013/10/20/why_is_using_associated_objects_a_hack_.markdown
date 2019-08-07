@@ -1,7 +1,7 @@
 @title Why Is Using Associated Objects a Hack?
 @pubDate Sun Oct 20 14:14:48 -0700 2013
 @modDate Sun Oct 20 14:14:48 -0700 2013
-This came up on [Twitter](https://twitter.com/heathborders/status/391767563987734528) as a response to my post about <code>[NSURL&shy;Session&shy;Data&shy;Delegate](http://inessential.com/2013/10/12/nsurlsessiondatadelegate_and_objc_runtim)</code>.
+This came up on [Twitter](https://twitter.com/heathborders/status/391767563987734528) as a response to my post about <code>[NSURL&shy;Session&shy;Data&shy;Delegate](/2013/10/12/nsurlsessiondatadelegate_and_objc_runtim)</code>.
 
 I’ll clarify.
 

@@ -1,7 +1,7 @@
 @title A Clarification Regarding Web Services and Control
 @pubDate Thu Mar 28 10:33:59 -0700 2013
 @modDate Thu Mar 28 10:49:15 -0700 2013
-Responding to <a href="http://inessential.com/2013/03/27/why_developers_shouldnt_use_icloud_sy">yesterday’s post</a>, a number of people pointed out to me that it sounded weird if one minute I suggest checking out Azure <a href="http://www.windowsazure.com/ios">Mobile Services</a> and the next minute tell developers they should take control of their app’s web services.
+Responding to <a href="/2013/03/27/why_developers_shouldnt_use_icloud_sy">yesterday’s post</a>, a number of people pointed out to me that it sounded weird if one minute I suggest checking out Azure <a href="http://www.windowsazure.com/ios">Mobile Services</a> and the next minute tell developers they should take control of their app’s web services.
 
 I meant no contradiction, but I could have explained better.
 

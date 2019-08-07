@@ -5,7 +5,7 @@ I’ve never seen an app go so dramatically bad as the latest update of <a href=
 
 It had an average four-star rating across all versions. But look at the ratings for the current release.
 
-<img src="http://inessential.com/images/scrabbleRating.png" height="" width="" alt="1,132 one-star ratings for Scrabble 3.0" />
+<img src="/images/scrabbleRating.png" height="" width="" alt="1,132 one-star ratings for Scrabble 3.0" />
 
 The new version feels like a UIWebView app — that is, I think it’s mostly HTML, CSS, and JavaScript. The old version — which wasn’t perfect, but was playable and fun — felt like a native iPhone app.
 

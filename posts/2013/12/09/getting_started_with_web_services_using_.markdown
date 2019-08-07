@@ -1,7 +1,7 @@
 @title Getting Started with Web Services Using Node and Express (for Cocoa developers)
 @pubDate 2013-12-09 21:28:53 -0800
 @modDate 2013-12-09 21:32:42 -0800
-(See [Getting Started](http://inessential.com/2013/12/09/getting_started_with_node_js_for_cocoa_) if you haven’t already.)
+(See [Getting Started](/2013/12/09/getting_started_with_node_js_for_cocoa_) if you haven’t already.)
 
 Let’s create an API. I could do something with databases — because that’s probably what you really need — but to keep things simple I’ll leave databases out of it. (I might get to them in a future post.)
 

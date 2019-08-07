@@ -15,11 +15,11 @@ We just about don’t use email any more. I <em>love</em> that.
 
 Click for full-size screenshots.
 
-<a href="http://inessential.com/images/glassboard2-timeline.png"><img src="http://inessential.com/images/glassboard2-timeline-thumb.png" width=256 height=256 alt="Screenshot of timeline" /></a>
+<a href="/images/glassboard2-timeline.png"><img src="/images/glassboard2-timeline-thumb.png" width=256 height=256 alt="Screenshot of timeline" /></a>
 
-<a href="http://inessential.com/images/glassboard2-sidebar.png"><img src="http://inessential.com/images/glassboard2-sidebar-thumb.png" width=256 height=256 alt="Screenshot of sidebar" /></a>
+<a href="/images/glassboard2-sidebar.png"><img src="/images/glassboard2-sidebar-thumb.png" width=256 height=256 alt="Screenshot of sidebar" /></a>
 
-<a href="http://inessential.com/images/glassboard2-gallery.png"><img src="http://inessential.com/images/glassboard2-gallery-thumb.png" width=256 height=256 alt="Screenshot of photo gallery" /></a>
+<a href="/images/glassboard2-gallery.png"><img src="/images/glassboard2-gallery-thumb.png" width=256 height=256 alt="Screenshot of photo gallery" /></a>
 
 #### Some things the app doesn’t do
 

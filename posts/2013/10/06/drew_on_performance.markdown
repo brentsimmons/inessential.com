@@ -1,7 +1,7 @@
 @title Drew on Performance
 @pubDate Sun Oct 06 14:28:24 -0700 2013
 @modDate Sun Oct 06 14:29:03 -0700 2013
-Responding to my <a href="http://inessential.com/2013/10/05/why_care_about_30_000_notes_">previous post</a> on performance, Drew McCormack writes <a href="http://mentalfaculty.tumblr.com/post/63291176713/theres-no-free-lunch-when-it-comes-to-performance-or">There’s No Free Lunch When it Comes to Performance (Or Anything Else for that Matter)</a>:
+Responding to my <a href="/2013/10/05/why_care_about_30_000_notes_">previous post</a> on performance, Drew McCormack writes <a href="http://mentalfaculty.tumblr.com/post/63291176713/theres-no-free-lunch-when-it-comes-to-performance-or">There’s No Free Lunch When it Comes to Performance (Or Anything Else for that Matter)</a>:
 
 >In my view, Brent has this all backwards. He is thinking up a mythical user with 30000 Vesper notes, and wants to be sure that that 1/1000th of a percent of his customers doesn’t experience any lag. What he doesn’t seem to realize, is that that choice has a big impact on the other 99.999% of his costumers, who almost certainly will pay a performance penalty.
 

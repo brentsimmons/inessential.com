@@ -1,7 +1,7 @@
 @title Vesper Sync Diary #4 - In Another Country
 @pubDate 2013-11-07 16:01:58 -0800
 @modDate 2013-11-09 10:51:38 -0800
-I mentioned previously that Vesper will [sync via web services](http://inessential.com/2013/11/05/vesper_sync_diary_3_immutability_del).
+I mentioned previously that Vesper will [sync via web services](/2013/11/05/vesper_sync_diary_3_immutability_del).
 
 Web services don’t just appear out of the foam like Aphrodite from the sea — they have to be written. Though I was tempted to run a server on a Mac and write the backend in Objective-C, I decided to do what normal people do: use a scripting language. JavaScript.
 

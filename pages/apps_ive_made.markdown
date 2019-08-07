@@ -1,29 +1,21 @@
 @title Apps I’ve Made
 
-My wife Sheila and I are <a href="http://ranchero.com/">Ranchero Software</a>, where we’re working on two new open source projects — Mac apps — that aren’t shipping yet:
+I’m working on two open source projects — Mac apps — that aren’t shipping yet:
 
-- **[Evergreen](https://github.com/brentsimmons/Evergreen)**
+- **[NetNewsWire](https://ranchero.com/netnewswire/)**
 - **[Rainier](https://github.com/brentsimmons/Rainier)**
 
-Evergreen, a feed reader, is closer to shipping than Rainier.
-
-By day I work at <a href="https://www.omnigroup.com/">The Omni Group</a> where I do a podcast called [The Omni Show](https://theomnishow.omnigroup.com/) and write for [The Omni Blog](https://omnigroup.com/blog/) (among other things).
+NetNewsWire 5.0, a feed reader, is much closer to shipping than Rainier. I started NetNewsWire in 2002, and worked on it until 2011 when Black Pixel acquired it. It [came back to me](http://inessential.com/2018/08/31/netnewswire_comes_home) in August 2018.
 
 #### The Past
 
-Most recently I wrote **<a href="http://vesperapp.co/">Vesper</a>** with <a href="http://betterelevation.com/">Dave Wiskus</a> and <a href="http://daringfireball.net/">John Gruber</a> at Q Branch. Vesper has been made open source and [released on GitHub](https://github.com/brentsimmons/Vesper).
+<b><a href="http://www.red-sweater.com/marsedit/">MarsEdit</a></b> (2004, Ranchero Software) is now at <a href="http://www.red-sweater.com/">Red Sweater</a>.
 
-These apps I created now live elsewhere:
+<b>TapLynx</b> (2009, NewsGator) was acquired by <a href="http://push.io/">Push IO</a>, which is now at Oracle. It has been discontinued.
 
-<b><a href="http://netnewswireapp.com/">NetNewsWire</a></b> (2002) is now at <a href="http://blackpixel.com/">Black Pixel</a>.
+<b>Glassboard</b> (2011, Sepia Labs), a group messaging app, was acquired by Second Gear, but has since been turned off.
 
-<b><a href="http://www.red-sweater.com/marsedit/">MarsEdit</a></b> (2004) is now at <a href="http://www.red-sweater.com/">Red Sweater</a>.
-
-These apps I helped create now live elsewhere:
-
-<b><a href="http://www.taplynx.com/">TapLynx</a></b> (2009) is now at <a href="http://push.io/">Push IO</a>, which is now at Oracle.
-
-<b><a href="http://glassboard.com/">Glassboard</a></b> (2011) was at <a href="http://www.secondgearsoftware.com/">Second Gear</a>, but has since been turned off.
+**Vesper** (2013, Q Branch), a note-taking app, was written with <a href="https://twitter.com/dwiskus">Dave Wiskus</a> and <a href="http://daringfireball.net/">John Gruber</a>. Vesper has been made open source and [released on GitHub](https://github.com/brentsimmons/Vesper).
 
 #### Distant Past
 

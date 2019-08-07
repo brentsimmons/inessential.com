@@ -1,7 +1,7 @@
 @title My Favorite Way to Screw Up a Feed
 @pubDate Mon Mar 18 17:56:35 -0700 2013
 @modDate Mon Mar 18 17:56:35 -0700 2013
-Since Brian worked on the server side, his list of <a href="http://inessential.com/2013/03/18/brians_stupid_feed_tricks">Stupid Feed Tricks</a> didn’t include my very favorite feed screw-up.
+Since Brian worked on the server side, his list of <a href="/2013/03/18/brians_stupid_feed_tricks">Stupid Feed Tricks</a> didn’t include my very favorite feed screw-up.
 
 A lot of hotels and similar offer wi-fi. When you open a page in your browser, it redirects you to their login page.
 

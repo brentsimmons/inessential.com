@@ -3,7 +3,7 @@
 @modDate Mon May 21 16:06:40 -0700 2012
 Found in my closet. (Click thumbnail for full version.)
 
-<a href="http://inessential.com/images/spotlight_plaque.png"><img src="http://inessential.com/images/spotlight_plaque_thumb.png" alt="thumbnail of plaque from Apple" height="273" width="286" /></a>
+<a href="/images/spotlight_plaque.png"><img src="/images/spotlight_plaque_thumb.png" alt="thumbnail of plaque from Apple" height="273" width="286" /></a>
 
 Here’s the explanation:
 

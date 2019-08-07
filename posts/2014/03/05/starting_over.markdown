@@ -41,7 +41,7 @@ So I have two objects — VSTimelineNote and VSNote — which both come from the
 
 VSTimelineNote has five properties, while VSNote has 14 properties and two relationships.
 
-This is all specified in the data model. (Here’s a [screen shot](http://inessential.com/images/VesperDataModel.png) of the data model.)
+This is all specified in the data model. (Here’s a [screen shot](/images/VesperDataModel.png) of the data model.)
 
 #### Primary keys
 

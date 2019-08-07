@@ -1,7 +1,7 @@
 @title Imagining a Scripting Language
 @pubDate 2014-03-11 17:45:48 -0700
 @modDate 2014-03-11 20:18:54 -0700
-My [earlier post](http://inessential.com/2014/03/11/strange_dialect) about WebScript and JSTalk got me thinking: what if I could write part of my app using a scripting language?
+My [earlier post](/2014/03/11/strange_dialect) about WebScript and JSTalk got me thinking: what if I could write part of my app using a scripting language?
 
 First let’s imagine a language: Shasta, named for the mountain in California. It works with Objective-C — in fact, its objects are Objective-C objects, and Objective-C objects are Shasta objects. You can, for instance, subclass UIViewController. The Cocoa APIs are almost all available to Shasta.
 

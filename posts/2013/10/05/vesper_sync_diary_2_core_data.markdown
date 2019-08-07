@@ -3,7 +3,7 @@
 @modDate Sat Oct 05 15:00:41 -0700 2013
 I figured I should take a look at <a href="http://vesperapp.co/">Vesper</a>’s database layer and make any needed changes there first, before writing syncing code.
 
-So last weekend I switched from SQLite/FMDB to Core Data. This may <a href="http://inessential.com/2010/02/26/on_switching_away_from_core_data">come as a surprise</a>.
+So last weekend I switched from SQLite/FMDB to Core Data. This may <a href="/2010/02/26/on_switching_away_from_core_data">come as a surprise</a>.
 
 Here’s what happened. I was adding support for multiple attachments per note (I’m not promising it as a feature, but I need to code for it) and I found myself setting up yet another lookup table to handle the to-many relationship. My code was getting more complex and less easy to maintain.
 

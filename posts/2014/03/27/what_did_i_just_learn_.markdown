@@ -1,7 +1,7 @@
 @title What Did I Just Learn?
 @pubDate 2014-03-27 14:37:32 -0700
 @modDate 2014-03-27 14:41:48 -0700
-I posted about [why I’m not running my own server](http://inessential.com/2014/03/27/on_running_your_own_servers_and_why_we) — and then my site went down. (Almost down. Super-slow.)
+I posted about [why I’m not running my own server](/2014/03/27/on_running_your_own_servers_and_why_we) — and then my site went down. (Almost down. Super-slow.)
 
 If it had been my own server I could have rebooted Apache (assuming that was the problem) and had it back up quickly.
 
@@ -11,7 +11,7 @@ The quick and obvious answer is that this site should be on my own server. But i
 
 This site is hosted on an inexpensive shared-hosting plan on [DreamHost](http://www.dreamhost.com/). It’s been there — along with some other sites and my email — for about 10 years. I’ve been quite happy with the performance and customer support the entire time.
 
-This site is a [statically-rendered site](http://inessential.com/2009/01/30/new_publishing_system_tour_of_my_head), and it stands up to [Daring Fireball](http://daringfireball.net/) and [Hacker News](https://news.ycombinator.com/) and everything else without even blinking. (Example: Hacker News linked to that crazy [$1,850 opt-out thing from Network Solutions](http://inessential.com/2014/01/21/network_solutions_auto-enroll_1_850) — and I saw the following [comment on Hacker News](https://news.ycombinator.com/item?id=7099733): “I was really pleased with the instantaneous load of this blog.”)
+This site is a [statically-rendered site](/2009/01/30/new_publishing_system_tour_of_my_head), and it stands up to [Daring Fireball](http://daringfireball.net/) and [Hacker News](https://news.ycombinator.com/) and everything else without even blinking. (Example: Hacker News linked to that crazy [$1,850 opt-out thing from Network Solutions](http://inessential.com/2014/01/21/network_solutions_auto-enroll_1_850) — and I saw the following [comment on Hacker News](https://news.ycombinator.com/item?id=7099733): “I was really pleased with the instantaneous load of this blog.”)
 
 #### Had This Been My Own Server
 

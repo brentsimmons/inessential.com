@@ -5,7 +5,7 @@ We don’t use a regular UINavigationBar with Vesper. (We don’t even use a UIN
 
 The reason for that is that we have transition animations that I don’t know how to do using a UINavigationBar. Here’s a screenshot of the navbar as you’re swiping back from detail to timeline view.
 
-<img src="http://inessential.com/images/vesper-navbar.png" width="639" height="125" alt="Vesper navbar screenshot" />
+<img src="/images/vesper-navbar.png" width="639" height="125" alt="Vesper navbar screenshot" />
 
 Note that the <strong>&lt;</strong> and <strong>+</strong> buttons are at full opacity and don’t move, while All Notes and the icons are in mid-fade. (And All Notes is moving from left to the middle of the navbar.)
 
