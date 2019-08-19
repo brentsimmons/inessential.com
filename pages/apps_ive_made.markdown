@@ -1,13 +1,12 @@
 @title Apps I’ve Made
 
-I’m working on two open source projects — Mac apps — that aren’t shipping yet:
+<p><a href="https://ranchero.com/netnewswire/"><img src="https://ranchero.com/images/nnw_icon_256.png" height="256" width="256" alt="NetNewsWire for Mac icon: globe with a satellite in the foreground."></a></p>
 
-- **[NetNewsWire](https://ranchero.com/netnewswire/)**
-- **[Rainier](https://github.com/brentsimmons/Rainier)**
+**[NetNewsWire](https://ranchero.com/netnewswire/)** is a free and open source RSS reader for Mac. (An iOS app is in progress.)
 
-NetNewsWire 5.0, a feed reader, is much closer to shipping than Rainier. I started NetNewsWire in 2002, and worked on it until 2011 when Black Pixel acquired it. It [came back to me](http://inessential.com/2018/08/31/netnewswire_comes_home) in August 2018.
+**[Rainier](https://github.com/brentsimmons/Rainier)** is also a free and open source Mac app — but it’s in very early stages, not even close to shipping. It’s a scripting and database environment inspired by UserLand Frontier.
 
-#### The Past
+## The Past
 
 <b><a href="http://www.red-sweater.com/marsedit/">MarsEdit</a></b> (2004, Ranchero Software) is now at <a href="http://www.red-sweater.com/">Red Sweater</a>.
 
@@ -17,7 +16,7 @@ NetNewsWire 5.0, a feed reader, is much closer to shipping than Rainier. I start
 
 **Vesper** (2013, Q Branch), a note-taking app, was written with <a href="https://twitter.com/dwiskus">Dave Wiskus</a> and <a href="http://daringfireball.net/">John Gruber</a>. Vesper has been made open source and [released on GitHub](https://github.com/brentsimmons/Vesper).
 
-#### Distant Past
+## Distant Past
 
 I worked on **<a href="http://frontierkernel.org/">UserLand Frontier</a>** 1996-2002. 
 
