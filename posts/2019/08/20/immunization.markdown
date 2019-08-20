@@ -1,16 +1,16 @@
 @title Immunization
 @pubDate 2019-08-20 13:19:23 -0700
-@modDate 2019-08-20 13:24:55 -0700
+@modDate 2019-08-20 13:36:27 -0700
 Before every major release I like to try and think of everything mean that people might say about the app. It’s fun!
 
-So I did this with the NetNewsWire Slack group. Here’s a taste:
+So went through this exercise on the NetNewsWire Slack group. Here’s a taste:
 
 * This took five years? I could write an RSS parser in a weekend.
 * Can’t get my Twitter and Facebook feeds. Whatever.
 * Doesn’t work with my Usenet host.
 * The information density of the timeline is… lacking. What the hell.
-* Not truly free software since it’s on a Mac.
-* Not truly free software since it’s not GPL.
+* Not truly open source since it’s on a Mac.
+* Not truly open source since it’s not GPL.
 * No vim keys. Why bother.
 * Regular people will never use an RSS reader. What’s the point?
 * Brent’s last good idea was in 2002. Consider this a textbook case of coasting.
@@ -27,6 +27,7 @@ So I did this with the NetNewsWire Slack group. Here’s a taste:
 * No iOS app. The revolution happened on mobile, people. What the actual fuck.
 * Shoulda been Catalyst. Dinosaurs wrote this app.
 * Not on the Mac App Store? I guess they don’t want users.
+* I would totally use this if it had just this one [feature x], which I can’t believe they shipped without. (Multiply this comment by 100, with a different feature x each time.)
 
 Some feedback will be factually inaccurate, but we like to imagine that too:
 
@@ -36,6 +37,7 @@ Some feedback will be factually inaccurate, but we like to imagine that too:
 * It should be free.
 * You’d think they would have updated the design — but it looks *exactly* like NetNewsWire of old.
 * Why the hell would they build on that aging code base from Black Pixel? I heard it doesn't even use ARC.
+* No way to sync? What’s their actual problem?
 
 See? The actual feedback will be nicer than the stuff we thought up. This provides a bit of immunization. :)
 
