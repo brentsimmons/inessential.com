@@ -1,9 +1,9 @@
 @title Immunization
 @pubDate 2019-08-20 13:19:23 -0700
-@modDate 2019-08-20 13:36:27 -0700
+@modDate 2019-08-20 13:42:16 -0700
 Before every major release I like to try and think of everything mean that people might say about the app. It’s fun!
 
-So went through this exercise on the NetNewsWire Slack group. Here’s a taste:
+So we just went through this exercise on the NetNewsWire Slack group. Here’s a taste:
 
 * This took five years? I could write an RSS parser in a weekend.
 * Can’t get my Twitter and Facebook feeds. Whatever.
@@ -28,6 +28,7 @@ So went through this exercise on the NetNewsWire Slack group. Here’s a taste:
 * Shoulda been Catalyst. Dinosaurs wrote this app.
 * Not on the Mac App Store? I guess they don’t want users.
 * I would totally use this if it had just this one [feature x], which I can’t believe they shipped without. (Multiply this comment by 100, with a different feature x each time.)
+* Area Man Can’t Let RSS Go
 
 Some feedback will be factually inaccurate, but we like to imagine that too:
 
