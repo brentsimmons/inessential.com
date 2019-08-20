@@ -1,6 +1,6 @@
 @title Immunization
 @pubDate 2019-08-20 13:19:23 -0700
-@modDate 2019-08-20 13:42:16 -0700
+@modDate 2019-08-20 14:26:54 -0700
 Before every major release I like to try and think of everything mean that people might say about the app. It’s fun!
 
 So we just went through this exercise on the NetNewsWire Slack group. Here’s a taste:
@@ -24,7 +24,7 @@ So we just went through this exercise on the NetNewsWire Slack group. Here’s a
 * If this app took five years, imagine how long it will take before it will actually sync with Feedly.
 * Sure it’s free, but I bet the Feedbin people paid them off, because the only way to sync is to pay money to Feedbin.
 * No iCloud sync? Jerks.
-* No iOS app. The revolution happened on mobile, people. What the actual fuck.
+* No iOS app. The revolution happened on mobile, Brant. What the actual fuck.
 * Shoulda been Catalyst. Dinosaurs wrote this app.
 * Not on the Mac App Store? I guess they don’t want users.
 * I would totally use this if it had just this one [feature x], which I can’t believe they shipped without. (Multiply this comment by 100, with a different feature x each time.)
