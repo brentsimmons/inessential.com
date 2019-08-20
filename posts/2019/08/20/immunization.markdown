@@ -1,6 +1,6 @@
 @title Immunization
 @pubDate 2019-08-20 13:19:23 -0700
-@modDate 2019-08-20 13:19:23 -0700
+@modDate 2019-08-20 13:24:55 -0700
 Before every major release I like to try and think of everything mean that people might say about the app. It’s fun!
 
 So I did this with the NetNewsWire Slack group. Here’s a taste:
@@ -26,6 +26,7 @@ So I did this with the NetNewsWire Slack group. Here’s a taste:
 * No iCloud sync? Jerks.
 * No iOS app. The revolution happened on mobile, people. What the actual fuck.
 * Shoulda been Catalyst. Dinosaurs wrote this app.
+* Not on the Mac App Store? I guess they don’t want users.
 
 Some feedback will be factually inaccurate, but we like to imagine that too:
 
