@@ -1,6 +1,6 @@
 @title Apps I’ve Made
 
-<p><a href="https://ranchero.com/netnewswire/"><img src="https://ranchero.com/images/nnw_icon_256.png" height="256" width="256" alt="NetNewsWire for Mac icon: globe with a satellite in the foreground."></a></p>
+<p><a href="https://ranchero.com/netnewswire/"><img class="centeredImage" src="https://ranchero.com/images/nnw_icon_256.png" height="256" width="256" alt="NetNewsWire for Mac icon: globe with a satellite in the foreground."></a></p>
 
 **[NetNewsWire](https://ranchero.com/netnewswire/)** is a free and open source RSS reader for Mac. (An iOS app is in progress.)
 
