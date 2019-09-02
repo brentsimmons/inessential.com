@@ -1,6 +1,11 @@
 @title NetNewsWire Comes Home
 @pubDate 2018-08-31 10:59:41 -0700
 @modDate 2018-08-31 11:01:47 -0700
+
+<i>Update one year later (26 Aug 2019): [NetNewsWire 5](https://ranchero.com/netnewswire/) is now shipping!</i>
+
+---
+
 After some years spent traveling the world, NetNewsWire is now back where it started! It’s my app again.
 
 We’ve kept its room ready for all these years. And I am thrilled to welcome it home.
