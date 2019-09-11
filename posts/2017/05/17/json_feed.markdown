@@ -23,7 +23,7 @@ Some people have said this should have happened ten years ago, and other people 
 
 And some people really like the icon:
 
-<img src="http://jsonfeed.org/graphics/icon.png" height=70 width=70 />
+<img src="http://jsonfeed.org/graphics/icon.png" height="70" width="70" />
 
 #### Microformats
 
