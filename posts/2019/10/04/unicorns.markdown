@@ -1,6 +1,6 @@
 @title Unicorns
 @pubDate 2019-10-04 17:00:04 -0700
-@modDate 2019-10-04 17:00:04 -0700
+@modDate 2019-10-04 17:06:48 -0700
 I can hardly write a message on my iPhone without adding a 🐯 or 🎩 or other emoji at the end. I even use these as a kind of code — there’s a specific emoji I send to Sheila when I’m leaving work, for instance.
 
 Most of my emoji come from the Frequently Used section — most often in the very left-most column, next to the screen edge. I rarely go hunting. What I want is right there.
@@ -39,6 +39,6 @@ I’m not saying don’t ever change your app’s UI. Make improvements. Definit
 
 But always keep in mind that your app is probably only one of dozens that any given person might use. Most people don’t read your change notes. But they’ll notice if something they relied on, that was easy and useful, is now, suddenly, not.
 
-It may even be that they could get it back to the way they liked it. But will they figure it out? And how much time will they all have spent on it?
+It may even be that they could get it back to the way they liked it. But will they figure it out? And how much time will they all have spent on it? How much frustration?
 
 Because our apps go to so many people, we should start thinking the same way other professions do: we have a real obligation to the public, not just to our bottom line. We should, at least, do no harm.
