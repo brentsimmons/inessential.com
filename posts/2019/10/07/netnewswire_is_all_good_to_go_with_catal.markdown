@@ -1,6 +1,6 @@
 @pubDate 2019-10-07 12:11:32 -0700
-@modDate 2019-10-07 12:12:24 -0700
-NetNewsWire 5 is all good to go with Catalina!
+@modDate 2019-10-07 12:17:22 -0700
+[NetNewsWire 5](https://ranchero.com/netnewswire/) is all good to go with Catalina!
 
 New macOS days are super-fun. This year we get the added bonus of checking out all the new Catalyst apps. I’m psyched to see what cool apps are coming to Mac.
 
