@@ -1,6 +1,6 @@
 @title No ETAs
 @pubDate 2019-10-28 13:33:05 -0700
-@modDate 2019-10-28 13:33:05 -0700
+@modDate 2019-10-30 13:12:49 -0700
 People often ask me about ETAs. When will the feature they’re waiting for ship? If you’re a software developer, they probably ask you too.
 
 I totally get it! Though I write an app, I’m mostly a user of apps, and I too want to know when the features I’m waiting for will ship.
@@ -32,3 +32,5 @@ So the better thing to do is plan which features go into which releases, and hav
 Even if you the software developer think you can make accurate ETAs — and maybe you did, once or twice — you’re not going to be that lucky most of the time.
 
 PS This is all just to say that app-making is nothing like building a house. It’s more like building the first house ever in the history of houses, with a pile of rusty nails and your bare hands, in a non-stop tornado. It’s different every time, and it’s astonishingly complex, non-linear, and unpredictable. We all do our best to mitigate this, to make it more regular, but the industry just hasn’t gotten very far with that yet. The only reason anything ever ships is because people just keep working until it’s ready.
+
+<i>Update 30 Oct. 2019:</i> [See the follow-up](https://inessential.com/2019/10/30/etas_follow_up), which explains that I’m not talking about *all* ETAs.
