@@ -1,6 +1,6 @@
 @title Happy 20th to This Blog!
 @pubDate 2019-11-07 13:19:15 -0800
-@modDate 2019-11-07 13:19:15 -0800
+@modDate 2019-11-07 13:21:40 -0800
 Today is my blog’s 20th birthday!
 
 It started like this: at the time I was working at UserLand Software on a blogging app called Manila, and this was my own personal Manila blog. It’s gone through a few other engines since then. (These days it’s rendered — as a static site — by some Ruby scripts.)
@@ -17,7 +17,7 @@ The name *inessential* sounds like a low self-esteem thing. It’s not. It was n
 
 In other words, the name comes from huge and unwarranted self-esteem, as if my blog would be the first to be literature. Sheesh! Now I laugh at myself. What arrogance!
 
-I hope I’ve matured, at least a little, since then! But I keep the name, because nowadays that’s just its name.
+I hope I’ve matured, at least a little, since then. But I keep the name, because nowadays that’s just its name.
 
 <p style="text-align:center">* * *</p>
 
