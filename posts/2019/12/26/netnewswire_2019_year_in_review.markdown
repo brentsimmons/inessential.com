@@ -1,6 +1,6 @@
 @title NetNewsWire 2019 Year in Review
 @pubDate 2019-12-26 15:31:04 -0800
-@modDate 2019-12-26 15:31:04 -0800
+@modDate 2019-12-26 15:36:53 -0800
 About a year ago, in early 2019, NetNewsWire for Mac was at the “d” (development) level, where it had been for years. For instance, we released [NetNewsWire 5.0d8](https://nnw.ranchero.com/2019/01/27/netnewswire-d.html) on January 27.
 
 We shipped the first alpha — feature complete, free of known bugs, but needing testing — by WWDC. [NetNewsWire 5.0a1](https://nnw.ranchero.com/2019/05/31/netnewswire-a.html) was released May 31.
@@ -10,6 +10,8 @@ We [reached beta](https://nnw.ranchero.com/2019/08/12/netnewswire-has-finally.ht
 We continued to ship updates to the Mac app — [NetNewsWire 5.0.3](https://nnw.ranchero.com/2019/10/22/netnewswire-for-mac.html), the most recent, shipped October 22.
 
 Maurice started working on the iOS app before we shipped 5.0 of the Mac app — and, on Dec. 22, we shipped a [public TestFlight beta of NetNewsWire 5.0 for iOS](https://inessential.com/2019/12/22/netnewswire_5_for_ios_public_testflight).
+
+At this writing, four days later, 3,148 people have signed up to help test the iOS app. This is *far* beyond what we expected, and it’s super-exciting for the team.
 
 <p style="text-align:center">* * *</p>
 
