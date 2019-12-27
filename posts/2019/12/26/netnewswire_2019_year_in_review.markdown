@@ -1,6 +1,6 @@
 @title NetNewsWire 2019 Year in Review
 @pubDate 2019-12-26 15:31:04 -0800
-@modDate 2019-12-26 15:36:53 -0800
+@modDate 2019-12-26 17:13:27 -0800
 About a year ago, in early 2019, NetNewsWire for Mac was at the “d” (development) level, where it had been for years. For instance, we released [NetNewsWire 5.0d8](https://nnw.ranchero.com/2019/01/27/netnewswire-d.html) on January 27.
 
 We shipped the first alpha — feature complete, free of known bugs, but needing testing — by WWDC. [NetNewsWire 5.0a1](https://nnw.ranchero.com/2019/05/31/netnewswire-a.html) was released May 31.
@@ -22,3 +22,5 @@ I feel great about our pace! I know it can be frustrating for anybody waiting on
 Remember that it’s a group of volunteers who are [doing this for love](https://inessential.com/2015/06/30/love).
 
 P.S. I’ll write another blog post soon-ish on plans for 2020. :)
+
+*Update a little while later*: [Here’s the 2020 roadmap](https://inessential.com/2019/12/26/netnewswire_2020_roadmap_schmoadmap).
