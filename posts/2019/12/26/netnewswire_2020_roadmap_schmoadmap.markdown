@@ -1,6 +1,6 @@
 @title NetNewsWire 2020: Roadmap Schmoadmap
 @pubDate 2019-12-26 16:39:57 -0800
-@modDate 2019-12-26 16:39:57 -0800
+@modDate 2019-12-26 16:48:42 -0800
 We don’t have a detailed, plotted-out roadmap. Who does? Software is fluid, and software schedules are hot air.
 
 But there are things that seem most likely for 2020. Consider this all as an educated guess, not as a promise.
@@ -11,7 +11,7 @@ We hope to be able to ship this in the first quarter. There’s no guarantee, bu
 
 #### NetNewsWire 5.0.4 for Mac: Q1 2020
 
-This will be a bug-fix release, and it will be the last release that will run on Catalina. The most important part of this release will be database clean-ups — it will be much better about pruning the database of old stuff.
+This will be a bug-fix release, and it will be the last release that will run on macOS 10.14 (Mojave). The most important part of this release will be database clean-ups — it will be much better about pruning the database of old stuff.
 
 It will also improve performance and reduce memory use.
 
@@ -19,7 +19,7 @@ But, given that we’re concentrating on the iOS app right now, and we don’t k
 
 #### NetNewsWire 5.1 for Mac: Q2 2020
 
-This release will require macOS 10.14 (Mojave). It will add features already present in the iOS app: Feedly syncing and a Reader view. It may add other features, including additional syncing systems (no, I don’t know which ones). Tentatively — not for sure yet — we’re planning on sandboxing this release and publishing it on the Mac App Store.
+This release will require macOS 10.15 (Catalina). It will add features already present in the iOS app: Feedly syncing and a Reader view. It may add other features, including additional syncing systems (no, I don’t know which ones). Tentatively — not for sure yet — we’re planning on sandboxing this release and publishing it on the Mac App Store.
 
 Ideally we’d ship this in Q1. If we can, we will — but I’d put money on Q2 instead.
 
