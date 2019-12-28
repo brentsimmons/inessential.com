@@ -1,6 +1,6 @@
 @title How We Run the NetNewsWire Open Source Project
 @pubDate 2019-12-27 16:40:52 -0800
-@modDate 2019-12-27 16:52:43 -0800
+@modDate 2019-12-27 22:03:33 -0800
 People ask me, “So — I can just show up, see something I feel like doing, do it, and then it will just show in the app?”
 
 The answer, perhaps surprisingly, is no. Or, mostly no.
@@ -23,7 +23,7 @@ My leadership style is to ask questions, talk things over, look for consensus, a
 
 But remember that NetNewsWire is free, has no budget (not one cent), and everyone who works on it is volunteering their time.
 
-So there are some thing we do differently from a commercial app.
+So there are some things we do differently from a commercial app.
 
 #### Quality
 
@@ -51,7 +51,7 @@ Consider the situation with syncing systems. I knew we wanted to ship NetNewsWir
 
 And then consider that, after that, Feedly syncing was by far the most common request, so it was obvious to prioritize that one next. (The iOS TestFlight build includes Feedly syncing, and the Mac app will follow suit.)
 
-And then consider that our goal is to support all the various systems. Which one will come next, after Feedly? How do we choose? This decision is based in part on people who shows up: what systems do they want to work on?
+And then consider that our goal is to support all the various systems. Which one will come next, after Feedly? How do we choose? This decision is based in part on people who show up: what systems do they want to work on?
 
 This is not how you’d do things with a commercial app, but in this context it works fine.
 
