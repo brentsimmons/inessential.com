@@ -1,6 +1,6 @@
 @title KVO, My Enemy
 @pubDate 2019-12-30 16:53:00 -0800
-@modDate 2019-12-30 16:53:00 -0800
+@modDate 2019-12-30 16:56:49 -0800
 One of the keys to the stability of the shipping versions of NetNewsWire is that we don’t allow KVO (Key-Value Observing).
 
 KVO is a false convenience — it’s often easier than setting up a delegate or old-fashioned notification. But to use KVO is to just ask for your app to crash.
@@ -15,4 +15,4 @@ Okay. Fine. It’s worth it, right? It’s just this one small use of KVO. *Sure
 
 [Nope.](https://github.com/brentsimmons/NetNewsWire/issues/1481)
 
-Goddamn KVO.
+KVO is why I drink.
