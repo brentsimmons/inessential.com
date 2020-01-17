@@ -1,6 +1,6 @@
 @title Immutable Swift Structs
 @pubDate 2020-01-16 20:52:48 -0800
-@modDate 2020-01-16 21:00:24 -0800
+@modDate 2020-01-16 21:10:04 -0800
 As you read this, consider that I might be a squirrel and not, as I like to pretend, a rational programmer.
 
 #### My Two Brains
@@ -17,7 +17,7 @@ So my favorite thing in all of Swift is an immutable struct. It’s a value type
 
 Both brains happeeee! 🐥🐣
 
-#### Val vs. Let
+#### Var vs. Let
 
 This came up in working on NetNewsWire: some model objects — some structs decoded from JSON returned by a syncing server — used `var` instead of `let` for their properties.
 
