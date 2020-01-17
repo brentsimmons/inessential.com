@@ -1,6 +1,6 @@
 @title Immutable Swift Structs
 @pubDate 2020-01-16 20:52:48 -0800
-@modDate 2020-01-16 20:52:48 -0800
+@modDate 2020-01-16 21:00:24 -0800
 As you read this, consider that I might be a squirrel and not, as I like to pretend, a rational programmer.
 
 #### My Two Brains
@@ -35,7 +35,7 @@ I struggled with the answer.
 
 Here’s the thing: value types *are* good. Even though those structs aren’t being mutated *now*, we could imagine cases where they could be.
 
-Why not leave it up to the code that has one of these to decide to mutate or not? After all, as value types, this makes a copy and doesn’t affect other code. Value types are safe, regardless of mutability.
+Why not leave it up to the code that has one of these to decide to mutate or not? After all, as value types, this makes a copy and doesn’t affect other instances. Value types are safe, regardless of mutability.
 
 And yet…
 
