@@ -1,6 +1,6 @@
 @title On Replacing OperationQueue
 @pubDate 2020-01-20 12:37:14 -0800
-@modDate 2020-01-20 12:37:14 -0800
+@modDate 2020-01-20 13:19:44 -0800
 We fixed our [mystery KVO crash](https://inessential.com/2019/12/30/kvo_my_enemy) by writing a replacement for `OperationQueue.`
 
 Well, sort of a replacement. It’s not a drop-in replacement, because what we really wanted was slightly different from `OperationQueue`.
@@ -95,3 +95,5 @@ Normally I am very much against reinventing wheels. No points are awarded for wr
 Even if a system-provided thing is not exactly right, but close enough, you should probably use it.
 
 But when you do find you need write your own version of the wheel, think about what you need exactly, and just do that thing and not more. And don’t be clever — you don’t want to trade one problem for another.
+
+*Update 1:20 pm*: I’ve been asked about using `OperationQeue.main` to run code on the main thread and still use `OperationQueue`. Answer: the thing that triggered all this was the mystery KVO crashes. I don’t want to dwell on that, but that’s really why we wrote our own operation queue.
