@@ -1,7 +1,9 @@
 @title Adam Klobuchar
 @pubDate 2020-03-07 21:01:01 -0800
-@modDate 2020-03-07 21:01:01 -0800
+@modDate 2020-03-07 21:06:26 -0800
 Like all of us, I’ll remember forever that image of Adam Klobuchar announcing his candidacy during a storm, with snow falling on his hair. He looked so tough and heroic and yet just plain *real*.
+
+(By now we’ve all seen the poster a million times.)
 
 I love his Midwestern credibility. His ability to win in even the reddest of districts. His common sense and his care and empathy. His record as a prosecutor *and* his record of introducing and passing bills in Senate.
 
