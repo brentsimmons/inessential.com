@@ -1,6 +1,6 @@
 @title On Alternate App Icons for NetNewsWire for iOS
 @pubDate 2020-03-13 19:50:39 -0700
-@modDate 2020-03-13 19:50:39 -0700
+@modDate 2020-03-13 19:55:25 -0700
 Releasing an app always comes with surprises. No matter how many beta testers you have, there’s nothing like an app actually going out to the public.
 
 We’ve had, for [NetNewsWire](https://ranchero.com/netnewswire/) for iOS, a startling number of requests for the ability to choose from a list of alternate app icons.
@@ -13,13 +13,13 @@ And now it’s a thing people expect.
 
 Given that including additional app icons can’t slow down the app, why not just do it? What could possibly be the downsides?
 
-#### Here Are the Downsides
+#### Here Are All the Downsides
 
 The first one is kind of obvious. It’s easy to think that this is something you could do in a couple hours. But remember that it’s not just a case of loading the app icon up in Photoshop and doing some quick versions with different colors.
 
 The colors have to be chosen and tested. Each version has to be created in all the various different sizes. It’s quite a bit of work!
 
-And our app icon maker [Brad Ellis](https://twitter.com/bradellis) is a father — like everyone else on the team, he’s donating time he could be spending with family instead. Do I ask him to spend a few nights on this?
+And our app icon maker [Brad Ellis](https://twitter.com/bradellis) is a father. Like everyone else on the team, he’s donating his time. Do I ask him to spend a few nights on this?
 
 A second downside is that this takes time away from fixing bugs and doing things like bringing Feedly syncing to the Mac. (This feature requires layout, code, and testing — it’s not just Photoshop work.)
 
@@ -45,4 +45,4 @@ That’s not to say we wouldn’t ever do this. Or we might just add a dark vers
 
 I know this will disappoint some people. My pledge is that, even when I’m disappointing you, I will tell you honestly why.
 
-(We’ll probably do themes for the article view way before we do this, because 1) that’s fun too!, and 2) it’s a real accessibility/readability issue.)
+(We’ll probably do themes for the article view way before we do this, because 1) that’s fun too!, and 2) it’s an accessibility/readability issue.)
