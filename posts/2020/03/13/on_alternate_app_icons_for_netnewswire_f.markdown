@@ -1,6 +1,6 @@
 @title On Alternate App Icons for NetNewsWire for iOS
 @pubDate 2020-03-13 19:50:39 -0700
-@modDate 2020-03-13 19:55:25 -0700
+@modDate 2020-03-13 19:56:43 -0700
 Releasing an app always comes with surprises. No matter how many beta testers you have, there’s nothing like an app actually going out to the public.
 
 We’ve had, for [NetNewsWire](https://ranchero.com/netnewswire/) for iOS, a startling number of requests for the ability to choose from a list of alternate app icons.
@@ -45,4 +45,4 @@ That’s not to say we wouldn’t ever do this. Or we might just add a dark vers
 
 I know this will disappoint some people. My pledge is that, even when I’m disappointing you, I will tell you honestly why.
 
-(We’ll probably do themes for the article view way before we do this, because 1) that’s fun too!, and 2) it’s an accessibility/readability issue.)
+(We’ll probably do themes for the article view way before we would do something like this, because 1) that’s fun too!, and 2) it’s an accessibility/readability issue.)
