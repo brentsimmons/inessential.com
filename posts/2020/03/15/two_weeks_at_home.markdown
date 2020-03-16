@@ -1,7 +1,7 @@
 @title Two Weeks at Home
 @pubDate 2020-03-15 23:02:18 -0700
-@modDate 2020-03-15 23:02:18 -0700
-Monday is the 14th day my wife and I will spend in self-isolation. We’re getting groceries once a week, but anything optional is just not done, and everything is optional.
+@modDate 2020-03-15 23:03:27 -0700
+Monday is the 14th day my wife and I will spend in self-isolation. We’re getting groceries once a week, but anything optional is just not done, and everything else is optional.
 
 We skipped the small dinner party we were invited to on the weekend. We haven’t been to a bar or a restaurant or even to a coffee shop. I’m not getting my hair cut tomorrow.
 
