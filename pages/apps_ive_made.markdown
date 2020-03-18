@@ -2,7 +2,7 @@
 
 <p><a href="https://ranchero.com/netnewswire/"><img class="centeredImage" src="https://ranchero.com/images/nnw_icon_256.png" height="256" width="256" alt="NetNewsWire for Mac icon: globe with a satellite in the foreground."></a></p>
 
-**[NetNewsWire](https://ranchero.com/netnewswire/)** is a free and open source RSS reader for Mac. (An iOS app is in progress.)
+**[NetNewsWire](https://ranchero.com/netnewswire/)** is a free and open source RSS reader for Mac and iOS.
 
 **[Rainier](https://github.com/brentsimmons/Rainier)** is also a free and open source Mac app — but it’s in very early stages, not even close to shipping. It’s a scripting and database environment inspired by UserLand Frontier.
 
