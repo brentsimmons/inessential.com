@@ -1,7 +1,7 @@
 @title NetNewsWire 5.0 for iOS Shipping
 @pubDate 2020-03-09 08:18:37 -0700
-@modDate 2020-03-09 08:18:37 -0700
-<img class="centeredImage" src="https://ranchero.com/netnewswire/images/NNW-iOS-Icon-Shadow.png" height="384" width="385" alt="">
+@modDate 2020-03-19 11:01:33 -0700
+<img class="centeredImage" src="https://ranchero.com/netnewswire/images/NNW-iOS-Icon-Shadow.png" height="256" width="256" alt="">
 
 Go get it [on the App Store](https://apps.apple.com/us/app/netnewswire-rss-reader/id1480640210)! Also see the [announcement on the NetNewsWire blog](https://nnw.ranchero.com/2020/03/09/netnewswire-for-ios.html) and see the [NetNewsWire home page](https://ranchero.com/netnewswire/) for details.
 
