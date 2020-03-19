@@ -6,8 +6,8 @@ body {
 	line-height: 1.7em;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 1.2em;
-	color: rgba(255, 255, 255, 0.75);
-	background-color: #333;
+	color: #333;
+	background-color: white;
 }
 
 a {
@@ -19,31 +19,29 @@ a:link {
 a:visited {
 	color: rgba(110, 153, 139, 1.0);
 }
-h1 {
-	color: rgba(255, 255, 255, 0.9);
+h1, h2, h3, h4, h5, h6 {
+	color: black;
 }
-article h1, article h2 {
-	color: rgba(255, 255, 255, 0.9);
-	font-size: 42px;
-	line-height: 1em;
+h3 {
+	font-size: 28px;
 }
-article h2 a:link, article h2 a:visited {
-	color: rgba(255, 255, 255, 0.9);
+h3 a:link, h3 a:visited {
+	color: #333;
 }
-article h2 a:hover {
-	color: white;
+h3 a:hover {
+	color: rgba(70, 140, 220, 1.0);
 }
-
 h4 {
 	margin-bottom: 1em;
+	color: #444;
 }
 
 header {
 	line-height: 2em;
 	padding-top: 64px;
+	padding-bottom: 16px;
 	text-align: center;
-	box-shadow: inset 0 -4px 6px 0 rgba(0, 0, 0, 0.05);
-}
+	}
 #biglink {
 	font-size: 48px;
 	display: block;
@@ -51,11 +49,8 @@ header {
 	margin-bottom: 0.3em;
 }
 #biglink a:link, #biglink a:visited {
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(70, 140, 220, 1.0);
 	text-decoration: none;
-}
-#biglink a:hover {
-	color: white;
 }
 #bigbyline {
 	color: #999;
@@ -63,62 +58,51 @@ header {
 	position: relative;
 	top: -10px;
 }
-.separator {
-	height: 1px;
-	background-color: rgba(255, 255, 255, 0.25);
-}
-.innertext {
+
+main {
+	padding-top: 40px;
+	padding-bottom: 2em;
 	max-width: 650px;
 	margin-left: auto;
 	margin-right: auto;
 }
-main {
-	padding-top: 2em;
-	padding-bottom: 2em;
-	background-color: rgba(255, 255, 255, 0.1);
+
+nav {
+	padding-top: 0;
+  color: #999;
+  text-align: center;
+  padding-top: 52px;
+  border-top: 1px solid #ddd;
 }
 
 .post {
 	margin-bottom: 75px;
 }
+.post h3 {
+	line-height: 1.3em;
+	margin-bottom: -10px;
+}
 .postBody {
 	margin-bottom: -18px;
 	padding-bottom: 0;
 }
+.postDateline {
+	margin-top: 1.5em;
+}
 .postDateline, .postDateline a:link, .postDateline a:visited {
-	color: rgba(255, 255, 255, 0.5);
+	color: #999;
 	font-weight: medium;
 }
 .postDateline a:hover {
 	color: rgba(70, 140, 220, 1.0);
 }
-.posttopmargin {
-	margin-top: -2em;
-}
-.navtoppadding {
-	margin-bottom: 2em;
-}
-nav {
-  text-align: center;
-	color: rgba(255, 255, 255, 0.5);
-	box-shadow: inset 0 4px 6px 0 rgba(0, 0, 0, 0.05);
-}
-.nnwad {
-	margin-bottom: 2em;
-}
-.brighttext {
-	color: rgba(255, 255, 255, 0.7);
-}
-.navbottompadding {
-	margin-top: 2em;
-}
 
 footer {
 	margin-bottom: 0;
-	margin-bottom: 2em;
-	margin-top: 2em;
+	padding-top: 14px;
+	padding-bottom: 32px;
+	color: #999;
 	text-align: center;
-	color: rgba(255, 255, 255, 0.5);
 	}
 footer p {
 	margin-bottom: 18px;
@@ -129,6 +113,7 @@ footer a:link, #footer a:visited {
 code, pre {
 	font-family: "SF Mono", Menlo, "Courier", monospace;
 	font-size: 16px;
+	color: #666;
 	white-space: pre-wrap;
 }
 .centeredImage {
@@ -138,21 +123,21 @@ code, pre {
 }
 
 @media (max-width: 760px) {
-	.innertext {
+	main {
 		width: 500px;
 		max-width: 500px;
 		min-width: 500px;
 		}
 }
 @media (max-width: 600px) {
-	.innertext {
+	main {
 		width: 450px;
 		max-width: 450px;
 		min-width: 450px;
 		}
 }
 @media (max-width: 480px) {
-	.innertext {
+	main {
 		width: 311px;
 		max-width: 311px;
 		min-width: 311px;
