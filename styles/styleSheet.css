@@ -98,7 +98,7 @@ main {
 	margin-top: -2em;
 }
 .navtoppadding {
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 }
 nav {
   text-align: center;
@@ -117,7 +117,7 @@ nav {
 
 footer {
 	margin-bottom: 0;
-	margin-bottom: 2em;
+	margin-bottom: 3em;
 	margin-top: 2em;
 	text-align: center;
 	color: rgba(255, 255, 255, 0.5);
