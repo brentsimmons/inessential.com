@@ -6,18 +6,18 @@ body {
 	line-height: 1.7em;
 	font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 1.2em;
-	color: rgba(255, 255, 255, 0.75);
-	background-color: #333;
+	color: rgba(255, 255, 255, 0.70);
+	background-color: #222;
 }
 
 a {
 	text-decoration: none;
 }
 a:link {
-	color: hsl(212, 88.2%, 76.9%);
+	color: hsl(210, 100%, 75%);
 }
 a:visited {
-	color: rgba(110, 153, 139, 1.0);
+	color: hsl(160, 50%, 80%);
 }
 h1 {
 	color: rgba(255, 255, 255, 0.9);
@@ -45,7 +45,7 @@ header {
 	line-height: 2em;
 	padding-top: 64px;
 	text-align: center;
-	box-shadow: inset 0 -4px 6px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 -4px 6px 0 rgba(0, 0, 0, 0.25);
 }
 #biglink {
 	font-size: 48px;
@@ -54,7 +54,7 @@ header {
 	margin-bottom: 0.3em;
 }
 #biglink a:link, #biglink a:visited {
-	color: rgba(255, 255, 255, 0.65);
+	color: rgba(255, 255, 255, 0.7);
 	text-decoration: none;
 }
 #biglink a:hover {
@@ -103,7 +103,7 @@ main {
 nav {
   text-align: center;
 	color: rgba(255, 255, 255, 0.5);
-	box-shadow: inset 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 4px 6px 0 rgba(0, 0, 0, 0.15);
 }
 .nnwad {
 	margin-bottom: 2em;
@@ -126,7 +126,7 @@ footer p {
 	margin-bottom: 18px;
 }
 footer a:link, #footer a:visited {
-	color: hsl(212, 88.2%, 76.9%);
+	color: hsl(210, 100%, 75%);
 }
 code, pre {
 	font-family: "SF Mono", Menlo, "Courier", monospace;
