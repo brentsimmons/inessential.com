@@ -1,6 +1,6 @@
 @title Day 36: Radioactive but Uninteresting
 @pubDate 2020-04-07 19:47:10 -0700
-@modDate 2020-04-07 19:51:56 -0700
+@modDate 2020-04-08 10:47:42 -0700
 We haven’t been going anywhere. We’re getting our groceries and things delivered.
 
 I’m going for jogs — but only after 8 pm, once it’s dark, once the sidewalks are clear enough. My neighborhood has a surprising amount of walkers. Normally I love that, but right now I just wish it would rain like hell and keep them all home.
@@ -33,4 +33,4 @@ I changed all my clothes and washed my hands like crazy. Multiple times. Used th
 
 I’m weirdly busy — the job hunt is more than a full-time job. I’m treating it that way, anyway. I’ll be anxious about this until I get a job, and I don’t need more anxiety right now.
 
-I’m keeping an open mind and talking to as many potential employers as I can. I’m leaning strongly toward a full-time job. I just had one; I’d like another one.
+I’m keeping an open mind and talking to as many potential employers as I can. I’m leaning strongly toward a full-time job (rather than contracting). I just had one; I’d like another one.
