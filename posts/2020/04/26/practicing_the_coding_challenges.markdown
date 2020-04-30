@@ -1,9 +1,9 @@
 @title Practicing the Coding Challenges
 @pubDate 2020-04-26 16:58:22 -0700
-@modDate 2020-04-26 21:36:16 -0700
+@modDate 2020-04-27 13:51:40 -0700
 As part of my [job hunt](https://inessential.com/2020/03/31/looking_for_work) I’ve been doing some problems on [LeetCode](https://leetcode.com/) to prepare for coding challenges.
 
-I don’t have a CS degree, but I have decades of experience — I know what a linked list is, for instance, and could one write one by hand easily if called to. In a few different languages, even. I could talk about the trade-offs between a linked list and a contiguous array. Etc. I’ve got all that.
+I don’t have a CS degree, but I have decades of experience — I know what a linked list is, for instance, and could write one by hand easily if called to. In a few different languages, even. I could talk about the trade-offs between a linked list and a contiguous array. Etc. I’ve got all that.
 
 But these tests are kicking my butt a little bit. I think I’ve figured out why.
 
