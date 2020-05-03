@@ -1,6 +1,6 @@
 @title Memory Hole
 @pubDate 2020-05-02 17:27:46 -0700
-@modDate 2020-05-02 17:32:56 -0700
+@modDate 2020-05-02 17:36:00 -0700
 I knew about the 1918 pandemic — but not *really.* It was just kind of a fact with no details filled in and nothing important attached to it.
 
 I’m a big fan of American art and literature of the period, and, while the war is frequently referenced, the pandemic is barely mentioned. If ever. I don’t remember it coming up in The Great Gatsby or anything else.
@@ -15,4 +15,4 @@ I’ve already forgotten March — all I remember is that it felt like it laste
 
 My theory: there will be no demand for novels or movies or TV shows that remind us of all this.
 
-We’re living through a time we’re going to try to forget, as if we’re under some kind of anesthesia that makes us forget the operation.
+We’re living through a time we’re going to try to forget, as if we’re under some kind of anesthesia that makes us forget the operation and how painful it is.
