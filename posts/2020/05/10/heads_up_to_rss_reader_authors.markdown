@@ -1,6 +1,10 @@
 @title Heads-Up to RSS Reader Authors
 @pubDate 2020-05-10 17:45:26 -0700
-@modDate 2020-05-10 18:08:41 -0700
+@modDate 2020-05-11 10:47:40 -0700
+<i>Update the next morning (May 11):</i> NetNewsWire 5.0.1 for iOS has been approved for the App Store — which happened before I had the chance to provide documentation. I will assume that the policy enforcement change described below was just an error.
+
+---
+
 NetNewsWire 5.0.1 for iOS is delayed due to an apparently new, or newly-enforced, issue: if an RSS reader includes default feeds, Apple will ask for documentation that says you have permission to include those default feeds.
 
 The first RSS app that got tagged with this, that I know of, was [NewsWave](https://newswaveapp.com/). We submitted NetNewsWire 5.0.1 for iOS for review a couple days ago and had the same issue.
