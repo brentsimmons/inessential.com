@@ -1,6 +1,8 @@
 @title NetNewsWire 5.0.1 for iOS Released
 @pubDate 2020-05-12 10:37:52 -0700
-@modDate 2020-05-12 10:37:52 -0700
+@modDate 2020-05-12 10:39:32 -0700
+<img class="centeredImage" src="https://ranchero.com/netnewswire/images/NNW-iOS-Icon-Shadow.png" height="256" width="256" alt="">
+
 While I’ve been job-hunting, the mighty NetNewsWire team has kept rolling — and today we published the first update to the iOS app.
 
 This update fixes bugs, makes the app faster, and adds polish. Read the (rather lengthy) [change notes](https://nnw.ranchero.com/2020/05/12/netnewswire-for-ios.html) for the full scoop.
