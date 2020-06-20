@@ -1,9 +1,9 @@
 @title The iOS App Store Brings Users Only Because It’s the Only Choice
 @pubDate 2020-06-20 14:45:19 -0700
-@modDate 2020-06-20 14:45:19 -0700
+@modDate 2020-06-20 14:55:06 -0700
 One might argue that developers should love the App Store because it brings the users.
 
-[AppleInsider writes](https://appleinsider.com/articles/20/06/16/apple-pressures-email-app-hey-to-integrate-in-app-purchase-option) about the App Store, Hey app, and David  Heinemeier Hansson:
+[AppleInsider writes](https://appleinsider.com/articles/20/06/20/app-store-policy-and-developer-fee-drama-wont-change-apples-ways-at-all) about the App Store, Hey app, and David  Heinemeier Hansson:
 
 >Like any other product or service, Hey has to persuade people that they have a problem it can solve, and that it's worth paying for. You can't persuade people of anything, though, if they don't know about it. And then if you do persuade them, you can't profit without a way to get your product into their hands.
 >
@@ -17,7 +17,7 @@ Setting up distribution of an app is easy and cheap. I do it for NetNewsWire for
 
 And then there’s marketing. Sure, being featured used to mean something to revenue, but it hasn’t meant that much beyond just ego points in years. To be on the App Store is to be lost within an enormous sea of mostly junk. No matter how well you do at your app description and screenshots — even if you get some kind of feature — your app will not be found by many people.
 
-Build it and they will *not* come.
+Build it (and upload it to the App Store) and they will *not* come.
 
 Instead, you have to do marketing on your own, on the web and on social media, outside of the App Store. Just like always. The App Store brings nothing to the table.
 
