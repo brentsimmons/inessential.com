@@ -1,6 +1,6 @@
 @title The iOS App Store Brings Users Only Because It’s the Only Choice
 @pubDate 2020-06-20 14:45:19 -0700
-@modDate 2020-06-20 14:55:06 -0700
+@modDate 2020-06-20 15:07:42 -0700
 One might argue that developers should love the App Store because it brings the users.
 
 [AppleInsider writes](https://appleinsider.com/articles/20/06/20/app-store-policy-and-developer-fee-drama-wont-change-apples-ways-at-all) about the App Store, Hey app, and David  Heinemeier Hansson:
@@ -15,7 +15,7 @@ It’s just not true. It lacks even a grain of truth.
 
 Setting up distribution of an app is easy and cheap. I do it for NetNewsWire for Mac with no additional costs beyond what I already pay to host this blog. This was true in 2005 as much as now — distribution is *not* some exceptional value the App Store provides.
 
-And then there’s marketing. Sure, being featured used to mean something to revenue, but it hasn’t meant that much beyond just ego points in years. To be on the App Store is to be lost within an enormous sea of mostly junk. No matter how well you do at your app description and screenshots — even if you get some kind of feature — your app will not be found by many people.
+And then there’s marketing. Sure, being featured used to mean something to revenue, but it hasn’t meant that much beyond just ego points in years. To be on the App Store is to be lost within an enormous sea of floating junk. No matter how well you do at your app description and screenshots — even if you get some kind of feature — your app will not be found by many people.
 
 Build it (and upload it to the App Store) and they will *not* come.
 
