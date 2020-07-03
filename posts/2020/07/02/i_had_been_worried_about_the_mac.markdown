@@ -1,6 +1,6 @@
 @title I Had Been Worried About the Mac
 @pubDate 2020-07-02 20:19:26 -0700
-@modDate 2020-07-02 20:19:26 -0700
+@modDate 2020-07-02 20:22:25 -0700
 I spent the month or so before WWDC like you — suffering through a pandemic, outraged by violent racism, worried about democracy. Heartsick and appalled, mad and sad.
 
 Nothing has changed since WWDC, either. Except for one thing. A small thing in comparison, but important to me — I had been very worried that Apple would, as part of the ARM transition, lock down macOS so that <em>only</em> Mac App Store apps would be permitted.
@@ -17,7 +17,7 @@ I’m excited about the new features in SwiftUI this year. This reminds me of th
 
 I jumped right on it, back then — and I feel no less enthusiastic for this <em>new</em> new thing than I did for Cocoa almost 20 years ago.
 
-Apple has said, I believe, that the way we’ve been making apps is all legacy. AppKit and UIKit both. SwiftUI is the future.
+Apple has essentially said, I believe, that the way we’ve been making apps is all legacy. AppKit and UIKit both. SwiftUI is the future.
 
 #### NetNewsWire and SwiftUI
 
@@ -32,4 +32,4 @@ The thing to call out here is NetNewsWire 6.0. We’re already at work building 
 
 The work is going very quickly: I’m amazed. If you want to follow along, or even help, take a look at the [swiftui branch](https://github.com/Ranchero-Software/NetNewsWire/tree/swiftui).
 
-I’m super-psyched for this. If it means Mac and iOS can share most of their code, and we can add features more quickly (because SwiftUI makes for faster development), then we can ship more and better versions of NetNewsWire more often. I want that!
+I’m super-psyched for this. If it means Mac and iOS can share most of their code, and we can add features more quickly (because SwiftUI makes for so much faster development), then we can ship more and better versions of NetNewsWire more often. I want that!
