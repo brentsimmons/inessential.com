@@ -1,6 +1,6 @@
 @title URLSession’s Delegate Queue Should Be the Main Queue
 @pubDate 2021-01-27 12:01:06 -0800
-@modDate 2021-01-27 12:05:15 -0800
+@modDate 2021-01-27 13:17:49 -0800
 [Consider this line of code from RSWeb](https://github.com/Ranchero-Software/RSWeb/blob/2f7bc7671a751e994e2567c8221ba64e884d5583/Sources/RSWeb/DownloadSession.swift#L56), a framework NetNewsWire uses:
 
 	urlSession = URLSession(configuration: sessionConfiguration, delegate: self, delegateQueue: OperationQueue.main)
@@ -29,4 +29,4 @@ Your code that uses URLSession almost certainly has some data structures that do
 
 That’s what we do with NetNewsWire. (And did with Vesper and other apps.)
 
-It’s important to know I’m a performance junkie *and* a stability junkie — and with this pattern I satisfy both.
+It’s important to know I’m a performance junkie *and* a stability junkie — and with this practice I satisfy both.
