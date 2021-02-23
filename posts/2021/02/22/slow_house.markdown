@@ -1,6 +1,6 @@
 @title Slow House
 @pubDate 2021-02-22 17:27:52 -0800
-@modDate 2021-02-22 17:27:52 -0800
+@modDate 2021-02-22 18:16:09 -0800
 “Slow House,” song #3, is more exercise than song. Where most songs have a structure like ABAB or ABACAB or whatever, this one is just A. Not even AAA — just A.
 
 I wanted to get some practice recording an acoustic guitar — it’s the first GarageBand thing I’ve done where one of the parts was from a mic (a Yeti Blue). (All the previous parts are via MIDI and Apogee Jam.)
@@ -15,6 +15,6 @@ It’s called “Slow House” because it’s slow (as an antidote to the very f
 
 <audio controls><source type="audio/mpeg" src="https://ranchero.com/downloads/SlowHouse.mp3"></audio>
 
-Here’s the GarageBand file: [VampiresRun.band.zip](https://ranchero.com/downloads/SlowHouse.band.zip)
+Here’s the GarageBand file: [SlowHouse.band.zip](https://ranchero.com/downloads/SlowHouse.band.zip)
 
 It’s not until I make song #1,000 that I’ll make something people actually want to listen to more than once! I get that. I’m sharing anyway, because I think maybe it’s interesting to watch someone learn. 🐣
