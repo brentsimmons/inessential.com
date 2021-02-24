@@ -1,6 +1,6 @@
 @title Mysterious SwiftUI Crash
 @pubDate 2021-02-24 11:21:39 -0800
-@modDate 2021-02-24 11:21:39 -0800
+@modDate 2021-02-24 11:32:37 -0800
 A friend just released a new version of their app — and it has a new crash not seen during development.
 
 This new version of the app has a bunch of new SwiftUI code, and this crash is definitely in SwiftUI — but it’s apparently in SwiftUI itself.
@@ -48,5 +48,5 @@ Anyone else seen this? Is there something my friend can do to work around this?
 	28 GraphicsServices 0x00000001b135e784 GSEventRunModal + 164
 	29 UIKitCore 0x000000019c1d2ee8 -[UIApplication _run] + 1072
 	30 UIKitCore 0x000000019c1d875c UIApplicationMain + 168
-	31 Audible 0x0000000100ed8444 main (main.m:19)
+	31 AppName 0x0000000100ed8444 main (main.m:19)
 	32 libdyld.dylib 0x00000001994526b0 start + 4
