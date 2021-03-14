@@ -1,6 +1,6 @@
-@title New in NetNewsWire: Twitter Search Feeds
+@title New in NetNewsWire 6: Twitter Search Feeds
 @pubDate 2021-03-13 21:23:24 -0800
-@modDate 2021-03-13 21:24:40 -0800
+@modDate 2021-03-13 21:26:46 -0800
 New in NetNewsWire 6 — [currently in beta](https://nnw.ranchero.com/2021/03/13/netnewswire-b-for.html) (Mac version, for now) — is the ability to add Twitter searches and read them as if they were any other kind of feed.
 
 Here’s how:
