@@ -1,6 +1,6 @@
 @title How NetNewsWire Handles Threading
 @pubDate 2021-03-20 14:08:25 -0700
-@modDate 2021-03-20 14:08:25 -0700
+@modDate 2021-03-20 14:12:09 -0700
 NetNewsWire is mostly *not* multi-threaded. Here’s what we do:
 
 #### Run Most Code on the Main Thread
@@ -45,7 +45,7 @@ If you do a search on `Thread.isMainThread`, you’ll find a bunch of these…
 
 (I would not mind having a whole lot more of `precondition(Thread.isMainThread)` than we do now.)
 
-### The Result
+#### The Result
 
 You may be skeptical about this model, but I’ll remind you that NetNewsWire is responsive and freakishly fast. It’s also — by *far* — the most stable and bug-free app I’ve ever worked on in my long career. And a big part of that is our threading model.
 
@@ -53,7 +53,7 @@ One of the nice things about this model is that a developer knows, just by looki
 
 As we adopt Combine, SwiftUI, and future Swift language changes to support concurrency, we will continue to use this model. The details of our implementation may change, but the model will remain the same: use the main thread everywhere except in a few cases, and make sure that those cases cannot leak knowledge or behavior of their queues outside themselves.
 
-### Advice
+#### Advice
 
 Some developers I’ve known seem to think that being good at concurrency makes them badass. Others seem to think that senior developers must be great at concurrency, and so they should be too.
 
