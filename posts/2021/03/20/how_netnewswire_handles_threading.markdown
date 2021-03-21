@@ -1,6 +1,6 @@
 @title How NetNewsWire Handles Threading
 @pubDate 2021-03-20 14:08:25 -0700
-@modDate 2021-03-20 14:12:09 -0700
+@modDate 2021-03-21 11:41:31 -0700
 NetNewsWire is mostly *not* multi-threaded. Here’s what we do:
 
 #### Run Most Code on the Main Thread
@@ -57,7 +57,7 @@ As we adopt Combine, SwiftUI, and future Swift language changes to support concu
 
 Some developers I’ve known seem to think that being good at concurrency makes them badass. Others seem to think that senior developers must be great at concurrency, and so they should be too.
 
-But what senior developers are good it is eliminating concurrency as much as possible by developing a simple, easy, consistent model to follow for the app and its components.
+But what senior developers are good at is eliminating concurrency as much as possible by developing a simple, easy, consistent model to follow for the app and its components.
 
 And this is because concurrency is too difficult for humans to understand and maintain. Maybe you can create a system that makes extensive use of it, and have it be correct for one day. But think of your team! Even if you’re a solo developer, you and you-plus-six-months makes you a team.
 
