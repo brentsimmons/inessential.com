@@ -1,0 +1,196 @@
+:root {
+	color-scheme: light dark;
+	--background-color: #ccc;
+	--main-background-color: #fff;
+	--color: rgba(0, 0, 0, 0.75);
+	--link-color: hsl(212, 70%, 50%);
+	--link-visited-color: hsl(250, 27%, 56%);
+	--header-background-color: hsl(212, 70%, 40%);
+	--biglink-color: rgba(255, 255, 255, 0.85);
+	--biglink-hover-color: #fff;
+	--byline-color: rgba(255, 255, 255, 0.5);
+	--heading-color: rgba(0, 0, 0, 0.75);
+	--heading-font: "Helvetica Neue", sans-serif;
+	--header-font: var(--heading-font);
+	--dateline-text-color: rgba(0, 0, 0, 0.25);
+	--footer-text-color: rgba(255, 255, 255, 0.75);
+	--nav-text-color: var(--footer-text-color);
+	--nav-link-hover-color: #fff;
+	--footer-background-color: rgba(0, 0, 0, 0.7);
+	--nav-background-color: var(--footer-background-color);
+	--nav-link-color: rgba(255, 255, 255, 0.75);
+}
+@media(prefers-color-scheme: dark) {
+	:root {
+		--background-color: black;
+		--main-background-color: hsl(212, 10%, 18%);
+		--color: rgba(255, 255, 255, 0.75);
+		--biglink-color: rgba(255, 255, 255, 0.75);
+		--byline-color: rgba(255, 255, 255, 0.35);	
+		--heading-color: rgba(255, 255, 255, 0.85);
+		--dateline-text-color: rgba(255, 255, 255, 0.5);
+	}
+}
+
+body {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	line-height: 1.6em;
+	font-family: Georgia, serif;
+	font-size: 20px;
+	color: var(--color);
+	background-color: var(--background-color);
+}
+
+a {
+	text-decoration: none;
+}
+a:link {
+	color: var(--link-color);
+}
+a:visited {
+	color: var(--link-visited-color); 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--heading-font);
+	color: var(--heading-color);
+}
+article h1, article h2 {
+	font-size: 36px;
+	line-height: 1.1em;
+	margin-top: 0;
+	font-weight: bold;
+}
+article h2 a:link, article h2 a:visited {
+	color: var(--heading-color);
+}
+article h2 a:hover {
+	color: var(--link-color);
+}
+
+h4 {
+	margin-bottom: -0.5em;
+	margin-top: 1.25em;
+	font-size: 22px;
+}
+
+header {
+	background-color: var(--header-background-color);
+	font-family: var(--header-font);
+	line-height: 2em;
+	padding-top: 64px;
+	padding-bottom: 8px;
+	text-align: center;
+}
+#biglink {
+	font-size: 54px;
+	font-weight: bold;
+	margin-bottom: 0.3em;
+	color: var(--biglink-color);
+}
+#biglink a:link, #biglink a:visited {
+	color: var(--biglink-color);
+}
+#biglink a:hover {
+	color: var(--biglink-hover-color);
+}
+#bigbyline {
+	color: var(--byline-color);
+}
+.innertext {
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+main {
+	background-color: var(--main-background-color);
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+.post {
+	margin-bottom: 4em;
+}
+.postDateline {
+	font-family: var(--heading-font);
+	font-weight: bold;
+	margin-top: -0.5em;
+}
+.postDateline, .postDateline a:link, .postDateline a:visited {
+	color: var(--dateline-text-color);
+}
+.postDateline a:hover {
+	color: var(--link-color);
+}
+
+nav {
+	background-color: var(--nav-background-color);
+	font-family: var(--heading-font);
+	padding-top: 1em;
+	padding-bottom: 0.25em;
+	margin-bottom: 0;
+	text-align: center;
+	color: var(--nav-text-color);
+}
+nav a, nav a:link, nav a:visited {
+	color: var(--nav-link-color);
+}
+nav a:hover {
+	color: var(--nav-link-hover-color);
+}
+
+
+footer {
+	background-color: var(--footer-background-color);
+	font-family: var(--heading-font);
+	margin-bottom: 0;
+	margin-bottom: 0;
+	padding-top: 0.25em;
+	padding-bottom: 1em;
+	text-align: center;
+	color: var(--footer-text-color);
+}
+code, pre {
+	font-family: "SF Mono", Menlo, "Courier", monospace;
+	font-size: 16px;
+	white-space: pre-wrap;
+}
+.centeredImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 760px) {
+	.innertext {
+		width: 500px;
+		max-width: 500px;
+		min-width: 500px;
+		}
+	#biglink {
+		display: inline;
+	}
+}
+@media (max-width: 600px) {
+	.innertext {
+		width: 450px;
+		max-width: 450px;
+		min-width: 450px;
+		}
+	#biglink {
+		display: block;
+	}
+}
+@media (max-width: 480px) {
+	.innertext {
+		width: 311px;
+		max-width: 311px;
+		min-width: 311px;
+		}
+	#biglink {
+		display: block;
+	}
+}
