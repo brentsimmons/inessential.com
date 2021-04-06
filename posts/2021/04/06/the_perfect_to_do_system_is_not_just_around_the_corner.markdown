@@ -1,7 +1,7 @@
 @title The Perfect To-Do System Is Not Just Around the Corner
 @pubDate 2021-04-06 15:17:44 -0700
-@modDate 2021-04-06 15:17:44 -0700
-Sometimes it’s as if you can almost sense its nearness — that perfect to-do system, built on OmniFocus, Things, Asana, Todoist, or one of those. It’ll take just a little more thinking and tweaking. Rationalize your tagging system, change how you think about due dates, maybe write some scripts or create more templates, and you’ll have it.
+@modDate 2021-04-06 15:23:11 -0700
+Sometimes it’s as if you can almost sense its nearness — that perfect to-do system, built on OmniFocus, Things, Asana, Todoist, or one of the many others. It’ll take just a little more thinking and tweaking. Rationalize your tagging system, change how you think about due dates, maybe write some scripts or create more templates, and you’ll have it.
 
 And it will be so glorious! And you’ll never have to deal with this again. (You swear you’re not one of those people who futz with their to-do thing just because it’s fun.)
 
