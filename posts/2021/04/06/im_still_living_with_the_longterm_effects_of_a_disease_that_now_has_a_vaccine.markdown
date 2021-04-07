@@ -1,6 +1,6 @@
 @title I’m Still Living with the Longterm Effects of a Disease that Now Has a Vaccine
 @pubDate 2021-04-06 17:36:02 -0700
-@modDate 2021-04-06 17:36:02 -0700
+@modDate 2021-04-06 17:51:28 -0700
 I was in third grade when I got a severe case of chicken pox. This was in the days before there was a vaccine for it. When I returned to school, I found I couldn’t read the blackboard anymore, and I had to get glasses.
 
 My eyesight kept getting worse in the years since, and it’s the worst that I know of among friends and family. With my contacts out, I can’t see my feet. I could trip over anything on the floor because I can’t actually see that far away.
@@ -21,4 +21,4 @@ Long story short — we didn’t have to attempt the trip once I was able to ho
 
 But was this all better than getting a vaccine would have been? I could have died, and I’m *still* living with the effects. In a heartbeat I’d swap that experience for having had the vaccine.
 
-When it’s your turn — it’ll be mine in a couple weeks — get the coronavirus vaccine!
+When it’s your turn — it’ll be mine in a couple weeks — get the coronavirus vaccine! Don’t let this thing kill you or fuck you up forever.
