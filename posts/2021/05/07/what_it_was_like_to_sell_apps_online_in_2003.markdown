@@ -1,6 +1,6 @@
 @title What It Was Like to Sell Apps Online in 2003
 @pubDate 2021-05-07 14:16:24 -0700
-@modDate 2021-05-07 14:20:01 -0700
+@modDate 2021-05-07 15:45:26 -0700
 Apple likes to claim that the App Store replaced the system of selling software in physical boxes in stores and over the mail.
 
 But it’s not true.
@@ -19,7 +19,7 @@ This meant there was some work, yes, but it was nothing compared to what you hav
 
 (It could have been more convenient for purchasers, yes, and by 2005 we had plans to create an in-app purchasing system that still used Kagi, but we ended up benching that plan, for reasons.)
 
-And — importantly — Kagi’s fee was something like 5%. I don’t have the exact number — if anything it was less.
+And — importantly — Kagi’s fee was something like 5%. (<i>Update a little later:</i> evidence suggests I may be misremembering: it could have been more like 10%.)
 
 *Even more importantly*: Kagi didn’t review our app. I suppose, if we had been selling something egregious in some way, they might have learned of it and cut us off. But that’s a standard business relationship. Kagi was not a gatekeeper.
 
