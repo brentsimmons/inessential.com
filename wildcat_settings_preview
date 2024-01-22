@@ -1,0 +1,15 @@
+@site_name inessential.com
+@site_url https://inessential.com/
+@output_file_suffix .html
+@output_folder /Users/brent/Sites/inessential/
+@has_blog true
+@blog_number_of_posts_on_home_page 16
+@blog_home_page_title weblog
+@blog_archive_title weblog archive
+@blog_relative_path (empty-string)
+@feed_number_of_posts 32
+@feed_title inessential
+@feed_description Brent Simmons’s weblog.
+@feed_author Brent Simmons
+@feed_author_url https://inessential.com/
+@feed_author_avatar_url https://ranchero.com/downloads/brent_avatar.png
