@@ -68,7 +68,9 @@ article h2 a:link, article h2 a:visited {
 article h2 a:hover {
 	color: var(--link-color);
 }
-
+article p a {
+	text-decoration: underline;
+}
 h4 {
 	margin-bottom: -0.5em;
 	margin-top: 1.25em;
