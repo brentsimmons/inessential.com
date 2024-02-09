@@ -1,6 +1,6 @@
 @title Apps I’ve Made
 
-<p><a href="https://ranchero.com/netnewswire/"><img class="centeredImage" src="https://ranchero.com/images/nnw_icon_256.png" height="256" width="256" alt="NetNewsWire for Mac icon: globe with a satellite in the foreground."></a></p>
+<p><a href="https://ranchero.com/netnewswire/"><img class="centeredImage" src="https://netnewswire.com/images/nnw-6-icon-256.png" height="256" width="256" alt="NetNewsWire for Mac icon: globe with a satellite in the foreground."></a></p>
 
 **[NetNewsWire](https://ranchero.com/netnewswire/)** is a free and open source RSS reader for Mac and iOS.
 
@@ -18,6 +18,6 @@ For a few years I worked at The Omni Group on **<a href="https://www.omnigroup.c
 
 ### The Distant Past
 
-I worked on **<a href="http://frontierkernel.org/">UserLand Frontier</a>** 1996-2002. 
+I worked on **<a href="http://frontierkernel.org/">UserLand Frontier</a>** 1996-2002.
 
 Before that — 1995-1996 — I released software that worked with WebSTAR: **<a href="http://web.archive.org/web/19991021212201/http://www.ranchero.com/spotlight/">SpotLight</a>**, DenyAgent, and something else (I can’t remember its name). SpotLight sold about 10 copies; DenyAgent and that something else sold zero copies. But they *shipped*. 🐣🐥
