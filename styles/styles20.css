@@ -178,6 +178,9 @@ code, pre {
 	margin-left: auto;
 	margin-right: auto;
 }
+.blogArchiveIndex {
+	font-family: var(--header-font);
+}
 
 @media (max-width: 760px) {
 	.innertext {
