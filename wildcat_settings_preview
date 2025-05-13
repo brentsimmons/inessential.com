@@ -3,11 +3,11 @@
 @output_file_suffix .html
 @output_folder /Users/brent/Sites/inessential/
 @has_blog true
-@blog_number_of_posts_on_home_page 16
+@blog_number_of_posts_on_home_page 8
 @blog_home_page_title weblog
 @blog_archive_title weblog archive
 @blog_relative_path (empty-string)
-@feed_number_of_posts 32
+@feed_number_of_posts 5
 @feed_title inessential
 @feed_description Brent Simmons’s weblog.
 @feed_author Brent Simmons
