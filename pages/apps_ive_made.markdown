@@ -14,7 +14,9 @@
 
 **Vesper** (2013, Q Branch), a note-taking app, was written with <a href="https://twitter.com/dwiskus">Dave Wiskus</a> and <a href="http://daringfireball.net/">John Gruber</a>. Vesper has been made open source and [released on GitHub](https://github.com/brentsimmons/Vesper).
 
-For a few years I worked at The Omni Group on **<a href="https://www.omnigroup.com/omnioutliner">OmniOutliner</a>** and **<a href="https://www.omnigroup.com/omnifocus/">OmniFocus</a>**.
+From 2014-2020 I worked at The Omni Group on **<a href="https://www.omnigroup.com/omnioutliner">OmniOutliner</a>** and **<a href="https://www.omnigroup.com/omnifocus/">OmniFocus</a>**.
+
+From 2020-2025 I worked on the <b>[Audible](https://www.audible.com/ep/apple)</b> iOS app.
 
 ### The Distant Past
 

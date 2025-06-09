@@ -130,6 +130,7 @@ main {
 }
 .postBody a {
 	text-decoration: underline;
+	text-underline-offset: 3px;
 }
 .postDateline {
 	font-family: var(--header-font);
@@ -179,6 +180,9 @@ code, pre {
 	margin-right: auto;
 }
 .blogArchiveIndex {
+	font-family: var(--header-font);
+}
+#archiveLink {
 	font-family: var(--header-font);
 }
 
