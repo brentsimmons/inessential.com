@@ -11,7 +11,7 @@ We’ve reserved an area outside, with a half-dozen picnic tables. There will be
 
 #### When
 
-Thursday, June 19, 2025<br>5 pm - 10 pm
+Thursday, July 31, 2025<br>5 pm - 10 pm
 
 It’s open-house-style — show up whenever works for you.
 
