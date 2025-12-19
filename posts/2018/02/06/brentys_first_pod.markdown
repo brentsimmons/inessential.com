@@ -11,4 +11,4 @@ Still to do: support Carthage and Swift Package Manager. And, after this repo, t
 
 But that’s okay — doing open source is what I signed up for, and learning and using the infrastructure is part of the gig.
 
-PS I really like what happens in the Terminal when you successfully publish a pod. [Here’s a screenshot](http://images.inessential.com/PodShot.png).
+PS I really like what happens in the Terminal when you successfully publish a pod. [Here’s a screenshot](http://inessential.com/images/PodShot.png).
