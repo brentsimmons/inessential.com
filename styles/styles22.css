@@ -123,12 +123,8 @@ header {
 }
 #biglink a:link, #biglink a:visited {
 	color: var(--biglink-color);
-	text-decoration: underline;
-	text-underline-offset: 3px;
-	text-decoration-thickness: 2px;
 }
 #biglink a:hover {
-	color: var(--biglink-hover-color);
 	text-decoration: underline;
 	text-underline-offset: 3px;
 	text-decoration-thickness: 2px;
