@@ -11,7 +11,7 @@ Then of course I wrote some Objective-C code recently and really, really loved i
 
 I wanted to replace my homegrown static website/blog generator because I no longer wanted to use the language it was written in, for reasons.
 
-I took it as a good opportunity to learn Python — but it turned out that my heart wasn’t in it (not Python’s fault; great language) and I ended up screwing it up. (See [Blog Fuckup](https://inessential.com/2026/02/01/blog-fuckup.html)).
+I took it as an opportunity to learn Python — but it turned out that my heart wasn’t in it (not Python’s fault; great language) and I ended up screwing it up. (See [Blog Fuckup](https://inessential.com/2026/02/01/blog-fuckup.html)).
 
 I thought about some alternatives: Swift, which I know well; Rust and Go, which would have the advantage of helping me branch out from the Apple ecosystem; and good old C, my happy-go-lucky friend who still sprints faster than every brash new language.
 
@@ -25,7 +25,7 @@ And then I remembered Objective-C, which is C plus some things a little nicer th
 
 Anyone new to Objective-C thinks it’s difficult and maybe a bit harsh because `[[those squareBrackets] lookInsane:YES]`.
 
-Once you get past that, which takes a day or two given a good-faith effort, you’ll realize how small a language it is, how easy to hold in your palm and turn it around and understand all sides of it. And you’ll appreciate how easy it is to make good decisions when you don’t have a surplus of language features to choose from.
+Once you get past that, which takes a day or two given a good-faith effort, you’ll realize how small a language it is, how easy to hold in your palm and turn around and understand all sides of it. And you’ll appreciate how easy it is to make good decisions when you don’t have a surplus of language features to choose from.
 
 And you’d be reassured to know that Objective-C is probably never going to change, which means tech debt will accumulate much more slowly than with newer languages. (Unless, of course, you count Objective-C itself as tech debt. You don’t have to, though.)
 
