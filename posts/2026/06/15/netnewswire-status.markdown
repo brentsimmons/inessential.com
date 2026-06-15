@@ -5,7 +5,7 @@ It’s been a year since I retired — my [last working day](https://inessential
 
 <p style="text-align:center">* * *</p>
 
-My hope for retirement was to get a lot of work done on NetNewsWire.
+My hope for retirement was to get a lot of work done on [NetNewsWire](https://netnewswire.com/).
 
 A year ago it was in sore need of modernization, tech debt pay-off, and bug fixes. People were asking for features, but the foundation needed a ton of work before I could get on to adding new rooms.
 
