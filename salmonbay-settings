@@ -13,4 +13,5 @@
 @feed_author Brent Simmons
 @feed_author_url https://inessential.com/
 @feed_author_avatar_url https://ranchero.com/downloads/brent_avatar.png
+@time_zone America/Los_Angeles
 @rsync_remote_path inessential.com:/var/www/inessential.com/html/
