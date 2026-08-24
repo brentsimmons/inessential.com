@@ -277,6 +277,12 @@ code, pre {
 	margin-right: auto;
 }
 
+/* App names look weird in Georgia */
+.appname {
+	font-family: var(--heading-font);
+	font-size: 0.95em;
+}
+
 /* Standalone pages — not blog posts, so .post rules don't reach them */
 
 /* A page opens with a big title rather than a small dateline,
@@ -308,6 +314,7 @@ main:has(> .page) {
 .page p {
 	margin: 0 0 20px 0;
 }
+
 .page p:last-child {
 	margin-bottom: 0;
 }
