@@ -277,6 +277,41 @@ code, pre {
 	margin-right: auto;
 }
 
+/* Standalone pages — not blog posts, so .post rules don't reach them */
+
+/* A page opens with a big title rather than a small dateline,
+   so it needs less runway above than the blog does. */
+main:has(> .page) {
+	padding-top: 44px;
+}
+
+.page h1 {
+	font-size: 34px;
+	font-weight: bold;
+	margin: 0 0 24px 0;
+}
+.page h2 {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 48px 0 16px 0;
+}
+.page h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 32px 0 12px 0;
+}
+.page h4 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 28px 0 10px 0;
+}
+.page p {
+	margin: 0 0 20px 0;
+}
+.page p:last-child {
+	margin-bottom: 0;
+}
+
 /* Footer */
 
 #footer-background {
