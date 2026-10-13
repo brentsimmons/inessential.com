@@ -1,0 +1,333 @@
+:root {
+	color-scheme: light dark;
+
+	/* The masthead and links share one hue at several lightnesses.
+	   Change --hue to reshade them together. */
+	--hue: 220;
+	--text-color: rgba(0, 0, 0, 0.75);
+	--link-color: hsl(var(--hue), 60%, 50%);
+	--link-visited: #7a4f98;
+	--header-background: hsl(var(--hue), 60%, 50%);
+	--masthead-color: rgba(255, 255, 255, 0.85);
+	--tagline-color: rgba(255, 255, 255, 0.90);
+	--dateline-color: #b45309;
+	--footer-background: #1f2a4d;
+	--footer-text: rgba(255, 255, 255, 0.65);
+	--footer-link: rgba(255, 255, 255, 0.85);
+	--footer-link-hover: #fff;
+	--body-background: #f4f4f3;
+	--content-background: #f4f4f3;
+	--content-width: 600px;
+	--heading-color: rgba(0, 0, 0, 0.85);
+	--blockquote-border: #e0a526;
+	--blockquote-color: rgba(0, 0, 0, 0.75);
+	--separator-color: #e0dedb;
+	--highlight-shadow: rgba(255, 255, 255, 0.9);
+	--body-font: Georgia, 'Times New Roman', serif;
+	--heading-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Dark mode */
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--text-color: rgba(255, 255, 255, 0.75);
+		--body-background: #141a20;
+		--content-background: #1a2028;
+		--link-color: hsl(var(--hue), 90%, 70%);
+		--link-visited: #cca0ea;
+		--header-background: hsl(var(--hue), 45%, 28.5%);
+		--masthead-color: rgba(255, 255, 255, 0.82);
+		--tagline-color: rgba(255, 255, 255, 0.62);
+		--dateline-color: #e8a65c;
+		--footer-background: #141a36;
+		--footer-text: rgba(255, 255, 255, 0.6);
+		--footer-link: rgba(255, 255, 255, 0.82);
+		--footer-link-hover: #fff;
+		--heading-color: rgba(255, 255, 255, 0.85);
+		--blockquote-border: #c9962f;
+		--blockquote-color: rgba(255, 255, 255, 0.75);
+		--separator-color: #333a42;
+		--highlight-shadow: transparent;
+	}
+}
+
+/* Base */
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--body-font);
+	font-size: 1.15em;
+	line-height: 1.8;
+	color: var(--text-color);
+	background-color: var(--body-background);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: var(--link-color);
+	text-underline-offset: 3px;
+}
+a:visited {
+	color: var(--link-visited);
+}
+
+/* Header */
+
+#header-background {
+	background-color: var(--header-background);
+}
+header {
+	font-family: var(--heading-font);
+	padding: 40px 2px 22px 2px;
+	max-width: var(--content-width);
+	margin: 0 auto;
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	gap: 14px;
+}
+header .biglink {
+	margin: 0;
+	font-size: 52px;
+	font-weight: bold;
+	letter-spacing: -0.02em;
+	line-height: 1.1;
+}
+header .biglink a {
+	color: var(--masthead-color);
+	text-decoration: none;
+}
+header .biglink a:hover {
+	text-decoration: underline;
+	text-underline-offset: 6px;
+	color: #fff;
+}
+header .biglink a:visited {
+	color: var(--masthead-color);
+}
+header .tagline {
+	margin: 0;
+	font-size: 17px;
+	color: var(--tagline-color);
+}
+
+/* Content area */
+
+#content-background {
+	background-color: var(--content-background);
+}
+
+/* Main content */
+
+main {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	padding-top: 72px;
+	padding-bottom: 72px;
+}
+
+/* Headings */
+
+h1, h2, h3, h4 {
+	font-family: var(--heading-font);
+	color: var(--heading-color);
+	line-height: 1.2em;
+}
+
+/* Blog posts */
+
+.post {
+	margin-bottom: 72px;
+}
+.post h1 {
+	margin: 4px 0 14px 0;
+	font-size: 28px;
+	font-weight: bold;
+}
+.post h1 a {
+	color: var(--heading-color);
+	text-decoration: none;
+}
+.post h1 a:hover {
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
+}
+.post h1 a:visited {
+	color: var(--heading-color);
+}
+.post h3 {
+	font-size: 20px;
+	margin-top: 1.5em;
+	margin-bottom: 0.5em;
+}
+.postBody {
+	margin: 0;
+	overflow-wrap: break-word;
+}
+.postBody p {
+	margin: 0 0 14px 0;
+}
+.postDateline {
+	font-family: var(--heading-font);
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 1.4;
+	color: var(--dateline-color);
+	margin-bottom: 10px;
+	padding-bottom: 6px;
+	border-bottom: 1px solid var(--separator-color);
+	box-shadow: 0 1px 0 var(--highlight-shadow);
+}
+.postDateline a {
+	color: var(--dateline-color);
+	text-decoration: none;
+}
+.postDateline a:visited {
+	color: var(--dateline-color);
+}
+.postDateline a:hover {
+	text-decoration: underline;
+}
+
+/* Quotes and code */
+
+blockquote {
+	color: var(--blockquote-color);
+	border-left: 3px solid var(--blockquote-border);
+	padding-left: 18px;
+	margin-left: 0;
+	font-style: normal;
+}
+
+code, pre {
+	font-family: "SF Mono", Menlo, "Courier", monospace;
+	font-size: 17px;
+	white-space: pre-wrap;
+}
+
+/* Archive link */
+
+#archiveLink a {
+	font-family: var(--heading-font);
+	font-size: 17px;
+	font-weight: bold;
+}
+
+/* Centered images (used on post pages) */
+
+.centeredImage {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* App names look weird in Georgia */
+.appname {
+	font-family: var(--heading-font);
+	font-size: 0.95em;
+}
+
+/* Standalone pages — not blog posts, so .post rules don't reach them */
+
+/* A page opens with a big title rather than a small dateline,
+   so it needs less runway above than the blog does. */
+main:has(> .page) {
+	padding-top: 44px;
+}
+
+.page h1 {
+	font-size: 34px;
+	font-weight: bold;
+	margin: 0 0 24px 0;
+}
+.page h2 {
+	font-size: 22px;
+	font-weight: bold;
+	margin: 48px 0 16px 0;
+}
+.page h3 {
+	font-size: 20px;
+	font-weight: bold;
+	margin: 32px 0 12px 0;
+}
+.page h4 {
+	font-size: 18px;
+	font-weight: bold;
+	margin: 28px 0 10px 0;
+}
+.page p {
+	margin: 0 0 20px 0;
+}
+
+.page p:last-child {
+	margin-bottom: 0;
+}
+
+/* Footer */
+
+#footer-background {
+	background-color: var(--footer-background);
+}
+footer {
+	max-width: var(--content-width);
+	margin: 0 auto;
+	font-family: var(--heading-font);
+	padding: 32px 2px 36px 2px;
+	font-size: 17px;
+	color: var(--footer-text);
+}
+footer a {
+	color: var(--footer-link);
+}
+footer a:visited {
+	color: var(--footer-link);
+}
+footer a:hover {
+	color: var(--footer-link-hover);
+}
+footer p {
+	margin: 0;
+	line-height: 1.6;
+}
+footer p + p {
+	margin-top: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+	header {
+		padding: 32px 20px 18px 20px;
+	}
+	main {
+		padding: 72px 20px 72px 20px;
+	}
+	footer {
+		padding: 28px 20px 32px 20px;
+	}
+}
+
+@media (max-width: 480px) {
+	header {
+		padding: 24px 20px 14px 20px;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0;
+	}
+	header .biglink {
+		font-size: 38px;
+	}
+	main {
+		padding-top: 36px;
+		padding-bottom: 36px;
+	}
+	.post {
+		margin-bottom: 36px;
+	}
+}
